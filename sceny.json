@@ -1,0 +1,370 @@
+{
+ "version": 2,
+ "uwaga": "Cytaty (q) to krotkie fragmenty angielskiej Biblii Douay-Rheims (rewizja Challonera, domena publiczna) w tlumaczeniu na polski. Reszta to narracja i parafraza (p). Kazda scena ma kilka postaci (roles); kazda postac: id, name, blurb, start, nodes. Wezel bez choices konczy sciezke.",
+ "scenes": {
+  "2026-10-01": {
+   "ref": "Łk 10,1-12",
+   "title": "Posłani po dwóch",
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Jeden z siedemdziesięciu dwóch posłanych",
+     "blurb": "Idziesz do obcego miasta bez sakwy",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Stoisz z towarzyszem u bram miasta, którego nie znasz. Nie masz sakwy ani zapasowych sandałów. Jezus kazał iść przed Nim, dwójkami, do miejsc, dokąd sam miał przyjść."
+       ],
+       "q": {
+        "t": "Idźcie: oto posyłam was jak baranki między wilki.",
+        "r": "Łk 10,3"
+       },
+       "choices": [
+        {
+         "label": "Zapukać do pierwszego domu i powitać pokojem",
+         "to": "n2"
+        },
+        {
+         "label": "Najpierw poszukać kogoś znajomego",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Drzwi otwiera mężczyzna z nieufnym spojrzeniem. Słyszy twoje powitanie, ale nie odpowiada. W środku widać stół z prostym jedzeniem."
+       ],
+       "choices": [
+        {
+         "label": "Zostać i jeść to, co postawią",
+         "to": "e1"
+        },
+        {
+         "label": "Pójść dalej, skoro nie chce słuchać",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Znajdujesz kupca, którego kiedyś spotkałeś. Chętnie daje nocleg w wygodnym domu. Obcy dom z nieufnym gospodarzem wygląda przy tym znacznie gorzej."
+       ],
+       "choices": [
+        {
+         "label": "Przyjąć wygodny nocleg u znajomego",
+         "to": "e3"
+        },
+        {
+         "label": "Jednak iść do obcego domu",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Siadasz z nieznajomym przy stole. Po jakimś czasie napięcie opada i zaczyna pytać, po co przyszliście. Masz okazję opowiedzieć mu, że Królestwo jest blisko."
+       ],
+       "q": {
+        "t": "Do któregokolwiek domu wejdziecie, najpierw mówcie: Pokój temu domowi.",
+        "r": "Łk 10,5"
+       },
+       "end": "Koniec sceny. Ścieżka: gościnność przyjęta bez wybierania."
+      },
+      "e2": {
+       "p": [
+        "Odchodzisz bez żalu i bez zgorzknienia. Pokój, który niosłeś, nie przepadł; po prostu nie znalazł tam jeszcze miejsca. Przed wami jest jeszcze wiele drzwi."
+       ],
+       "end": "Koniec sceny. Ścieżka: odejście bez urazy."
+      },
+      "e3": {
+       "p": [
+        "Noc jest spokojna, ale rano czujesz, że ominęło cię coś, po co właściwie szedłeś. Znajomy słucha uprzejmie i na tym się kończy."
+       ],
+       "end": "Koniec sceny. Ścieżka: wygoda zamiast spotkania."
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Gospodarz w mieście",
+     "blurb": "Mieszkaniec, do którego pukają dwaj obcy",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Wieczorem pukają dwaj obcy ludzie w zakurzonych płaszczach. Nie mają sakwy ani zapasów. Zanim zdążysz zapytać, kim są, jeden z nich mówi coś, czego nikt ci dawno nie powiedział."
+       ],
+       "q": {
+        "t": "Do któregokolwiek domu wejdziecie, najpierw mówcie: Pokój temu domowi.",
+        "r": "Łk 10,5"
+       },
+       "choices": [
+        {
+         "label": "Otworzyć szerzej i zaprosić do stołu",
+         "to": "e1"
+        },
+        {
+         "label": "Zostawić drzwi uchylone i słuchać dalej",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Dzielisz z nimi to, co masz w domu. Rozmowa trwa długo, a rano wiesz, że ta noc coś w tobie zmieniła."
+       ],
+       "end": "Koniec sceny. Ścieżka: gościnność."
+      },
+      "e2": {
+       "p": [
+        "Słuchasz przez szparę. Obcy nie naciskają, mówią o bliskim Królestwie i idą dalej. Zostaje ci niepokój, że przepuściłeś coś ważnego."
+       ],
+       "end": "Koniec sceny. Ścieżka: ostrożność."
+      }
+     }
+    }
+   ]
+  },
+  "2026-10-02": {
+   "ref": "Mt 18,1-5.10",
+   "title": "Kto jest największy",
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Uczeń w kręgu Dwunastu",
+     "blurb": "Jesteś w kręgu uczniów, którzy się kłócili",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Po drodze kłóciliście się, kto z was będzie pierwszy. Teraz Jezus przywołuje małe dziecko i stawia je pośrodku. Wszyscy milkną."
+       ],
+       "choices": [
+        {
+         "label": "Podejść bliżej dziecka",
+         "to": "n2"
+        },
+        {
+         "label": "Cofnąć się, bo jest ci wstyd",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Dziecko patrzy na ciebie bez lęku i bez żadnych ocen. Nie wie nic o waszych sporach."
+       ],
+       "q": {
+        "t": "Ktokolwiek więc uniży się jak to dziecko, ten jest większy w królestwie niebieskim.",
+        "r": "Mt 18,4"
+       },
+       "choices": [
+        {
+         "label": "Przykucnąć do jego wzrostu",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać Jezusa, co to znaczy",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Stoisz z tyłu. Ktoś obok szepcze, że to było o tobie. Wiesz, że miał rację."
+       ],
+       "choices": [
+        {
+         "label": "Przyznać się, że kłóciłeś się najgłośniej",
+         "to": "e3"
+        },
+        {
+         "label": "Zapytać Jezusa, co to znaczy",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Dziecko uśmiecha się i podaje ci jakiś kamyk. Przez moment nie myślisz, kto jest pierwszy."
+       ],
+       "end": "Koniec sceny. Ścieżka: stać się małym."
+      },
+      "e2": {
+       "p": [
+        "Jezus nie tłumaczy długo. Mówi o przyjęciu takiego dziecka jak przyjęcia Jego samego. Zostaje ci coś, nad czym będziesz myśleć całą drogę."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie zamiast odpowiedzi."
+      },
+      "e3": {
+       "p": [
+        "Mówisz to półgłosem, ale Jezus słyszy. Nie ma w Jego twarzy wyrzutu, tylko uwaga. Pierwszy raz od rana jest ci lżej."
+       ],
+       "end": "Koniec sceny. Ścieżka: przyznanie się."
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Dziecko pośrodku",
+     "blurb": "To ty zostajesz postawiony przed dorosłymi",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Ktoś bierze cię za rękę i prowadzi na środek kręgu mężczyzn. Wszyscy patrzą na ciebie, a ty nie wiesz dlaczego. Rozpoznajesz tylko ciepłą dłoń Jezusa na ramieniu."
+       ],
+       "q": {
+        "t": "A kto przyjmie jedno takie dziecko w moim imieniu, mnie przyjmuje.",
+        "r": "Mt 18,5"
+       },
+       "choices": [
+        {
+         "label": "Uśmiechnąć się do kogoś w kręgu",
+         "to": "e1"
+        },
+        {
+         "label": "Schować się za Jezusem",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Jeden z mężczyzn odwzajemnia uśmiech, trochę niezgrabnie. Czujesz, że zniknęło napięcie, którego nie umiałbyś nazwać."
+       ],
+       "end": "Koniec sceny. Ścieżka: ufność."
+      },
+      "e2": {
+       "p": [
+        "Jezus nie odsuwa cię i nie popycha do przodu. Stoisz tak, bezpieczny, a dorośli milkną i słuchają."
+       ],
+       "end": "Koniec sceny. Ścieżka: schronienie."
+      }
+     }
+    }
+   ]
+  },
+  "2026-10-03": {
+   "ref": "Łk 10,17-24",
+   "title": "Powrót z radością",
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Jeden z siedemdziesięciu dwóch wracających",
+     "blurb": "Wracasz z misji pełen radości",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Wracacie podekscytowani. Opowiadasz wszystkim, że nawet złe duchy ustępowały w Jego imieniu. Jezus słucha, a potem mówi coś, czego się nie spodziewałeś."
+       ],
+       "q": {
+        "t": "Nie radujcie się z tego, że duchy są wam poddane, ale z tego, że imiona wasze są zapisane w niebie.",
+        "r": "Łk 10,20"
+       },
+       "choices": [
+        {
+         "label": "Opowiadać dalej o wszystkim, co widziałeś",
+         "to": "n2"
+        },
+        {
+         "label": "Zamilknąć i posłuchać",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Opowieść płynie szybko, a ty słyszysz w niej coraz więcej siebie. W pewnej chwili orientujesz się, że Jezus dawno przestał patrzeć na ciebie, a patrzy gdzieś dalej."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać, co znaczy zapisane imię",
+         "to": "e1"
+        },
+        {
+         "label": "Wrócić do opowieści",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "W ciszy widzisz, jak Jezus raduje się i dziękuje Ojcu, że to, co ukryte, objawia prostym. Nikt Mu nie przerywa."
+       ],
+       "choices": [
+        {
+         "label": "Zostać w tej radości razem z Nim",
+         "to": "e3"
+        },
+        {
+         "label": "Zapytać, kim są ci prości",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Odpowiedź jest krótka i niewygodna: ważne nie jest to, co potrafisz, tylko komu należysz. Idziesz za Nim dalej, z jednym pytaniem mniej."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o tożsamość."
+      },
+      "e2": {
+       "p": [
+        "Kończysz opowieść. Ktoś poklepuje cię po ramieniu. Zostaje ci niejasne poczucie, że umknęło ci coś ważniejszego niż sukces."
+       ],
+       "end": "Koniec sceny. Ścieżka: radość z własnych dokonań."
+      },
+      "e3": {
+       "p": [
+        "Nie mówisz nic. Radość jest cicha i nie potrzebuje opowieści. To, co zobaczyli wasi przodkowie z daleka, ty miałeś przed oczami."
+       ],
+       "end": "Koniec sceny. Ścieżka: wspólna radość."
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Jeden z Dwunastu",
+     "blurb": "Słuchasz relacji tych, którzy zostali posłani",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Nie byłeś wśród siedemdziesięciu dwóch. Słuchasz ich opowieści, a w głowie masz dwa uczucia: radość i ukłucie zazdrości. Jezus odwraca się nagle do ciebie i do pozostałych."
+       ],
+       "q": {
+        "t": "Błogosławione oczy, które widzą to, co wy widzicie.",
+        "r": "Łk 10,23"
+       },
+       "choices": [
+        {
+         "label": "Przyznać się do zazdrości",
+         "to": "e1"
+        },
+        {
+         "label": "Cieszyć się razem z nimi",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Mówisz to cicho. Jezus nie ocenia. Słowa o oczach, które widzą, nagle dotyczą także ciebie."
+       ],
+       "end": "Koniec sceny. Ścieżka: szczerość."
+      },
+      "e2": {
+       "p": [
+        "Radość jest prostsza, niż myślałeś. Dziękujesz za to, co sam widziałeś, i przestajesz porównywać."
+       ],
+       "end": "Koniec sceny. Ścieżka: wdzięczność."
+      }
+     }
+    }
+   ]
+  }
+ }
+}

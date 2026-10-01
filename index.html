@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Przeżyj Biblię</title>
+<style>
+:root{--bg:#f3f0e8;--fg:#1d2a33;--mut:#5d6b73;--acc:#2f5d62;--q:#a8803a;--card:#e8e3d6}
+@media(prefers-color-scheme:dark){:root{--bg:#121b22;--fg:#e8e4d8;--mut:#98a6ad;--acc:#8fc0b4;--q:#d2ae65;--card:#1b2731}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 Georgia,"Times New Roman",serif}
+main{max-width:34rem;margin:0 auto;padding:1.25rem 1.1rem 4rem}
+h1{font-size:1.5rem;margin:0 0 .75rem;font-weight:700}
+nav{display:flex;gap:.5rem;margin-bottom:1.5rem}
+nav button{flex:1}
+button{font:inherit;min-height:48px;padding:.6rem 1rem;border:1.5px solid var(--acc);background:transparent;color:var(--fg);border-radius:6px;cursor:pointer;text-align:left}
+button:hover,button.on{background:var(--acc);color:var(--bg)}
+button:focus-visible{outline:3px solid var(--q);outline-offset:2px}
+.meta{color:var(--mut);font-size:.95rem;margin:0}
+h2{font-size:1.6rem;line-height:1.25;margin:.25rem 0 .25rem}
+.role{font-style:italic;color:var(--mut);margin:0 0 1.25rem}
+blockquote{margin:1.25rem 0;padding:.25rem 0 .25rem 1rem;border-left:4px solid var(--q)}
+blockquote cite{display:block;color:var(--mut);font-size:.9rem;font-style:normal}
+.choices{display:grid;gap:.6rem;margin-top:1.5rem}
+.end{color:var(--mut);font-size:.95rem;margin-top:1.5rem}
+.note{color:var(--mut);font-size:.85rem;margin-top:2rem}
+.lib{display:grid;gap:.6rem}
+.lib button{display:block;width:100%}
+.lib small{display:block;color:inherit;opacity:.75}
+</style>
+</head>
+<body>
+<main>
+<h1>Przeżyj Biblię</h1>
+<nav>
+  <button id="tDzis" class="on">Dziś</button>
+  <button id="tLib">Biblioteka</button>
+</nav>
+<section id="v" aria-live="polite"></section>
+<p class="note">Cytaty to własne tłumaczenie fragmentów angielskiej Biblii Douay-Rheims (domena publiczna), nie oficjalny przekład liturgiczny. Pozostały tekst to narracja i parafraza.</p>
+</main>
+<script>
+const v=document.getElementById('v');
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const q=new URLSearchParams(location.search).get('dzien');
+const today=q||new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Warsaw'}).format(new Date());
+let S={},from='dzis';
+
+function tab(w){
+  document.getElementById('tDzis').classList.toggle('on',w==='dzis');
+  document.getElementById('tLib').classList.toggle('on',w==='lib');
+}
+function fmt(d){return new Date(d+'T12:00:00').toLocaleDateString('pl-PL',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}
+
+function pick(date){
+  const sc=S[date];v.replaceChildren();
+  v.append(el('p','meta',fmt(date)+' · '+sc.ref),el('h2',0,sc.title),el('p','role','Wybierz postać, którą zagrasz:'));
+  const box=el('div','lib');
+  sc.roles.forEach(r=>{const b=el('button',0,r.name);b.append(el('small',0,r.blurb));b.onclick=()=>{play(date,r.id);scrollTo(0,0)};box.append(b)});
+  v.append(box);
+}
+function play(date,rid,node){
+  const sc=S[date],r=sc.roles.find(x=>x.id===rid),n=r.nodes[node||r.start];
+  v.replaceChildren();
+  v.append(el('p','meta',fmt(date)+' · '+sc.ref),el('h2',0,sc.title),el('p','role','Grasz: '+r.name));
+  n.p.forEach(t=>v.append(el('p',0,t)));
+  if(n.q){const b=el('blockquote',0,'„'+n.q.t+'”');b.append(el('cite',0,n.q.r));v.append(b)}
+  const box=el('div','choices');
+  if(n.choices){n.choices.forEach(c=>{const b=el('button',0,c.label);b.onclick=()=>{play(date,rid,c.to);scrollTo(0,0)};box.append(b)})}
+  else{
+    v.append(el('p','end',n.end||''));
+    const a=el('button',0,'Zagraj tą postacią jeszcze raz');a.onclick=()=>play(date,rid);box.append(a);
+    const o=el('button',0,'Zagraj inną postacią');o.onclick=()=>pick(date);box.append(o);
+    if(from==='lib'){const l=el('button',0,'Wróć do biblioteki');l.onclick=library;box.append(l)}
+  }
+  v.append(box);
+}
+function showToday(){
+  from='dzis';tab('dzis');
+  if(S[today])return pick(today);
+  v.replaceChildren(el('p',0,'Na dziś nie ma jeszcze sceny. Zajrzyj do biblioteki.'));
+}
+function library(){
+  from='lib';tab('lib');v.replaceChildren();
+  const past=Object.keys(S).filter(d=>d<today).sort().reverse();
+  if(!past.length){v.append(el('p',0,'Biblioteka jest pusta. Pierwsza scena trafi tu jutro.'));return}
+  const l=el('div','lib');
+  past.forEach(d=>{const b=el('button',0,S[d].title);b.append(el('small',0,fmt(d)+' · '+S[d].ref));b.onclick=()=>pick(d);l.append(b)});
+  v.append(l);
+}
+document.getElementById('tDzis').onclick=showToday;
+document.getElementById('tLib').onclick=library;
+fetch('sceny.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{S=d.scenes||{};showToday()})
+ .catch(()=>v.replaceChildren(el('p',0,'Nie udało się wczytać scen. Sprawdź, czy plik sceny.json leży obok index.html.')));
+</script>
+</body>
+</html>
