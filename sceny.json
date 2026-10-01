@@ -1,6 +1,6 @@
 {
  "version": 2,
- "uwaga": "Cytaty (q) to krotkie fragmenty angielskiej Biblii Douay-Rheims (rewizja Challonera, domena publiczna) w tlumaczeniu na polski. Reszta to narracja i parafraza (p). Kazda scena ma kilka postaci (roles); kazda postac: id, name, blurb, start, nodes. Wezel bez choices konczy sciezke.",
+ "uwaga": "Cytaty (q) i teksty fragmentow (text) to wlasne tlumaczenie angielskiej Biblii Douay-Rheims (Challoner, domena publiczna), nie przeklad liturgiczny. Reszta to narracja i parafraza (p). Scena: ref, title, context, text, roles. Postac: id, name, blurb, start, nodes. Wezel koncowy: end + reflection.",
  "scenes": {
   "2026-10-01": {
    "ref": "Łk 10,1-12",
@@ -69,19 +69,22 @@
         "t": "Do któregokolwiek domu wejdziecie, najpierw mówcie: Pokój temu domowi.",
         "r": "Łk 10,5"
        },
-       "end": "Koniec sceny. Ścieżka: gościnność przyjęta bez wybierania."
+       "end": "Koniec sceny. Ścieżka: gościnność przyjęta bez wybierania.",
+       "reflection": "Jezus każe posłanym zostać w domu, który ich przyjmie, i jeść to, co podadzą (Łk 10,7-8). Ty zostałeś przy stole z kimś, kto dopiero się otwierał. Co trudniej przyjąć: gościnność innych czy własną zależność od niej?"
       },
       "e2": {
        "p": [
         "Odchodzisz bez żalu i bez zgorzknienia. Pokój, który niosłeś, nie przepadł; po prostu nie znalazł tam jeszcze miejsca. Przed wami jest jeszcze wiele drzwi."
        ],
-       "end": "Koniec sceny. Ścieżka: odejście bez urazy."
+       "end": "Koniec sceny. Ścieżka: odejście bez urazy.",
+       "reflection": "Gdy miasto nie przyjmuje, Jezus każe odejść, ale z wieścią, że Królestwo jest blisko (Łk 10,10-11). Ty odszedłeś bez urazy. Czy potrafisz odejść od odrzucenia, nie zabierając ze sobą żalu?"
       },
       "e3": {
        "p": [
         "Noc jest spokojna, ale rano czujesz, że ominęło cię coś, po co właściwie szedłeś. Znajomy słucha uprzejmie i na tym się kończy."
        ],
-       "end": "Koniec sceny. Ścieżka: wygoda zamiast spotkania."
+       "end": "Koniec sceny. Ścieżka: wygoda zamiast spotkania.",
+       "reflection": "Posłani mają nie szukać wygody ani nie przechodzić z domu do domu (Łk 10,7). Wybrałeś znajomego, bo był łatwiejszy. Co mogłoby się wydarzyć, gdybyś jednak zapukał do obcego?"
       }
      }
     },
@@ -114,15 +117,67 @@
        "p": [
         "Dzielisz z nimi to, co masz w domu. Rozmowa trwa długo, a rano wiesz, że ta noc coś w tobie zmieniła."
        ],
-       "end": "Koniec sceny. Ścieżka: gościnność."
+       "end": "Koniec sceny. Ścieżka: gościnność.",
+       "reflection": "Posłani niosą pokój i wchodzą do domu, który ich przyjmie (Łk 10,5-6). Ty otworzyłeś drzwi na tyle, by pokój mógł spocząć. Kogo ostatnio przyjąłeś, choć nie miał nic do zaoferowania?"
       },
       "e2": {
        "p": [
         "Słuchasz przez szparę. Obcy nie naciskają, mówią o bliskim Królestwie i idą dalej. Zostaje ci niepokój, że przepuściłeś coś ważnego."
        ],
-       "end": "Koniec sceny. Ścieżka: ostrożność."
+       "end": "Koniec sceny. Ścieżka: ostrożność.",
+       "reflection": "Pokój, który nie zostaje przyjęty, wraca do tych, którzy go przynieśli (Łk 10,6). Ty słuchałeś przez szparę i niczego nie rozstrzygnąłeś. Czego potrzebowałbyś, żeby otworzyć szerzej?"
       }
      }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "Potem Pan wyznaczył jeszcze innych siedemdziesięciu dwóch i posłał ich po dwóch przed sobą do każdego miasta i miejsca, dokąd sam miał przyjść."
+    },
+    {
+     "v": "2",
+     "t": "I mówił do nich: Żniwo wprawdzie jest wielkie, ale robotników mało. Proście więc Pana żniwa, aby wysłał robotników na swoje żniwo."
+    },
+    {
+     "v": "3",
+     "t": "Idźcie: oto posyłam was jak baranki między wilki."
+    },
+    {
+     "v": "4",
+     "t": "Nie noście ani trzosa, ani torby, ani sandałów i nikogo w drodze nie pozdrawiajcie."
+    },
+    {
+     "v": "5",
+     "t": "Do któregokolwiek domu wejdziecie, najpierw mówcie: Pokój temu domowi."
+    },
+    {
+     "v": "6",
+     "t": "A jeśli będzie tam syn pokoju, spocznie na nim wasz pokój; a jeśli nie, wróci do was."
+    },
+    {
+     "v": "7",
+     "t": "W tym samym domu zostańcie, jedząc i pijąc to, co mają, bo robotnik wart jest swojej zapłaty. Nie przechodźcie z domu do domu."
+    },
+    {
+     "v": "8",
+     "t": "A do któregokolwiek miasta wejdziecie i przyjmą was, jedzcie to, co wam podadzą."
+    },
+    {
+     "v": "9",
+     "t": "Uzdrawiajcie chorych, którzy w nim są, i mówcie im: Przybliżyło się do was królestwo Boże."
+    },
+    {
+     "v": "10",
+     "t": "Ale do któregokolwiek miasta wejdziecie, a nie przyjmą was, wyjdźcie na jego ulice i powiedzcie:"
+    },
+    {
+     "v": "11",
+     "t": "Nawet pył z waszego miasta, który przylgnął do nas, strząsamy na was. Wiedzcie jednak, że królestwo Boże jest bliskie."
+    },
+    {
+     "v": "12",
+     "t": "Mówię wam, że w owym dniu Sodomie będzie znośniej niż temu miastu."
     }
    ]
   },
@@ -189,19 +244,22 @@
        "p": [
         "Dziecko uśmiecha się i podaje ci jakiś kamyk. Przez moment nie myślisz, kto jest pierwszy."
        ],
-       "end": "Koniec sceny. Ścieżka: stać się małym."
+       "end": "Koniec sceny. Ścieżka: stać się małym.",
+       "reflection": "Jezus stawia dziecko pośrodku i mówi o uniżeniu (Mt 18,2-4). Ty zniżyłeś się do jego wzrostu. Co w twojej codzienności wymaga takiego zniżenia?"
       },
       "e2": {
        "p": [
         "Jezus nie tłumaczy długo. Mówi o przyjęciu takiego dziecka jak przyjęcia Jego samego. Zostaje ci coś, nad czym będziesz myśleć całą drogę."
        ],
-       "end": "Koniec sceny. Ścieżka: pytanie zamiast odpowiedzi."
+       "end": "Koniec sceny. Ścieżka: pytanie zamiast odpowiedzi.",
+       "reflection": "Uczniowie pytają, kto jest większy, a odpowiedź przychodzi w postaci dziecka, nie definicji (Mt 18,1-4). Ty zapytałeś Jezusa wprost. Z jakim pytaniem zostajesz po tej odpowiedzi?"
       },
       "e3": {
        "p": [
         "Mówisz to półgłosem, ale Jezus słyszy. Nie ma w Jego twarzy wyrzutu, tylko uwaga. Pierwszy raz od rana jest ci lżej."
        ],
-       "end": "Koniec sceny. Ścieżka: przyznanie się."
+       "end": "Koniec sceny. Ścieżka: przyznanie się.",
+       "reflection": "Uczniowie spierali się o pierwszeństwo, a Jezus mówi o nawróceniu i stawaniu się jak dzieci (Mt 18,3). Ty przyznałeś się do swojego udziału w sporze. Co dało ci to uczciwe nazwanie?"
       }
      }
     },
@@ -234,15 +292,43 @@
        "p": [
         "Jeden z mężczyzn odwzajemnia uśmiech, trochę niezgrabnie. Czujesz, że zniknęło napięcie, którego nie umiałbyś nazwać."
        ],
-       "end": "Koniec sceny. Ścieżka: ufność."
+       "end": "Koniec sceny. Ścieżka: ufność.",
+       "reflection": "Kto przyjmie jedno takie dziecko w imię Jezusa, przyjmuje Jego (Mt 18,5). Ty uśmiechnąłeś się do kogoś w kręgu dorosłych. Kogo dziś możesz przyjąć tak, jakby nie miał nic do pokazania?"
       },
       "e2": {
        "p": [
         "Jezus nie odsuwa cię i nie popycha do przodu. Stoisz tak, bezpieczny, a dorośli milkną i słuchają."
        ],
-       "end": "Koniec sceny. Ścieżka: schronienie."
+       "end": "Koniec sceny. Ścieżka: schronienie.",
+       "reflection": "Jezus każe nie gardzić małymi, bo ich aniołowie zawsze oglądają oblicze Ojca (Mt 18,10). Ty schowałeś się za Nim i byłeś bezpieczny. Kogo ty możesz osłonić?"
       }
      }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "W tej godzinie uczniowie przyszli do Jezusa i powiedzieli: Kto, jak sądzisz, jest większy w królestwie niebieskim?"
+    },
+    {
+     "v": "2",
+     "t": "A Jezus, przywoławszy do siebie małe dziecko, postawił je pośrodku nich"
+    },
+    {
+     "v": "3",
+     "t": "i rzekł: Zaprawdę powiadam wam: jeśli się nie nawrócicie i nie staniecie się jak dzieci, nie wejdziecie do królestwa niebieskiego."
+    },
+    {
+     "v": "4",
+     "t": "Ktokolwiek więc uniży się jak to dziecko, ten jest większy w królestwie niebieskim."
+    },
+    {
+     "v": "5",
+     "t": "A kto przyjmie jedno takie dziecko w moim imieniu, mnie przyjmuje."
+    },
+    {
+     "v": "10",
+     "t": "Baczcie, byście nie gardzili żadnym z tych małych, bo powiadam wam, że ich aniołowie w niebie zawsze oglądają oblicze mojego Ojca, który jest w niebie."
     }
    ]
   },
@@ -309,19 +395,22 @@
        "p": [
         "Odpowiedź jest krótka i niewygodna: ważne nie jest to, co potrafisz, tylko komu należysz. Idziesz za Nim dalej, z jednym pytaniem mniej."
        ],
-       "end": "Koniec sceny. Ścieżka: pytanie o tożsamość."
+       "end": "Koniec sceny. Ścieżka: pytanie o tożsamość.",
+       "reflection": "Jezus mówi, by radować się nie z posłuszeństwa duchów, ale z tego, że imiona są zapisane w niebie (Łk 10,20). Ty zapytałeś, co to znaczy. Gdzie szukasz swojej tożsamości: w osiągnięciach czy w przynależności?"
       },
       "e2": {
        "p": [
         "Kończysz opowieść. Ktoś poklepuje cię po ramieniu. Zostaje ci niejasne poczucie, że umknęło ci coś ważniejszego niż sukces."
        ],
-       "end": "Koniec sceny. Ścieżka: radość z własnych dokonań."
+       "end": "Koniec sceny. Ścieżka: radość z własnych dokonań.",
+       "reflection": "Posłani wracają z radością z sukcesu, a Jezus kieruje ich ku czemuś głębszemu (Łk 10,17-20). Ty wróciłeś do opowieści o sukcesie. Co w tej radości jest prawdziwe, a co jest tylko dumą?"
       },
       "e3": {
        "p": [
         "Nie mówisz nic. Radość jest cicha i nie potrzebuje opowieści. To, co zobaczyli wasi przodkowie z daleka, ty miałeś przed oczami."
        ],
-       "end": "Koniec sceny. Ścieżka: wspólna radość."
+       "end": "Koniec sceny. Ścieżka: wspólna radość.",
+       "reflection": "Jezus raduje się w Duchu i dziękuje Ojcu, że objawił to małym (Łk 10,21). Ty zostałeś w tej radości. Kiedy ostatnio cieszyłeś się czymś bez potrzeby opowiadania o tym?"
       }
      }
     },
@@ -354,15 +443,344 @@
        "p": [
         "Mówisz to cicho. Jezus nie ocenia. Słowa o oczach, które widzą, nagle dotyczą także ciebie."
        ],
-       "end": "Koniec sceny. Ścieżka: szczerość."
+       "end": "Koniec sceny. Ścieżka: szczerość.",
+       "reflection": "Jezus błogosławi oczy, które widzą to, co widzą uczniowie (Łk 10,23). Ty przyznałeś się do zazdrości. Co zmienia się, gdy swoje porównywanie nazwiesz po imieniu?"
       },
       "e2": {
        "p": [
         "Radość jest prostsza, niż myślałeś. Dziękujesz za to, co sam widziałeś, i przestajesz porównywać."
        ],
-       "end": "Koniec sceny. Ścieżka: wdzięczność."
+       "end": "Koniec sceny. Ścieżka: wdzięczność.",
+       "reflection": "Wielu proroków i królów pragnęło zobaczyć to, co widzą uczniowie (Łk 10,24). Ty podziękowałeś za to, co widziałeś. Za co dziś możesz podziękować, nie porównując się z innymi?"
       }
      }
+    }
+   ],
+   "text": [
+    {
+     "v": "17",
+     "t": "A siedemdziesięciu dwóch wróciło z radością, mówiąc: Panie, nawet demony są nam poddane w twoim imieniu."
+    },
+    {
+     "v": "18",
+     "t": "A on rzekł do nich: Widziałem szatana spadającego z nieba jak błyskawica."
+    },
+    {
+     "v": "19",
+     "t": "Oto dałem wam moc deptania węży i skorpionów i całej potęgi nieprzyjaciela, i nic wam nie zaszkodzi."
+    },
+    {
+     "v": "20",
+     "t": "Nie radujcie się jednak z tego, że duchy są wam poddane, ale radujcie się z tego, że imiona wasze są zapisane w niebie."
+    },
+    {
+     "v": "21",
+     "t": "W tej samej godzinie rozradował się w Duchu Świętym i rzekł: Wysławiam cię, Ojcze, Panie nieba i ziemi, że ukryłeś to przed mądrymi i roztropnymi, a objawiłeś małym. Tak, Ojcze, bo tak ci się upodobało."
+    },
+    {
+     "v": "22",
+     "t": "Wszystko zostało mi przekazane przez mojego Ojca. I nikt nie wie, kim jest Syn, tylko Ojciec, ani kim jest Ojciec, tylko Syn i ten, komu Syn zechce go objawić."
+    },
+    {
+     "v": "23",
+     "t": "I zwróciwszy się do uczniów, rzekł: Błogosławione oczy, które widzą to, co wy widzicie."
+    },
+    {
+     "v": "24",
+     "t": "Bo powiadam wam, że wielu proroków i królów pragnęło zobaczyć to, co wy widzicie, a nie zobaczyli, i usłyszeć to, co słyszycie, a nie usłyszeli."
+    }
+   ]
+  },
+  "2026-10-04": {
+   "ref": "Mt 21,33-43",
+   "title": "Winnica i dzierżawcy",
+   "context": [
+    "Gdzie jesteśmy: Jerozolima, ostatni tydzień życia Jezusa. Wjechał do miasta, wypędził kupców ze świątyni, a teraz naucza na dziedzińcu. Arcykapłani i starsi ludu pytają Go, jakim prawem to robi (Mt 21,23).",
+    "Ta przypowieść jest drugą z trzech skierowanych do tych samych słuchaczy: wcześniej Jezus opowiada o dwóch synach (Mt 21,28-32), a zaraz potem o uczcie weselnej (Mt 22,1-14).",
+    "Obraz winnicy znali z Księgi Izajasza (Iz 5,1-7), którą Kościół czyta dziś jako pierwsze czytanie. Tam winnicą Pana jest dom Izraela, a Bóg szuka w niej sprawiedliwości. Mur, tłocznia i wieża z przypowieści to ten sam troskliwy obraz.",
+    "Co dalej: według Mt 21,45-46 arcykapłani i faryzeusze rozumieją, że Jezus mówi o nich, ale nie sięgają po Niego z lęku przed tłumem, który uważa Go za proroka.",
+    "Uwaga: słuchaczami są przywódcy świątyni, a nie cały naród. Warto o tym pamiętać, grając tę scenę."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Rolnik z winnicy",
+     "blurb": "Dzierżawisz winnicę, a pan jest daleko",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Winnicę oddano wam w dzierżawę: mur wokół, tłocznia wykopana, wieża stoi. Pan wyjechał i od dawna go nie widzieliście. Z czasem zacząłeś myśleć o tej ziemi jak o swojej. Teraz są zbiory, a na zboczu pojawia się sługa pana po należne owoce."
+       ],
+       "choices": [
+        {
+         "label": "Oddać sługom to, co się należy",
+         "to": "n2"
+        },
+        {
+         "label": "Odesłać go z niczym",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Sługa odchodzi z owocami, a koledzy patrzą na ciebie spode łba. Ktoś mruczy, że pan jest daleko i nikt by się nie dowiedział. Ktoś inny, że to dopiero początek takich wizyt."
+       ],
+       "choices": [
+        {
+         "label": "Przekonywać ich, że to uczciwe",
+         "to": "e1"
+        },
+        {
+         "label": "Milczeć, żeby nie zostać sam",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Sługa wraca z pustymi rękami, a pan posyła następnych, więcej niż poprzednio. Rolnicy ich biją, jednego zabijają, innego kamienują. Stoisz na skraju tego, co się dzieje."
+       ],
+       "choices": [
+        {
+         "label": "Stanąć między rolnikami a sługami",
+         "to": "e1"
+        },
+        {
+         "label": "Odwrócić głowę",
+         "to": "n4"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Na końcu pan posyła własnego syna, myśląc, że dla niego znajdą szacunek. Rolnicy widzą go z daleka. Ktoś z nich odzywa się cicho, a reszta słucha."
+       ],
+       "q": {
+        "t": "To jest dziedzic: chodźcie, zabijmy go, a będziemy mieć jego dziedzictwo.",
+        "r": "Mt 21,38"
+       },
+       "choices": [
+        {
+         "label": "Sprzeciwić się",
+         "to": "e1"
+        },
+        {
+         "label": "Nic nie mówić",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Mówisz głośno to, czego inni wolą nie wypowiadać. Nie wiesz, czy cię posłuchają, ale nie jesteś już cichym wspólnikiem."
+       ],
+       "end": "Koniec sceny. Ścieżka: odwaga, by się sprzeciwić.",
+       "reflection": "Przypowieść pyta, kto odda właścicielowi owoce winnicy (Mt 21,41). Ty zabrałeś głos tam, gdzie inni milczeli. Gdzie w twoim życiu przychodzi ci mówić, choć to kosztuje?"
+      },
+      "e2": {
+       "p": [
+        "Milczysz, bo tak jest łatwiej, a samotność w tej grupie wydaje się gorsza niż niesprawiedliwość. Czujesz, że to milczenie coś kosztuje, choć nikt tego nie zauważył."
+       ],
+       "end": "Koniec sceny. Ścieżka: milczenie z lęku przed samotnością.",
+       "reflection": "Rolnicy chcą zatrzymać winnicę dla siebie (Mt 21,38). Ty milczałeś, żeby nie zostać sam. Jakie milczenie w grupie znasz z własnego doświadczenia?"
+      },
+      "e3": {
+       "p": [
+        "Nie uczestniczysz w niczym, ale też niczemu nie zapobiegasz. Wieczorem winnica wygląda tak samo jak zwykle, a ty wiesz, że nic już nie jest takie samo."
+       ],
+       "end": "Koniec sceny. Ścieżka: współudział przez milczenie.",
+       "reflection": "Syn przychodzi na końcu, bo ojciec ufa, że go uszanują (Mt 21,37). Ty nic nie powiedziałeś. Co to znaczy współuczestniczyć przez bierność?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Sługa posłany po owoce",
+     "blurb": "Idziesz do winnicy z poleceniem pana",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Pan posłał kolejnych sług, więcej niż poprzednio. Znasz drogę pod górę i wiesz, co spotkało pierwszych. Masz jedno polecenie: odebrać owoce, które należą do właściciela."
+       ],
+       "choices": [
+        {
+         "label": "Iść mimo strachu",
+         "to": "n2"
+        },
+        {
+         "label": "Zawahać się na progu",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Rolnicy wychodzą ci naprzeciw. Nie wyglądają na ludzi, którzy przyszli ci pomóc. Mur, tłocznia i wieża są tak, jak je zostawiono, a pod nimi stoją ci, którym zostawiono winnicę."
+       ],
+       "choices": [
+        {
+         "label": "Spokojnie powtórzyć polecenie pana",
+         "to": "e1"
+        },
+        {
+         "label": "Cofnąć się",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Zatrzymujesz się. Myślisz o tych, którzy poszli przed tobą, i o panu, który czeka. Nikt cię nie popędza, ale nikt też nie zdejmie z ciebie tego zadania."
+       ],
+       "choices": [
+        {
+         "label": "Iść razem z pozostałymi",
+         "to": "e1"
+        },
+        {
+         "label": "Wrócić do pana z niczym",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Robisz to, po co przyszedłeś, bez gwarancji, że się uda. Wiesz tylko, że wierność poleceniu to coś, co możesz zrobić, nawet jeśli nie zależy od ciebie reszta."
+       ],
+       "end": "Koniec sceny. Ścieżka: wierność posłaniu.",
+       "reflection": "Pan posyła sług jeden raz po drugim, więcej niż poprzednio (Mt 21,34-36). Ty zrobiłeś to, po co cię posłano, bez gwarancji powodzenia. Co w twoim życiu zależy tylko od twojej wierności, a nie od skutku?"
+      },
+      "e2": {
+       "p": [
+        "Wracasz z ulgą, która szybko ustępuje wstydowi. Pan nie mówi nic, tylko patrzy. W jego spojrzeniu nie ma potępienia, ale wiesz, że winnica wciąż czeka."
+       ],
+       "end": "Koniec sceny. Ścieżka: odwrót.",
+       "reflection": "Sługa, który się wycofuje, zostaje z wiedzą o tym, co zostawił (Mt 21,34-36). Ty wróciłeś bez owoców. Co pomogłoby ci następnym razem dojść do końca?"
+      }
+     }
+    },
+    {
+     "id": "r3",
+     "name": "Ktoś z tłumu w świątyni",
+     "blurb": "Stoisz na dziedzińcu i słuchasz Jezusa",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Stoisz na dziedzińcu świątyni w Jerozolimie. Kilka dni temu tłum witał Jezusa wjeżdżającego do miasta. Dziś arcykapłani i starsi pytają Go, jakim prawem tu naucza. Zamiast odpowiedzieć wprost, zaczyna opowiadać o winnicy, a ty znasz ten obraz z pieśni Izajasza."
+       ],
+       "choices": [
+        {
+         "label": "Podejść bliżej arcykapłanów",
+         "to": "n2"
+        },
+        {
+         "label": "Zostać w tłumie i słuchać",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Widzisz twarze starszych, gdy w opowieści pojawia się syn gospodarza i słowo o dziedzictwie. Wyraz ich oczu zmienia się powoli, jakby rozumieli więcej, niż chcą okazać."
+       ],
+       "choices": [
+        {
+         "label": "Odwrócić wzrok",
+         "to": "e1"
+        },
+        {
+         "label": "Patrzeć dalej",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Obok stoi starsza kobieta i szepcze, że to brzmi jak Izajasz: winnicą Pana jest dom Izraela, a Bóg szukał w niej sprawiedliwości. Jezus kończy opowieść słowami o kamieniu, który budowniczowie odrzucili."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać ją, co to znaczy dla was",
+         "to": "e2"
+        },
+        {
+         "label": "Wsłuchać się w słowa o kamieniu",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Odwracasz wzrok, bo patrzenie w ich twarze jest krępujące. Tłum cię osłania, ale pytanie, które padło, zostaje z tobą."
+       ],
+       "end": "Koniec sceny. Ścieżka: unikanie.",
+       "reflection": "Przywódcy świątyni rozumieją, że przypowieść dotyczy ich (Mt 21,45). Ty odwróciłeś wzrok. Od jakich pytań ty odwracasz oczy?"
+      },
+      "e2": {
+       "p": [
+        "Patrzysz uważnie i dopiero po chwili rozumiesz, że przypowieść mówi również do ciebie. Nie tylko do tych, którzy stoją najbliżej Jezusa."
+       ],
+       "end": "Koniec sceny. Ścieżka: uważne słuchanie.",
+       "reflection": "Słuchacze sami wydają wyrok w przypowieści (Mt 21,41), nie wiedząc, że mówią o sobie. Ty zrozumiałeś, że przypowieść dotyczy także ciebie. Co z niej mówi właśnie do ciebie?"
+      },
+      "e3": {
+       "p": [
+        "Kamień odrzucony przez budowniczych stał się kamieniem węgielnym. Znasz te słowa z psalmu, ale jeszcze nigdy nie słyszałeś ich tak blisko. Wychodzisz ze świątyni, powtarzając je w myślach."
+       ],
+       "end": "Koniec sceny. Ścieżka: kamień węgielny.",
+       "reflection": "Jezus cytuje Psalm: kamień odrzucony przez budowniczych stał się głowicą węgła (Mt 21,42). Ty usłyszałeś to z bliska. Co w twoim życiu było odrzucone, a okazało się fundamentem?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "33",
+     "t": "Posłuchajcie innej przypowieści. Był pewien człowiek, gospodarz, który zasadził winnicę, otoczył ją żywopłotem, wykopał w niej tłocznię, zbudował wieżę, oddał ją rolnikom w dzierżawę i wyjechał do obcego kraju."
+    },
+    {
+     "v": "34",
+     "t": "A gdy zbliżył się czas owoców, posłał swoje sługi do rolników, by odebrali jej owoce."
+    },
+    {
+     "v": "35",
+     "t": "Ale rolnicy, chwyciwszy jego sługi, jednego pobili, drugiego zabili, a trzeciego ukamienowali."
+    },
+    {
+     "v": "36",
+     "t": "Znowu posłał innych sług, więcej niż poprzednio, i uczynili im to samo."
+    },
+    {
+     "v": "37",
+     "t": "W końcu posłał do nich swego syna, mówiąc: Będą szanować mojego syna."
+    },
+    {
+     "v": "38",
+     "t": "Lecz rolnicy, ujrzawszy syna, powiedzieli do siebie: To jest dziedzic: chodźcie, zabijmy go, a będziemy mieć jego dziedzictwo."
+    },
+    {
+     "v": "39",
+     "t": "I pochwyciwszy go, wyrzucili go poza winnicę i zabili."
+    },
+    {
+     "v": "40",
+     "t": "Gdy więc przyjdzie pan winnicy, co uczyni tym rolnikom?"
+    },
+    {
+     "v": "41",
+     "t": "Odpowiadają mu: Złych ludzi zgubi marnie, a winnicę odda w dzierżawę innym rolnikom, którzy będą mu oddawać owoc w stosownym czasie."
+    },
+    {
+     "v": "42",
+     "t": "Jezus rzekł do nich: Czy nigdy nie czytaliście w Pismach: Kamień, który odrzucili budowniczowie, stał się głowicą węgła? Pan to uczynił i jest to cudowne w naszych oczach."
+    },
+    {
+     "v": "43",
+     "t": "Dlatego powiadam wam, że królestwo Boże zostanie wam odebrane i będzie dane narodowi, który wydaje jego owoce."
     }
    ]
   }

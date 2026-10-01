@@ -23,6 +23,9 @@ blockquote{margin:1.25rem 0;padding:.25rem 0 .25rem 1rem;border-left:4px solid v
 blockquote cite{display:block;color:var(--mut);font-size:.9rem;font-style:normal}
 .choices{display:grid;gap:.6rem;margin-top:1.5rem}
 .end{color:var(--mut);font-size:.95rem;margin-top:1.5rem}
+details{background:var(--card);padding:.6rem 1rem;border-radius:6px;margin:0 0 1.25rem;font-size:.95rem}summary{cursor:pointer;font-weight:700;min-height:32px;display:flex;align-items:center}
+h3{font-size:1.05rem;margin:1.5rem 0 .3rem}ul.dec{padding-left:1.2rem;margin:.2rem 0}.refl{border-left:4px solid var(--acc);padding-left:1rem;margin-top:.3rem}
+sup{color:var(--mut);font-size:.7em;margin-right:.15em}
 .note{color:var(--mut);font-size:.85rem;margin-top:2rem}
 .lib{display:grid;gap:.6rem}
 .lib button{display:block;width:100%}
@@ -44,7 +47,14 @@ const v=document.getElementById('v');
 const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 const q=new URLSearchParams(location.search).get('dzien');
 const today=q||new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Warsaw'}).format(new Date());
-let S={},from='dzis';
+let S={},from='dzis',path=[];
+function textPanel(sc){
+  if(!sc.text)return document.createDocumentFragment();
+  const d=el('details');d.append(el('summary',0,'Tekst fragmentu: '+sc.ref));
+  sc.text.forEach(x=>{const p=el('p');p.append(el('sup',0,x.v),document.createTextNode(x.t));d.append(p)});
+  d.append(el('p','meta','Własne tłumaczenie z angielskiej Biblii Douay-Rheims, nie przekład liturgiczny.'));
+  d.style.marginTop='1.5rem';return d;
+}
 
 function tab(w){
   document.getElementById('tDzis').classList.toggle('on',w==='dzis');
@@ -54,10 +64,12 @@ function fmt(d){return new Date(d+'T12:00:00').toLocaleDateString('pl-PL',{weekd
 
 function pick(date){
   const sc=S[date];v.replaceChildren();
-  v.append(el('p','meta',fmt(date)+' · '+sc.ref),el('h2',0,sc.title),el('p','role','Wybierz postać, którą zagrasz:'));
+  v.append(el('p','meta',fmt(date)+' · '+sc.ref),el('h2',0,sc.title));
+  if(sc.context){const d=el('details');d.open=true;d.append(el('summary',0,'Kontekst fragmentu'));sc.context.forEach(t=>d.append(el('p',0,t)));v.append(d)}
+  v.append(el('p','role','Wybierz postać, którą zagrasz:'));
   const box=el('div','lib');
-  sc.roles.forEach(r=>{const b=el('button',0,r.name);b.append(el('small',0,r.blurb));b.onclick=()=>{play(date,r.id);scrollTo(0,0)};box.append(b)});
-  v.append(box);
+  sc.roles.forEach(r=>{const b=el('button',0,r.name);b.append(el('small',0,r.blurb));b.onclick=()=>{path=[];play(date,r.id);scrollTo(0,0)};box.append(b)});
+  v.append(box,textPanel(sc));
 }
 function play(date,rid,node){
   const sc=S[date],r=sc.roles.find(x=>x.id===rid),n=r.nodes[node||r.start];
@@ -66,14 +78,16 @@ function play(date,rid,node){
   n.p.forEach(t=>v.append(el('p',0,t)));
   if(n.q){const b=el('blockquote',0,'„'+n.q.t+'”');b.append(el('cite',0,n.q.r));v.append(b)}
   const box=el('div','choices');
-  if(n.choices){n.choices.forEach(c=>{const b=el('button',0,c.label);b.onclick=()=>{play(date,rid,c.to);scrollTo(0,0)};box.append(b)})}
+  if(n.choices){n.choices.forEach(c=>{const b=el('button',0,c.label);b.onclick=()=>{path.push(c.label);play(date,rid,c.to);scrollTo(0,0)};box.append(b)})}
   else{
     v.append(el('p','end',n.end||''));
-    const a=el('button',0,'Zagraj tą postacią jeszcze raz');a.onclick=()=>play(date,rid);box.append(a);
+    if(path.length){v.append(el('h3',0,'Twoje decyzje'));const u=el('ul','dec');path.forEach(t=>u.append(el('li',0,t)));v.append(u)}
+    if(n.reflection){v.append(el('h3',0,'Rozważanie'));v.append(el('p','refl',n.reflection))}
+    const a=el('button',0,'Zagraj tą postacią jeszcze raz');a.onclick=()=>{path=[];play(date,rid)};box.append(a);
     const o=el('button',0,'Zagraj inną postacią');o.onclick=()=>pick(date);box.append(o);
     if(from==='lib'){const l=el('button',0,'Wróć do biblioteki');l.onclick=library;box.append(l)}
   }
-  v.append(box);
+  v.append(box,textPanel(sc));
 }
 function showToday(){
   from='dzis';tab('dzis');
