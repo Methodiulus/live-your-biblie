@@ -1,0 +1,210 @@
+/* ==========================================================
+   Przeżyj Biblię – style
+   Kolory zdefiniowane jako zmienne, jasny i ciemny motyw.
+   ========================================================== */
+
+:root {
+  --bg: #f3f0e8;
+  --fg: #1d2a33;
+  --muted: #5d6b73;
+  --accent: #2f5d62;
+  --quote: #a8803a;
+  --card: #e8e3d6;
+  --radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121b22;
+    --fg: #e8e4d8;
+    --muted: #98a6ad;
+    --accent: #8fc0b4;
+    --quote: #d2ae65;
+    --card: #1b2731;
+  }
+}
+
+/* ---------- Układ ogólny ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 18px/1.65 Georgia, "Times New Roman", serif;
+}
+
+main {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.1rem 4rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin: 0.25rem 0;
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+h3 {
+  margin: 1.5rem 0 0.3rem;
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+sup {
+  margin-right: 0.15em;
+  color: var(--muted);
+  font-size: 0.7em;
+}
+
+/* ---------- Przyciski ---------- */
+
+button {
+  min-height: 48px;
+  padding: 0.6rem 1rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+button:hover,
+button.active {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--quote);
+  outline-offset: 2px;
+}
+
+/* ---------- Zakładki Dziś / Biblioteka ---------- */
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tabs button {
+  flex: 1;
+}
+
+/* ---------- Nagłówek sceny ---------- */
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.role-line {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ---------- Lista przycisków (wybór postaci, biblioteka) ---------- */
+
+.card-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.card-list button {
+  display: block;
+  width: 100%;
+}
+
+.card-list small {
+  display: block;
+  opacity: 0.75;
+  color: inherit;
+}
+
+/* ---------- Przebieg ścieżki ---------- */
+
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  border-left: 4px solid var(--quote);
+}
+
+blockquote cite {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: normal;
+}
+
+.choices {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Zakończenie: decyzje i rozważanie ---------- */
+
+.ending {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.decisions {
+  margin: 0.2rem 0;
+  padding-left: 1.2rem;
+}
+
+.reflection {
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent);
+}
+
+/* ---------- Panele rozwijane: kontekst i tekst fragmentu ---------- */
+
+details {
+  margin: 0 0 1.25rem;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  background: var(--card);
+  font-size: 0.95rem;
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-panel {
+  margin-top: 1.5rem;
+}
+
+/* ---------- Stopka ---------- */
+
+.note {
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

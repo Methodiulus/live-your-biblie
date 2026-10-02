@@ -1,20 +1,26 @@
 {
- "version": 2,
- "uwaga": "Cytaty (q) i teksty fragmentow (text) to wlasne tlumaczenie angielskiej Biblii Douay-Rheims (Challoner, domena publiczna), nie przeklad liturgiczny. Reszta to narracja i parafraza (p). Scena: ref, title, context, text, roles. Postac: id, name, blurb, start, nodes. Wezel koncowy: end + reflection.",
+ "version": 3,
+ "uwaga": "Cytaty (q) i teksty fragmentow (text) to wlasne tlumaczenie angielskiej Biblii Douay-Rheims (Challoner, domena publiczna), nie przeklad liturgiczny. Reszta to narracja i parafraza. Scena: ref, title, context, text, roles. Postac: id, name, blurb, start, nodes. Wezel: p (akapity), q (cytat), choices, albo end + reflection.",
  "scenes": {
   "2026-10-01": {
    "ref": "Łk 10,1-12",
    "title": "Posłani po dwóch",
+   "context": [
+    "Gdzie jesteśmy: Jezus postanowił iść do Jerozolimy (Łk 9,51). Posyła przed sobą posłańców do miejsc, dokąd sam ma przyjść. Tuż wcześniej jedna z wiosek samarytańskich nie przyjęła Go (Łk 9,52-53).",
+    "Posłanych jest siedemdziesięciu dwóch (w części rękopisów: siedemdziesięciu), po dwóch. Wcześniej Jezus posłał Dwunastu z podobnymi wskazówkami (Łk 9,1-6). Brak sakwy i zapasów oznacza zależność od gościnności tych, do których idą.",
+    "Fragment opisuje dwie możliwe reakcje miasta: przyjęcie, które oznacza jedzenie przy cudzym stole, i odrzucenie, po którym posłani wychodzą na ulice i mówią o pyle. W obu wypadkach wieść jest ta sama: królestwo Boże jest blisko (Łk 10,9.11).",
+    "Co dalej: Jezus woła biada nad miastami, które nie przyjęły znaków (Łk 10,13-15), a w wersecie 17 posłani wracają z radością. To właśnie scena z 3 października."
+   ],
    "roles": [
     {
      "id": "r1",
-     "name": "Jeden z siedemdziesięciu dwóch posłanych",
+     "name": "Jeden z posłanych",
      "blurb": "Idziesz do obcego miasta bez sakwy",
      "start": "n1",
      "nodes": {
       "n1": {
        "p": [
-        "Stoisz z towarzyszem u bram miasta, którego nie znasz. Nie masz sakwy ani zapasowych sandałów. Jezus kazał iść przed Nim, dwójkami, do miejsc, dokąd sam miał przyjść."
+        "Stoisz z towarzyszem przed miastem, do którego sam Jezus jeszcze nie dotarł. Nie macie sakwy, torby ani sandałów na zapas. Po drodze mijacie znajomych, którzy chętnie by zatrzymali was na rozmowę. Wiesz, że żniwo jest wielkie, a robotników mało."
        ],
        "q": {
         "t": "Idźcie: oto posyłam was jak baranki między wilki.",
@@ -22,81 +28,111 @@
        },
        "choices": [
         {
-         "label": "Zapukać do pierwszego domu i powitać pokojem",
+         "label": "Iść prosto do miasta, nie zatrzymując się",
          "to": "n2"
         },
         {
-         "label": "Najpierw poszukać kogoś znajomego",
+         "label": "Zatrzymać się u znajomych na rozmowę",
          "to": "n3"
         }
        ]
       },
       "n2": {
        "p": [
-        "Drzwi otwiera mężczyzna z nieufnym spojrzeniem. Słyszy twoje powitanie, ale nie odpowiada. W środku widać stół z prostym jedzeniem."
+        "Dochodzicie do miasta tuż przed wieczorem. Ulice są pełne obcych twarzy. Masz w pamięci słowa o tym, co powiedzieć w domu, do którego wejdziecie."
        ],
        "choices": [
         {
-         "label": "Zostać i jeść to, co postawią",
-         "to": "e1"
+         "label": "Zapukać do pierwszego domu i powitać pokojem",
+         "to": "n4"
         },
         {
-         "label": "Pójść dalej, skoro nie chce słuchać",
-         "to": "e2"
+         "label": "Poszukać domu, w którym będzie wygodniej",
+         "to": "e3"
         }
        ]
       },
       "n3": {
        "p": [
-        "Znajdujesz kupca, którego kiedyś spotkałeś. Chętnie daje nocleg w wygodnym domu. Obcy dom z nieufnym gospodarzem wygląda przy tym znacznie gorzej."
+        "Rozmowa się przedłuża i do miasta docieracie po zmroku. Znajomy proponuje wam wygodny nocleg u siebie. Wiesz, że w mieście ktoś może na was czekać, choć nikt o tym nie wie."
        ],
        "choices": [
         {
-         "label": "Przyjąć wygodny nocleg u znajomego",
+         "label": "Przyjąć nocleg u znajomych",
          "to": "e3"
         },
         {
-         "label": "Jednak iść do obcego domu",
-         "to": "e1"
+         "label": "Mimo późnej pory pójść do obcego domu",
+         "to": "n4"
         }
        ]
       },
-      "e1": {
+      "n4": {
        "p": [
-        "Siadasz z nieznajomym przy stole. Po jakimś czasie napięcie opada i zaczyna pytać, po co przyszliście. Masz okazję opowiedzieć mu, że Królestwo jest blisko."
+        "Drzwi otwiera mężczyzna, który słucha uważnie, choć ostrożnie. Mówisz: Pokój temu domowi. W jego twarzy widać, że ktoś to usłyszał. Gospodyni stawia na stole to, co ma w domu."
        ],
        "q": {
         "t": "Do któregokolwiek domu wejdziecie, najpierw mówcie: Pokój temu domowi.",
         "r": "Łk 10,5"
        },
-       "end": "Koniec sceny. Ścieżka: gościnność przyjęta bez wybierania.",
-       "reflection": "Jezus każe posłanym zostać w domu, który ich przyjmie, i jeść to, co podadzą (Łk 10,7-8). Ty zostałeś przy stole z kimś, kto dopiero się otwierał. Co trudniej przyjąć: gościnność innych czy własną zależność od niej?"
+       "choices": [
+        {
+         "label": "Zostać w tym domu i jeść to, co postawią",
+         "to": "n5"
+        },
+        {
+         "label": "Przejść do domu zamożniejszego sąsiada",
+         "to": "e3"
+        }
+       ]
+      },
+      "n5": {
+       "p": [
+        "Mijają dni. Mieszkańcy pytają o chorych w domu obok, a wy mówicie, że królestwo Boże przybliżyło się do nich. Ale w następnym mieście, do którego trafiacie, nikt nie otwiera drzwi."
+       ],
+       "choices": [
+        {
+         "label": "Wyjść na ulice i powiedzieć słowa o pyle, z wieścią o bliskim Królestwie",
+         "to": "e1"
+        },
+        {
+         "label": "Odejść w milczeniu, bez słowa",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Stajesz na ulicy i mówisz to, co Jezus kazał powiedzieć tym, którzy nie przyjmują. Nie przeklinasz miasta, tylko oznajmiasz, że Królestwo jest blisko."
+       ],
+       "end": "Koniec sceny. Ścieżka: wierne świadectwo mimo odrzucenia.",
+       "reflection": "Instrukcja z Łk 10,10-11 jest paradoksalna: gest strząśnięcia pyłu ma ton ostrzeżenia, ale kończy się wieścią, że Królestwo Boże jest blisko. Odrzucenie nie unieważnia orędzia i nie robi z posłańca sędziego. Zwróć uwagę na kontekst: tuż wcześniej Jezus sam doświadczył odmowy w wiosce samarytańskiej (Łk 9,53), a uczniowie pytali, czy mają wezwać ogień z nieba (Łk 9,54). Co zmieniłoby się w twoim świadectwie, gdybyś nie potrzebował, by miasto przyznało ci rację?"
       },
       "e2": {
        "p": [
-        "Odchodzisz bez żalu i bez zgorzknienia. Pokój, który niosłeś, nie przepadł; po prostu nie znalazł tam jeszcze miejsca. Przed wami jest jeszcze wiele drzwi."
+        "Odchodzisz bez słowa. Nikt cię nie wypędził, ale nikt też nie dowiedział się, po co przyszedłeś."
        ],
-       "end": "Koniec sceny. Ścieżka: odejście bez urazy.",
-       "reflection": "Gdy miasto nie przyjmuje, Jezus każe odejść, ale z wieścią, że Królestwo jest blisko (Łk 10,10-11). Ty odszedłeś bez urazy. Czy potrafisz odejść od odrzucenia, nie zabierając ze sobą żalu?"
+       "end": "Koniec sceny. Ścieżka: milczące odejście.",
+       "reflection": "W Łk 10,10-11 odrzucenie nie kończy się ciszą: posłani wychodzą na ulice i mówią, że Królestwo jest blisko. Milczenie chroni przed upokorzeniem, ale zostawia miasto bez wieści, z którą ktoś został posłany przed Jezusa. Odrzucenie często boli bardziej, niż chcemy przyznać, a cisza bywa jego śladem. Co musiałoby się w tobie wydarzyć, żebyś mógł powiedzieć te słowa bez gniewu?"
       },
       "e3": {
        "p": [
-        "Noc jest spokojna, ale rano czujesz, że ominęło cię coś, po co właściwie szedłeś. Znajomy słucha uprzejmie i na tym się kończy."
+        "Przyjmujesz wygodniejsze miejsce. Rano czujesz, że coś z misji zostało w domu, do którego nie zapukałeś."
        ],
-       "end": "Koniec sceny. Ścieżka: wygoda zamiast spotkania.",
-       "reflection": "Posłani mają nie szukać wygody ani nie przechodzić z domu do domu (Łk 10,7). Wybrałeś znajomego, bo był łatwiejszy. Co mogłoby się wydarzyć, gdybyś jednak zapukał do obcego?"
+       "end": "Koniec sceny. Ścieżka: wygoda zamiast powierzenia się.",
+       "reflection": "Jezus mówi: zostańcie w domu, który was przyjmie, jedzcie to, co podadzą, i nie przechodźcie z domu do domu (Łk 10,7). Posłani nie wybierają gościny, tylko ją przyjmują. Szukanie lepszego kąta wygląda praktycznie, ale może znaczyć, że misja zaczyna opierać się na twoich zabezpieczeniach, a nie na zaufaniu. W jakich sprawach wolisz mieć plan zapasowy zamiast powierzyć się cudzej gościnności?"
       }
      }
     },
     {
      "id": "r2",
      "name": "Gospodarz w mieście",
-     "blurb": "Mieszkaniec, do którego pukają dwaj obcy",
+     "blurb": "Do twoich drzwi pukają dwaj obcy",
      "start": "n1",
      "nodes": {
       "n1": {
        "p": [
-        "Wieczorem pukają dwaj obcy ludzie w zakurzonych płaszczach. Nie mają sakwy ani zapasów. Zanim zdążysz zapytać, kim są, jeden z nich mówi coś, czego nikt ci dawno nie powiedział."
+        "Wieczorem pukają do twoich drzwi dwaj obcy w zakurzonych płaszczach. Nie mają sakwy ani zapasów. Zanim zdążysz zapytać, kim są, jeden z nich mówi: Pokój temu domowi."
        ],
        "q": {
         "t": "Do któregokolwiek domu wejdziecie, najpierw mówcie: Pokój temu domowi.",
@@ -104,28 +140,65 @@
        },
        "choices": [
         {
-         "label": "Otworzyć szerzej i zaprosić do stołu",
+         "label": "Przyjąć ich bez pytań",
+         "to": "n2"
+        },
+        {
+         "label": "Zapytać, kim są i skąd przyszli",
+         "to": "n3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Mówią, że zostali posłani przed Jezusem, do każdego miejsca, dokąd sam ma przyjść. Nie mają niczego na dowód swoich słów. W mieście krąży wiele opowieści o wędrownych prorokach."
+       ],
+       "choices": [
+        {
+         "label": "Zaprosić ich do środka",
+         "to": "n2"
+        },
+        {
+         "label": "Odprawić ich z uprzejmością",
+         "to": "e2"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Siedzicie przy stole, a oni jedzą to, co masz. Nie narzekają na prostotę i nie szukają lepszego miejsca. Pytają, czy w okolicy są chorzy, i mówią, że królestwo Boże jest blisko."
+       ],
+       "choices": [
+        {
+         "label": "Zaprosić sąsiadów, żeby posłuchali",
          "to": "e1"
         },
         {
-         "label": "Zostawić drzwi uchylone i słuchać dalej",
-         "to": "e2"
+         "label": "Zatrzymać tę wieść dla siebie",
+         "to": "e3"
         }
        ]
       },
       "e1": {
        "p": [
-        "Dzielisz z nimi to, co masz w domu. Rozmowa trwa długo, a rano wiesz, że ta noc coś w tobie zmieniła."
+        "Rano w twoim domu jest więcej ludzi niż wieczorem. Obcy mówią o królestwie Bożym, a niektórzy sąsiedzi zostają, żeby słuchać."
        ],
-       "end": "Koniec sceny. Ścieżka: gościnność.",
-       "reflection": "Posłani niosą pokój i wchodzą do domu, który ich przyjmie (Łk 10,5-6). Ty otworzyłeś drzwi na tyle, by pokój mógł spocząć. Kogo ostatnio przyjąłeś, choć nie miał nic do zaoferowania?"
+       "end": "Koniec sceny. Ścieżka: pokój, który spoczął.",
+       "reflection": "Posłani mają najpierw powiedzieć: Pokój temu domowi, a jeśli jest tam syn pokoju, spocznie na nim ich pokój (Łk 10,5-6). Pokój nie jest narzucany: zależy od tego, czy dom go przyjmie. Odwróciła się zwykła rola gościnności, bo to ubodzy posłani są darem dla ciebie, a ty dajesz im dach. W jakiej sprawie w twoim życiu pokój czeka, aż otworzysz drzwi?"
       },
       "e2": {
        "p": [
-        "Słuchasz przez szparę. Obcy nie naciskają, mówią o bliskim Królestwie i idą dalej. Zostaje ci niepokój, że przepuściłeś coś ważnego."
+        "Drzwi się zamykają, a w domu zostaje spokój, ale i pustka. Przez całą noc masz w uszach to jedno słowo, które usłyszałeś na progu."
        ],
-       "end": "Koniec sceny. Ścieżka: ostrożność.",
-       "reflection": "Pokój, który nie zostaje przyjęty, wraca do tych, którzy go przynieśli (Łk 10,6). Ty słuchałeś przez szparę i niczego nie rozstrzygnąłeś. Czego potrzebowałbyś, żeby otworzyć szerzej?"
+       "end": "Koniec sceny. Ścieżka: ostrożność, która zamyka.",
+       "reflection": "Jezus zakłada, że pokój, który nie zostanie przyjęty, wróci do tych, którzy go przynieśli (Łk 10,6). Posłani niczego nie tracą, ale dom zostaje bez daru, którego nie rozpoznał. Ostrożność wobec obcych bywa rozsądna i Ewangelia jej nie potępia, tylko wskazuje cenę zamknięcia. Jaki jest twój pierwszy odruch: otworzyć czy zasunąć rygiel?"
+      },
+      "e3": {
+       "p": [
+        "Posłani odchodzą rano, a sąsiedzi nigdy nie dowiedzieli się, kto u ciebie nocował."
+       ],
+       "end": "Koniec sceny. Ścieżka: pokój zatrzymany dla siebie.",
+       "reflection": "Wieść niesiona przez posłanych dotyczy całego miasta, a nie tylko jednego domu (Łk 10,8-9). Pokój, który spoczął na domu, ma się stać udziałem chorych i potrzebujących wokół. Zatrzymanie go dla siebie jest zrozumiałe, bo nie każdy chce wystawiać dom na ciekawość sąsiadów, ale to nie jest odpowiedź na słowo o bliskim Królestwie. Czym chętnie podzieliłbyś się z innymi, gdyby nie obawa przed oceną?"
       }
      }
     }
@@ -183,32 +256,76 @@
   },
   "2026-10-02": {
    "ref": "Mt 18,1-5.10",
-   "title": "Kto jest największy",
+   "title": "Kto jest większy",
+   "context": [
+    "Gdzie jesteśmy: Galilea, Kafarnaum. Jezus po raz drugi zapowiedział swoją mękę (Mt 17,22-23). Według Ewangelii Marka uczniowie po drodze spierali się, kto jest największy (Mk 9,33-34). Mateusz pomija tę kłótnię i zaczyna od pytania: „Kto jest większy w królestwie niebieskim?”",
+    "Dziecko, które Jezus stawia pośrodku, jest obrazem kogoś bez pozycji i bez osiągnięć. Jezus nie mówi, że uczniowie mają być dziecinni, tylko że mają się zmienić (nawrócić) i uniżyć jak ono.",
+    "Werset 10 jest podstawą dla wspomnienia świętych Aniołów Stróżów, które Kościół obchodzi 2 października. Nie jest to opis anielskiej techniki opieki, tylko ostrzeżenie: nie gardźcie małymi, bo ich sprawa jest u Ojca.",
+    "Co dalej: w wersetach 6-9 Jezus mówi o zgorszeniu małych, w 12-14 o zagubionej owcy („nie jest wolą waszego Ojca, żeby zginął jeden z tych małych”), a w 15-35 o upomnieniu i przebaczaniu we wspólnocie."
+   ],
    "roles": [
     {
      "id": "r1",
      "name": "Uczeń w kręgu Dwunastu",
-     "blurb": "Jesteś w kręgu uczniów, którzy się kłócili",
+     "blurb": "Spierałeś się po drodze o pierwszeństwo",
      "start": "n1",
      "nodes": {
       "n1": {
        "p": [
-        "Po drodze kłóciliście się, kto z was będzie pierwszy. Teraz Jezus przywołuje małe dziecko i stawia je pośrodku. Wszyscy milkną."
+        "Po drodze spierałeś się z innymi, kto z was jest największy. Teraz stoicie w domu, a ktoś z grupy pyta Jezusa wprost: kto jest większy w królestwie niebieskim? Ty też chciałbyś to wiedzieć."
        ],
+       "q": {
+        "t": "Kto, jak sądzisz, jest większy w królestwie niebieskim?",
+        "r": "Mt 18,1"
+       },
        "choices": [
         {
-         "label": "Podejść bliżej dziecka",
+         "label": "Podejść razem z innymi i słuchać",
          "to": "n2"
         },
         {
-         "label": "Cofnąć się, bo jest ci wstyd",
+         "label": "Zostać z tyłu, bo wstyd ci za kłótnię",
          "to": "n3"
         }
        ]
       },
       "n2": {
        "p": [
-        "Dziecko patrzy na ciebie bez lęku i bez żadnych ocen. Nie wie nic o waszych sporach."
+        "Jezus przywołuje małe dziecko i stawia je pośrodku was. Mówi, że jeśli się nie nawrócicie i nie staniecie się jak dzieci, nie wejdziecie do królestwa niebieskiego. To zdanie nie brzmi jak odpowiedź na twoje pytanie."
+       ],
+       "q": {
+        "t": "Jeśli się nie nawrócicie i nie staniecie się jak dzieci, nie wejdziecie.",
+        "r": "Mt 18,3"
+       },
+       "choices": [
+        {
+         "label": "Zapytać, co znaczy nawrócić się",
+         "to": "e2"
+        },
+        {
+         "label": "Spojrzeć na dziecko i zastanowić się, co ono ma, a ty nie",
+         "to": "n4"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Stoisz z tyłu, ale słyszysz każde słowo. Jezus stawia dziecko pośrodku i mówi o nawróceniu. Ktoś obok szepcze, że to było o was wszystkich, a najbardziej o tych, którzy najgłośniej się kłócili."
+       ],
+       "choices": [
+        {
+         "label": "Podejść bliżej i przyznać się do kłótni",
+         "to": "e3"
+        },
+        {
+         "label": "Zostać z tyłu, udając, że to nie o tobie",
+         "to": "n4"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jezus mówi, że kto się uniży jak to dziecko, ten jest większy, a kto przyjmie jedno takie dziecko w jego imieniu, przyjmuje Jego. Dodaje, żeby nie gardzić żadnym z małych, bo ich aniołowie w niebie zawsze oglądają oblicze Ojca."
        ],
        "q": {
         "t": "Ktokolwiek więc uniży się jak to dziecko, ten jest większy w królestwie niebieskim.",
@@ -216,62 +333,62 @@
        },
        "choices": [
         {
-         "label": "Przykucnąć do jego wzrostu",
+         "label": "Wziąć dziecko na ręce i przyjąć je",
          "to": "e1"
         },
         {
-         "label": "Zapytać Jezusa, co to znaczy",
-         "to": "e2"
-        }
-       ]
-      },
-      "n3": {
-       "p": [
-        "Stoisz z tyłu. Ktoś obok szepcze, że to było o tobie. Wiesz, że miał rację."
-       ],
-       "choices": [
-        {
-         "label": "Przyznać się, że kłóciłeś się najgłośniej",
-         "to": "e3"
-        },
-        {
-         "label": "Zapytać Jezusa, co to znaczy",
+         "label": "Zastanowić się, kogo ty w grupie uważasz za małego",
          "to": "e2"
         }
        ]
       },
       "e1": {
        "p": [
-        "Dziecko uśmiecha się i podaje ci jakiś kamyk. Przez moment nie myślisz, kto jest pierwszy."
+        "Dziecko nie wie, że stało się przykładem dla dorosłych mężczyzn. Trzymasz je, a ono po prostu patrzy na ciebie."
        ],
-       "end": "Koniec sceny. Ścieżka: stać się małym.",
-       "reflection": "Jezus stawia dziecko pośrodku i mówi o uniżeniu (Mt 18,2-4). Ty zniżyłeś się do jego wzrostu. Co w twojej codzienności wymaga takiego zniżenia?"
+       "end": "Koniec sceny. Ścieżka: przyjęcie małego.",
+       "reflection": "Jezus nie każe uczniom rozważać, jak być dzieckiem, tylko przyjąć jedno takie dziecko w Jego imię (Mt 18,5). Wielkość, o którą pytali uczniowie, okazuje się zależna od uniżenia i od tego, jak traktują tych, którzy nic nie mogą im dać. Zwróć uwagę, że w Mt 18,6-14 Jezus kontynuuje ten wątek: małych nie wolno gorszyć ani gardzić nimi, bo nie jest wolą Ojca, żeby ktokolwiek z nich zginął. Kogo w twoim otoczeniu przyjmujesz tylko wtedy, gdy ci się to opłaca?"
       },
       "e2": {
        "p": [
-        "Jezus nie tłumaczy długo. Mówi o przyjęciu takiego dziecka jak przyjęcia Jego samego. Zostaje ci coś, nad czym będziesz myśleć całą drogę."
+        "Pytanie Jezusa o wielkość zostało w tobie nierozwiązane. Wiesz tylko, że odpowiedź nie leży tam, gdzie jej szukałeś."
        ],
        "end": "Koniec sceny. Ścieżka: pytanie zamiast odpowiedzi.",
-       "reflection": "Uczniowie pytają, kto jest większy, a odpowiedź przychodzi w postaci dziecka, nie definicji (Mt 18,1-4). Ty zapytałeś Jezusa wprost. Z jakim pytaniem zostajesz po tej odpowiedzi?"
+       "reflection": "Uczniowie pytają, kto jest większy, a odpowiedź przychodzi w postaci dziecka, a nie definicji (Mt 18,1-4). Nawrócenie z wersetu 3 oznacza zmianę kierunku, a nie tylko korektę postawy. Zostać z pytaniem jest czasem uczciwsze niż szybko przyjąć odpowiedź, która nic nie kosztuje. Z jakim jeszcze nierozwiązanym pytaniem o własną wielkość żyjesz?"
       },
       "e3": {
        "p": [
-        "Mówisz to półgłosem, ale Jezus słyszy. Nie ma w Jego twarzy wyrzutu, tylko uwaga. Pierwszy raz od rana jest ci lżej."
+        "Mówisz to cicho, ale Jezus słyszy. W Jego twarzy nie ma wyrzutu, tylko uwaga."
        ],
-       "end": "Koniec sceny. Ścieżka: przyznanie się.",
-       "reflection": "Uczniowie spierali się o pierwszeństwo, a Jezus mówi o nawróceniu i stawaniu się jak dzieci (Mt 18,3). Ty przyznałeś się do swojego udziału w sporze. Co dało ci to uczciwe nazwanie?"
+       "end": "Koniec sceny. Ścieżka: przyznanie się do sporu.",
+       "reflection": "Ewangelia Marka mówi, że uczniowie milczeli, gdy Jezus zapytał, o czym rozmawiali po drodze (Mk 9,34). Ty pierwszy przyznałeś się do sporu, co w tej grupie było rzadkością. Uniżenie, o którym mówi Mt 18,4, nie jest udawaniem, że nie chcemy być ważni, tylko uczciwym nazwaniem tego, że chcemy. Co zmienia się w relacjach, gdy zamiast bronić swojej pozycji, ktoś pierwszy powie prawdę?"
       }
      }
     },
     {
      "id": "r2",
      "name": "Dziecko pośrodku",
-     "blurb": "To ty zostajesz postawiony przed dorosłymi",
+     "blurb": "To ciebie Jezus stawia przed dorosłymi",
      "start": "n1",
      "nodes": {
       "n1": {
        "p": [
-        "Ktoś bierze cię za rękę i prowadzi na środek kręgu mężczyzn. Wszyscy patrzą na ciebie, a ty nie wiesz dlaczego. Rozpoznajesz tylko ciepłą dłoń Jezusa na ramieniu."
+        "Ktoś przywołuje cię i prowadzi na środek kręgu dorosłych mężczyzn. Wszyscy patrzą na ciebie, a ty nie wiesz dlaczego. Czujesz dłoń Jezusa na ramieniu."
+       ],
+       "choices": [
+        {
+         "label": "Spojrzeć na Jezusa",
+         "to": "n2"
+        },
+        {
+         "label": "Spojrzeć na uczniów",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus patrzy na ciebie spokojnie. Mówi do dorosłych, że kto przyjmie jedno takie dziecko w Jego imieniu, przyjmuje Jego. Nie wszystko z tego rozumiesz, ale rozumiesz, że chodzi o ciebie."
        ],
        "q": {
         "t": "A kto przyjmie jedno takie dziecko w moim imieniu, mnie przyjmuje.",
@@ -279,28 +396,50 @@
        },
        "choices": [
         {
-         "label": "Uśmiechnąć się do kogoś w kręgu",
+         "label": "Oprzeć się o Niego",
          "to": "e1"
         },
         {
-         "label": "Schować się za Jezusem",
+         "label": "Szukać wzrokiem kogoś ze swoich bliskich",
          "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Twarze uczniów są poważne. Jeden z nich wygląda na zawstydzonego, inny na zirytowanego. Nikt nie uśmiecha się do ciebie."
+       ],
+       "choices": [
+        {
+         "label": "Uśmiechnąć się do tego zawstydzonego",
+         "to": "e1"
+        },
+        {
+         "label": "Schować się za Jezusa",
+         "to": "e3"
         }
        ]
       },
       "e1": {
        "p": [
-        "Jeden z mężczyzn odwzajemnia uśmiech, trochę niezgrabnie. Czujesz, że zniknęło napięcie, którego nie umiałbyś nazwać."
+        "Nie potrzebujesz słów, by rozumieć, że jesteś bezpieczny. Ktoś z dorosłych odwzajemnia uśmiech, niezgrabnie, jakby uczył się go na nowo."
        ],
        "end": "Koniec sceny. Ścieżka: ufność.",
-       "reflection": "Kto przyjmie jedno takie dziecko w imię Jezusa, przyjmuje Jego (Mt 18,5). Ty uśmiechnąłeś się do kogoś w kręgu dorosłych. Kogo dziś możesz przyjąć tak, jakby nie miał nic do pokazania?"
+       "reflection": "W scenie to dziecko nie robi nic, co zasługiwałoby na nagrodę, a mimo to jest przykładem dla uczniów (Mt 18,2-4). Ufność dziecka nie jest zasługą, tylko sposobem życia z darem, którego się nie wypracowało. Nawrócenie z Mt 18,3 oznacza dla dorosłych powrót do takiego sposobu przyjmowania. W jakich sprawach trudno ci przyjąć coś, czego nie zdobyłeś sam?"
       },
       "e2": {
        "p": [
-        "Jezus nie odsuwa cię i nie popycha do przodu. Stoisz tak, bezpieczny, a dorośli milkną i słuchają."
+        "Wzrokiem odnajdujesz kogoś, kogo znasz, i wiesz, że masz do kogo wrócić."
+       ],
+       "end": "Koniec sceny. Ścieżka: przynależność.",
+       "reflection": "Jezus mówi, że aniołowie małych zawsze oglądają oblicze Ojca (Mt 18,10). Tradycja wiąże to z ideą szczególnej opieki, ale sam tekst mówi przede wszystkim o wadze, jaką mali mają dla Boga. Poczucie, że ktoś nas widzi i zna, jest pierwszym warunkiem odwagi. Czyje spojrzenie daje tobie poczucie przynależności?"
+      },
+      "e3": {
+       "p": [
+        "Stoisz za Jezusem, a dorośli milkną i słuchają. Nikt nie odważy się cię stamtąd wyciągnąć."
        ],
        "end": "Koniec sceny. Ścieżka: schronienie.",
-       "reflection": "Jezus każe nie gardzić małymi, bo ich aniołowie zawsze oglądają oblicze Ojca (Mt 18,10). Ty schowałeś się za Nim i byłeś bezpieczny. Kogo ty możesz osłonić?"
+       "reflection": "Werset 10 ostrzega przed pogardą wobec małych. Dziecko chowające się za Jezusem pokazuje, że bycie małym wymaga schronienia i że ktoś musi je osłaniać. Mt 18,6-7 mówi surowo o tych, którzy gorszą małych, czyli stawiają im przeszkody na drodze do Boga. Kogo ty możesz dziś osłonić i czyje schronienie bywa dla ciebie niewygodne?"
       }
      }
     }
@@ -335,20 +474,26 @@
   "2026-10-03": {
    "ref": "Łk 10,17-24",
    "title": "Powrót z radością",
+   "context": [
+    "Gdzie jesteśmy: posłani po dwóch wracają do Jezusa (Łk 10,17). Przed chwilą Jezus mówił o miastach, które nie przyjęły znaków (Łk 10,13-15), i o sobie jako tym, kto jest wysyłającym (10,16).",
+    "Obraz szatana spadającego jak błyskawica (Łk 10,18) i węży oraz skorpionów pod stopami (10,19) bywa czytany jako obraz zwycięstwa nad złem, którego znakiem są uzdrowienia i wyzwolenia dokonywane przez posłanych. Sam Jezus przesuwa akcent z władzy na przynależność: imiona zapisane w niebie (10,20).",
+    "Wersety 21-22 to jeden z nielicznych momentów, w których Łukasz pokazuje Jezusa radującego się w Duchu Świętym. Objawienie jest dane „małym”, nie „mądrym i roztropnym”, a poznanie Ojca i Syna jest wzajemne.",
+    "Co dalej: w wersecie 25 pojawia się uczony w Prawie z pytaniem o życie wieczne. To już scena z 5 października."
+   ],
    "roles": [
     {
      "id": "r1",
-     "name": "Jeden z siedemdziesięciu dwóch wracających",
-     "blurb": "Wracasz z misji pełen radości",
+     "name": "Jeden z posłanych wracających",
+     "blurb": "Wracasz pełen radości z misji",
      "start": "n1",
      "nodes": {
       "n1": {
        "p": [
-        "Wracacie podekscytowani. Opowiadasz wszystkim, że nawet złe duchy ustępowały w Jego imieniu. Jezus słucha, a potem mówi coś, czego się nie spodziewałeś."
+        "Wracacie podekscytowani. Opowiadasz wszystkim, że nawet złe duchy ustępowały w imieniu Jezusa. Jezus słucha, a potem mówi, że widział szatana spadającego z nieba jak błyskawicę."
        ],
        "q": {
-        "t": "Nie radujcie się z tego, że duchy są wam poddane, ale z tego, że imiona wasze są zapisane w niebie.",
-        "r": "Łk 10,20"
+        "t": "Widziałem szatana spadającego z nieba jak błyskawica.",
+        "r": "Łk 10,18"
        },
        "choices": [
         {
@@ -356,61 +501,80 @@
          "to": "n2"
         },
         {
-         "label": "Zamilknąć i posłuchać",
+         "label": "Zapytać, co znaczą te słowa",
          "to": "n3"
         }
        ]
       },
       "n2": {
        "p": [
-        "Opowieść płynie szybko, a ty słyszysz w niej coraz więcej siebie. W pewnej chwili orientujesz się, że Jezus dawno przestał patrzeć na ciebie, a patrzy gdzieś dalej."
+        "Mówisz coraz szybciej i zaczynasz słyszeć w opowieści więcej siebie niż Jezusa. Jezus mówi, że dał wam moc nad wężami, skorpionami i całą potęgą nieprzyjaciela. Po chwili dodaje coś, czego się nie spodziewałeś."
        ],
+       "q": {
+        "t": "Radujcie się z tego, że imiona wasze są zapisane w niebie.",
+        "r": "Łk 10,20"
+       },
        "choices": [
         {
-         "label": "Zapytać, co znaczy zapisane imię",
-         "to": "e1"
+         "label": "Zapytać, w czym więc mamy się radować",
+         "to": "n4"
         },
         {
-         "label": "Wrócić do opowieści",
+         "label": "Zamilknąć, zawstydzony",
          "to": "e2"
         }
        ]
       },
       "n3": {
        "p": [
-        "W ciszy widzisz, jak Jezus raduje się i dziękuje Ojcu, że to, co ukryte, objawia prostym. Nikt Mu nie przerywa."
+        "Jezus wyjaśnia, że to, co zobaczyliście, jest znakiem czegoś większego. Mówi o mocy, którą wam dał, a potem zmienia temat tak, że nie możesz już mówić o sukcesie. Mówi o imionach zapisanych w niebie."
        ],
        "choices": [
         {
-         "label": "Zostać w tej radości razem z Nim",
+         "label": "Zapytać, co to znaczy mieć imię zapisane w niebie",
+         "to": "n4"
+        },
+        {
+         "label": "Zamilknąć i zostać z tym zdaniem",
+         "to": "e2"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jezus rozradowuje się w Duchu Świętym i mówi: Wysławiam Cię, Ojcze, że ukryłeś to przed mądrymi i roztropnymi, a objawiłeś małym. Mówi, że nikt nie wie, kim jest Syn, tylko Ojciec, ani kim jest Ojciec, tylko Syn i ten, komu Syn zechce go objawić."
+       ],
+       "choices": [
+        {
+         "label": "Dołączyć do tej radości i podziękować",
          "to": "e3"
         },
         {
-         "label": "Zapytać, kim są ci prości",
+         "label": "Zapytać, kim są ci mali",
          "to": "e1"
         }
        ]
       },
       "e1": {
        "p": [
-        "Odpowiedź jest krótka i niewygodna: ważne nie jest to, co potrafisz, tylko komu należysz. Idziesz za Nim dalej, z jednym pytaniem mniej."
+        "Odpowiedź jest krótka: mali to ci, którym Ojciec chce coś objawić i którzy tego nie zawdzięczają sobie. Idziesz za Nim dalej z jednym pytaniem mniej i jednym nowym."
        ],
        "end": "Koniec sceny. Ścieżka: pytanie o tożsamość.",
-       "reflection": "Jezus mówi, by radować się nie z posłuszeństwa duchów, ale z tego, że imiona są zapisane w niebie (Łk 10,20). Ty zapytałeś, co to znaczy. Gdzie szukasz swojej tożsamości: w osiągnięciach czy w przynależności?"
+       "reflection": "Jezus przesuwa radość z tego, co posłani potrafią, na to, kim są: ich imiona są zapisane w niebie (Łk 10,20). Tożsamość oparta na wynikach jest krucha, bo zależy od tego, jak nam idzie. Tożsamość oparta na przynależności nie zależy od skutków misji. Zwróć uwagę, że zaraz potem Jezus mówi o objawieniu małym (10,21), a więc nie o tych, którzy się wykazali. Na czym opierasz swoje poczucie, że jesteś kimś?"
       },
       "e2": {
        "p": [
-        "Kończysz opowieść. Ktoś poklepuje cię po ramieniu. Zostaje ci niejasne poczucie, że umknęło ci coś ważniejszego niż sukces."
+        "Zostajesz z cichym wstydem, że radość z sukcesu zagłuszyła cię bardziej, niż chciałbyś przyznać. W Jego słowach nie ma wyrzutu, jest tylko inna miara."
        ],
-       "end": "Koniec sceny. Ścieżka: radość z własnych dokonań.",
-       "reflection": "Posłani wracają z radością z sukcesu, a Jezus kieruje ich ku czemuś głębszemu (Łk 10,17-20). Ty wróciłeś do opowieści o sukcesie. Co w tej radości jest prawdziwe, a co jest tylko dumą?"
+       "end": "Koniec sceny. Ścieżka: cicha korekta radości.",
+       "reflection": "Jezus nie odbiera posłanym radości ani nie umniejsza ich wyzwoleń. Mówi tylko, że ta radość nie jest najgłębsza (Łk 10,20). Wstyd w tej scenie może być początkiem przesunięcia ciężaru z siebie na Dawcę. Jak odróżniasz w sobie radość z tego, co zrobiłeś, od radości z tego, komu należysz?"
       },
       "e3": {
        "p": [
-        "Nie mówisz nic. Radość jest cicha i nie potrzebuje opowieści. To, co zobaczyli wasi przodkowie z daleka, ty miałeś przed oczami."
+        "Jezus nie przerywa. Radość, w której stoisz, jest cicha i nie potrzebuje już opowieści o wydarzeniach."
        ],
        "end": "Koniec sceny. Ścieżka: wspólna radość.",
-       "reflection": "Jezus raduje się w Duchu i dziękuje Ojcu, że objawił to małym (Łk 10,21). Ty zostałeś w tej radości. Kiedy ostatnio cieszyłeś się czymś bez potrzeby opowiadania o tym?"
+       "reflection": "Łukasz pokazuje Jezusa radującego się w Duchu Świętym (Łk 10,21) i dziękującego Ojcu za to, że objawia małym. Radość posłanych zostaje włączona w większą radość: zbawienie nie jest ich dziełem, tylko darem. Taka radość nie potrzebuje porównań z innymi. Kiedy ostatnio cieszyłeś się czymś, nie opowiadając o tym nikomu?"
       }
      }
     },
@@ -422,7 +586,7 @@
      "nodes": {
       "n1": {
        "p": [
-        "Nie byłeś wśród siedemdziesięciu dwóch. Słuchasz ich opowieści, a w głowie masz dwa uczucia: radość i ukłucie zazdrości. Jezus odwraca się nagle do ciebie i do pozostałych."
+        "Nie byłeś wśród siedemdziesięciu dwóch. Słuchasz ich opowieści i czujesz jednocześnie radość i ukłucie zazdrości. Po chwili Jezus odwraca się do was, swoich uczniów, i mówi coś cicho."
        ],
        "q": {
         "t": "Błogosławione oczy, które widzą to, co wy widzicie.",
@@ -431,27 +595,64 @@
        "choices": [
         {
          "label": "Przyznać się do zazdrości",
-         "to": "e1"
+         "to": "n2"
         },
         {
          "label": "Cieszyć się razem z nimi",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Mówisz wprost, że czujesz zazdrość. Jezus nie ocenia i mówi, że wielu proroków i królów pragnęło zobaczyć to, co wy widzicie, i usłyszeć to, co słyszycie, a nie zobaczyli i nie usłyszeli."
+       ],
+       "choices": [
+        {
+         "label": "Zastanowić się, co ty sam widziałeś i słyszałeś",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać, czy jest coś, czego jeszcze nie rozumiesz",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Radość jest prostsza, niż myślałeś. Obserwujesz twarz Jezusa, który dziękuje Ojcu i mówi o małych, którym coś zostało objawione. Nikt nie wypowiada słów, które by cię zraniły."
+       ],
+       "choices": [
+        {
+         "label": "Podziękować razem z Nim",
+         "to": "e3"
+        },
+        {
+         "label": "Zapytać o to, co Syn zechce objawić",
          "to": "e2"
         }
        ]
       },
       "e1": {
        "p": [
-        "Mówisz to cicho. Jezus nie ocenia. Słowa o oczach, które widzą, nagle dotyczą także ciebie."
+        "Przypominasz sobie to, co widziałeś: uzdrowienia, tłumy, słowa, których nie rozumiałeś. Uświadamiasz sobie też, że wielu z tych, którzy kiedyś tego pragnęli, nie dożyło tego, co masz przed oczami."
        ],
-       "end": "Koniec sceny. Ścieżka: szczerość.",
-       "reflection": "Jezus błogosławi oczy, które widzą to, co widzą uczniowie (Łk 10,23). Ty przyznałeś się do zazdrości. Co zmienia się, gdy swoje porównywanie nazwiesz po imieniu?"
+       "end": "Koniec sceny. Ścieżka: wdzięczność zamiast porównań.",
+       "reflection": "Jezus mówi, że wielu proroków i królów pragnęło zobaczyć to, co widzą uczniowie (Łk 10,24). Zazdrość patrzy w bok, na to, co mają inni. Wdzięczność patrzy na to, co zostało nam dane, i widzi, że nie zasłużyliśmy na to bardziej niż inni. Co dziś masz przed oczami, a przestałeś to zauważać?"
       },
       "e2": {
        "p": [
-        "Radość jest prostsza, niż myślałeś. Dziękujesz za to, co sam widziałeś, i przestajesz porównywać."
+        "Pytanie, które zadajesz, zostaje bez odpowiedzi. Rozumiesz tylko, że to, co dzieje się między Ojcem a Synem, objawia się komu chce, nie według zasług."
        ],
-       "end": "Koniec sceny. Ścieżka: wdzięczność.",
-       "reflection": "Wielu proroków i królów pragnęło zobaczyć to, co widzą uczniowie (Łk 10,24). Ty podziękowałeś za to, co widziałeś. Za co dziś możesz podziękować, nie porównując się z innymi?"
+       "end": "Koniec sceny. Ścieżka: pytanie o objawienie.",
+       "reflection": "Werset 22 mówi o poznaniu wzajemnym Ojca i Syna i o tym, że to Syn decyduje, komu je objawić. Nie jest to więc nagroda dla najlepszych, tylko dar, który można tylko przyjąć. Nie wszystko, czego jeszcze nie rozumiesz, jest twoją winą. O co prosisz, zamiast próbować to sobie zasłużyć?"
+      },
+      "e3": {
+       "p": [
+        "Dziękujesz cicho. To jedna z niewielu chwil, kiedy nie porównujesz się z nikim."
+       ],
+       "end": "Koniec sceny. Ścieżka: dziękczynienie.",
+       "reflection": "W Łk 10,21 Jezus raduje się w Duchu i dziękuje Ojcu, że ukrył to przed mądrymi, a objawił małym. Uczniowie, którzy dołączają do tego dziękczynienia, wchodzą w relację Syna z Ojcem, a nie tylko słuchają o niej. Takie dziękczynienie nie wymaga, by wszyscy mieli to samo doświadczenie. Za co dziś mógłbyś podziękować, nie dodając: ale…?"
       }
      }
     }
@@ -497,9 +698,9 @@
    "context": [
     "Gdzie jesteśmy: Jerozolima, ostatni tydzień życia Jezusa. Wjechał do miasta, wypędził kupców ze świątyni, a teraz naucza na dziedzińcu. Arcykapłani i starsi ludu pytają Go, jakim prawem to robi (Mt 21,23).",
     "Ta przypowieść jest drugą z trzech skierowanych do tych samych słuchaczy: wcześniej Jezus opowiada o dwóch synach (Mt 21,28-32), a zaraz potem o uczcie weselnej (Mt 22,1-14).",
-    "Obraz winnicy znali z Księgi Izajasza (Iz 5,1-7), którą Kościół czyta dziś jako pierwsze czytanie. Tam winnicą Pana jest dom Izraela, a Bóg szuka w niej sprawiedliwości. Mur, tłocznia i wieża z przypowieści to ten sam troskliwy obraz.",
+    "Obraz winnicy znali z Księgi Izajasza (Iz 5,1-7), którą Kościół czyta dziś jako pierwsze czytanie. Tam winnicą Pana jest dom Izraela, a Bóg szuka w niej sprawiedliwości, ale znajduje rozlew krwi. Ogrodzenie, tłocznia i wieża z przypowieści to ten sam troskliwy obraz.",
     "Co dalej: według Mt 21,45-46 arcykapłani i faryzeusze rozumieją, że Jezus mówi o nich, ale nie sięgają po Niego z lęku przed tłumem, który uważa Go za proroka.",
-    "Uwaga: słuchaczami są przywódcy świątyni, a nie cały naród. Warto o tym pamiętać, grając tę scenę."
+    "Uwaga: słuchaczami są przywódcy świątyni, a nie cały naród. Kościół odrzuca odczytywanie tej przypowieści jako potępienia Żydów. Warto o tym pamiętać, grając tę scenę."
    ],
    "roles": [
     {
@@ -510,7 +711,7 @@
      "nodes": {
       "n1": {
        "p": [
-        "Winnicę oddano wam w dzierżawę: mur wokół, tłocznia wykopana, wieża stoi. Pan wyjechał i od dawna go nie widzieliście. Z czasem zacząłeś myśleć o tej ziemi jak o swojej. Teraz są zbiory, a na zboczu pojawia się sługa pana po należne owoce."
+        "Winnicę oddano wam w dzierżawę: ogrodzenie, tłocznia i wieża są gotowe, a gospodarz wyjechał. Z czasem zacząłeś myśleć o tej ziemi jak o swojej. Zbliża się czas owoców i na zboczu pojawiają się słudzy pana, którzy mają odebrać jego plon."
        ],
        "choices": [
         {
@@ -518,14 +719,14 @@
          "to": "n2"
         },
         {
-         "label": "Odesłać go z niczym",
+         "label": "Odesłać ich z niczym",
          "to": "n3"
         }
        ]
       },
       "n2": {
        "p": [
-        "Sługa odchodzi z owocami, a koledzy patrzą na ciebie spode łba. Ktoś mruczy, że pan jest daleko i nikt by się nie dowiedział. Ktoś inny, że to dopiero początek takich wizyt."
+        "Słudzy odchodzą z owocami, a koledzy patrzą na ciebie spode łba. Ktoś mruczy, że pan jest daleko i nikt by się nie dowiedział. Ktoś inny, że to dopiero początek takich wizyt."
        ],
        "choices": [
         {
@@ -540,7 +741,7 @@
       },
       "n3": {
        "p": [
-        "Sługa wraca z pustymi rękami, a pan posyła następnych, więcej niż poprzednio. Rolnicy ich biją, jednego zabijają, innego kamienują. Stoisz na skraju tego, co się dzieje."
+        "Rolnicy chwytają sługi: jednego biją, drugiego zabijają, trzeciego kamienują. Pan posyła następnych, więcej niż poprzednio, i z nimi robią to samo. Stoisz na skraju tego, co się dzieje."
        ],
        "choices": [
         {
@@ -555,7 +756,7 @@
       },
       "n4": {
        "p": [
-        "Na końcu pan posyła własnego syna, myśląc, że dla niego znajdą szacunek. Rolnicy widzą go z daleka. Ktoś z nich odzywa się cicho, a reszta słucha."
+        "Na końcu pan posyła własnego syna, myśląc, że go uszanują. Rolnicy widzą go z daleka. Ktoś z nich mówi cicho do reszty, a oni słuchają."
        ],
        "q": {
         "t": "To jest dziedzic: chodźcie, zabijmy go, a będziemy mieć jego dziedzictwo.",
@@ -577,21 +778,21 @@
         "Mówisz głośno to, czego inni wolą nie wypowiadać. Nie wiesz, czy cię posłuchają, ale nie jesteś już cichym wspólnikiem."
        ],
        "end": "Koniec sceny. Ścieżka: odwaga, by się sprzeciwić.",
-       "reflection": "Przypowieść pyta, kto odda właścicielowi owoce winnicy (Mt 21,41). Ty zabrałeś głos tam, gdzie inni milczeli. Gdzie w twoim życiu przychodzi ci mówić, choć to kosztuje?"
+       "reflection": "Jezus pyta swoich słuchaczy: co uczyni pan winnicy z tymi rolnikami? (Mt 21,40). Ich odpowiedź jest surowa, ale nie wiedzą jeszcze, że wydają wyrok na siebie (Mt 21,41.45). Rolnik, który się sprzeciwia, pokazuje, że w przypowieści jest miejsce dla kogoś, kto nie bierze udziału w zawłaszczeniu. To ważne, bo przypowieść nie mówi: wszyscy zawsze zawiodą. Gdzie w twoim życiu przychodzi ci mówić, choć to kosztuje?"
       },
       "e2": {
        "p": [
-        "Milczysz, bo tak jest łatwiej, a samotność w tej grupie wydaje się gorsza niż niesprawiedliwość. Czujesz, że to milczenie coś kosztuje, choć nikt tego nie zauważył."
+        "Milczysz, bo tak jest łatwiej, a samotność w grupie wydaje się gorsza niż niesprawiedliwość. To milczenie coś kosztuje, choć nikt tego nie zauważył."
        ],
        "end": "Koniec sceny. Ścieżka: milczenie z lęku przed samotnością.",
-       "reflection": "Rolnicy chcą zatrzymać winnicę dla siebie (Mt 21,38). Ty milczałeś, żeby nie zostać sam. Jakie milczenie w grupie znasz z własnego doświadczenia?"
+       "reflection": "Rolnicy chcą zatrzymać winnicę dla siebie: to jest sedno ich racjonalizacji (Mt 21,38). Iz 5,7 mówi o winnicy, od której Bóg oczekiwał sprawiedliwości, a znalazł jej przeciwieństwo. Milczenie w grupie nie jest neutralne, bo wzmacnia tych, którzy mówią głośniej. Jakie milczenie w grupie znasz z własnego doświadczenia i komu ono służy?"
       },
       "e3": {
        "p": [
         "Nie uczestniczysz w niczym, ale też niczemu nie zapobiegasz. Wieczorem winnica wygląda tak samo jak zwykle, a ty wiesz, że nic już nie jest takie samo."
        ],
-       "end": "Koniec sceny. Ścieżka: współudział przez milczenie.",
-       "reflection": "Syn przychodzi na końcu, bo ojciec ufa, że go uszanują (Mt 21,37). Ty nic nie powiedziałeś. Co to znaczy współuczestniczyć przez bierność?"
+       "end": "Koniec sceny. Ścieżka: współudział przez bierność.",
+       "reflection": "Syn przychodzi na końcu, bo ojciec ufa, że go uszanują (Mt 21,37). To zdanie pokazuje cierpliwość gospodarza, który wciąż wierzy w drugą szansę mimo dotychczasowych sług. Rolnik, który nic nie mówi, nie jest sprawcą, ale jest częścią układu, który to umożliwia. Co znaczy dla ciebie odpowiedzialność za coś, czego nie zrobiłeś, ale czemu nie przeszkodziłeś?"
       }
      }
     },
@@ -603,7 +804,7 @@
      "nodes": {
       "n1": {
        "p": [
-        "Pan posłał kolejnych sług, więcej niż poprzednio. Znasz drogę pod górę i wiesz, co spotkało pierwszych. Masz jedno polecenie: odebrać owoce, które należą do właściciela."
+        "Pan posłał już sług i nie wrócili z owocami. Teraz posyła kolejnych, więcej niż poprzednio. Znasz drogę pod górę i wiesz, co spotkało pierwszych. Masz jedno polecenie: odebrać owoce, które należą do gospodarza."
        ],
        "choices": [
         {
@@ -618,7 +819,7 @@
       },
       "n2": {
        "p": [
-        "Rolnicy wychodzą ci naprzeciw. Nie wyglądają na ludzi, którzy przyszli ci pomóc. Mur, tłocznia i wieża są tak, jak je zostawiono, a pod nimi stoją ci, którym zostawiono winnicę."
+        "Rolnicy wychodzą ci naprzeciw. Nie wyglądają na ludzi, którzy przyszli ci pomóc. Ogrodzenie, tłocznia i wieża są takie, jak je zostawiono, a pod nimi stoją ci, którym zostawiono winnicę."
        ],
        "choices": [
         {
@@ -648,17 +849,17 @@
       },
       "e1": {
        "p": [
-        "Robisz to, po co przyszedłeś, bez gwarancji, że się uda. Wiesz tylko, że wierność poleceniu to coś, co możesz zrobić, nawet jeśli nie zależy od ciebie reszta."
+        "Robisz to, po co przyszedłeś, bez gwarancji powodzenia. Wiesz tylko, że wierność poleceniu to coś, co możesz zrobić, nawet jeśli nie zależy od ciebie reszta."
        ],
        "end": "Koniec sceny. Ścieżka: wierność posłaniu.",
-       "reflection": "Pan posyła sług jeden raz po drugim, więcej niż poprzednio (Mt 21,34-36). Ty zrobiłeś to, po co cię posłano, bez gwarancji powodzenia. Co w twoim życiu zależy tylko od twojej wierności, a nie od skutku?"
+       "reflection": "Pan posyła sług jeden raz po drugim, nie rezygnując z winnicy (Mt 21,34-36). Wierność sługi nie gwarantuje skutku i przypowieść nie obiecuje, że posłani będą bezpieczni. To właśnie jest jej boleść, bo na drodze posłanych w Biblii często stoi odrzucenie. Co w twoim życiu zależy tylko od twojej wierności, a nie od skutku?"
       },
       "e2": {
        "p": [
-        "Wracasz z ulgą, która szybko ustępuje wstydowi. Pan nie mówi nic, tylko patrzy. W jego spojrzeniu nie ma potępienia, ale wiesz, że winnica wciąż czeka."
+        "Wracasz z ulgą, która szybko ustępuje wstydowi. Pan nie mówi nic, tylko patrzy. W Jego spojrzeniu nie ma potępienia, ale wiesz, że winnica wciąż czeka."
        ],
        "end": "Koniec sceny. Ścieżka: odwrót.",
-       "reflection": "Sługa, który się wycofuje, zostaje z wiedzą o tym, co zostawił (Mt 21,34-36). Ty wróciłeś bez owoców. Co pomogłoby ci następnym razem dojść do końca?"
+       "reflection": "Sługa, który się wycofuje, nie jest w przypowieści potępiony, ale zostaje z wiedzą o tym, co zostawił (Mt 21,34-36). W Biblii strach przed odrzuceniem jest częstym doświadczeniem posłanych (Jr 1,6-8). Powrót z pustymi rękami nie musi zamykać drogi. Co pomogłoby ci następnym razem dojść do końca?"
       }
      }
     },
@@ -685,7 +886,7 @@
       },
       "n2": {
        "p": [
-        "Widzisz twarze starszych, gdy w opowieści pojawia się syn gospodarza i słowo o dziedzictwie. Wyraz ich oczu zmienia się powoli, jakby rozumieli więcej, niż chcą okazać."
+        "Widzisz twarze starszych, gdy w opowieści pojawia się syn gospodarza i słowo o dziedzictwie. Jezus pyta ich, co pan winnicy uczyni z rolnikami. Odpowiadają, że wytraci złych ludzi, a winnicę odda innym. Ich oczy zmieniają się powoli."
        ],
        "choices": [
         {
@@ -700,8 +901,12 @@
       },
       "n3": {
        "p": [
-        "Obok stoi starsza kobieta i szepcze, że to brzmi jak Izajasz: winnicą Pana jest dom Izraela, a Bóg szukał w niej sprawiedliwości. Jezus kończy opowieść słowami o kamieniu, który budowniczowie odrzucili."
+        "Obok stoi starsza kobieta i szepcze, że to brzmi jak Izajasz: winnicą Pana jest dom Izraela, a Bóg szukał w niej sprawiedliwości. Jezus kończy opowieść słowami o kamieniu, który budowniczowie odrzucili, a który stał się głowicą węgła."
        ],
+       "q": {
+        "t": "Kamień, który odrzucili budowniczowie, stał się głowicą węgła.",
+        "r": "Mt 21,42"
+       },
        "choices": [
         {
          "label": "Zapytać ją, co to znaczy dla was",
@@ -718,21 +923,21 @@
         "Odwracasz wzrok, bo patrzenie w ich twarze jest krępujące. Tłum cię osłania, ale pytanie, które padło, zostaje z tobą."
        ],
        "end": "Koniec sceny. Ścieżka: unikanie.",
-       "reflection": "Przywódcy świątyni rozumieją, że przypowieść dotyczy ich (Mt 21,45). Ty odwróciłeś wzrok. Od jakich pytań ty odwracasz oczy?"
+       "reflection": "Przywódcy świątyni rozumieją, że przypowieść dotyczy ich (Mt 21,45). Jezus nie powiedział tego wprost, ale ich własna odpowiedź z wersetu 41 stała się lustrem. Odwracanie wzroku przed takim lustrem jest bardzo ludzkie, bo prawda o sobie zwykle przychodzi z zewnątrz. Od jakich pytań ty odwracasz oczy?"
       },
       "e2": {
        "p": [
-        "Patrzysz uważnie i dopiero po chwili rozumiesz, że przypowieść mówi również do ciebie. Nie tylko do tych, którzy stoją najbliżej Jezusa."
+        "Patrzysz uważnie i dopiero po chwili rozumiesz, że przypowieść mówi również do ciebie, a nie tylko do tych, którzy stoją najbliżej Jezusa."
        ],
        "end": "Koniec sceny. Ścieżka: uważne słuchanie.",
-       "reflection": "Słuchacze sami wydają wyrok w przypowieści (Mt 21,41), nie wiedząc, że mówią o sobie. Ty zrozumiałeś, że przypowieść dotyczy także ciebie. Co z niej mówi właśnie do ciebie?"
+       "reflection": "Słuchacze sami wydają wyrok w przypowieści (Mt 21,41), nie wiedząc, że mówią o sobie. To znany sposób nauczania prorockiego, w którym słuchacz sam osądza opowieść, zanim zorientuje się, że ona go dotyczy. Obserwator, który nie odwraca wzroku, może pierwszy dostrzec, że lustro jest też dla niego. Co z tej przypowieści mówi właśnie do ciebie?"
       },
       "e3": {
        "p": [
         "Kamień odrzucony przez budowniczych stał się kamieniem węgielnym. Znasz te słowa z psalmu, ale jeszcze nigdy nie słyszałeś ich tak blisko. Wychodzisz ze świątyni, powtarzając je w myślach."
        ],
        "end": "Koniec sceny. Ścieżka: kamień węgielny.",
-       "reflection": "Jezus cytuje Psalm: kamień odrzucony przez budowniczych stał się głowicą węgła (Mt 21,42). Ty usłyszałeś to z bliska. Co w twoim życiu było odrzucone, a okazało się fundamentem?"
+       "reflection": "Jezus cytuje Psalm 118: odrzucony kamień staje się głowicą węgła (Mt 21,42). Przypowieść kończy się więc nie samą winą rolników, lecz nadzieją: to, co odrzucone, nie przestaje być fundamentem. Werset 43 mówi o narodzie, który wyda owoce królestwa, a Mateusz używa tu słowa, które wcześniej oznaczało także pogan; interpretacje tego miejsca są różne i warto je omawiać ostrożnie. Co w twoim życiu zostało kiedyś odrzucone, a z czasem okazało się fundamentem?"
       }
      }
     }
@@ -781,6 +986,1277 @@
     {
      "v": "43",
      "t": "Dlatego powiadam wam, że królestwo Boże zostanie wam odebrane i będzie dane narodowi, który wydaje jego owoce."
+    }
+   ]
+  },
+  "2026-10-05": {
+   "ref": "Łk 10,25-37",
+   "title": "Kto jest moim bliźnim",
+   "context": [
+    "Gdzie jesteśmy: Jezus jest w drodze do Jerozolimy. Przed chwilą posłani wrócili z radością (Łk 10,17-24). Teraz pojawia się uczony w Prawie, który wystawia Go na próbę.",
+    "Odpowiedź uczonego łączy dwa przykazania: miłość Boga z Księgi Powtórzonego Prawa (Pwt 6,5) i miłość bliźniego z Księgi Kapłańskiej (Kpł 19,18). Jezus nie dyskutuje z tą odpowiedzią, tylko mówi: czyń. Pytanie „kto jest moim bliźnim?” jest próbą usprawiedliwienia siebie (Łk 10,29).",
+    "Droga z Jerozolimy do Jerycha schodzi stromo w dół, przez pustynny teren. Kapłan i lewita przechodzą po drugiej stronie. Samarytanin należy do ludu, z którym Żydzi mieli napięte relacje (Łk 9,52-53; J 4,9). W przypowieści to on okazuje miłosierdzie.",
+    "Jezus odwraca pytanie: nie pyta, kto jest bliźnim rannego, lecz który z trzech okazał się bliźnim (Łk 10,36). Co dalej: w wersecie 38 Jezus wchodzi do domu Marty, co jest sceną z 6 października."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Uczony w Prawie",
+     "blurb": "Wystawiasz Jezusa na próbę",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Wstajesz, żeby zadać pytanie, które zna cały dom nauki: co mam czynić, aby posiąść życie wieczne? Chcesz sprawdzić, jak ten nauczyciel z Galilei na nie odpowie. On odpowiada pytaniem: co jest napisane w Prawie i jak czytasz?"
+       ],
+       "choices": [
+        {
+         "label": "Odpowiedzieć z Prawa: miłować Boga i bliźniego",
+         "to": "n2"
+        },
+        {
+         "label": "Odpowiedzieć kolejnym pytaniem, żeby się zabezpieczyć",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Cytujesz przykazania z Księgi Powtórzonego Prawa i Kapłańskiej. Jezus mówi: dobrze odpowiedziałeś, to czyń, a będziesz żył. Czujesz, że to była zbyt łatwa odpowiedź na takie pytanie."
+       ],
+       "q": {
+        "t": "Dobrze odpowiedziałeś: to czyń, a będziesz żył.",
+        "r": "Łk 10,28"
+       },
+       "choices": [
+        {
+         "label": "Zapytać dalej: a kto jest moim bliźnim?",
+         "to": "n3"
+        },
+        {
+         "label": "Zostać z tą odpowiedzią i nic więcej nie pytać",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Pytasz: a kto jest moim bliźnim? Chcesz się usprawiedliwić, bo wiesz, że zakres odpowiedzi może wiele kosztować. Jezus opowiada o człowieku z Jerozolimy do Jerycha, o zbójcach, kapłanie, lewicie i Samarytaninie. Pod koniec pyta ciebie: który z tych trzech był bliźnim?"
+       ],
+       "q": {
+        "t": "Który z tych trzech, według ciebie, był bliźnim tego, który wpadł w ręce zbójców?",
+        "r": "Łk 10,36"
+       },
+       "choices": [
+        {
+         "label": "Odpowiedzieć wprost: ten, który okazał miłosierdzie",
+         "to": "e1"
+        },
+        {
+         "label": "Odpowiedzieć wymijająco, bez słowa o Samarytaninie",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Mówisz: ten, który okazał mu miłosierdzie. Jezus odpowiada: idź, i ty czyń podobnie. Wychodzisz z tym zdaniem, które nie jest już pytaniem."
+       ],
+       "end": "Koniec sceny. Ścieżka: idę i czynię.",
+       "reflection": "Zwróć uwagę na zmianę kierunku pytania: ty pytałeś, kogo musisz kochać, a Jezus pyta, kto okazał się bliźnim (Łk 10,36). Bliźnim nie jest ktoś, kogo wybierasz z listy, tylko ktoś, komu się stajesz. Ostatnie słowa Jezusa nie są definicją, tylko poleceniem: idź i czyń (10,37). Czyj bliźni możesz się dziś stać, zanim zdążysz o to zapytać?"
+      },
+      "e2": {
+       "p": [
+        "Odpowiedź jest poprawna, a ty wychodzisz z poczuciem, że sprawa jest załatwiona. Jezus powiedział: to czyń, ale nie powiedział, że wystarczy to wiedzieć."
+       ],
+       "end": "Koniec sceny. Ścieżka: wiedza bez czynu.",
+       "reflection": "Jezus mówi: to czyń, a będziesz żył (Łk 10,28). To zdanie jest poleceniem, a nie pochwałą wiedzy. Uczony zna Prawo lepiej niż wielu, ale pytanie o życie wieczne dotyczy tego, co robi z tą wiedzą. Co w twoim życiu wiesz od dawna, a wciąż nie wprowadziłeś w czyn?"
+      },
+      "e3": {
+       "p": [
+        "Powiedziałeś: ten, który okazał miłosierdzie. Samego słowa Samarytanin nie wymówiłeś. Jezus nie ponagla cię, ale to zdanie zostaje między wami."
+       ],
+       "end": "Koniec sceny. Ścieżka: uprzedzenie, które nie chce paść.",
+       "reflection": "W Łk 10,37 uczony nie mówi słowa Samarytanin, tylko: ten, który okazał mu miłosierdzie. Ta drobna wymijająca odpowiedź pokazuje, że pytanie o bliźniego dotyka też uprzedzeń, których nie lubimy nazywać. Jezus nie wytyka tego, a mimo to polecenie idź i czyń podobnie pozostaje. Jakie słowo trudno ci wymówić, gdy mówisz o kimś, kto ci pomógł?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Samarytanin",
+     "blurb": "Jedziesz drogą w dół do Jerycha",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Jedziesz drogą z Jerozolimy do Jerycha, a przed tobą na poboczu leży człowiek obdarty i pobity. Wiesz, że przed tobą przeszli tędy kapłan i lewita. Wiesz też, że ten człowiek może należeć do ludu, który cię nie lubi."
+       ],
+       "choices": [
+        {
+         "label": "Podejść do niego od razu",
+         "to": "n2"
+        },
+        {
+         "label": "Rozejrzeć się, czy to nie zasadzka",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Wzruszasz się litością. Zalewasz jego rany oliwą i winem, opatrujesz je i sadzasz go na swoje zwierzę. Prowadzisz je do gospody i zajmujesz się nim przez noc."
+       ],
+       "q": {
+        "t": "Zajmij się nim; a cokolwiek wydasz ponad to, ja przy powrocie ci oddam.",
+        "r": "Łk 10,35"
+       },
+       "choices": [
+        {
+         "label": "Rano zostawić gospodarzowi pieniądze i obietnicę zwrotu",
+         "to": "e1"
+        },
+        {
+         "label": "Rano zostawić tylko pieniądze i odjechać",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Droga jest pusta, a w zasięgu wzroku nikogo. Człowiek porusza się słabo. Gdzieś z tyłu głowy masz wszystko, co o takich sytuacjach słyszałeś."
+       ],
+       "choices": [
+        {
+         "label": "Podejść i opatrzyć rany",
+         "to": "n2"
+        },
+        {
+         "label": "Odjechać, nie ryzykując",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Zostawiasz dwa denary i obietnicę: zwrócę, gdy wrócę. Nie wiesz, czy ten człowiek kiedykolwiek się dowie, kim byłeś."
+       ],
+       "end": "Koniec sceny. Ścieżka: miłosierdzie z obietnicą powrotu.",
+       "reflection": "Przypowieść pokazuje miłosierdzie krok po kroku: podejść, opatrzyć, zawieźć, zapłacić, obiecać powrót (Łk 10,33-35). Samarytanin nie kończy pomocy na pierwszym odruchu serca, ale organizuje opiekę na czas, którego nie będzie przy rannym. Dwa denary to mniej więcej dwa dni zwykłej płacy. Co w twojej pomocy wykracza poza pierwszy impuls?"
+      },
+      "e2": {
+       "p": [
+        "Zostawiasz pieniądze i ruszasz w drogę. Zrobiłeś więcej niż inni, a mimo to wiesz, że zostawiasz niedokończoną sprawę."
+       ],
+       "end": "Koniec sceny. Ścieżka: pomoc ograniczona do tego, co pewne.",
+       "reflection": "Samarytanin w tekście mówi: cokolwiek wydasz ponad to, ja ci oddam (Łk 10,35). Jego pomoc ma otwarty rachunek i obietnicę powrotu, a nie tylko jednorazowy dar. Pomoc ograniczona do tego, co pewne, jest już cenna, ale przypowieść idzie dalej. Gdzie ty zatrzymujesz się na granicy, za którą zaczyna się ryzyko?"
+      },
+      "e3": {
+       "p": [
+        "Odjeżdżasz, a obraz leżącego człowieka jedzie z tobą. W przypowieści stoisz teraz obok kapłana i lewity."
+       ],
+       "end": "Koniec sceny. Ścieżka: odejście z ostrożności.",
+       "reflection": "Kapłan i lewita zobaczyli rannego i minęli go (Łk 10,31-32). Jezus nie podaje ich motywów, a tradycyjne tłumaczenia o rytualnej czystości są domysłem. Tekst pokazuje tylko, że można zobaczyć i nie zareagować. Zwróć uwagę, że Samarytanin także widział, ale to, co nastąpiło potem, wyróżnia go od innych. Co sprawia, że widząc potrzebę, czasem ją mijasz?"
+      }
+     }
+    },
+    {
+     "id": "r3",
+     "name": "Człowiek pobity przez zbójców",
+     "blurb": "Leżysz na drodze na pół umarły",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Leżysz na drodze z Jerozolimy do Jerycha. Zbójcy zabrali ci wszystko, a potem odeszli. Słyszysz kroki. To kapłan. Zatrzymuje się na chwilę, widzi cię i przechodzi. Potem słyszysz kroki lewity, który robi to samo."
+       ],
+       "choices": [
+        {
+         "label": "Spróbować zawołać",
+         "to": "n2"
+        },
+        {
+         "label": "Zamilknąć z bólu",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Słyszysz kolejne kroki. Ktoś się zatrzymuje, kładzie ci rękę na ramieniu i zalewa rany czymś, co szczypie. Widzisz jego ubiór i zrozumiałeś, że to Samarytanin, z ludu, który twój lud omija."
+       ],
+       "choices": [
+        {
+         "label": "Przyjąć jego pomoc",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać, dlaczego pomaga komuś takiemu",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Nie masz siły wołać. Ktoś mimo to podchodzi i zaczyna cię opatrywać. Nie pyta, kim jesteś, ani czy możesz za to zapłacić."
+       ],
+       "choices": [
+        {
+         "label": "Pozwolić mu pomóc",
+         "to": "e1"
+        },
+        {
+         "label": "Odwrócić twarz z dumy",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Pozwalasz się opatrzyć, wsadzić na zwierzę i zawieźć do gospody. Rano słyszysz, że ktoś zapłacił za twój pobyt."
+       ],
+       "end": "Koniec sceny. Ścieżka: przyjęcie pomocy.",
+       "reflection": "Ranny w przypowieści nie ma głosu i niczego nie robi, bo cała inicjatywa należy do Samarytanina (Łk 10,33-35). To rzadka perspektywa, bo zwykle pytamy, czy sami pomożemy, a rzadziej, czy potrafimy przyjąć pomoc od kogoś, kogo nie wybraliśmy. Zależność od cudzej dobroci bywa trudniejsza niż jej okazywanie. Od kogo trudno ci przyjąć pomoc i dlaczego?"
+      },
+      "e2": {
+       "p": [
+        "Odwracasz twarz. Samarytanin mimo to zostaje, opatruje i zawozi cię do gospody, jakbyś nic nie powiedział."
+       ],
+       "end": "Koniec sceny. Ścieżka: duma w potrzebie.",
+       "reflection": "Przypowieść nie mówi, jak zareagował ranny. Zostawia to otwarte i pozwala czytelnikowi włożyć siebie na jego miejsce. Duma wobec pomocy jest zwykle próbą zachowania godności, która w sytuacji skrajnej okazuje się czymś mniej istotnym niż życie. Co chronisz swoją dumą, gdy ktoś chce ci pomóc?"
+      },
+      "e3": {
+       "p": [
+        "Pytasz, a on odpowiada tylko: leż spokojnie. Zdumienie zostaje w tobie dłużej niż ból. Dowiadujesz się, że ktoś zapłacił za twój pobyt, i nie wiesz, jak to odwdzięczyć."
+       ],
+       "end": "Koniec sceny. Ścieżka: zdumienie i dług wdzięczności.",
+       "reflection": "Pytanie o bliźniego w tej scenie ma zaskakującą odpowiedź: to właśnie ten, kogo twój lud omija, okazuje miłosierdzie (Łk 10,33-37). Zdumienie jest częstą pierwszą reakcją na dobro od kogoś, od kogo go nie oczekujemy. Dług, którego nie da się odpłacić, może być początkiem wdzięczności albo wstydu. Jaki rodzaj długu wdzięczności zostawia w tobie najwięcej ciepła?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "25",
+     "t": "A oto powstał pewien uczony w Prawie i wystawiając Go na próbę, rzekł: Nauczycielu, co mam czynić, aby posiąść życie wieczne?"
+    },
+    {
+     "v": "26",
+     "t": "A On rzekł do niego: Co jest napisane w Prawie? Jak czytasz?"
+    },
+    {
+     "v": "27",
+     "t": "On odpowiadając, rzekł: Będziesz miłował Pana, Boga swego, całym swoim sercem i całą swoją duszą, i wszystkimi swoimi siłami, i całym swoim umysłem; a bliźniego swego jak siebie samego."
+    },
+    {
+     "v": "28",
+     "t": "I rzekł do niego: Dobrze odpowiedziałeś: to czyń, a będziesz żył."
+    },
+    {
+     "v": "29",
+     "t": "Lecz on, chcąc się usprawiedliwić, rzekł do Jezusa: A kto jest moim bliźnim?"
+    },
+    {
+     "v": "30",
+     "t": "A Jezus odpowiadając, rzekł: Pewien człowiek schodził z Jerozolimy do Jerycha i wpadł w ręce zbójców, którzy go obdarli, a zadawszy mu rany, odeszli, zostawiając go na pół umarłego."
+    },
+    {
+     "v": "31",
+     "t": "Zdarzyło się, że tą samą drogą schodził pewien kapłan; zobaczył go i minął."
+    },
+    {
+     "v": "32",
+     "t": "Podobnie i lewita, gdy był blisko tego miejsca i zobaczył go, minął."
+    },
+    {
+     "v": "33",
+     "t": "Lecz pewien Samarytanin, będąc w podróży, przyszedł blisko niego; a zobaczywszy go, wzruszył się litością."
+    },
+    {
+     "v": "34",
+     "t": "I podszedłszy, opatrzył jego rany, zalewając je oliwą i winem; i wsadziwszy go na swoje bydlę, zawiózł do gospody i zajął się nim."
+    },
+    {
+     "v": "35",
+     "t": "A następnego dnia wyjął dwa denary, dał gospodarzowi i rzekł: Zajmij się nim; a cokolwiek wydasz ponad to, ja przy powrocie ci oddam."
+    },
+    {
+     "v": "36",
+     "t": "Który z tych trzech, według ciebie, był bliźnim tego, który wpadł w ręce zbójców?"
+    },
+    {
+     "v": "37",
+     "t": "A on rzekł: Ten, który okazał mu miłosierdzie. I rzekł mu Jezus: Idź, i ty czyń podobnie."
+    }
+   ]
+  },
+  "2026-10-06": {
+   "ref": "Łk 10,38-42",
+   "title": "Marta i Maria",
+   "context": [
+    "Gdzie jesteśmy: Jezus i uczniowie idą dalej do Jerozolimy. Scena następuje bezpośrednio po przypowieści o miłosiernym Samarytaninie, w której Jezus mówił: idź i czyń podobnie (Łk 10,37). Teraz pokazuje inny wymiar uczniostwa: słuchanie.",
+    "Łukasz mówi tylko o „pewnym miasteczku”. Nazwę Betanii znamy z Ewangelii Jana (J 11,1; 12,1-3), gdzie Marta i Maria także występują, ale u Łukasza miejsca się nie nazywa.",
+    "Marta „przyjęła Go do swego domu”, a więc robi dokładnie to, co w Łk 10,5-8 robią domy, które przyjmują posłanych. Maria siada u stóp Pana, co w tamtym świecie było postawą ucznia wobec nauczyciela.",
+    "Co dalej: tuż po tej scenie uczeń prosi Jezusa o naukę modlitwy (Łk 11,1-4), czyli temat słuchania i rozmowy z Bogiem jest kontynuowany."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Marta",
+     "blurb": "Przyjmujesz Jezusa w swoim domu",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Przyjęłaś Jezusa i Jego uczniów do swego domu. Jest dużo do zrobienia: chleb, woda, miejsca do siedzenia. Maria siedzi u stóp Pana i słucha. Ty uwijasz się koło wielu posług."
+       ],
+       "choices": [
+        {
+         "label": "Pracować dalej w milczeniu",
+         "to": "n2"
+        },
+        {
+         "label": "Podejść do Jezusa i poprosić o pomoc",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Praca nie mija, a w tobie narasta żal, że siedzisz sama przy czymś, co robicie dla Niego. Przechodzisz obok pokoju, w którym siedzi Maria. Słyszysz Jego głos."
+       ],
+       "choices": [
+        {
+         "label": "Zajrzeć do pokoju i zatrzymać się",
+         "to": "n3"
+        },
+        {
+         "label": "Wrócić do pracy bez słowa",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Stajesz przed Jezusem i mówisz: Panie, czy cię to nie obchodzi, że moja siostra zostawiła mnie samą przy usługiwaniu? Powiedz jej, żeby mi pomogła. Jezus patrzy na ciebie z uwagą, bez złości."
+       ],
+       "q": {
+        "t": "Marto, Marto, troszczysz się i niepokoisz o wiele rzeczy.",
+        "r": "Łk 10,41"
+       },
+       "choices": [
+        {
+         "label": "Przyjąć Jego słowa i usiąść",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać, co znaczy: tylko jedno jest potrzebne",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Siadasz po raz pierwszy tego dnia. Praca w kuchni zostaje, ale już nie rządzi tobą."
+       ],
+       "end": "Koniec sceny. Ścieżka: usiąść i słuchać.",
+       "reflection": "Jezus nie karci Marty za służbę, tylko za niepokój: troszczysz się i niepokoisz o wiele (Łk 10,41). Zwróć uwagę, że to Marta przyjęła Go do domu, a więc jej gościnność jest dobra. Problem zaczyna się, gdy służba zasłania obecność Tego, komu się służy. Co w twoim życiu zaczęło być ważniejsze niż ten, dla którego to robisz?"
+      },
+      "e2": {
+       "p": [
+        "Pytanie zostaje w powietrzu, a Jezus odpowiada tylko tyle, że Maria wybrała najlepszą cząstkę, której nie będzie pozbawiona. Zostajesz z tym zdaniem na resztę dnia."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o to, co jedno.",
+       "reflection": "Jezus mówi: potrzebne jest tylko jedno (Łk 10,42). Łukasz nie definiuje tego jednego, zostawia czytelnikowi zadanie, by to rozpoznał. Dla Marty to pytanie jest uczciwe, bo nie kwestionuje jej służby, tylko jej proporcje. Co jest w twoim życiu tym jednym, bez czego reszta traci sens?"
+      },
+      "e3": {
+       "p": [
+        "Wracasz do pracy z żalem, który z czasem twardnieje. Wieczorem wszystko jest gotowe, ale ty jesteś zbyt zmęczona, by usiąść."
+       ],
+       "end": "Koniec sceny. Ścieżka: służba bez zatrzymania.",
+       "reflection": "Marta w tekście nie jest przedstawiona jako zła, tylko jako ktoś, kto jest pochłonięty wieloma sprawami (Łk 10,40). Łukasz używa słowa, które sugeruje rozproszenie i rozciągnięcie. Praca bez momentu zatrzymania może stać się sposobem ucieczki przed rzeczami trudniejszymi niż praca. Przed czym chroni cię twój nadmiar zajęć?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Maria",
+     "blurb": "Siedzisz u stóp Jezusa",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Siedzisz u stóp Jezusa i słuchasz Jego słów. Z drugiego pokoju słychać, jak Marta uwija się z naczyniami. Wiesz, że siostra czeka na twoją pomoc, ale nie masz ochoty wstawać."
+       ],
+       "choices": [
+        {
+         "label": "Zostać i dalej słuchać",
+         "to": "n2"
+        },
+        {
+         "label": "Wstać i pomóc siostrze",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Marta staje w drzwiach i mówi do Jezusa: czy cię to nie obchodzi, że siostra zostawiła mnie samą? Czujesz, że wszyscy patrzą na ciebie. Jezus wskazuje na ciebie spojrzeniem, a potem zwraca się do Marty."
+       ],
+       "choices": [
+        {
+         "label": "Nie bronić się i milczeć",
+         "to": "e1"
+        },
+        {
+         "label": "Odezwać się do siostry",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Idziesz do kuchni i zaczynasz pomagać. Marta rzuca ci krótkie spojrzenie, w którym jest ulga i trochę wyrzutu. Z pokoju dochodzi głos Jezusa, ale nie słyszysz słów."
+       ],
+       "choices": [
+        {
+         "label": "Wrócić do pokoju, gdy tylko skończycie",
+         "to": "e3"
+        },
+        {
+         "label": "Zostać do końca w kuchni",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Milczysz, bo nie masz słów, które nie zabrzmiałyby jak oskarżenie. Jezus mówi do Marty, a nie do ciebie, że wybrałaś najlepszą cząstkę."
+       ],
+       "end": "Koniec sceny. Ścieżka: milczące zaufanie.",
+       "reflection": "Maria nie mówi w tej scenie ani słowa, a mimo to jest bohaterką. Jezus mówi o niej: wybrała najlepszą cząstkę, której nie będzie pozbawiona (Łk 10,42). Cząstka, którą wybrała, nie zostanie jej odebrana, co mówi o trwałości daru. Kiedy ostatnio nie broniłeś się przed oskarżeniem, bo ufałeś, że ktoś inny powie prawdę?"
+      },
+      "e2": {
+       "p": [
+        "Mówisz do siostry cicho: chodź i usiądź. Marta patrzy na ciebie długo, a potem odwraca się z naczyniem w ręku."
+       ],
+       "end": "Koniec sceny. Ścieżka: rozmowa sióstr.",
+       "reflection": "Ewangelia pokazuje dwie siostry, które nie kłócą się do końca. Marta mówi do Jezusa, nie do siostry, a Jezus odpowiada jej z czułością: Marto, Marto (Łk 10,41). Powtórzenie imienia jest typowym sposobem zwracania się z troską. Czy rozmowa z kimś bliskim, kto jest przeciążony, jest zaproszeniem czy wyrzutem, zależy od tonu, a nie od treści. Co mówisz bliskim, którzy za dużo na siebie biorą?"
+      },
+      "e3": {
+       "p": [
+        "Pomagasz, a wieczorem, gdy goście odchodzą, siadasz razem z Martą. W kuchni zostaje cisza, ale rozmowa przychodzi dopiero potem."
+       ],
+       "end": "Koniec sceny. Ścieżka: służba i słuchanie razem.",
+       "reflection": "Łukasz nie stawia modlitwy przeciw służbie, bo scena następuje zaraz po przypowieści, w której czynne miłosierdzie jest wzorem (Łk 10,37). Jezus mówi tylko, że jedno jest potrzebne i że Maria wybrała dobrze. Zwróć uwagę na to, że zarówno Marta, jak i Maria pozostają w jego domowym kręgu. Jak pogodzić w swoim dniu chwile słuchania i działania, żeby żadne nie wypierało drugiego?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "38",
+     "t": "A gdy szli dalej, wszedł do pewnego miasteczka; i pewna kobieta, imieniem Marta, przyjęła Go do swego domu."
+    },
+    {
+     "v": "39",
+     "t": "Miała ona siostrę zwaną Marią, która usiadłszy u stóp Pana, słuchała Jego słowa."
+    },
+    {
+     "v": "40",
+     "t": "Lecz Marta krzątała się koło wielu posług. Stanęła więc i rzekła: Panie, czy ci to obojętne, że siostra moja zostawiła mnie samą przy usługiwaniu? Powiedz jej więc, żeby mi pomogła."
+    },
+    {
+     "v": "41",
+     "t": "A Pan odpowiadając, rzekł do niej: Marto, Marto, troszczysz się i niepokoisz o wiele rzeczy,"
+    },
+    {
+     "v": "42",
+     "t": "a tylko jedno jest potrzebne. Maria wybrała najlepszą cząstkę, która nie zostanie jej odebrana."
+    }
+   ]
+  },
+  "2026-10-07": {
+   "ref": "Łk 11,1-4",
+   "title": "Naucz nas się modlić",
+   "context": [
+    "Gdzie jesteśmy: Łukasz często pokazuje Jezusa na modlitwie przed ważnymi wydarzeniami (np. Łk 3,21; 6,12; 9,18). Tutaj uczniowie widzą Go modlącego się i proszą, by nauczył ich modlić się tak, jak Jan Chrzciciel uczył swoich uczniów.",
+    "Wersja Modlitwy Pańskiej u Łukasza jest krótsza niż u Mateusza (Mt 6,9-13). Zaczyna się od słowa „Ojcze”, które w tradycji wiąże się z aramejskim „Abba” (Rz 8,15, aklamacja tego dnia).",
+    "W polskim lekcjonarzu ostatnia prośba brzmi: „nie dopuść, byśmy ulegli pokusie”. Tłumaczenie tej prośby jest przedmiotem dyskusji w wielu językach.",
+    "Co dalej: w Łk 11,5-13 Jezus mówi o natrętnym przyjacielu o północy i o proszeniu Ojca. To scena z 8 października."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Uczeń, który prosi o naukę",
+     "blurb": "Widzisz Jezusa modlącego się",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Obserwujesz Jezusa, który modli się w pewnym miejscu. Jego twarz jest spokojna. Zauważasz, że jest w tym coś, czego nie znasz z własnej modlitwy. Gdy kończy, ktoś z uczniów mówi to, co ty tylko myślałeś."
+       ],
+       "q": {
+        "t": "Panie, naucz nas modlić się, jak i Jan nauczył swoich uczniów.",
+        "r": "Łk 11,1"
+       },
+       "choices": [
+        {
+         "label": "Poprosić: Panie, naucz nas się modlić",
+         "to": "n2"
+        },
+        {
+         "label": "Poczekać, nie przeszkadzać",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus mówi: gdy się modlicie, mówcie: Ojcze, niech będzie święte imię twoje. Przyjdź królestwo twoje. To brzmi prościej niż modlitwy, które znasz."
+       ],
+       "q": {
+        "t": "Gdy się modlicie, mówcie: Ojcze, niech będzie święte imię twoje.",
+        "r": "Łk 11,2"
+       },
+       "choices": [
+        {
+         "label": "Powtarzać za Nim słowa",
+         "to": "n4"
+        },
+        {
+         "label": "Zapytać, czy wolno mówić: Ojcze",
+         "to": "n4"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Chwilę czekasz, aż ktoś przerwie ciszę. Po chwili inny uczeń prosi Jezusa o naukę modlitwy. Czujesz, że to pytanie było i twoje."
+       ],
+       "choices": [
+        {
+         "label": "Dołączyć do pytania",
+         "to": "n2"
+        },
+        {
+         "label": "Zostać z tym pytaniem w sobie",
+         "to": "e3"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jezus mówi dalej: chleba naszego powszedniego daj nam dzisiaj. I przebacz nam nasze grzechy, bo i my przebaczamy każdemu, kto jest nam dłużny. I nie wódź nas na pokuszenie. To krótka modlitwa, w której jest wszystko, czego człowiek potrzebuje."
+       ],
+       "choices": [
+        {
+         "label": "Zatrzymać się przy słowach o przebaczeniu",
+         "to": "e1"
+        },
+        {
+         "label": "Zatrzymać się przy chlebie na dziś",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Zatrzymujesz się przy słowach: bo i my przebaczamy każdemu, kto jest nam dłużny. Przychodzi ci do głowy konkretna osoba, którą wolałbyś pominąć."
+       ],
+       "end": "Koniec sceny. Ścieżka: przebaczenie w modlitwie.",
+       "reflection": "Prośba o przebaczenie jest w tej modlitwie połączona z naszym przebaczaniem (Łk 11,4). To nie jest warunek w sensie zapłaty, tylko wskazanie, że przyjęcie przebaczenia i dawanie go idą razem. W Mt 18,21-35, w dalszej części rozdziału, z którego czytaliśmy 2 października, Jezus rozwija ten wątek przypowieścią o dłużniku. Kogo dziś nosisz w sobie jako dłużnika?"
+      },
+      "e2": {
+       "p": [
+        "Zatrzymujesz się przy chlebie na dziś. Słowo dzisiaj ci się podoba, bo zwalnia z planowania całej przyszłości."
+       ],
+       "end": "Koniec sceny. Ścieżka: chleb na dziś.",
+       "reflection": "Modlitwa nie prosi o zapasy na lata, tylko o chleb na dzisiaj (Łk 11,3). Przypomina to manę na pustyni, którą trzeba było zbierać dzień po dniu (Wj 16). Taka prośba uczy zaufania, bo wymaga codziennego powrotu do Ojca. Co chciałbyś mieć zabezpieczone na całe życie, a co możesz zostawić na dziś?"
+      },
+      "e3": {
+       "p": [
+        "Zostajesz z pytaniem w sobie. Nie wypowiadasz go, ale widzisz, jak pada z ust innych, a Jezus odpowiada im, a przez to również tobie."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie wypowiedziane przez kogoś innego.",
+       "reflection": "Łukasz zaznacza, że prośba pada po tym, jak Jezus skończył się modlić (Łk 11,1). Uczniowie nie przerwali Mu, tylko poczekali. Czasem pytanie, które nosimy w sobie, zostaje wyrażone przez kogoś innego i wtedy odpowiedź też jest dla nas. Jakie pytanie o modlitwę nosisz w sobie od dawna?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Były uczeń Jana Chrzciciela",
+     "blurb": "Znasz modlitwy Jana",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Przez jakiś czas chodziłeś za Janem nad Jordanem. Znasz jego sposób modlitwy: surowy, nastawiony na nawrócenie. Teraz patrzysz na Jezusa, który modli się inaczej, jakby rozmawiał z kimś, kogo dobrze zna."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać Jezusa, czym Jego modlitwa różni się od tej, której uczył Jan",
+         "to": "n2"
+        },
+        {
+         "label": "Słuchać bez porównań",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus mówi: gdy się modlicie, mówcie: Ojcze. Nie ma przy tym ani słowa o surowości, o którą pytałeś. Jest imię, które brzmi zwyczajnie, a zarazem tak, jakby nikt wcześniej tak nie mówił."
+       ],
+       "q": {
+        "t": "Gdy się modlicie, mówcie: Ojcze.",
+        "r": "Łk 11,2"
+       },
+       "choices": [
+        {
+         "label": "Zapamiętać to słowo jako nowość",
+         "to": "e1"
+        },
+        {
+         "label": "Zobaczyć w tym ciąg dalszy tego, czego uczył Jan",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Nie pytasz o porównania. Słuchasz słów, które Jezus mówi do uczniów, i czujesz, że nie są wymyślone na potrzeby chwili. To jest sposób mówienia, który wypływa z czegoś, co On robi cały czas."
+       ],
+       "choices": [
+        {
+         "label": "Powtarzać te słowa po cichu",
+         "to": "e3"
+        },
+        {
+         "label": "Zapytać, co to znaczy: Ojcze",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Słowo Ojcze zostaje w tobie dłużej niż reszta modlitwy. Nie jest nowością, jest zaproszeniem, które nie wymaga zasług."
+       ],
+       "end": "Koniec sceny. Ścieżka: Ojcze jako nowość.",
+       "reflection": "Zwrócenie się do Boga jako Ojca nie jest w tradycji żydowskiej nieznane, ale bezpośredniość, z jaką Jezus uczy tego uczniów, jest dla Łukasza ważna (Łk 11,2). Rz 8,15, które czytamy jako aklamację tego dnia, mówi, że Duch wzbudza w nas wołanie: Abba, Ojcze. Modlitwa zaczyna się więc od relacji, a dopiero potem od próśb. Co zmienia się w twojej modlitwie, gdy zaczynasz ją od relacji, a nie od listy spraw?"
+      },
+      "e2": {
+       "p": [
+        "Dostrzegasz, że Jan przygotowywał ludzi na to, co Jezus teraz daje. Nie ma tu rywalizacji, tylko ciąg dalszy."
+       ],
+       "end": "Koniec sceny. Ścieżka: ciągłość między Janem a Jezusem.",
+       "reflection": "Łukasz opisuje Jana jako tego, który przygotowuje drogę (Łk 3,3-6; 7,27). Modlitwa Jezusa nie unieważnia nauki Jana, tylko prowadzi ją dalej. Dla kogoś, kto szedł za Janem, nowość nie musi oznaczać zerwania. Co w twoim życiu przygotowało cię na to, co dziś robisz?"
+      },
+      "e3": {
+       "p": [
+        "Powtarzasz słowa po cichu. Są proste i nie wymagają przygotowania. Przy drugim razie rozumiesz, że to nie są słowa do zapamiętania, tylko do życia."
+       ],
+       "end": "Koniec sceny. Ścieżka: modlitwa prostych słów.",
+       "reflection": "Modlitwa z Łk 11,2-4 ma pięć krótkich próśb, a nie rozbudowaną liturgię. Prostota nie oznacza płytkości, tylko uczy skupienia na tym, co ważne: imię Boga, Jego królestwo, chleb, przebaczenie, ochrona. Taka modlitwa pasuje do każdej sytuacji, także tej bez czasu. Jaką prostą modlitwę możesz powtarzać w dniu pełnym spraw?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "I zdarzyło się, że gdy modlił się w pewnym miejscu i przestał, jeden z Jego uczniów rzekł do Niego: Panie, naucz nas modlić się, jak i Jan nauczył swoich uczniów."
+    },
+    {
+     "v": "2",
+     "t": "A On rzekł do nich: Gdy się modlicie, mówcie: Ojcze, niech będzie święte imię twoje. Przyjdź królestwo twoje."
+    },
+    {
+     "v": "3",
+     "t": "Chleba naszego powszedniego daj nam dzisiaj."
+    },
+    {
+     "v": "4",
+     "t": "I przebacz nam nasze grzechy, bo i my przebaczamy każdemu, kto jest nam dłużny. I nie wódź nas na pokuszenie."
+    }
+   ]
+  },
+  "2026-10-08": {
+   "ref": "Łk 11,5-13",
+   "title": "Przyjaciel o północy",
+   "context": [
+    "Gdzie jesteśmy: scena następuje bezpośrednio po nauce Modlitwy Pańskiej (Łk 11,1-4). Prosimy o chleb na dziś w modlitwie, a teraz Jezus opowiada o człowieku, który o północy prosi o chleb dla gościa.",
+    "Gościnność była obowiązkiem. Człowiek w przypowieści nie ma co postawić gościowi, więc idzie do przyjaciela. Słowo, które zwykle oddaje się jako natręctwo, oznacza coś w rodzaju braku wstydu.",
+    "Przypowieść nie porównuje Boga do niechętnego sąsiada, lecz kontrastuje go z nim: jeśli nawet ten ustąpi, o ileż bardziej Ojciec da (Łk 11,13). To argument z większego do mniejszego.",
+    "Co dalej: w wersecie 14 Jezus wyrzuca niemego ducha, co jest początkiem sceny z 9 października."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Człowiek pukający o północy",
+     "blurb": "Twój przyjaciel przybył z podróży",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Jest po północy, a do twojego domu przybył przyjaciel z drogi. Nie masz chleba, który mógłbyś mu postawić. Wiesz, że sąsiad, który ma dom obok, zwykle ma zapas."
+       ],
+       "q": {
+        "t": "Przyjacielu, pożycz mi trzy chleby.",
+        "r": "Łk 11,5"
+       },
+       "choices": [
+        {
+         "label": "Iść do sąsiada o północy",
+         "to": "n2"
+        },
+        {
+         "label": "Poczekać do rana i nie niepokoić nikogo",
+         "to": "e3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Pukasz i słyszysz z wewnątrz: nie naprzykrzaj mi się, drzwi są już zamknięte, a moje dzieci są ze mną w łóżku. Nie mogę wstać i dać tobie. Stoisz w ciemności, a w domu za twoimi plecami czeka gość."
+       ],
+       "choices": [
+        {
+         "label": "Pukać dalej",
+         "to": "n3"
+        },
+        {
+         "label": "Odejść i przeprosić gościa",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Pukasz jeszcze raz, ciszej, ale uparcie. Po chwili słyszysz kroki i skrzypnięcie rygla. Sąsiad otwiera i bez słowa daje ci tyle chleba, ile potrzebujesz."
+       ],
+       "choices": [
+        {
+         "label": "Wrócić od razu do gościa",
+         "to": "e1"
+        },
+        {
+         "label": "Podziękować i zostać chwilę w drzwiach",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Wracasz do domu z chlebem, a gość siada do stołu. Dopiero później zastanawiasz się, ile razy się wahałeś, zanim zapukałeś."
+       ],
+       "end": "Koniec sceny. Ścieżka: wytrwałość w prośbie.",
+       "reflection": "Jezus mówi, że sąsiad wstaje nie dlatego, że jest przyjacielem, ale z powodu natręctwa proszącego (Łk 11,8). Słowo to oznacza upór bez wstydu. Kontekst jest ważny: ta przypowieść stoi zaraz po Modlitwie Pańskiej, w której prosimy o chleb na dziś, i uczy, że proszenie nie jest oznaką braku wiary. Co powstrzymuje cię przed proszeniem o rzeczy ważne, mimo że wiesz, że są potrzebne?"
+      },
+      "e2": {
+       "p": [
+        "Odchodzisz z pustymi rękami i przepraszasz gościa. On macha ręką, że to nic, ale ty wiesz, że to nie był koniec możliwości."
+       ],
+       "end": "Koniec sceny. Ścieżka: rezygnacja po pierwszej odmowie.",
+       "reflection": "Wersety 9-10 mówią: proście, szukajcie, kołaczcie. Czasowniki są w czasie, który oznacza ciągłość: proście nadal. Pierwsza odmowa nie jest w tej przypowieści ostatnim słowem, a rezygnacja po niej jest pominięta w opowieści, bo nie jest jej tematem. Kiedy ostatni raz zrezygnowałeś z prośby po pierwszym nie, choć sprawa była ważna?"
+      },
+      "e3": {
+       "p": [
+        "Postanawiasz poczekać do rana. Gość nie narzeka, ale wiesz, że to nie jest gościnność, jaką chciałeś mu okazać."
+       ],
+       "end": "Koniec sceny. Ścieżka: oszczędzanie przyjaciela.",
+       "reflection": "Przypowieść zakłada, że prośba o północy jest niewygodna, a mimo to usprawiedliwiona przez potrzebę gościa (Łk 11,5-6). Troska o to, żeby nikogo nie niepokoić, bywa szlachetna, ale może też być sposobem uniknięcia ryzyka odmowy. Jezus uczy, że w relacji z Ojcem taka obawa nie jest potrzebna (Łk 11,13). Kiedy twoja delikatność wobec kogoś jest troską, a kiedy ucieczką?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Przyjaciel za drzwiami",
+     "blurb": "Jest północ, a ktoś puka",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Jest głęboko po północy. Twoje dzieci śpią z tobą w łóżku, drzwi są zamknięte. Ktoś puka do drzwi. Poznajesz głos sąsiada i słyszysz słowa: przyjacielu, pożycz mi trzy chleby, bo przyjaciel mój przybył z podróży."
+       ],
+       "q": {
+        "t": "Nie naprzykrzaj mi się, drzwi są już zamknięte.",
+        "r": "Łk 11,7"
+       },
+       "choices": [
+        {
+         "label": "Zawołać z wnętrza: nie naprzykrzaj mi się",
+         "to": "n2"
+        },
+        {
+         "label": "Wstać po cichu i otworzyć",
+         "to": "e1"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Pukanie nie ustaje. Dzieci poruszają się niespokojnie. Wiesz, że sąsiad nie odejdzie, a ty nie zaśniesz, dopóki on tu stoi."
+       ],
+       "choices": [
+        {
+         "label": "Wstać i dać mu chleb",
+         "to": "e2"
+        },
+        {
+         "label": "Udawać, że śpisz",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Otwierasz drzwi i dajesz mu chleb, zanim zdążył powtórzyć prośbę. Wracasz do łóżka z uczuciem, że to było łatwiejsze, niż się spodziewałeś."
+       ],
+       "end": "Koniec sceny. Ścieżka: gościnność bez wahania.",
+       "reflection": "Przypowieść pokazuje, że sąsiad wstaje po długim pukaniu (Łk 11,8), ale nie wyklucza, że ktoś mógłby wstać od razu. Jezus nie chwali oporu, tylko wskazuje, że nawet niechętny człowiek w końcu ustępuje. Tym bardziej Ojciec, który nie jest niechętny, daje od razu (Łk 11,13). Kiedy ostatnio wstałeś nocą dla kogoś, kto cię o to poprosił?"
+      },
+      "e2": {
+       "p": [
+        "Wstajesz, bo nie możesz zasnąć, i dajesz mu tyle chleba, ile potrzebuje. Wiesz, że zrobiłeś to bardziej dla własnego spokoju niż z przyjaźni."
+       ],
+       "end": "Koniec sceny. Ścieżka: ustąpienie z natręctwa.",
+       "reflection": "Jezus mówi wprost, że sąsiad wstaje z powodu natręctwa, a nie przyjaźni (Łk 11,8). To realistyczna obserwacja o ludziach, której Jezus używa, żeby wskazać na kontrast z Ojcem. Dobro zrobione z niechęcią jest nadal dobrem dla tego, kto je otrzymuje, ale nie pokazuje serca darczyńcy. Z jakich pobudek zwykle pomagasz?"
+      },
+      "e3": {
+       "p": [
+        "Leżysz nieruchomo, ale pukanie trwa. W końcu zaczynasz słyszeć w nim nie natręctwo, tylko czyjąś potrzebę, której nie możesz już zignorować."
+       ],
+       "end": "Koniec sceny. Ścieżka: udawanie, że nie słyszysz.",
+       "reflection": "Zamknięte drzwi i dzieci w łóżku to w przypowieści prawdziwe powody odmowy, a nie tylko wymówki (Łk 11,7). Jezus pokazuje, że proszący musi przełamać nie tylko niechęć, ale też zwyczajną wygodę. Udawanie, że się śpi, jest ludzką reakcją, której Ewangelia nie potępia, tylko opisuje. Jakiego pukania w swoim życiu udajesz, że nie słyszysz?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "5",
+     "t": "I rzekł do nich: Któż z was będzie miał przyjaciela i pójdzie do niego o północy, i powie mu: Przyjacielu, pożycz mi trzy chleby,"
+    },
+    {
+     "v": "6",
+     "t": "bo przyjaciel mój przybył do mnie z podróży, a nie mam, co mu podać;"
+    },
+    {
+     "v": "7",
+     "t": "a ten z wewnątrz odpowie: Nie naprzykrzaj mi się, drzwi są już zamknięte, a moje dzieci są ze mną w łóżku; nie mogę wstać i dać tobie."
+    },
+    {
+     "v": "8",
+     "t": "Jeśli jednak będzie dalej pukał, powiadam wam: choć nie wstanie i nie da mu dlatego, że jest jego przyjacielem, to z powodu jego natręctwa wstanie i da mu tyle, ile potrzebuje."
+    },
+    {
+     "v": "9",
+     "t": "I ja wam powiadam: Proście, a będzie wam dane; szukajcie, a znajdziecie; kołaczcie, a będzie wam otworzone."
+    },
+    {
+     "v": "10",
+     "t": "Każdy bowiem, kto prosi, otrzymuje; kto szuka, znajduje; a kołaczącemu będzie otworzone."
+    },
+    {
+     "v": "11",
+     "t": "A któż z was, gdy syn poprosi go o chleb, poda mu kamień? Albo o rybę, czy zamiast ryby poda mu węża?"
+    },
+    {
+     "v": "12",
+     "t": "Albo gdy poprosi o jajko, czy poda mu skorpiona?"
+    },
+    {
+     "v": "13",
+     "t": "Jeśli więc wy, będąc źli, umiecie dawać dobre dary swoim dzieciom, o ileż bardziej Ojciec z nieba da dobrego Ducha tym, którzy Go proszą?"
+    }
+   ]
+  },
+  "2026-10-09": {
+   "ref": "Łk 11,15-26",
+   "title": "Palec Boży",
+   "context": [
+    "Gdzie jesteśmy: Jezus wyrzuca złego ducha, który odbierał człowiekowi mowę. Gdy duch wychodzi, niemy zaczyna mówić, a tłumy są zdumione (Łk 11,14). Dopiero na tym tle padają dwie reakcje: oskarżenie i żądanie znaku.",
+    "Oskarżenie, że Jezus działa mocą Belzebuba (Łk 11,15), jest próbą wyjaśnienia czynu, którego nie da się zaprzeczyć. Jezus odpowiada, wskazując na wewnętrzną sprzeczność tego twierdzenia (11,17-18).",
+    "„Palec Boży” (Łk 11,20) przywołuje scenę z Księgi Wyjścia, w której egipscy magowie mówią o plagach: to jest palec Boży (Wj 8,15). Jezus mówi, że w Jego działaniu przyszło do ludzi królestwo Boże.",
+    "Co dalej: werset 23 jest ostrym wezwaniem do opowiedzenia się. Wersety 24-26 pokazują, że wyzwolenie samo w sobie nie wystarczy: dom wymieciony i przyozdobiony, lecz pusty, może być zajęty na nowo. W wersecie 27 odzywa się kobieta z tłumu, co jest sceną z 10 października."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Człowiek, który odzyskał mowę",
+     "blurb": "Do niedawna nie mogłeś mówić",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Przez lata nie mogłeś wypowiedzieć ani słowa. Teraz Jezus wyrzucił z ciebie ducha i nagle masz głos. Tłum patrzy z podziwem, ale część ludzi mówi, że to dzieje się mocą Belzebuba, władcy złych duchów."
+       ],
+       "q": {
+        "t": "Przez Belzebuba, władcę demonów, wyrzuca demony.",
+        "r": "Łk 11,15"
+       },
+       "choices": [
+        {
+         "label": "Przemówić i opowiedzieć, co się stało",
+         "to": "n2"
+        },
+        {
+         "label": "Milczeć, bo słyszysz oskarżenia",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Mówisz drżącym głosem o tym, co przeżyłeś. Jezus wskazuje, że każde królestwo wewnętrznie podzielone popada w spustoszenie i że szatan nie wyrzucałby szatana. Mówi, że palcem Bożym wyrzuca demony, a to znaczy, że królestwo Boże przyszło do was."
+       ],
+       "q": {
+        "t": "Jeśli ja palcem Bożym wyrzucam demony, to niewątpliwie przyszło do was królestwo Boże.",
+        "r": "Łk 11,20"
+       },
+       "choices": [
+        {
+         "label": "Podejść bliżej Jezusa",
+         "to": "n4"
+        },
+        {
+         "label": "Wycofać się w tłum, przytłoczony",
+         "to": "n3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Słyszysz słowa Jezusa: kto nie jest ze mną, jest przeciwko mnie, a kto ze mną nie zbiera, rozprasza. Nie masz już milczenia, za którym mógłbyś się schować. Twój nowy głos domaga się wyboru."
+       ],
+       "q": {
+        "t": "Kto nie jest ze mną, jest przeciwko mnie.",
+        "r": "Łk 11,23"
+       },
+       "choices": [
+        {
+         "label": "Stanąć po stronie Jezusa",
+         "to": "n4"
+        },
+        {
+         "label": "Zostać pośrodku, bez opowiadania się",
+         "to": "e3"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jezus mówi o duchu nieczystym, który wychodzi z człowieka, wędruje po miejscach bezwodnych, a potem wraca i zastaje dom wymieciony i przyozdobiony. Bierze wtedy siedmiu innych duchów, gorszych od siebie. Rozumiesz, że to także o tobie."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać, jak strzec domu",
+         "to": "e1"
+        },
+        {
+         "label": "Dziękować za wolność i nie zostawiać domu pustego",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Pytasz, jak strzec domu, a Jezus nie odpowiada instrukcją. Mówi tylko, że kto zbiera z Nim, ten nie rozprasza. Czujesz, że strzeżenie domu jest bardziej relacją niż techniką."
+       ],
+       "end": "Koniec sceny. Ścieżka: czujność.",
+       "reflection": "Ewangelia nie mówi, że wyzwolenie jest zabezpieczeniem na zawsze. Dom wymieciony i przyozdobiony, ale pusty, jest w Łk 11,24-26 obrazem tego, co może zostać zajęte na nowo. Czujność nie polega tu na strachu przed złem, tylko na tym, kto zamieszkuje w domu. Kto lub co mieszka w twoim domu, gdy wyzdrowiejesz z czegoś trudnego?"
+      },
+      "e2": {
+       "p": [
+        "Dziękujesz za głos, który dostałeś, i zaczynasz go używać do tego, co wydaje ci się ważne. Dom nie jest pusty, gdy ktoś w nim mieszka."
+       ],
+       "end": "Koniec sceny. Ścieżka: wdzięczność, która wypełnia dom.",
+       "reflection": "Cały fragment mówi o wypełnianiu: mocarz strzeże dworu, mocniejszy go pokonuje, dom nie może zostać pusty (Łk 11,21-26). Wdzięczność za wolność jest sposobem jej utrwalenia, bo zamienia ją w relację. Wolność od czegoś jest dopiero początkiem, a nie celem. Czym wypełniasz miejsce, które zwolniło się po czymś, co cię więziło?"
+      },
+      "e3": {
+       "p": [
+        "Zostajesz pośrodku, ani po jednej, ani po drugiej stronie. Odczuwasz, że to nie jest miejsce, w którym można długo zostać."
+       ],
+       "end": "Koniec sceny. Ścieżka: neutralność jako pozycja.",
+       "reflection": "Jezus mówi, że kto nie jest z Nim, jest przeciwko Niemu (Łk 11,23). W kontekście walki ze złem to zdanie ostrzega przed złudzeniem neutralności. W Łk 9,50 mówi On jednak coś, co brzmi odwrotnie: kto nie jest przeciwko wam, ten jest z wami. Oba zdania razem uczą, że miarą nie jest przynależność do grupy, tylko stosunek do Jego dzieła. Gdzie w twoim życiu neutralność bywa sposobem unikania wyboru?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Ktoś z tłumu",
+     "blurb": "Słyszysz oskarżenia i żądania znaków",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Stoisz w tłumie, kiedy Jezus wyrzuca ducha z niemego człowieka, który zaczyna mówić. Wszyscy są zdumieni, ale obok ciebie ktoś mówi, że to dzieje się mocą Belzebuba, a ktoś inny domaga się znaku z nieba."
+       ],
+       "choices": [
+        {
+         "label": "Dołączyć do tych, którzy mówią o Belzebubie",
+         "to": "n2"
+        },
+        {
+         "label": "Zapytać, czego dokładnie żądają jako znaku",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus znał ich myśli i mówi: każde królestwo wewnętrznie podzielone popada w spustoszenie i dom na dom się wali. Pyta, przez kogo wyrzucają demony wasi synowie. Czujesz, że logika tych słów ma sens."
+       ],
+       "q": {
+        "t": "Każde królestwo wewnętrznie podzielone popada w spustoszenie.",
+        "r": "Łk 11,17"
+       },
+       "choices": [
+        {
+         "label": "Przyznać, że argument trafia",
+         "to": "e1"
+        },
+        {
+         "label": "Wzruszyć ramionami, nie zmieniając zdania",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Ktoś odpowiada, że znak z nieba byłby jednoznaczny. Jezus mówi o mocarzu uzbrojonym, który strzeże dworu, i o mocniejszym, który go pokonuje i rozdaje jego łupy. Znak, o który proszą, jest już przed nimi."
+       ],
+       "choices": [
+        {
+         "label": "Przyjąć, że Królestwo jest blisko",
+         "to": "e1"
+        },
+        {
+         "label": "Szukać dalszych dowodów",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Przyznajesz w duchu, że oskarżenie nie ma sensu. Wychodzisz z tłumu, a pytanie, które postawił Jezus, idzie za tobą."
+       ],
+       "end": "Koniec sceny. Ścieżka: zmiana zdania.",
+       "reflection": "Odpowiedź Jezusa jest argumentem, a nie obrazą: szatan nie wyrzuca szatana (Łk 11,18). Zmiana zdania w obliczu argumentu jest rzadkim wydarzeniem, a Ewangelia pokazuje, że jest możliwa. Fragment nie mówi, co zrobił konkretny słuchacz, ale zostawia taką możliwość otwartą. Kiedy ostatnio zmieniłeś zdanie, bo ktoś mówił rozsądniej niż ty?"
+      },
+      "e2": {
+       "p": [
+        "Zostajesz przy swoim. Wiesz, że argument ma sens, ale zmiana zdania kosztowałaby cię więcej, niż jesteś gotów zapłacić."
+       ],
+       "end": "Koniec sceny. Ścieżka: obojętność wobec argumentu.",
+       "reflection": "Jezus stawia sprawę prosto: kto nie jest z Nim, jest przeciwko Niemu (Łk 11,23). Wzruszenie ramion nie jest neutralnością, bo oznacza wybór w praktyce. Zwróć uwagę na to, że oskarżający nie atakują Jezusa za to, że nie uzdrowił, tylko za to, że uzdrowił zbyt skutecznie. Co musiałoby się wydarzyć, żebyś przyznał rację komuś, z kim się nie zgadzasz?"
+      },
+      "e3": {
+       "p": [
+        "Szukasz kolejnych dowodów i znaków. Wciąż pojawia się nowe pytanie, a Jezus odwraca uwagę na to, co już się stało."
+       ],
+       "end": "Koniec sceny. Ścieżka: żądanie znaku.",
+       "reflection": "Łk 11,16 wspomina o ludziach, którzy żądają znaku z nieba, a w wersecie 29 Jezus mówi, że to pokolenie otrzyma tylko znak Jonasza. Znak, o który proszą, już się wydarzył w wyzwoleniu niemego człowieka (11,14). Żądanie kolejnych dowodów bywa sposobem odsuwania decyzji. Czego domagasz się jeszcze, żeby uwierzyć, choć masz już wiele?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "15",
+     "t": "Lecz niektórzy z nich mówili: Przez Belzebuba, władcę demonów, wyrzuca demony."
+    },
+    {
+     "v": "16",
+     "t": "A inni, wystawiając Go na próbę, żądali od Niego znaku z nieba."
+    },
+    {
+     "v": "17",
+     "t": "On zaś, widząc ich myśli, rzekł do nich: Każde królestwo wewnętrznie podzielone popada w spustoszenie, a dom na dom się wali."
+    },
+    {
+     "v": "18",
+     "t": "Jeśli więc i szatan jest wewnętrznie podzielony, jak ostoi się jego królestwo? Bo mówicie, że przez Belzebuba wyrzucam demony."
+    },
+    {
+     "v": "19",
+     "t": "A jeśli ja przez Belzebuba wyrzucam demony, przez kogo wyrzucają je wasi synowie? Dlatego oni będą waszymi sędziami."
+    },
+    {
+     "v": "20",
+     "t": "Lecz jeśli ja palcem Bożym wyrzucam demony, to niewątpliwie przyszło do was królestwo Boże."
+    },
+    {
+     "v": "21",
+     "t": "Gdy mocarz uzbrojony strzeże swego dworu, w pokoju jest to, co posiada."
+    },
+    {
+     "v": "22",
+     "t": "Lecz jeśli mocniejszy od niego nadejdzie i go pokona, zabierze całe jego uzbrojenie, na którym polegał, i rozda jego łupy."
+    },
+    {
+     "v": "23",
+     "t": "Kto nie jest ze mną, jest przeciwko mnie; a kto ze mną nie zbiera, rozprasza."
+    },
+    {
+     "v": "24",
+     "t": "Gdy duch nieczysty wyjdzie z człowieka, chodzi po miejscach bezwodnych, szukając spoczynku; a nie znajdując, mówi: Wrócę do mojego domu, z którego wyszedłem."
+    },
+    {
+     "v": "25",
+     "t": "A gdy przyjdzie, zastaje go wymiecionym i przyozdobionym."
+    },
+    {
+     "v": "26",
+     "t": "Wtedy idzie i bierze z sobą siedmiu innych duchów, gorszych od siebie; a wszedłszy, mieszkają tam. I stan ostatni tego człowieka staje się gorszy niż pierwszy."
+    }
+   ]
+  },
+  "2026-10-10": {
+   "ref": "Łk 11,27-28",
+   "title": "Błogosławieni, którzy słuchają",
+   "context": [
+    "Gdzie jesteśmy: to krótki fragment, który następuje bezpośrednio po nauce o duchu nieczystym i domu wymiecionym (Łk 11,24-26). Jezus mówił o domu, który ma być zajęty. Teraz kobieta z tłumu wykrzykuje błogosławieństwo.",
+    "Kobieta błogosławi łono, które nosiło Jezusa, i piersi, które On ssał. W tej tradycji jest to wyraz uznania dla matki, która wychowała takiego syna. Odpowiedź Jezusa nie neguje tego błogosławieństwa, ale poszerza jego sens („owszem, raczej…”).",
+    "Podobna myśl pojawia się w Łk 8,19-21, gdzie Jezus mówi, że Jego matką i braćmi są ci, którzy słuchają słowa Bożego i je wypełniają. Łukasz wcześniej pokazuje też Maryję jako tę, która zachowuje słowa w sercu (Łk 2,19.51).",
+    "Co dalej: w wersecie 29 Jezus mówi o pokoleniu, które żąda znaku, i o znaku Jonasza. To zaczyna nową część nauczania."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Kobieta z tłumu",
+     "blurb": "Wołasz głośno słowa błogosławieństwa",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Stoisz w tłumie i słuchasz, jak Jezus mówi o duchach, domach i tych, którzy zbierają lub rozpraszają. Nagle czujesz, że masz do powiedzenia coś prostszego. Myślisz o Jego matce."
+       ],
+       "choices": [
+        {
+         "label": "Zawołać głośno błogosławieństwo dla niej",
+         "to": "n2"
+        },
+        {
+         "label": "Zachować to w sobie",
+         "to": "e3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Wołasz: błogosławione łono, które cię nosiło, i piersi, które ssałeś. Ludzie odwracają się w twoją stronę. Jezus patrzy na ciebie i odpowiada: owszem, raczej błogosławieni są ci, którzy słuchają słowa Bożego i go zachowują."
+       ],
+       "q": {
+        "t": "Owszem, raczej błogosławieni są ci, którzy słuchają słowa Bożego i go zachowują.",
+        "r": "Łk 11,28"
+       },
+       "choices": [
+        {
+         "label": "Przyjąć to jako poszerzenie",
+         "to": "e1"
+        },
+        {
+         "label": "Poczuć się upomnianą",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Przyjmujesz te słowa jako zaproszenie. Błogosławieństwo, które chciałaś dać matce, jest dla ciebie samej, o ile słuchasz."
+       ],
+       "end": "Koniec sceny. Ścieżka: słuchanie jako błogosławieństwo.",
+       "reflection": "Odpowiedź zaczyna się od owszem i nie neguje błogosławieństwa matki (Łk 11,28). Poszerza je o tych, którzy słuchają i zachowują słowo. Łukasz wcześniej pokazuje Maryję jako kogoś, kto zachowuje słowa w sercu (Łk 2,19.51), więc te dwa błogosławieństwa nie są przeciwstawne. Co dziś znaczy dla ciebie słuchać słowa i je zachować?"
+      },
+      "e2": {
+       "p": [
+        "Czujesz ukłucie, jakbyś powiedziała coś niewłaściwego. Dopiero po chwili słyszysz w jego słowach nie odrzucenie, tylko zaproszenie, którego nie spodziewałaś się usłyszeć."
+       ],
+       "end": "Koniec sceny. Ścieżka: wstyd, który zmienia się w zaproszenie.",
+       "reflection": "Słowo owszem w Łk 11,28 jest ważne, bo oznacza, że Jezus nie odrzuca twojego błogosławieństwa. Dodaje do niego głębszy sens. Wstyd przy takiej korekcie jest naturalny, ale nie jest celem wypowiedzi. Kiedy ostatnio odebrałeś jako upomnienie coś, co było tylko poszerzeniem?"
+      },
+      "e3": {
+       "p": [
+        "Zachowujesz błogosławieństwo dla siebie. Nikt go nie słyszy, a ty wracasz do domu z myślą, która zostaje w tobie na długo."
+       ],
+       "end": "Koniec sceny. Ścieżka: słowo zachowane w sercu.",
+       "reflection": "W Łk 2,19.51 Maryja zachowuje słowa w sercu i je rozważa. Twoje milczenie przypomina tę postawę, choć nie możesz usłyszeć odpowiedzi, którą dostała kobieta, która zawołała. Czasem słowa, które zachowujemy, są wartościowe, a czasem potrzebują wypowiedzenia, żeby zostać skorygowane lub pogłębione. Co trzymasz w sobie, a co mogłoby zyskać na wypowiedzeniu?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Mężczyzna, który oskarżał Jezusa",
+     "blurb": "Wcześniej mówiłeś o Belzebubie",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Jeszcze niedawno mówiłeś, że Jezus wyrzuca demony mocą Belzebuba. Teraz słuchasz, jak mówi o domu wymiecionym i pustym, w którym złe duchy mogą zamieszkać na nowo. Obok kobieta woła błogosławieństwo dla Jego matki, a On odpowiada."
+       ],
+       "q": {
+        "t": "Błogosławieni są ci, którzy słuchają słowa Bożego i go zachowują.",
+        "r": "Łk 11,28"
+       },
+       "choices": [
+        {
+         "label": "Zastanowić się, czy ty naprawdę słuchasz",
+         "to": "n2"
+        },
+        {
+         "label": "Zlekceważyć to, co usłyszałeś",
+         "to": "e2"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Dom wymieciony i przyozdobiony może być pusty, i wiesz, że o tym mówił Jezus kilka chwil wcześniej. Teraz mówi o słuchaniu i zachowywaniu. Rozumiesz, że to jest odpowiedź na to, co ten dom może ochronić."
+       ],
+       "choices": [
+        {
+         "label": "Zacząć od słuchania, zanim ocenisz",
+         "to": "e1"
+        },
+        {
+         "label": "Odłożyć decyzję na później",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Postanawiasz najpierw słuchać, a potem oceniać. To nie jest łatwe, ale pierwszy raz od dawna czujesz, że nie musisz mieć racji."
+       ],
+       "end": "Koniec sceny. Ścieżka: słuchanie przed oceną.",
+       "reflection": "Fragment zestawia wcześniejszą scenę oskarżenia z błogosławieństwem tych, którzy słuchają (Łk 11,15.28). Słuchanie nie jest bierną postawą, bo wymaga rezygnacji z gotowego wyjaśnienia, którym łatwo zamknąć coś, czego nie rozumiemy. To właśnie zrobili ci, którzy powiedzieli: przez Belzebuba. Jakie gotowe wyjaśnienie trzymasz, żeby nie musieć słuchać?"
+      },
+      "e2": {
+       "p": [
+        "Lekceważysz słowa i wracasz do swoich spraw. Dom, o którym mówił Jezus, pozostaje taki, jaki był: wymieciony, a pusty."
+       ],
+       "end": "Koniec sceny. Ścieżka: lekceważenie.",
+       "reflection": "Jezus mówi o stanie ostatnim, który staje się gorszy niż pierwszy (Łk 11,26). To ostrzeżenie dotyczy tych, którzy po wyzwoleniu nie zbudowali nic nowego. Lekceważenie jest sposobem, w jaki zostawia się dom pustym. Co w twoim życiu zostało uporządkowane, ale niczym nie wypełnione?"
+      },
+      "e3": {
+       "p": [
+        "Odkładasz decyzję. Wiesz, że to ma swoją cenę, choć nikt jej jeszcze nie wyliczył."
+       ],
+       "end": "Koniec sceny. Ścieżka: odkładanie.",
+       "reflection": "Zaraz po tym fragmencie Jezus mówi o pokoleniu, które żąda znaku (Łk 11,29). Odkładanie decyzji jest formą żądania dowodu: jeszcze nie jestem pewien. Ewangelia zostawia taką możliwość otwartą, ale nie ukrywa jej kosztów. Jakiej decyzji nie podejmujesz, bo wciąż czekasz na dowód?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "27",
+     "t": "I zdarzyło się, gdy to mówił, że pewna kobieta z tłumu, podnosząc głos, rzekła do Niego: Błogosławione łono, które cię nosiło, i piersi, które ssałeś."
+    },
+    {
+     "v": "28",
+     "t": "A On rzekł: Owszem, raczej błogosławieni są ci, którzy słuchają słowa Bożego i go zachowują."
     }
    ]
   }

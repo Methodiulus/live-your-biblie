@@ -1,111 +1,243 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Przeżyj Biblię</title>
-<style>
-:root{--bg:#f3f0e8;--fg:#1d2a33;--mut:#5d6b73;--acc:#2f5d62;--q:#a8803a;--card:#e8e3d6}
-@media(prefers-color-scheme:dark){:root{--bg:#121b22;--fg:#e8e4d8;--mut:#98a6ad;--acc:#8fc0b4;--q:#d2ae65;--card:#1b2731}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 Georgia,"Times New Roman",serif}
-main{max-width:34rem;margin:0 auto;padding:1.25rem 1.1rem 4rem}
-h1{font-size:1.5rem;margin:0 0 .75rem;font-weight:700}
-nav{display:flex;gap:.5rem;margin-bottom:1.5rem}
-nav button{flex:1}
-button{font:inherit;min-height:48px;padding:.6rem 1rem;border:1.5px solid var(--acc);background:transparent;color:var(--fg);border-radius:6px;cursor:pointer;text-align:left}
-button:hover,button.on{background:var(--acc);color:var(--bg)}
-button:focus-visible{outline:3px solid var(--q);outline-offset:2px}
-.meta{color:var(--mut);font-size:.95rem;margin:0}
-h2{font-size:1.6rem;line-height:1.25;margin:.25rem 0 .25rem}
-.role{font-style:italic;color:var(--mut);margin:0 0 1.25rem}
-blockquote{margin:1.25rem 0;padding:.25rem 0 .25rem 1rem;border-left:4px solid var(--q)}
-blockquote cite{display:block;color:var(--mut);font-size:.9rem;font-style:normal}
-.choices{display:grid;gap:.6rem;margin-top:1.5rem}
-.end{color:var(--mut);font-size:.95rem;margin-top:1.5rem}
-details{background:var(--card);padding:.6rem 1rem;border-radius:6px;margin:0 0 1.25rem;font-size:.95rem}summary{cursor:pointer;font-weight:700;min-height:32px;display:flex;align-items:center}
-h3{font-size:1.05rem;margin:1.5rem 0 .3rem}ul.dec{padding-left:1.2rem;margin:.2rem 0}.refl{border-left:4px solid var(--acc);padding-left:1rem;margin-top:.3rem}
-sup{color:var(--mut);font-size:.7em;margin-right:.15em}
-.note{color:var(--mut);font-size:.85rem;margin-top:2rem}
-.lib{display:grid;gap:.6rem}
-.lib button{display:block;width:100%}
-.lib small{display:block;color:inherit;opacity:.75}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Przeżyj Biblię</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-<h1>Przeżyj Biblię</h1>
-<nav>
-  <button id="tDzis" class="on">Dziś</button>
-  <button id="tLib">Biblioteka</button>
-</nav>
-<section id="v" aria-live="polite"></section>
-<p class="note">Cytaty to własne tłumaczenie fragmentów angielskiej Biblii Douay-Rheims (domena publiczna), nie oficjalny przekład liturgiczny. Pozostały tekst to narracja i parafraza.</p>
-</main>
-<script>
-const v=document.getElementById('v');
-const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
-const q=new URLSearchParams(location.search).get('dzien');
-const today=q||new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Warsaw'}).format(new Date());
-let S={},from='dzis',path=[];
-function textPanel(sc){
-  if(!sc.text)return document.createDocumentFragment();
-  const d=el('details');d.append(el('summary',0,'Tekst fragmentu: '+sc.ref));
-  sc.text.forEach(x=>{const p=el('p');p.append(el('sup',0,x.v),document.createTextNode(x.t));d.append(p)});
-  d.append(el('p','meta','Własne tłumaczenie z angielskiej Biblii Douay-Rheims, nie przekład liturgiczny.'));
-  d.style.marginTop='1.5rem';return d;
-}
+  <main>
+    <h1>Przeżyj Biblię</h1>
 
-function tab(w){
-  document.getElementById('tDzis').classList.toggle('on',w==='dzis');
-  document.getElementById('tLib').classList.toggle('on',w==='lib');
-}
-function fmt(d){return new Date(d+'T12:00:00').toLocaleDateString('pl-PL',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}
+    <nav class="tabs">
+      <button id="tab-today" class="active">Dziś</button>
+      <button id="tab-library">Biblioteka</button>
+    </nav>
 
-function pick(date){
-  const sc=S[date];v.replaceChildren();
-  v.append(el('p','meta',fmt(date)+' · '+sc.ref),el('h2',0,sc.title));
-  if(sc.context){const d=el('details');d.open=true;d.append(el('summary',0,'Kontekst fragmentu'));sc.context.forEach(t=>d.append(el('p',0,t)));v.append(d)}
-  v.append(el('p','role','Wybierz postać, którą zagrasz:'));
-  const box=el('div','lib');
-  sc.roles.forEach(r=>{const b=el('button',0,r.name);b.append(el('small',0,r.blurb));b.onclick=()=>{path=[];play(date,r.id);scrollTo(0,0)};box.append(b)});
-  v.append(box,textPanel(sc));
-}
-function play(date,rid,node){
-  const sc=S[date],r=sc.roles.find(x=>x.id===rid),n=r.nodes[node||r.start];
-  v.replaceChildren();
-  v.append(el('p','meta',fmt(date)+' · '+sc.ref),el('h2',0,sc.title),el('p','role','Grasz: '+r.name));
-  n.p.forEach(t=>v.append(el('p',0,t)));
-  if(n.q){const b=el('blockquote',0,'„'+n.q.t+'”');b.append(el('cite',0,n.q.r));v.append(b)}
-  const box=el('div','choices');
-  if(n.choices){n.choices.forEach(c=>{const b=el('button',0,c.label);b.onclick=()=>{path.push(c.label);play(date,rid,c.to);scrollTo(0,0)};box.append(b)})}
-  else{
-    v.append(el('p','end',n.end||''));
-    if(path.length){v.append(el('h3',0,'Twoje decyzje'));const u=el('ul','dec');path.forEach(t=>u.append(el('li',0,t)));v.append(u)}
-    if(n.reflection){v.append(el('h3',0,'Rozważanie'));v.append(el('p','refl',n.reflection))}
-    const a=el('button',0,'Zagraj tą postacią jeszcze raz');a.onclick=()=>{path=[];play(date,rid)};box.append(a);
-    const o=el('button',0,'Zagraj inną postacią');o.onclick=()=>pick(date);box.append(o);
-    if(from==='lib'){const l=el('button',0,'Wróć do biblioteki');l.onclick=library;box.append(l)}
-  }
-  v.append(box,textPanel(sc));
-}
-function showToday(){
-  from='dzis';tab('dzis');
-  if(S[today])return pick(today);
-  v.replaceChildren(el('p',0,'Na dziś nie ma jeszcze sceny. Zajrzyj do biblioteki.'));
-}
-function library(){
-  from='lib';tab('lib');v.replaceChildren();
-  const past=Object.keys(S).filter(d=>d<today).sort().reverse();
-  if(!past.length){v.append(el('p',0,'Biblioteka jest pusta. Pierwsza scena trafi tu jutro.'));return}
-  const l=el('div','lib');
-  past.forEach(d=>{const b=el('button',0,S[d].title);b.append(el('small',0,fmt(d)+' · '+S[d].ref));b.onclick=()=>pick(d);l.append(b)});
-  v.append(l);
-}
-document.getElementById('tDzis').onclick=showToday;
-document.getElementById('tLib').onclick=library;
-fetch('sceny.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{S=d.scenes||{};showToday()})
- .catch(()=>v.replaceChildren(el('p',0,'Nie udało się wczytać scen. Sprawdź, czy plik sceny.json leży obok index.html.')));
-</script>
+    <section id="view" aria-live="polite"></section>
+
+    <p class="note">
+      Cytaty i tekst fragmentu to własne tłumaczenie angielskiej Biblii Douay-Rheims
+      (domena publiczna), nie przekład liturgiczny. Pozostały tekst to narracja
+      i parafraza.
+    </p>
+  </main>
+
+  <script>
+    // ---------- Pomocnicze ----------
+
+    const view = document.getElementById('view');
+
+    // Tworzy element: tag, klasa (lub 0), tekst (lub pominięty).
+    function el(tag, className, text) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text != null) node.textContent = text;
+      return node;
+    }
+
+    function formatDate(isoDate) {
+      return new Date(isoDate + 'T12:00:00').toLocaleDateString('pl-PL', {
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+      });
+    }
+
+    function setActiveTab(name) {
+      document.getElementById('tab-today').classList.toggle('active', name === 'today');
+      document.getElementById('tab-library').classList.toggle('active', name === 'library');
+    }
+
+    // ---------- Stan ----------
+
+    // Dzisiejsza data w strefie Europe/Warsaw (format RRRR-MM-DD).
+    // Do testów: dopisz do adresu ?dzien=2026-10-05
+    const override = new URLSearchParams(location.search).get('dzien');
+    const today = override || new Intl.DateTimeFormat('sv-SE', {
+      timeZone: 'Europe/Warsaw'
+    }).format(new Date());
+
+    let scenes = {};      // wszystkie sceny z sceny.json
+    let origin = 'today'; // skąd otwarto scenę: 'today' albo 'library'
+    let path = [];        // etykiety wybranych decyzji w bieżącej rozgrywce
+
+    // ---------- Panele rozwijane ----------
+
+    function contextPanel(scene) {
+      if (!scene.context) return null;
+      const panel = el('details');
+      panel.open = true;
+      panel.append(el('summary', null, 'Kontekst fragmentu'));
+      scene.context.forEach(text => panel.append(el('p', null, text)));
+      return panel;
+    }
+
+    function textPanel(scene) {
+      const panel = el('details', 'text-panel');
+      panel.append(el('summary', null, 'Tekst fragmentu: ' + scene.ref));
+      scene.text.forEach(verse => {
+        const p = el('p');
+        p.append(el('sup', null, verse.v), document.createTextNode(verse.t));
+        panel.append(p);
+      });
+      panel.append(el('p', 'meta',
+        'Własne tłumaczenie z angielskiej Biblii Douay-Rheims, nie przekład liturgiczny.'));
+      return panel;
+    }
+
+    // ---------- Ekran wyboru postaci ----------
+
+    function showRolePicker(date) {
+      const scene = scenes[date];
+      view.replaceChildren(
+        el('p', 'meta', formatDate(date) + ' · ' + scene.ref),
+        el('h2', null, scene.title)
+      );
+
+      const context = contextPanel(scene);
+      if (context) view.append(context);
+
+      view.append(el('p', 'role-line', 'Wybierz postać, którą zagrasz:'));
+
+      const list = el('div', 'card-list');
+      scene.roles.forEach(role => {
+        const button = el('button', null, role.name);
+        button.append(el('small', null, role.blurb));
+        button.onclick = () => {
+          path = [];
+          playNode(date, role.id);
+          scrollTo(0, 0);
+        };
+        list.append(button);
+      });
+
+      view.append(list, textPanel(scene));
+    }
+
+    // ---------- Przebieg ścieżki ----------
+
+    function playNode(date, roleId, nodeId) {
+      const scene = scenes[date];
+      const role = scene.roles.find(r => r.id === roleId);
+      const node = role.nodes[nodeId || role.start];
+
+      view.replaceChildren(
+        el('p', 'meta', formatDate(date) + ' · ' + scene.ref),
+        el('h2', null, scene.title),
+        el('p', 'role-line', 'Grasz: ' + role.name)
+      );
+
+      node.p.forEach(text => view.append(el('p', null, text)));
+
+      if (node.q) {
+        const quote = el('blockquote', null, '„' + node.q.t + '”');
+        quote.append(el('cite', null, node.q.r));
+        view.append(quote);
+      }
+
+      const box = el('div', 'choices');
+
+      if (node.choices) {
+        node.choices.forEach(choice => {
+          const button = el('button', null, choice.label);
+          button.onclick = () => {
+            path.push(choice.label);
+            playNode(date, roleId, choice.to);
+            scrollTo(0, 0);
+          };
+          box.append(button);
+        });
+      } else {
+        showEnding(node, date, roleId, box);
+      }
+
+      view.append(box, textPanel(scene));
+    }
+
+    // Zakończenie: etykieta ścieżki, wybrane decyzje, rozważanie i przyciski.
+    function showEnding(node, date, roleId, box) {
+      view.append(el('p', 'ending', node.end || ''));
+
+      if (path.length) {
+        view.append(el('h3', null, 'Twoje decyzje'));
+        const list = el('ul', 'decisions');
+        path.forEach(label => list.append(el('li', null, label)));
+        view.append(list);
+      }
+
+      if (node.reflection) {
+        view.append(el('h3', null, 'Rozważanie'));
+        view.append(el('p', 'reflection', node.reflection));
+      }
+
+      const again = el('button', null, 'Zagraj tą postacią jeszcze raz');
+      again.onclick = () => { path = []; playNode(date, roleId); };
+
+      const other = el('button', null, 'Zagraj inną postacią');
+      other.onclick = () => showRolePicker(date);
+
+      box.append(again, other);
+
+      if (origin === 'library') {
+        const back = el('button', null, 'Wróć do biblioteki');
+        back.onclick = showLibrary;
+        box.append(back);
+      }
+    }
+
+    // ---------- Dziś i biblioteka ----------
+
+    function showToday() {
+      origin = 'today';
+      setActiveTab('today');
+
+      if (scenes[today]) {
+        showRolePicker(today);
+      } else {
+        view.replaceChildren(
+          el('p', null, 'Na dziś nie ma jeszcze sceny. Zajrzyj do biblioteki.')
+        );
+      }
+    }
+
+    function showLibrary() {
+      origin = 'library';
+      setActiveTab('library');
+      view.replaceChildren();
+
+      // Biblioteka to wszystkie sceny z datą wcześniejszą niż dziś.
+      const past = Object.keys(scenes).filter(d => d < today).sort().reverse();
+
+      if (!past.length) {
+        view.append(el('p', null, 'Biblioteka jest pusta. Pierwsza scena trafi tu jutro.'));
+        return;
+      }
+
+      const list = el('div', 'card-list');
+      past.forEach(date => {
+        const button = el('button', null, scenes[date].title);
+        button.append(el('small', null, formatDate(date) + ' · ' + scenes[date].ref));
+        button.onclick = () => showRolePicker(date);
+        list.append(button);
+      });
+      view.append(list);
+    }
+
+    // ---------- Start ----------
+
+    document.getElementById('tab-today').onclick = showToday;
+    document.getElementById('tab-library').onclick = showLibrary;
+
+    fetch('sceny.json', { cache: 'no-cache' })
+      .then(response => response.json())
+      .then(data => {
+        scenes = data.scenes || {};
+        showToday();
+      })
+      .catch(() => {
+        view.replaceChildren(el('p', null,
+          'Nie udało się wczytać scen. Sprawdź, czy plik sceny.json leży obok index.html.'));
+      });
+  </script>
 </body>
 </html>
