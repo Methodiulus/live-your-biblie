@@ -2,34 +2,178 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Przeżyj Biblię</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
-    <h1>Przeżyj Biblię</h1>
+    <header class="topbar">
+      <h1 id="site-title">Przeżyj Biblię</h1>
+      <div class="controls">
+        <div class="lang-switch" role="group" aria-label="Język / Language">
+          <button type="button" id="lang-pl" aria-pressed="true">PL</button>
+          <button type="button" id="lang-en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" id="theme-toggle" class="theme-toggle"></button>
+      </div>
+    </header>
 
     <nav class="tabs">
-      <button id="tab-today" class="active">Dziś</button>
-      <button id="tab-library">Biblioteka</button>
+      <button type="button" id="tab-today" class="active"></button>
+      <button type="button" id="tab-library"></button>
     </nav>
 
     <section id="view" aria-live="polite"></section>
 
-    <p class="note">
-      Cytaty i tekst fragmentu to własne tłumaczenie angielskiej Biblii Douay-Rheims
-      (domena publiczna), nie przekład liturgiczny. Pozostały tekst to narracja
-      i parafraza.
-    </p>
+    <p class="note" id="footer-note"></p>
   </main>
 
   <script>
-    // ---------- Pomocnicze ----------
+    // ==========================================================
+    // Teksty interfejsu w dwóch językach
+    // ==========================================================
+
+    const UI = {
+      pl: {
+        title: 'Przeżyj Biblię',
+        today: 'Dziś',
+        library: 'Biblioteka',
+        passage: 'Tekst fragmentu: ',
+        passageNote: 'Własne tłumaczenie z angielskiej Biblii Douay-Rheims, nie przekład liturgiczny.',
+        context: 'Kontekst fragmentu',
+        chooseRole: 'Wybierz postać, którą zagrasz:',
+        youPlay: 'Grasz: ',
+        decisions: 'Twoje decyzje',
+        reflection: 'Rozważanie',
+        again: 'Zagraj tą postacią jeszcze raz',
+        another: 'Zagraj inną postacią',
+        backLibrary: 'Wróć do biblioteki',
+        noScene: 'Na dziś nie ma jeszcze sceny. Zajrzyj do biblioteki.',
+        emptyLibrary: 'Biblioteka jest pusta. Pierwsza scena trafi tu jutro.',
+        loadError: 'Nie udało się wczytać scen. Sprawdź, czy plik sceny.json leży obok index.html.',
+        footer: 'Cytaty i tekst fragmentu to własne tłumaczenie angielskiej Biblii Douay-Rheims (domena publiczna), nie przekład liturgiczny. Pozostały tekst to narracja i parafraza.',
+        toDark: 'Przełącz na ciemny motyw',
+        toLight: 'Przełącz na jasny motyw',
+        locale: 'pl-PL'
+      },
+      en: {
+        title: 'Live the Bible',
+        today: 'Today',
+        library: 'Library',
+        passage: 'Passage text: ',
+        passageNote: 'Douay-Rheims Bible (Challoner revision), public domain. Not the liturgical text used at Mass.',
+        context: 'Context of the passage',
+        chooseRole: 'Choose the character you will play:',
+        youPlay: 'You play: ',
+        decisions: 'Your decisions',
+        reflection: 'Reflection',
+        again: 'Play this character again',
+        another: 'Play another character',
+        backLibrary: 'Back to the library',
+        noScene: 'There is no scene for today yet. Have a look in the library.',
+        emptyLibrary: 'The library is empty. The first scene will arrive here tomorrow.',
+        loadError: 'Could not load the scenes. Check that sceny.json is next to index.html.',
+        footer: 'Passage text and quotes are from the Douay-Rheims Bible (public domain), not the liturgical translation. Everything else is narration and paraphrase.',
+        toDark: 'Switch to dark mode',
+        toLight: 'Switch to light mode',
+        locale: 'en-GB'
+      }
+    };
+
+    // ==========================================================
+    // Stan aplikacji
+    // ==========================================================
 
     const view = document.getElementById('view');
 
-    // Tworzy element: tag, klasa (lub 0), tekst (lub pominięty).
+    // Do testów: dopisz do adresu ?dzien=2026-10-05
+    const override = new URLSearchParams(location.search).get('dzien');
+    const today = override || new Intl.DateTimeFormat('sv-SE', {
+      timeZone: 'Europe/Warsaw'
+    }).format(new Date());
+
+    const data = { pl: {}, en: null };  // sceny z sceny.json i sceny.en.json
+    let lang = 'pl';
+    let screen = { name: 'today' };     // today | library | picker | play
+    let picks = [];                     // wybory: { node, index } (niezależne od języka)
+
+    const t = key => UI[lang][key];
+    const scenes = () => (lang === 'en' && data.en) ? data.en : data.pl;
+
+    // ==========================================================
+    // Preferencje (język i motyw) – zapis w przeglądarce
+    // ==========================================================
+
+    function readPref(key) {
+      try { return localStorage.getItem(key); } catch (e) { return null; }
+    }
+    function savePref(key, value) {
+      try { localStorage.setItem(key, value); } catch (e) { /* brak zapisu to nie błąd */ }
+    }
+
+    // ---------- Motyw ----------
+
+    const SUN = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/>' +
+      '<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+    const MOON = '<svg viewBox="0 0 24 24" aria-hidden="true">' +
+      '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function effectiveTheme() {
+      return document.documentElement.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+    }
+
+    // Ikona pokazuje aktualny motyw: słońce w jasnym, księżyc w ciemnym.
+    function updateThemeButton() {
+      const dark = effectiveTheme() === 'dark';
+      const button = document.getElementById('theme-toggle');
+      button.innerHTML = dark ? MOON : SUN;
+      button.setAttribute('aria-label', dark ? t('toLight') : t('toDark'));
+      button.title = button.getAttribute('aria-label');
+    }
+
+    function toggleTheme() {
+      const next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      savePref('theme', next);
+      updateThemeButton();
+    }
+
+    // ---------- Język ----------
+
+    function chooseInitialLanguage() {
+      const stored = readPref('lang');
+      if (stored === 'pl' || stored === 'en') return stored;
+      return (navigator.language || 'pl').toLowerCase().startsWith('pl') ? 'pl' : 'en';
+    }
+
+    function setLanguage(next) {
+      lang = next;
+      savePref('lang', next);
+      applyLanguageToChrome();
+      render();
+    }
+
+    // Elementy poza sceną: tytuł, zakładki, stopka, przełączniki.
+    function applyLanguageToChrome() {
+      document.documentElement.lang = lang;
+      document.title = t('title');
+      document.getElementById('site-title').textContent = t('title');
+      document.getElementById('tab-today').textContent = t('today');
+      document.getElementById('tab-library').textContent = t('library');
+      document.getElementById('footer-note').textContent = t('footer');
+      document.getElementById('lang-pl').setAttribute('aria-pressed', String(lang === 'pl'));
+      document.getElementById('lang-en').setAttribute('aria-pressed', String(lang === 'en'));
+      updateThemeButton();
+    }
+
+    // ==========================================================
+    // Pomocnicze funkcje widoku
+    // ==========================================================
+
+    // Tworzy element: tag, klasa (lub null), tekst (lub pominięty).
     function el(tag, className, text) {
       const node = document.createElement(tag);
       if (className) node.className = className;
@@ -38,7 +182,7 @@
     }
 
     function formatDate(isoDate) {
-      return new Date(isoDate + 'T12:00:00').toLocaleDateString('pl-PL', {
+      return new Date(isoDate + 'T12:00:00').toLocaleDateString(t('locale'), {
         weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
       });
     }
@@ -48,196 +192,219 @@
       document.getElementById('tab-library').classList.toggle('active', name === 'library');
     }
 
-    // ---------- Stan ----------
-
-    // Dzisiejsza data w strefie Europe/Warsaw (format RRRR-MM-DD).
-    // Do testów: dopisz do adresu ?dzien=2026-10-05
-    const override = new URLSearchParams(location.search).get('dzien');
-    const today = override || new Intl.DateTimeFormat('sv-SE', {
-      timeZone: 'Europe/Warsaw'
-    }).format(new Date());
-
-    let scenes = {};      // wszystkie sceny z sceny.json
-    let origin = 'today'; // skąd otwarto scenę: 'today' albo 'library'
-    let path = [];        // etykiety wybranych decyzji w bieżącej rozgrywce
-
-    // ---------- Panele rozwijane ----------
-
-    function contextPanel(scene) {
-      if (!scene.context) return null;
-      const panel = el('details');
-      panel.open = true;
-      panel.append(el('summary', null, 'Kontekst fragmentu'));
-      scene.context.forEach(text => panel.append(el('p', null, text)));
-      return panel;
+    // Etykiety wybranych decyzji w bieżącym języku.
+    function pickedLabels(role) {
+      return picks.map(p => role.nodes[p.node].choices[p.index].label);
     }
 
+    // ==========================================================
+    // Panele rozwijane
+    // ==========================================================
+
+    // Tekst fragmentu: zwinięty, wyświetlany zawsze na górze sceny.
     function textPanel(scene) {
-      const panel = el('details', 'text-panel');
-      panel.append(el('summary', null, 'Tekst fragmentu: ' + scene.ref));
+      const panel = el('details');
+      panel.append(el('summary', null, t('passage') + scene.ref));
       scene.text.forEach(verse => {
         const p = el('p');
         p.append(el('sup', null, verse.v), document.createTextNode(verse.t));
         panel.append(p);
       });
-      panel.append(el('p', 'meta',
-        'Własne tłumaczenie z angielskiej Biblii Douay-Rheims, nie przekład liturgiczny.'));
+      panel.append(el('p', 'meta', t('passageNote')));
       return panel;
     }
 
-    // ---------- Ekran wyboru postaci ----------
+    // Kontekst fragmentu: rozwinięty, pod tekstem fragmentu.
+    function contextPanel(scene) {
+      if (!scene.context) return null;
+      const panel = el('details');
+      panel.open = true;
+      panel.append(el('summary', null, t('context')));
+      scene.context.forEach(text => panel.append(el('p', null, text)));
+      return panel;
+    }
 
-    function showRolePicker(date) {
-      const scene = scenes[date];
+    // ==========================================================
+    // Ekrany
+    // ==========================================================
+
+    function renderToday() {
+      setActiveTab('today');
+      if (scenes()[today]) {
+        screen = { name: 'picker', date: today };
+        renderPicker();
+      } else {
+        view.replaceChildren(el('p', null, t('noScene')));
+      }
+    }
+
+    function renderLibrary() {
+      setActiveTab('library');
+      view.replaceChildren();
+
+      // Biblioteka to wszystkie sceny z datą wcześniejszą niż dziś.
+      const past = Object.keys(scenes()).filter(d => d < today).sort().reverse();
+      if (!past.length) {
+        view.append(el('p', null, t('emptyLibrary')));
+        return;
+      }
+
+      const list = el('div', 'card-list');
+      past.forEach(date => {
+        const scene = scenes()[date];
+        const button = el('button', null, scene.title);
+        button.append(el('small', null, formatDate(date) + ' · ' + scene.ref));
+        button.onclick = () => go({ name: 'picker', date, from: 'library' });
+        list.append(button);
+      });
+      view.append(list);
+    }
+
+    function renderPicker() {
+      const scene = scenes()[screen.date];
       view.replaceChildren(
-        el('p', 'meta', formatDate(date) + ' · ' + scene.ref),
-        el('h2', null, scene.title)
+        el('p', 'meta', formatDate(screen.date) + ' · ' + scene.ref),
+        el('h2', null, scene.title),
+        textPanel(scene)                       // tekst fragmentu na samej górze
       );
 
-      const context = contextPanel(scene);
+      const context = contextPanel(scene);     // kontekst pod nim
       if (context) view.append(context);
 
-      view.append(el('p', 'role-line', 'Wybierz postać, którą zagrasz:'));
+      view.append(el('p', 'role-line', t('chooseRole')));
 
       const list = el('div', 'card-list');
       scene.roles.forEach(role => {
         const button = el('button', null, role.name);
         button.append(el('small', null, role.blurb));
         button.onclick = () => {
-          path = [];
-          playNode(date, role.id);
-          scrollTo(0, 0);
+          picks = [];
+          go({ name: 'play', date: screen.date, roleId: role.id, nodeId: role.start, from: screen.from });
         };
         list.append(button);
       });
-
-      view.append(list, textPanel(scene));
+      view.append(list);
     }
 
-    // ---------- Przebieg ścieżki ----------
-
-    function playNode(date, roleId, nodeId) {
-      const scene = scenes[date];
-      const role = scene.roles.find(r => r.id === roleId);
-      const node = role.nodes[nodeId || role.start];
+    function renderPlay() {
+      const scene = scenes()[screen.date];
+      const role = scene.roles.find(r => r.id === screen.roleId);
+      const node = role.nodes[screen.nodeId];
 
       view.replaceChildren(
-        el('p', 'meta', formatDate(date) + ' · ' + scene.ref),
+        el('p', 'meta', formatDate(screen.date) + ' · ' + scene.ref),
         el('h2', null, scene.title),
-        el('p', 'role-line', 'Grasz: ' + role.name)
+        el('p', 'role-line', t('youPlay') + role.name),
+        textPanel(scene)
       );
 
       node.p.forEach(text => view.append(el('p', null, text)));
 
       if (node.q) {
         const quote = el('blockquote', null, '„' + node.q.t + '”');
+        if (lang === 'en') quote.textContent = '“' + node.q.t + '”';
         quote.append(el('cite', null, node.q.r));
         view.append(quote);
       }
 
       const box = el('div', 'choices');
-
       if (node.choices) {
-        node.choices.forEach(choice => {
+        node.choices.forEach((choice, index) => {
           const button = el('button', null, choice.label);
           button.onclick = () => {
-            path.push(choice.label);
-            playNode(date, roleId, choice.to);
-            scrollTo(0, 0);
+            picks.push({ node: screen.nodeId, index });
+            go({ ...screen, nodeId: choice.to });
           };
           box.append(button);
         });
       } else {
-        showEnding(node, date, roleId, box);
+        renderEnding(node, role, box);
       }
-
-      view.append(box, textPanel(scene));
+      view.append(box);
     }
 
-    // Zakończenie: etykieta ścieżki, wybrane decyzje, rozważanie i przyciski.
-    function showEnding(node, date, roleId, box) {
+    // Zakończenie: etykieta ścieżki, wybrane decyzje, rozważanie, przyciski.
+    function renderEnding(node, role, box) {
       view.append(el('p', 'ending', node.end || ''));
 
-      if (path.length) {
-        view.append(el('h3', null, 'Twoje decyzje'));
+      if (picks.length) {
+        view.append(el('h3', null, t('decisions')));
         const list = el('ul', 'decisions');
-        path.forEach(label => list.append(el('li', null, label)));
+        pickedLabels(role).forEach(label => list.append(el('li', null, label)));
         view.append(list);
       }
 
       if (node.reflection) {
-        view.append(el('h3', null, 'Rozważanie'));
+        view.append(el('h3', null, t('reflection')));
         view.append(el('p', 'reflection', node.reflection));
       }
 
-      const again = el('button', null, 'Zagraj tą postacią jeszcze raz');
-      again.onclick = () => { path = []; playNode(date, roleId); };
+      const again = el('button', null, t('again'));
+      again.onclick = () => { picks = []; go({ ...screen, nodeId: role.start }); };
 
-      const other = el('button', null, 'Zagraj inną postacią');
-      other.onclick = () => showRolePicker(date);
+      const other = el('button', null, t('another'));
+      other.onclick = () => go({ name: 'picker', date: screen.date, from: screen.from });
 
       box.append(again, other);
 
-      if (origin === 'library') {
-        const back = el('button', null, 'Wróć do biblioteki');
-        back.onclick = showLibrary;
+      if (screen.from === 'library') {
+        const back = el('button', null, t('backLibrary'));
+        back.onclick = () => go({ name: 'library' });
         box.append(back);
       }
     }
 
-    // ---------- Dziś i biblioteka ----------
+    // ==========================================================
+    // Nawigacja i rysowanie
+    // ==========================================================
 
-    function showToday() {
-      origin = 'today';
-      setActiveTab('today');
-
-      if (scenes[today]) {
-        showRolePicker(today);
-      } else {
-        view.replaceChildren(
-          el('p', null, 'Na dziś nie ma jeszcze sceny. Zajrzyj do biblioteki.')
-        );
-      }
+    function go(next) {
+      screen = next;
+      render();
+      scrollTo(0, 0);
     }
 
-    function showLibrary() {
-      origin = 'library';
-      setActiveTab('library');
-      view.replaceChildren();
-
-      // Biblioteka to wszystkie sceny z datą wcześniejszą niż dziś.
-      const past = Object.keys(scenes).filter(d => d < today).sort().reverse();
-
-      if (!past.length) {
-        view.append(el('p', null, 'Biblioteka jest pusta. Pierwsza scena trafi tu jutro.'));
-        return;
-      }
-
-      const list = el('div', 'card-list');
-      past.forEach(date => {
-        const button = el('button', null, scenes[date].title);
-        button.append(el('small', null, formatDate(date) + ' · ' + scenes[date].ref));
-        button.onclick = () => showRolePicker(date);
-        list.append(button);
-      });
-      view.append(list);
+    // Rysuje bieżący ekran w bieżącym języku (używane też po zmianie języka).
+    function render() {
+      if (screen.name === 'library') renderLibrary();
+      else if (screen.name === 'picker') { setActiveTab(screen.from === 'library' ? 'library' : 'today'); renderPicker(); }
+      else if (screen.name === 'play') { setActiveTab(screen.from === 'library' ? 'library' : 'today'); renderPlay(); }
+      else renderToday();
     }
 
-    // ---------- Start ----------
+    // ==========================================================
+    // Start
+    // ==========================================================
 
-    document.getElementById('tab-today').onclick = showToday;
-    document.getElementById('tab-library').onclick = showLibrary;
+    document.getElementById('tab-today').onclick = () => go({ name: 'today' });
+    document.getElementById('tab-library').onclick = () => go({ name: 'library' });
+    document.getElementById('lang-pl').onclick = () => setLanguage('pl');
+    document.getElementById('lang-en').onclick = () => setLanguage('en');
+    document.getElementById('theme-toggle').onclick = toggleTheme;
 
-    fetch('sceny.json', { cache: 'no-cache' })
-      .then(response => response.json())
-      .then(data => {
-        scenes = data.scenes || {};
-        showToday();
+    // Zapisany motyw ma pierwszeństwo, w przeciwnym razie obowiązuje ustawienie systemu.
+    const storedTheme = readPref('theme');
+    if (storedTheme === 'light' || storedTheme === 'dark') {
+      document.documentElement.dataset.theme = storedTheme;
+    }
+    systemDark.addEventListener('change', updateThemeButton);
+
+    lang = chooseInitialLanguage();
+    applyLanguageToChrome();
+
+    // Wersja polska jest wymagana, angielska opcjonalna (przy braku pliku zostają polskie sceny).
+    const loadJson = url => fetch(url, { cache: 'no-cache' }).then(r => {
+      if (!r.ok) throw new Error(url);
+      return r.json();
+    });
+
+    loadJson('sceny.json')
+      .then(pl => {
+        data.pl = pl.scenes || {};
+        return loadJson('sceny.en.json').then(en => { data.en = en.scenes || {}; }).catch(() => {});
       })
-      .catch(() => {
-        view.replaceChildren(el('p', null,
-          'Nie udało się wczytać scen. Sprawdź, czy plik sceny.json leży obok index.html.'));
-      });
+      .then(render)
+      .catch(() => view.replaceChildren(el('p', null, t('loadError'))));
   </script>
 </body>
 </html>

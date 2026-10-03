@@ -1,0 +1,2265 @@
+{
+ "version": 3,
+ "lang": "en",
+ "note": "English version. Passage text and quotes: Douay-Rheims Bible (Challoner revision), public domain. Structure (ids, choices) mirrors sceny.json.",
+ "scenes": {
+  "2026-10-01": {
+   "ref": "Lk 10:1-12",
+   "title": "Sent Two by Two",
+   "context": [
+    "Where we are: Jesus has resolved to go to Jerusalem (Luke 9:51). He sends messengers ahead of him to places where he himself will come. Just before, a Samaritan village had refused to receive him (Luke 9:52-53).",
+    "Seventy-two are sent (some manuscripts say seventy), two by two. Earlier, Jesus had sent the Twelve with similar instructions (Luke 9:1-6). Having no purse or supplies means depending on the hospitality of those they visit.",
+    "The passage describes two possible responses of a town: welcome, which means eating at a stranger's table, and rejection, after which the sent go into the streets and speak about the dust. In both cases the message is the same: the kingdom of God is at hand (Luke 10:9.11).",
+    "What follows: Jesus pronounces woe on the towns that did not accept the signs (Luke 10:13-15), and in verse 17 the sent return with joy. That is the scene for 3 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "One of the sent",
+     "blurb": "You walk into a strange town with no purse",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You stand with your companion outside a town that Jesus himself has not yet reached. You have no purse, no bag, no spare sandals. On the road you pass acquaintances who would gladly keep you talking. You know the harvest is great and the labourers are few."
+       ],
+       "q": {
+        "t": "Go: Behold I send you as lambs among wolves.",
+        "r": "Lk 10:3"
+       },
+       "choices": [
+        {
+         "label": "Go straight to the town without stopping",
+         "to": "n2"
+        },
+        {
+         "label": "Stop and chat with acquaintances",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You reach the town just before evening. The streets are full of strangers. You remember what you were told to say in the house you enter."
+       ],
+       "choices": [
+        {
+         "label": "Knock at the first house and greet it with peace",
+         "to": "n4"
+        },
+        {
+         "label": "Look for a house where it will be more comfortable",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "The conversation drags on and you reach the town after dark. An acquaintance offers you a comfortable bed at his house. You know someone in the town may be waiting for you, though nobody knows it."
+       ],
+       "choices": [
+        {
+         "label": "Accept the bed from your acquaintances",
+         "to": "e3"
+        },
+        {
+         "label": "Go to a stranger's house anyway, late as it is",
+         "to": "n4"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "A man opens the door, listening carefully though warily. You say: Peace be to this house. You can see in his face that someone has heard it. The woman of the house sets on the table what she has."
+       ],
+       "q": {
+        "t": "Into whatsoever house you enter, first say: Peace be to this house.",
+        "r": "Lk 10:5"
+       },
+       "choices": [
+        {
+         "label": "Stay in this house and eat what they set before you",
+         "to": "n5"
+        },
+        {
+         "label": "Move on to a wealthier neighbour's house",
+         "to": "e3"
+        }
+       ]
+      },
+      "n5": {
+       "p": [
+        "Days pass. People ask about the sick in the next house, and you tell them the kingdom of God has come near. But in the next town you reach, nobody opens a door."
+       ],
+       "choices": [
+        {
+         "label": "Go out into the streets and speak the words about the dust, with the news of the near Kingdom",
+         "to": "e1"
+        },
+        {
+         "label": "Leave in silence, without a word",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You stand in the street and say what Jesus told you to say to those who do not receive you. You do not curse the town; you only announce that the Kingdom is near."
+       ],
+       "end": "End of scene. Path: faithful witness despite rejection.",
+       "reflection": "The instruction in Luke 10:10-11 is paradoxical: shaking off the dust sounds like a warning, yet it ends with the news that the kingdom of God is at hand. Rejection does not cancel the message and does not turn the messenger into a judge. Note the context: just before, Jesus himself had met a refusal in a Samaritan village (Luke 9:53), and his disciples asked whether they should call down fire from heaven (Luke 9:54). What would change in your witness if you did not need the town to admit you were right?"
+      },
+      "e2": {
+       "p": [
+        "You leave without a word. Nobody drove you out, but nobody learned why you came."
+       ],
+       "end": "End of scene. Path: silent departure.",
+       "reflection": "In Luke 10:10-11 rejection does not end in silence: the sent go out into the streets and say that the Kingdom is at hand. Silence protects from humiliation, but it leaves the town without the news someone was sent ahead of Jesus to bring. Rejection often hurts more than we admit, and silence can be its trace. What would have to happen in you for you to say those words without anger?"
+      },
+      "e3": {
+       "p": [
+        "You accept the more comfortable place. In the morning you feel that something of the mission stayed in the house you never knocked at."
+       ],
+       "end": "End of scene. Path: comfort instead of entrusting yourself.",
+       "reflection": "Jesus says: remain in the same house, eating and drinking what they have, and do not move from house to house (Luke 10:7). The sent do not choose hospitality; they receive it. Looking for a better corner seems practical, but it can mean the mission starts to rest on your safeguards rather than on trust. In what matters do you prefer a backup plan to entrusting yourself to someone else's hospitality?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Host in the town",
+     "blurb": "Two strangers knock at your door",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "In the evening two strangers in dusty cloaks knock at your door. They carry no purse and no supplies. Before you can ask who they are, one of them says: Peace be to this house."
+       ],
+       "q": {
+        "t": "Into whatsoever house you enter, first say: Peace be to this house.",
+        "r": "Lk 10:5"
+       },
+       "choices": [
+        {
+         "label": "Take them in without questions",
+         "to": "n2"
+        },
+        {
+         "label": "Ask who they are and where they have come from",
+         "to": "n3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "They say they were sent ahead of Jesus, to every place where he himself will come. They have nothing to prove their words. Stories of wandering prophets circulate all over town."
+       ],
+       "choices": [
+        {
+         "label": "Invite them inside",
+         "to": "n2"
+        },
+        {
+         "label": "Politely send them away",
+         "to": "e2"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You sit at the table and they eat what you have. They do not complain about the simplicity or look for a better place. They ask whether there are sick people nearby and say the kingdom of God is at hand."
+       ],
+       "choices": [
+        {
+         "label": "Invite the neighbours to come and listen",
+         "to": "e1"
+        },
+        {
+         "label": "Keep the news to yourself",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "By morning there are more people in your house than there were at night. The strangers speak about the kingdom of God, and some neighbours stay to listen."
+       ],
+       "end": "End of scene. Path: peace that came to rest.",
+       "reflection": "The sent are to say first: Peace be to this house, and if a son of peace is there, their peace will rest upon him (Luke 10:5-6). Peace is not imposed; it depends on whether the house receives it. The usual role of hospitality is reversed: the poor sent ones are the gift to you, and you give them a roof. In what matter in your life is peace waiting for you to open the door?"
+      },
+      "e2": {
+       "p": [
+        "The door closes and the house stays quiet, but also empty. All night you hear that one word you caught on the threshold."
+       ],
+       "end": "End of scene. Path: caution that closes.",
+       "reflection": "Jesus assumes that peace that is not received returns to those who brought it (Luke 10:6). The sent lose nothing, but the house stays without a gift it did not recognise. Caution toward strangers can be reasonable, and the Gospel does not condemn it; it only points to the price of closing. What is your first reflex: to open or to bolt the door?"
+      },
+      "e3": {
+       "p": [
+        "The sent depart in the morning, and the neighbours never learn who stayed with you."
+       ],
+       "end": "End of scene. Path: peace kept for yourself.",
+       "reflection": "The news carried by the sent concerns the whole town, not just one house (Luke 10:8-9). The peace that rested on the house is meant to become a share for the sick and needy around it. Keeping it to yourself is understandable, since not everyone wants to expose a home to neighbours' curiosity, but it is no answer to the word about the near Kingdom. What would you gladly share with others, if not for the fear of being judged?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "And after these things the Lord appointed also other seventy-two: and he sent them two and two before his face into every city and place whither he himself was to come."
+    },
+    {
+     "v": "2",
+     "t": "And he said to them: The harvest indeed is great, but the labourers are few. Pray ye therefore the Lord of the harvest, that he send labourers into his harvest."
+    },
+    {
+     "v": "3",
+     "t": "Go: Behold I send you as lambs among wolves."
+    },
+    {
+     "v": "4",
+     "t": "Carry neither purse, nor scrip, nor shoes; and salute no man by the way."
+    },
+    {
+     "v": "5",
+     "t": "Into whatsoever house you enter, first say: Peace be to this house."
+    },
+    {
+     "v": "6",
+     "t": "And if the son of peace be there, your peace shall rest upon him; but if not, it shall return to you."
+    },
+    {
+     "v": "7",
+     "t": "And in the same house, remain, eating and drinking such things as they have: for the labourer is worthy of his hire. Remove not from house to house."
+    },
+    {
+     "v": "8",
+     "t": "And into what city soever you enter, and they receive you, eat such things as are set before you."
+    },
+    {
+     "v": "9",
+     "t": "And heal the sick that are therein, and say to them: The kingdom of God is come nigh unto you."
+    },
+    {
+     "v": "10",
+     "t": "But into whatsoever city you enter, and they receive you not, going forth into the streets thereof, say:"
+    },
+    {
+     "v": "11",
+     "t": "Even the very dust of your city that cleaveth to us, we wipe off against you. Yet know this, that the kingdom of God is at hand."
+    },
+    {
+     "v": "12",
+     "t": "I say to you, it shall be more tolerable at that day for Sodom, than for that city."
+    }
+   ]
+  },
+  "2026-10-02": {
+   "ref": "Mt 18:1-5.10",
+   "title": "Who Is the Greater",
+   "context": [
+    "Where we are: Galilee, Capernaum. Jesus has foretold his passion for the second time (Matthew 17:22-23). According to Mark, on the road the disciples argued about who was the greatest (Mark 9:33-34). Matthew skips the quarrel and begins with the question: “Who is the greater in the kingdom of heaven?”",
+    "The child Jesus sets in the midst stands for someone with no standing and no achievements. Jesus does not say the disciples should be childish, but that they must change (be converted) and humble themselves like the child.",
+    "Verse 10 is the basis for the memorial of the Holy Guardian Angels, which the Church celebrates on 2 October. It is not a description of how angels do their work, but a warning: do not despise the little ones, for their cause is before the Father.",
+    "What follows: in verses 6-9 Jesus speaks of causing the little ones to stumble, in 12-14 of the lost sheep (“it is not the will of your Father that one of these little ones should perish”), and in 15-35 of correction and forgiveness in the community."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Disciple among the Twelve",
+     "blurb": "You argued on the road about precedence",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "On the road you argued with the others about which of you is the greatest. Now you are all in a house, and someone in the group asks Jesus outright: who is the greater in the kingdom of heaven? You want to know too."
+       ],
+       "q": {
+        "t": "Who, thinkest thou, is the greater in the kingdom of heaven?",
+        "r": "Mt 18:1"
+       },
+       "choices": [
+        {
+         "label": "Step forward with the others and listen",
+         "to": "n2"
+        },
+        {
+         "label": "Hang back, ashamed of the quarrel",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus calls a little child and sets it in the midst of you. He says that unless you are converted and become as little children, you shall not enter the kingdom of heaven. This does not sound like an answer to your question."
+       ],
+       "q": {
+        "t": "Unless you be converted, and become as little children, you shall not enter.",
+        "r": "Mt 18:3"
+       },
+       "choices": [
+        {
+         "label": "Ask what it means to be converted",
+         "to": "e2"
+        },
+        {
+         "label": "Look at the child and wonder what it has that you do not",
+         "to": "n4"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You stand at the back, but you hear every word. Jesus sets the child in the midst and speaks of conversion. Someone beside you whispers that this was about all of you, and most of all about those who quarrelled loudest."
+       ],
+       "choices": [
+        {
+         "label": "Step closer and admit the quarrel",
+         "to": "e3"
+        },
+        {
+         "label": "Stay at the back and pretend it is not about you",
+         "to": "n4"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jesus says that whoever humbles himself like this child is the greater, and whoever receives one such child in his name receives him. He adds: do not despise any of these little ones, for their angels in heaven always see the face of his Father."
+       ],
+       "q": {
+        "t": "Whosoever therefore shall humble himself as this little child, he is the greater in the kingdom of heaven.",
+        "r": "Mt 18:4"
+       },
+       "choices": [
+        {
+         "label": "Take the child in your arms and receive it",
+         "to": "e1"
+        },
+        {
+         "label": "Wonder whom in the group you consider small",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "The child does not know it has become an example for grown men. You hold it, and it simply looks at you."
+       ],
+       "end": "End of scene. Path: receiving the little one.",
+       "reflection": "Jesus does not tell the disciples to ponder how to be a child, but to receive one such child in his name (Matthew 18:5). The greatness the disciples asked about turns out to depend on humility and on how they treat those who can give them nothing. Note that in Matthew 18:6-14 Jesus continues this theme: the little ones must not be caused to stumble or despised, since it is not the will of the Father that any of them perish. Whom around you do you receive only when it pays?"
+      },
+      "e2": {
+       "p": [
+        "Jesus' question about greatness stays unresolved in you. You only know that the answer does not lie where you were looking."
+       ],
+       "end": "End of scene. Path: a question instead of an answer.",
+       "reflection": "The disciples ask who is greater, and the answer comes as a child, not a definition (Matthew 18:1-4). The conversion of verse 3 means a change of direction, not just an adjustment of attitude. Staying with a question is sometimes more honest than quickly accepting an answer that costs nothing. What other unresolved question about your own greatness do you live with?"
+      },
+      "e3": {
+       "p": [
+        "You say it quietly, but Jesus hears. There is no reproach in his face, only attention."
+       ],
+       "end": "End of scene. Path: admitting the quarrel.",
+       "reflection": "Mark says the disciples were silent when Jesus asked what they had discussed on the road (Mark 9:34). You were the first to admit the quarrel, which was rare in that group. The humility of Matthew 18:4 is not pretending we do not want to matter, but honestly naming that we do. What changes in relationships when someone, instead of defending their position, is first to tell the truth?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "The child in the midst",
+     "blurb": "Jesus sets you before the grown-ups",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Someone calls you and leads you to the middle of a circle of grown men. They all look at you and you do not know why. You feel Jesus' hand on your shoulder."
+       ],
+       "choices": [
+        {
+         "label": "Look at Jesus",
+         "to": "n2"
+        },
+        {
+         "label": "Look at the disciples",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus looks at you calmly. He tells the grown-ups that whoever receives one such child in his name receives him. You do not understand all of it, but you understand it is about you."
+       ],
+       "q": {
+        "t": "And he that shall receive one such little child in my name, receiveth me.",
+        "r": "Mt 18:5"
+       },
+       "choices": [
+        {
+         "label": "Lean against him",
+         "to": "e1"
+        },
+        {
+         "label": "Look for someone of your own",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "The disciples' faces are serious. One looks ashamed, another annoyed. Nobody smiles at you."
+       ],
+       "choices": [
+        {
+         "label": "Smile at the ashamed one",
+         "to": "e1"
+        },
+        {
+         "label": "Hide behind Jesus",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You do not need words to know you are safe. One of the grown-ups smiles back, awkwardly, as if learning it anew."
+       ],
+       "end": "End of scene. Path: trust.",
+       "reflection": "In the scene the child does nothing that would earn a reward, yet it is the example for the disciples (Matthew 18:2-4). The child's trust is not merit but a way of living with a gift one did not earn. The conversion of Matthew 18:3 means for adults a return to receiving in that way. In what matters is it hard for you to accept something you did not earn yourself?"
+      },
+      "e2": {
+       "p": [
+        "With your eyes you find someone you know, and you know you have someone to go back to."
+       ],
+       "end": "End of scene. Path: belonging.",
+       "reflection": "Jesus says the angels of the little ones always see the face of the Father (Matthew 18:10). Tradition links this to the idea of special care, but the text itself speaks above all about the weight the little ones have for God. The sense that someone sees and knows us is the first condition of courage. Whose gaze gives you a sense of belonging?"
+      },
+      "e3": {
+       "p": [
+        "You stand behind Jesus, and the grown-ups fall silent and listen. Nobody dares drag you out."
+       ],
+       "end": "End of scene. Path: shelter.",
+       "reflection": "Verse 10 warns against contempt for the little ones. The child hiding behind Jesus shows that being small needs shelter and that someone must provide it. Matthew 18:6-7 speaks sternly of those who cause little ones to stumble, that is, put obstacles in their way to God. Whom can you shelter today, and whose shelter is sometimes inconvenient for you?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "At that hour the disciples came to Jesus, saying: Who, thinkest thou, is the greater in the kingdom of heaven?"
+    },
+    {
+     "v": "2",
+     "t": "And Jesus calling unto him a little child, set him in the midst of them,"
+    },
+    {
+     "v": "3",
+     "t": "And said: Amen I say to you, unless you be converted, and become as little children, you shall not enter into the kingdom of heaven."
+    },
+    {
+     "v": "4",
+     "t": "Whosoever therefore shall humble himself as this little child, he is the greater in the kingdom of heaven."
+    },
+    {
+     "v": "5",
+     "t": "And he that shall receive one such little child in my name, receiveth me."
+    },
+    {
+     "v": "10",
+     "t": "See that you despise not one of these little ones: for I say to you, that their angels in heaven always see the face of my Father who is in heaven."
+    }
+   ]
+  },
+  "2026-10-03": {
+   "ref": "Lk 10:17-24",
+   "title": "Return with Joy",
+   "context": [
+    "Where we are: the sent return to Jesus two by two (Luke 10:17). Moments before, Jesus spoke of the towns that did not accept the signs (Luke 10:13-15) and of himself as the one who sends (10:16).",
+    "The image of Satan falling like lightning (Luke 10:18) and of serpents and scorpions under foot (10:19) is often read as an image of victory over evil, whose signs are the healings and deliverances worked by the sent. Jesus himself shifts the emphasis from power to belonging: names written in heaven (10:20).",
+    "Verses 21-22 are one of the few moments where Luke shows Jesus rejoicing in the Holy Spirit. Revelation is given to the “little ones,” not to the “wise and prudent,” and the knowledge of Father and Son is mutual.",
+    "What follows: in verse 25 a lawyer appears with a question about eternal life. That is the scene for 5 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "One of the returning sent",
+     "blurb": "You come back full of joy from the mission",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You return exhilarated. You tell everyone that even the evil spirits yielded in Jesus' name. Jesus listens, then says he saw Satan fall from heaven like lightning."
+       ],
+       "q": {
+        "t": "I saw Satan like lightning falling from heaven.",
+        "r": "Lk 10:18"
+       },
+       "choices": [
+        {
+         "label": "Keep telling about everything you saw",
+         "to": "n2"
+        },
+        {
+         "label": "Ask what these words mean",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You talk faster and faster and begin to hear more of yourself in the story than of Jesus. Jesus says he has given you power over serpents, scorpions and all the power of the enemy. After a moment he adds something you did not expect."
+       ],
+       "q": {
+        "t": "Rejoice in this, that your names are written in heaven.",
+        "r": "Lk 10:20"
+       },
+       "choices": [
+        {
+         "label": "Ask what, then, we should rejoice in",
+         "to": "n4"
+        },
+        {
+         "label": "Fall silent, ashamed",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Jesus explains that what you saw is a sign of something greater. He speaks of the power he gave you, and then changes the subject so that you can no longer speak about success. He speaks of names written in heaven."
+       ],
+       "choices": [
+        {
+         "label": "Ask what it means to have your name written in heaven",
+         "to": "n4"
+        },
+        {
+         "label": "Fall silent and stay with that sentence",
+         "to": "e2"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jesus rejoices in the Holy Spirit and says: I confess to thee, O Father, that thou hast hidden these things from the wise and prudent, and hast revealed them to little ones. He says no one knows who the Son is but the Father, nor who the Father is but the Son and the one to whom the Son will reveal him."
+       ],
+       "choices": [
+        {
+         "label": "Join in that joy and give thanks",
+         "to": "e3"
+        },
+        {
+         "label": "Ask who the little ones are",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "The answer is short: the little ones are those to whom the Father wishes to reveal something and who do not owe it to themselves. You follow him on with one question fewer and one new one."
+       ],
+       "end": "End of scene. Path: a question about identity.",
+       "reflection": "Jesus shifts the joy from what the sent can do to who they are: their names are written in heaven (Luke 10:20). An identity built on results is fragile, because it depends on how things go. An identity built on belonging does not depend on the outcome of the mission. Note that right after this Jesus speaks of revelation to the little ones (10:21), not to those who distinguished themselves. On what do you base your sense of being somebody?"
+      },
+      "e2": {
+       "p": [
+        "You are left with a quiet shame that the joy of success drowned you out more than you would like to admit. In his words there is no reproach, only a different measure."
+       ],
+       "end": "End of scene. Path: a quiet correction of joy.",
+       "reflection": "Jesus does not take away the joy of the sent or diminish their deliverances. He only says that this joy is not the deepest (Luke 10:20). Shame in this scene can be the beginning of shifting weight from oneself to the Giver. How do you tell apart joy in what you did from joy in whom you belong to?"
+      },
+      "e3": {
+       "p": [
+        "Jesus does not interrupt. The joy you stand in is quiet and no longer needs stories about events."
+       ],
+       "end": "End of scene. Path: shared joy.",
+       "reflection": "Luke shows Jesus rejoicing in the Holy Spirit (Luke 10:21) and thanking the Father for revealing to the little ones. The joy of the sent is taken up into a greater joy: salvation is not their work but a gift. Such joy needs no comparison with others. When did you last rejoice in something without telling anyone about it?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "One of the Twelve",
+     "blurb": "You listen to the report of those who were sent",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You were not among the seventy-two. You listen to their stories and feel both joy and a pang of envy. After a moment Jesus turns to you, his disciples, and says something quietly."
+       ],
+       "q": {
+        "t": "Blessed are the eyes that see the things which you see.",
+        "r": "Lk 10:23"
+       },
+       "choices": [
+        {
+         "label": "Admit your envy",
+         "to": "n2"
+        },
+        {
+         "label": "Rejoice with them",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You say plainly that you feel envy. Jesus does not judge, and says that many prophets and kings desired to see what you see and hear what you hear, and did not see or hear it."
+       ],
+       "choices": [
+        {
+         "label": "Think about what you yourself have seen and heard",
+         "to": "e1"
+        },
+        {
+         "label": "Ask whether there is something you still do not understand",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "The joy is simpler than you thought. You watch the face of Jesus, who thanks the Father and speaks of the little ones to whom something was revealed. Nobody says words that would hurt you."
+       ],
+       "choices": [
+        {
+         "label": "Give thanks with him",
+         "to": "e3"
+        },
+        {
+         "label": "Ask about what the Son will reveal",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You recall what you have seen: healings, crowds, words you did not understand. You also realise that many who once longed for this did not live to see what is before your eyes."
+       ],
+       "end": "End of scene. Path: gratitude instead of comparison.",
+       "reflection": "Jesus says that many prophets and kings desired to see what the disciples see (Luke 10:24). Envy looks sideways at what others have. Gratitude looks at what has been given to us and sees that we did not deserve it more than others. What do you have before your eyes today that you have stopped noticing?"
+      },
+      "e2": {
+       "p": [
+        "The question you ask stays unanswered. You only understand that what happens between the Father and the Son is revealed to whom he wills, not by merit."
+       ],
+       "end": "End of scene. Path: a question about revelation.",
+       "reflection": "Verse 22 speaks of the mutual knowledge of Father and Son and of the Son deciding to whom to reveal it. So it is not a reward for the best but a gift that can only be received. Not everything you do not yet understand is your fault. What do you ask for, instead of trying to earn it?"
+      },
+      "e3": {
+       "p": [
+        "You give thanks quietly. It is one of the few moments when you are not comparing yourself with anyone."
+       ],
+       "end": "End of scene. Path: thanksgiving.",
+       "reflection": "In Luke 10:21 Jesus rejoices in the Spirit and thanks the Father for hiding it from the wise and revealing it to the little ones. Disciples who join in this thanksgiving enter the relationship of the Son with the Father instead of only hearing about it. Such thanksgiving does not require everyone to have the same experience. What could you give thanks for today, without adding “but…”?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "17",
+     "t": "And the seventy-two returned with joy, saying: Lord, the devils also are subject to us in thy name."
+    },
+    {
+     "v": "18",
+     "t": "And he said to them: I saw Satan like lightning falling from heaven."
+    },
+    {
+     "v": "19",
+     "t": "Behold, I have given you power to tread upon serpents and scorpions, and upon all the power of the enemy: and nothing shall hurt you."
+    },
+    {
+     "v": "20",
+     "t": "But yet rejoice not in this, that spirits are subject unto you; but rejoice in this, that your names are written in heaven."
+    },
+    {
+     "v": "21",
+     "t": "In that same hour, he rejoiced in the Holy Ghost, and said: I confess to thee, O Father, Lord of heaven and earth, because thou hast hidden these things from the wise and prudent, and hast revealed them to little ones. Yea, Father, for so it hath seemed good in thy sight."
+    },
+    {
+     "v": "22",
+     "t": "All things are delivered to me by my Father; and no one knoweth who the Son is, but the Father; and who the Father is, but the Son, and to whom the Son will reveal him."
+    },
+    {
+     "v": "23",
+     "t": "And turning to his disciples, he said: Blessed are the eyes that see the things which you see."
+    },
+    {
+     "v": "24",
+     "t": "For I say to you, that many prophets and kings have desired to see the things that you see, and have not seen them; and to hear the things that you hear, and have not heard them."
+    }
+   ]
+  },
+  "2026-10-04": {
+   "ref": "Mt 21:33-43",
+   "title": "The Vineyard and the Tenants",
+   "context": [
+    "Where we are: Jerusalem, the last week of Jesus' life. He has entered the city, driven the traders from the temple, and now teaches in its courts. The chief priests and elders of the people ask him by what authority he does this (Matthew 21:23).",
+    "This parable is the second of three addressed to the same listeners: before it Jesus speaks of the two sons (Matthew 21:28-32), and right after it of the wedding feast (Matthew 22:1-14).",
+    "They knew the image of the vineyard from the Book of Isaiah (Isaiah 5:1-7), which the Church reads today as the first reading. There the vineyard of the Lord is the house of Israel, and God looks in it for justice but finds bloodshed. The hedge, the winepress and the tower of the parable are the same caring picture.",
+    "What follows: according to Matthew 21:45-46 the chief priests and Pharisees understand that Jesus is speaking about them, but they do not lay hands on him for fear of the crowd, who regard him as a prophet.",
+    "Note: the listeners are the temple leaders, not the whole nation. The Church rejects reading this parable as a condemnation of the Jews. Keep this in mind when playing this scene."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Farmer in the vineyard",
+     "blurb": "You lease the vineyard and the owner is far away",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "The vineyard was leased to you: the hedge, the winepress and the tower are all ready, and the owner has gone abroad. Over time you began to think of this land as yours. The fruit season is near, and on the slope appear the owner's servants, sent to collect his produce."
+       ],
+       "choices": [
+        {
+         "label": "Hand over to the servants what is due",
+         "to": "n2"
+        },
+        {
+         "label": "Send them away with nothing",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "The servants leave with the fruit, and your fellow tenants glare at you. Someone mutters that the owner is far away and no one would ever have known. Someone else, that this is only the beginning of such visits."
+       ],
+       "choices": [
+        {
+         "label": "Argue that this is only fair",
+         "to": "e1"
+        },
+        {
+         "label": "Say nothing so as not to be left alone",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "The tenants seize the servants: one they beat, another they kill, another they stone. The owner sends others, more than the first time, and they do the same to them. You stand at the edge of what is happening."
+       ],
+       "choices": [
+        {
+         "label": "Step between the tenants and the servants",
+         "to": "e1"
+        },
+        {
+         "label": "Turn your head away",
+         "to": "n4"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "In the end the owner sends his own son, thinking they will reverence him. The tenants see him from afar. One of them speaks quietly to the rest, and they listen."
+       ],
+       "q": {
+        "t": "This is the heir: come, let us kill him, and we shall have his inheritance.",
+        "r": "Mt 21:38"
+       },
+       "choices": [
+        {
+         "label": "Object",
+         "to": "e1"
+        },
+        {
+         "label": "Say nothing",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You say aloud what others prefer not to voice. You do not know whether they will listen, but you are no longer a silent accomplice."
+       ],
+       "end": "End of scene. Path: the courage to object.",
+       "reflection": "Jesus asks his listeners: what will the lord of the vineyard do to those husbandmen? (Matthew 21:40). Their answer is harsh, but they do not yet know they are passing sentence on themselves (Matthew 21:41.45). A tenant who objects shows that the parable leaves room for someone who takes no part in the grab. That matters, because the parable does not say: everyone will always fail. Where in your life are you asked to speak up, even though it costs?"
+      },
+      "e2": {
+       "p": [
+        "You keep silent, because it is easier, and loneliness in the group seems worse than injustice. That silence costs something, though nobody noticed."
+       ],
+       "end": "End of scene. Path: silence out of fear of being alone.",
+       "reflection": "The tenants want to keep the vineyard for themselves: that is the core of their rationalisation (Matthew 21:38). Isaiah 5:7 speaks of a vineyard from which God looked for justice and found its opposite. Silence in a group is not neutral, because it strengthens those who speak louder. What silence in a group do you know from your own experience, and whom does it serve?"
+      },
+      "e3": {
+       "p": [
+        "You take part in nothing, but you prevent nothing either. In the evening the vineyard looks as usual, and you know nothing is the same any more."
+       ],
+       "end": "End of scene. Path: complicity through passivity.",
+       "reflection": "The son comes last because the father trusts they will reverence him (Matthew 21:37). That sentence shows the owner's patience, still believing in a second chance despite all the servants before. A tenant who says nothing is not the perpetrator, but is part of the arrangement that makes it possible. What does responsibility mean for something you did not do, but did not stop?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Servant sent for the fruit",
+     "blurb": "You go to the vineyard with the owner's order",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "The owner has already sent servants and they did not return with the fruit. Now he sends more, more than before. You know the road up the hill and what happened to the first. You have one order: to collect the fruit that belongs to the owner."
+       ],
+       "choices": [
+        {
+         "label": "Go despite the fear",
+         "to": "n2"
+        },
+        {
+         "label": "Hesitate at the threshold",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "The tenants come out to meet you. They do not look like people who have come to help. The hedge, the winepress and the tower are as they were left, and beneath them stand those to whom the vineyard was entrusted."
+       ],
+       "choices": [
+        {
+         "label": "Calmly repeat the owner's order",
+         "to": "e1"
+        },
+        {
+         "label": "Step back",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You stop. You think of those who went before you, and of the owner who is waiting. Nobody hurries you, but nobody will lift this task from you either."
+       ],
+       "choices": [
+        {
+         "label": "Go with the others",
+         "to": "e1"
+        },
+        {
+         "label": "Return to the owner with nothing",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You do what you came to do, with no guarantee that it will work. You only know that faithfulness to the order is something you can do, even if the rest does not depend on you."
+       ],
+       "end": "End of scene. Path: faithfulness to the mission.",
+       "reflection": "The lord sends his servants again and again, not giving up on his vineyard (Matthew 21:34-36). The servant's faithfulness guarantees no result, and the parable does not promise that the sent will be safe. That is precisely its pain, because rejection so often stands on the road of the sent in the Bible. What in your life depends only on your faithfulness, not on the outcome?"
+      },
+      "e2": {
+       "p": [
+        "You return with a relief that quickly gives way to shame. The owner says nothing, only looks. In his gaze there is no condemnation, but you know the vineyard is still waiting."
+       ],
+       "end": "End of scene. Path: retreat.",
+       "reflection": "A servant who withdraws is not condemned in the parable, but is left knowing what he left behind (Matthew 21:34-36). In the Bible, fear of rejection is a common experience of the sent (Jeremiah 1:6-8). Returning empty-handed need not close the road. What would help you next time to see it through to the end?"
+      }
+     }
+    },
+    {
+     "id": "r3",
+     "name": "Someone in the crowd at the temple",
+     "blurb": "You stand in the court and listen to Jesus",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You stand in the court of the temple in Jerusalem. A few days ago the crowd welcomed Jesus as he rode into the city. Today the chief priests and elders ask him by what authority he teaches here. Instead of answering directly, he begins to speak of a vineyard, and you know this image from Isaiah's song."
+       ],
+       "choices": [
+        {
+         "label": "Move closer to the chief priests",
+         "to": "n2"
+        },
+        {
+         "label": "Stay in the crowd and listen",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You see the faces of the elders when the owner's son and the word about the inheritance enter the story. Jesus asks them what the lord of the vineyard will do to the tenants. They answer that he will destroy the wicked and let the vineyard to others. Their eyes change slowly."
+       ],
+       "choices": [
+        {
+         "label": "Look away",
+         "to": "e1"
+        },
+        {
+         "label": "Keep watching",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Beside you an old woman whispers that this sounds like Isaiah: the vineyard of the Lord is the house of Israel, and God looked in it for justice. Jesus ends the story with the stone the builders rejected, which became the head of the corner."
+       ],
+       "q": {
+        "t": "The stone which the builders rejected, the same is become the head of the corner.",
+        "r": "Mt 21:42"
+       },
+       "choices": [
+        {
+         "label": "Ask her what it means for you all",
+         "to": "e2"
+        },
+        {
+         "label": "Listen closely to the words about the stone",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You look away, because looking at their faces is awkward. The crowd shields you, but the question that was asked stays with you."
+       ],
+       "end": "End of scene. Path: avoidance.",
+       "reflection": "The temple leaders understand that the parable is about them (Matthew 21:45). Jesus did not say so outright, but their own answer in verse 41 became a mirror. Turning away from such a mirror is very human, because the truth about ourselves usually comes from outside. What questions do you look away from?"
+      },
+      "e2": {
+       "p": [
+        "You watch closely and only after a moment understand that the parable speaks to you as well, not just to those standing closest to Jesus."
+       ],
+       "end": "End of scene. Path: attentive listening.",
+       "reflection": "The listeners pass judgement within the parable (Matthew 21:41), not knowing they speak of themselves. It is a familiar prophetic way of teaching, in which the hearer judges the story before realising it concerns him. An observer who does not look away may be the first to see that the mirror is also for him. What from this parable speaks to you?"
+      },
+      "e3": {
+       "p": [
+        "The stone the builders rejected has become the cornerstone. You know these words from the psalm, but you have never heard them so close. You leave the temple repeating them in your mind."
+       ],
+       "end": "End of scene. Path: the cornerstone.",
+       "reflection": "Jesus quotes Psalm 118: the rejected stone becomes the head of the corner (Matthew 21:42). So the parable ends not with the tenants' guilt alone but with hope: what is rejected does not stop being a foundation. Verse 43 speaks of a nation that will bear the fruits of the kingdom, and Matthew uses a word that earlier also denoted the Gentiles; interpretations of this passage differ and should be discussed carefully. What in your life was once rejected and later turned out to be a foundation?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "33",
+     "t": "Hear ye another parable. There was a man an householder, who planted a vineyard, and made a hedge round about it, and dug in it a press, and built a tower, and let it out to husbandmen; and went into a strange country."
+    },
+    {
+     "v": "34",
+     "t": "And when the time of the fruits drew nigh, he sent his servants to the husbandmen, that they might receive the fruits thereof."
+    },
+    {
+     "v": "35",
+     "t": "And the husbandmen laying hold on his servants, beat one, and killed another, and stoned another."
+    },
+    {
+     "v": "36",
+     "t": "Again he sent other servants more than the former; and they did to them in like manner."
+    },
+    {
+     "v": "37",
+     "t": "And last of all he sent to them his son, saying: They will reverence my son."
+    },
+    {
+     "v": "38",
+     "t": "But the husbandmen seeing the son, said among themselves: This is the heir: come, let us kill him, and we shall have his inheritance."
+    },
+    {
+     "v": "39",
+     "t": "And taking him, they cast him forth out of the vineyard, and killed him."
+    },
+    {
+     "v": "40",
+     "t": "When therefore the lord of the vineyard shall come, what will he do to those husbandmen?"
+    },
+    {
+     "v": "41",
+     "t": "They say to him: He will bring those evil men to an evil end; and will let out his vineyard to other husbandmen, that shall render him the fruit in due season."
+    },
+    {
+     "v": "42",
+     "t": "Jesus saith to them: Did you never read in the scriptures: The stone which the builders rejected, the same is become the head of the corner? By the Lord this has been done, and it is wonderful in our eyes?"
+    },
+    {
+     "v": "43",
+     "t": "Therefore I say to you, that the kingdom of God shall be taken from you, and shall be given to a nation yielding the fruits thereof."
+    }
+   ]
+  },
+  "2026-10-05": {
+   "ref": "Lk 10:25-37",
+   "title": "Who Is My Neighbour",
+   "context": [
+    "Where we are: Jesus is on the way to Jerusalem. A moment ago the sent returned with joy (Luke 10:17-24). Now a lawyer appears and puts him to the test.",
+    "The lawyer's answer joins two commandments: love of God from Deuteronomy (Deut 6:5) and love of neighbour from Leviticus (Lev 19:18). Jesus does not dispute it, but says: do this. The question “who is my neighbour?” is an attempt to justify himself (Luke 10:29).",
+    "The road from Jerusalem to Jericho descends steeply through desert terrain. The priest and the Levite pass by on the other side. The Samaritan belongs to a people with whom the Jews had strained relations (Luke 9:52-53; John 4:9). In the parable it is he who shows mercy.",
+    "Jesus reverses the question: he does not ask who the wounded man's neighbour is, but which of the three proved a neighbour (Luke 10:36). What follows: in verse 38 Jesus enters Martha's house, the scene for 6 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "The lawyer",
+     "blurb": "You put Jesus to the test",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You stand to ask the question every house of learning knows: what must I do to possess eternal life? You want to see how this teacher from Galilee will answer. He answers with a question: what is written in the law, and how do you read it?"
+       ],
+       "choices": [
+        {
+         "label": "Answer from the Law: love God and neighbour",
+         "to": "n2"
+        },
+        {
+         "label": "Answer with another question, to protect yourself",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You quote the commandments from Deuteronomy and Leviticus. Jesus says: you have answered right, do this and you shall live. You feel it was too easy an answer to such a question."
+       ],
+       "q": {
+        "t": "Thou hast answered right: this do, and thou shalt live.",
+        "r": "Lk 10:28"
+       },
+       "choices": [
+        {
+         "label": "Ask further: and who is my neighbour?",
+         "to": "n3"
+        },
+        {
+         "label": "Stay with this answer and ask nothing more",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You ask: and who is my neighbour? You want to justify yourself, because you know the answer could cost a great deal. Jesus tells of a man going down from Jerusalem to Jericho, of robbers, a priest, a Levite and a Samaritan. At the end he asks you: which of these three was neighbour?"
+       ],
+       "q": {
+        "t": "Which of these three, in thy opinion, was neighbour to him that fell among the robbers?",
+        "r": "Lk 10:36"
+       },
+       "choices": [
+        {
+         "label": "Answer plainly: the one who showed mercy",
+         "to": "e1"
+        },
+        {
+         "label": "Answer evasively, without a word about the Samaritan",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You say: the one who showed mercy to him. Jesus answers: go, and do thou in like manner. You walk away with that sentence, which is no longer a question."
+       ],
+       "end": "End of scene. Path: I go and do.",
+       "reflection": "Note the change in the direction of the question: you asked whom you must love, and Jesus asks who proved a neighbour (Luke 10:36). A neighbour is not someone you pick from a list, but someone you become to another. Jesus' last words are not a definition but a command: go and do (10:37). Whose neighbour can you become today, before you get round to asking?"
+      },
+      "e2": {
+       "p": [
+        "The answer is correct, and you leave feeling the matter is settled. Jesus said: do this, but he did not say that knowing it is enough."
+       ],
+       "end": "End of scene. Path: knowledge without action.",
+       "reflection": "Jesus says: this do, and thou shalt live (Luke 10:28). That sentence is a command, not praise for knowledge. The lawyer knows the Law better than many, but the question about eternal life concerns what he does with that knowledge. What in your life have you known for a long time and still not put into practice?"
+      },
+      "e3": {
+       "p": [
+        "You said: the one who showed mercy. The word Samaritan you did not utter. Jesus does not press you, but that sentence hangs between you."
+       ],
+       "end": "End of scene. Path: a prejudice that will not be spoken.",
+       "reflection": "In Luke 10:37 the lawyer does not say the word Samaritan, only: he that shewed mercy to him. That small evasive answer shows that the question about the neighbour touches prejudices we prefer not to name. Jesus does not point it out, yet the command go and do in like manner remains. What word is hard for you to say when you speak of someone who helped you?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "The Samaritan",
+     "blurb": "You ride down the road to Jericho",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You ride along the road from Jerusalem to Jericho, and ahead on the roadside lies a man stripped and beaten. You know a priest and a Levite passed this way before you. You also know this man may belong to a people who do not like you."
+       ],
+       "choices": [
+        {
+         "label": "Go to him at once",
+         "to": "n2"
+        },
+        {
+         "label": "Look around in case it is an ambush",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You are moved with compassion. You pour oil and wine on his wounds, bind them and set him on your beast. You take him to an inn and look after him through the night."
+       ],
+       "q": {
+        "t": "Take care of him; and whatsoever thou shalt spend over and above, I, at my return, will repay thee.",
+        "r": "Lk 10:35"
+       },
+       "choices": [
+        {
+         "label": "In the morning leave the host money and a promise to repay",
+         "to": "e1"
+        },
+        {
+         "label": "In the morning leave only money and ride on",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "The road is empty, and nobody is in sight. The man barely moves. In the back of your mind is everything you have heard about such situations."
+       ],
+       "choices": [
+        {
+         "label": "Go to him and tend his wounds",
+         "to": "n2"
+        },
+        {
+         "label": "Ride on, taking no risk",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You leave two denarii and a promise: I will repay when I return. You do not know whether this man will ever learn who you were."
+       ],
+       "end": "End of scene. Path: mercy with a promise to return.",
+       "reflection": "The parable shows mercy step by step: go near, bind up, carry, pay, promise to return (Luke 10:33-35). The Samaritan does not end his help with the first impulse of the heart, but arranges care for the time when he will not be at the man's side. Two pence is roughly two days' ordinary wages. What in your help goes beyond the first impulse?"
+      },
+      "e2": {
+       "p": [
+        "You leave money and set out on your way. You have done more than the others, yet you know you are leaving something unfinished."
+       ],
+       "end": "End of scene. Path: help limited to what is certain.",
+       "reflection": "In the text the Samaritan says: whatsoever thou shalt spend over and above, I will repay thee (Luke 10:35). His help has an open account and a promise to return, not just a one-off gift. Help limited to what is certain is already valuable, but the parable goes further. Where do you stop at the boundary beyond which risk begins?"
+      },
+      "e3": {
+       "p": [
+        "You ride away, and the image of the man lying there rides with you. In the parable you now stand beside the priest and the Levite."
+       ],
+       "end": "End of scene. Path: leaving out of caution.",
+       "reflection": "The priest and the Levite saw the wounded man and passed by (Luke 10:31-32). Jesus gives no reason, and the traditional explanations about ritual purity are conjecture. The text shows only that one can see and not respond. Note that the Samaritan also saw, but what followed sets him apart. What makes you sometimes pass by a need you have seen?"
+      }
+     }
+    },
+    {
+     "id": "r3",
+     "name": "The man beaten by robbers",
+     "blurb": "You lie on the road half dead",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You lie on the road from Jerusalem to Jericho. Robbers took everything and left. You hear footsteps. It is a priest. He stops for a moment, sees you and goes by. Then you hear the footsteps of a Levite, who does the same."
+       ],
+       "choices": [
+        {
+         "label": "Try to call out",
+         "to": "n2"
+        },
+        {
+         "label": "Fall silent from pain",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You hear more footsteps. Someone stops, lays a hand on your shoulder and pours something stinging on your wounds. You see his clothing and realise he is a Samaritan, from the people your own people avoid."
+       ],
+       "choices": [
+        {
+         "label": "Accept his help",
+         "to": "e1"
+        },
+        {
+         "label": "Ask why he helps someone like you",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You have no strength to call. Someone comes up anyway and begins to bind your wounds. He does not ask who you are or whether you can pay."
+       ],
+       "choices": [
+        {
+         "label": "Let him help",
+         "to": "e1"
+        },
+        {
+         "label": "Turn your face away out of pride",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You let yourself be bound up, set on the beast and taken to an inn. In the morning you hear that someone has paid for your stay."
+       ],
+       "end": "End of scene. Path: accepting help.",
+       "reflection": "The wounded man in the parable has no voice and does nothing, since all the initiative belongs to the Samaritan (Luke 10:33-35). It is a rare perspective, because we usually ask whether we ourselves will help, and less often whether we can accept help from someone we did not choose. Dependence on another's kindness can be harder than showing it. From whom is it hard for you to accept help, and why?"
+      },
+      "e2": {
+       "p": [
+        "You turn your face away. The Samaritan stays anyway, binds your wounds and takes you to the inn, as if you had said nothing."
+       ],
+       "end": "End of scene. Path: pride in need.",
+       "reflection": "The parable does not say how the wounded man reacted. It leaves that open and lets the reader put himself in his place. Pride in the face of help is usually an attempt to preserve dignity, which in an extreme situation turns out to matter less than life. What are you protecting with your pride when someone wants to help you?"
+      },
+      "e3": {
+       "p": [
+        "You ask, and he only answers: lie still. The astonishment stays with you longer than the pain. You learn that someone has paid for your stay, and you do not know how to repay it."
+       ],
+       "end": "End of scene. Path: astonishment and a debt of gratitude.",
+       "reflection": "The question about the neighbour has a surprising answer in this scene: it is precisely the one whom your own people avoid who shows mercy (Luke 10:33-37). Astonishment is a common first reaction to kindness from someone we do not expect it from. A debt that cannot be repaid can be the beginning of gratitude or of shame. What kind of debt of gratitude leaves the most warmth in you?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "25",
+     "t": "And behold a certain lawyer stood up, tempting him, and saying, Master, what must I do to possess eternal life?"
+    },
+    {
+     "v": "26",
+     "t": "But he said to him: What is written in the law? how readest thou?"
+    },
+    {
+     "v": "27",
+     "t": "He answering, said: Thou shalt love the Lord thy God with thy whole heart, and with thy whole soul, and with all thy strength, and with all thy mind: and thy neighbour as thyself."
+    },
+    {
+     "v": "28",
+     "t": "And he said to him: Thou hast answered right: this do, and thou shalt live."
+    },
+    {
+     "v": "29",
+     "t": "But he willing to justify himself, said to Jesus: And who is my neighbour?"
+    },
+    {
+     "v": "30",
+     "t": "And Jesus answering, said: A certain man went down from Jerusalem to Jericho, and fell among robbers, who also stripped him, and having wounded him went away, leaving him half dead."
+    },
+    {
+     "v": "31",
+     "t": "And it chanced, that a certain priest went down the same way: and seeing him, passed by."
+    },
+    {
+     "v": "32",
+     "t": "In like manner also a Levite, when he was near the place and saw him, passed by."
+    },
+    {
+     "v": "33",
+     "t": "But a certain Samaritan being on his journey, came near him; and seeing him, was moved with compassion."
+    },
+    {
+     "v": "34",
+     "t": "And going up to him, bound up his wounds, pouring in oil and wine: and setting him upon his own beast, brought him to an inn, and took care of him."
+    },
+    {
+     "v": "35",
+     "t": "And the next day he took out two pence, and gave to the host, and said: Take care of him; and whatsoever thou shalt spend over and above, I, at my return, will repay thee."
+    },
+    {
+     "v": "36",
+     "t": "Which of these three, in thy opinion, was neighbour to him that fell among the robbers?"
+    },
+    {
+     "v": "37",
+     "t": "But he said: He that shewed mercy to him. And Jesus said to him: Go, and do thou in like manner."
+    }
+   ]
+  },
+  "2026-10-06": {
+   "ref": "Lk 10:38-42",
+   "title": "Martha and Mary",
+   "context": [
+    "Where we are: Jesus and his disciples go on towards Jerusalem. The scene follows directly after the parable of the Good Samaritan, where Jesus said: go and do in like manner (Luke 10:37). Now he shows another dimension of discipleship: listening.",
+    "Luke speaks only of “a certain town.” We know the name Bethany from John's Gospel (John 11:1; 12:1-3), where Martha and Mary also appear, but Luke does not name the place.",
+    "Martha “received him into her house,” so she does exactly what the houses that receive the sent do in Luke 10:5-8. Mary sits at the Lord's feet, which in that world was the posture of a disciple before a teacher.",
+    "What follows: right after this scene a disciple asks Jesus to teach them to pray (Luke 11:1-4), so the theme of listening and speaking with God continues."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Martha",
+     "blurb": "You receive Jesus in your house",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You have received Jesus and his disciples into your house. There is much to do: bread, water, places to sit. Mary sits at the Lord's feet and listens. You bustle about with many tasks."
+       ],
+       "choices": [
+        {
+         "label": "Keep working in silence",
+         "to": "n2"
+        },
+        {
+         "label": "Go to Jesus and ask for help",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "The work does not end, and resentment grows in you that you are alone with something you are doing for him. You pass the room where Mary sits. You hear his voice."
+       ],
+       "choices": [
+        {
+         "label": "Look into the room and stop",
+         "to": "n3"
+        },
+        {
+         "label": "Go back to work without a word",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You stand before Jesus and say: Lord, hast thou no care that my sister hath left me alone to serve? Speak to her, that she help me. Jesus looks at you with attention, without anger."
+       ],
+       "q": {
+        "t": "Martha, Martha, thou art careful, and art troubled about many things.",
+        "r": "Lk 10:41"
+       },
+       "choices": [
+        {
+         "label": "Take his words and sit down",
+         "to": "e1"
+        },
+        {
+         "label": "Ask what it means that only one thing is necessary",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You sit down for the first time that day. The work in the kitchen remains, but it no longer rules you."
+       ],
+       "end": "End of scene. Path: sitting down to listen.",
+       "reflection": "Jesus does not rebuke Martha for serving, but for being troubled: you are careful and troubled about many things (Luke 10:41). Note that it was Martha who received him into her house, so her hospitality is good. The problem begins when service hides the presence of the One served. What in your life has become more important than the one for whom you do it?"
+      },
+      "e2": {
+       "p": [
+        "The question hangs in the air, and Jesus answers only that Mary has chosen the best part, which will not be taken from her. You stay with that sentence for the rest of the day."
+       ],
+       "end": "End of scene. Path: a question about the one thing.",
+       "reflection": "Jesus says: one thing is necessary (Luke 10:42). Luke does not define that one thing; he leaves the reader to recognise it. For Martha the question is honest, because it does not challenge her service, only its proportions. What is the one thing in your life without which the rest loses its meaning?"
+      },
+      "e3": {
+       "p": [
+        "You go back to work with a resentment that hardens over time. By evening everything is ready, but you are too tired to sit down."
+       ],
+       "end": "End of scene. Path: service without pausing.",
+       "reflection": "In the text Martha is not portrayed as bad, but as someone absorbed by many things (Luke 10:40). Luke uses a word that suggests distraction and being stretched thin. Work without a moment of stopping can become a way of escaping things harder than work. What does your excess of tasks protect you from?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Mary",
+     "blurb": "You sit at Jesus' feet",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You sit at Jesus' feet and listen to his words. From the other room you hear Martha busy with dishes. You know your sister is waiting for your help, but you have no wish to get up."
+       ],
+       "choices": [
+        {
+         "label": "Stay and keep listening",
+         "to": "n2"
+        },
+        {
+         "label": "Get up and help your sister",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Martha appears in the doorway and says to Jesus: hast thou no care that my sister hath left me alone? You feel everyone looking at you. Jesus glances at you, then turns to Martha."
+       ],
+       "choices": [
+        {
+         "label": "Say nothing in your defence",
+         "to": "e1"
+        },
+        {
+         "label": "Speak to your sister",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You go to the kitchen and begin to help. Martha throws you a brief glance with relief and a touch of reproach in it. From the room you hear Jesus' voice, but you cannot make out the words."
+       ],
+       "choices": [
+        {
+         "label": "Return to the room as soon as you finish",
+         "to": "e3"
+        },
+        {
+         "label": "Stay in the kitchen to the end",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You are silent, because you have no words that would not sound like an accusation. Jesus speaks to Martha, not to you, saying that you have chosen the best part."
+       ],
+       "end": "End of scene. Path: silent trust.",
+       "reflection": "Mary does not say a single word in this scene, yet she is the heroine. Jesus says of her: she has chosen the best part, which shall not be taken away from her (Luke 10:42). The part she chose will not be taken from her, which speaks of the lastingness of the gift. When did you last not defend yourself against an accusation, because you trusted someone else would tell the truth?"
+      },
+      "e2": {
+       "p": [
+        "You say quietly to your sister: come and sit. Martha looks at you for a long moment, then turns away with a dish in her hand."
+       ],
+       "end": "End of scene. Path: the sisters' conversation.",
+       "reflection": "The Gospel shows two sisters who do not quarrel to the end. Martha speaks to Jesus, not to her sister, and Jesus answers her tenderly: Martha, Martha (Luke 10:41). Repeating the name is a typical way of addressing someone with concern. Whether a word to a loved one who is overloaded is an invitation or a reproach depends on tone, not content. What do you say to those close to you who take on too much?"
+      },
+      "e3": {
+       "p": [
+        "You help, and in the evening, when the guests have gone, you sit down with Martha. The kitchen is quiet, but conversation comes only later."
+       ],
+       "end": "End of scene. Path: service and listening together.",
+       "reflection": "Luke does not set prayer against service, since the scene comes right after a parable in which active mercy is the model (Luke 10:37). Jesus says only that one thing is necessary and that Mary chose well. Note that both Martha and Mary remain within his circle at home. How can you reconcile moments of listening and acting in your day so that neither crowds out the other?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "38",
+     "t": "Now it came to pass as they went, that he entered into a certain town: and a certain woman named Martha, received him into her house."
+    },
+    {
+     "v": "39",
+     "t": "And she had a sister called Mary, who sitting also at the Lord's feet, heard his word."
+    },
+    {
+     "v": "40",
+     "t": "But Martha was busy about much serving. Who stood and said: Lord, hast thou no care that my sister hath left me alone to serve? speak to her therefore, that she help me."
+    },
+    {
+     "v": "41",
+     "t": "And the Lord answering, said to her: Martha, Martha, thou art careful, and art troubled about many things:"
+    },
+    {
+     "v": "42",
+     "t": "But one thing is necessary. Mary hath chosen the best part, which shall not be taken away from her."
+    }
+   ]
+  },
+  "2026-10-07": {
+   "ref": "Lk 11:1-4",
+   "title": "Lord, Teach Us to Pray",
+   "context": [
+    "Where we are: Luke often shows Jesus at prayer before important events (e.g. Luke 3:21; 6:12; 9:18). Here the disciples see him praying and ask him to teach them to pray as John the Baptist taught his disciples.",
+    "Luke's version of the Lord's Prayer is shorter than Matthew's (Matthew 6:9-13). It begins with the word “Father,” which tradition connects with the Aramaic “Abba” (Romans 8:15, the acclamation of this day).",
+    "In the Polish lectionary the last petition reads: “do not allow us to yield to temptation.” The translation of this petition is debated in many languages.",
+    "What follows: in Luke 11:5-13 Jesus speaks of the persistent friend at midnight and of asking the Father. That is the scene for 8 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "A disciple who asks to be taught",
+     "blurb": "You see Jesus praying",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You watch Jesus pray in a certain place. His face is calm. You notice there is something in it you do not know from your own prayer. When he finishes, one of the disciples says what you were only thinking."
+       ],
+       "q": {
+        "t": "Lord, teach us to pray, as John also taught his disciples.",
+        "r": "Lk 11:1"
+       },
+       "choices": [
+        {
+         "label": "Ask: Lord, teach us to pray",
+         "to": "n2"
+        },
+        {
+         "label": "Wait, not wanting to interrupt",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus says: when you pray, say: Father, hallowed be thy name. Thy kingdom come. It sounds plainer than the prayers you know."
+       ],
+       "q": {
+        "t": "When you pray, say: Father, hallowed be thy name.",
+        "r": "Lk 11:2"
+       },
+       "choices": [
+        {
+         "label": "Repeat the words after him",
+         "to": "n4"
+        },
+        {
+         "label": "Ask whether you may say: Father",
+         "to": "n4"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You wait a moment for someone to break the silence. After a while another disciple asks Jesus to teach them to pray. You feel that question was yours too."
+       ],
+       "choices": [
+        {
+         "label": "Join in the question",
+         "to": "n2"
+        },
+        {
+         "label": "Keep the question to yourself",
+         "to": "e3"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jesus goes on: give us this day our daily bread. And forgive us our sins, for we also forgive every one that is indebted to us. And lead us not into temptation. It is a short prayer, and it has in it everything a person needs."
+       ],
+       "choices": [
+        {
+         "label": "Dwell on the words about forgiveness",
+         "to": "e1"
+        },
+        {
+         "label": "Dwell on bread for today",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You dwell on the words: for we also forgive every one that is indebted to us. A particular person comes to mind, whom you would rather pass over."
+       ],
+       "end": "End of scene. Path: forgiveness in prayer.",
+       "reflection": "The petition for forgiveness in this prayer is joined to our forgiving (Luke 11:4). It is not a condition in the sense of payment, but a sign that receiving forgiveness and giving it go together. In Matthew 18:21-35, later in the chapter we read from on 2 October, Jesus develops this theme in the parable of the debtor. Whom do you carry in yourself as a debtor today?"
+      },
+      "e2": {
+       "p": [
+        "You dwell on bread for today. The word today pleases you, because it relieves you of planning your whole future."
+       ],
+       "end": "End of scene. Path: bread for today.",
+       "reflection": "The prayer does not ask for stores for years, only for bread for today (Luke 11:3). It recalls the manna in the desert, which had to be gathered day by day (Exodus 16). Such a petition teaches trust, because it requires a daily return to the Father. What would you like to have secured for your whole life, and what can you leave to today?"
+      },
+      "e3": {
+       "p": [
+        "You keep the question to yourself. You do not voice it, but you see it fall from the lips of others, and Jesus answers them, and so you as well."
+       ],
+       "end": "End of scene. Path: a question voiced by someone else.",
+       "reflection": "Luke notes that the request comes after Jesus finished praying (Luke 11:1). The disciples did not interrupt him; they waited. Sometimes a question we carry within is put into words by someone else, and then the answer is for us too. What question about prayer have you carried within for a long time?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "A former disciple of John the Baptist",
+     "blurb": "You know John's prayers",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "For a while you followed John by the Jordan. You know his manner of prayer: austere, aimed at conversion. Now you watch Jesus, who prays differently, as if speaking with someone he knows well."
+       ],
+       "choices": [
+        {
+         "label": "Ask Jesus how his prayer differs from the one John taught",
+         "to": "n2"
+        },
+        {
+         "label": "Listen without comparing",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus says: when you pray, say: Father. There is no word about the austerity you asked about. There is a name that sounds ordinary and yet as if no one had ever spoken it so."
+       ],
+       "q": {
+        "t": "When you pray, say: Father.",
+        "r": "Lk 11:2"
+       },
+       "choices": [
+        {
+         "label": "Remember that word as something new",
+         "to": "e1"
+        },
+        {
+         "label": "See in it a continuation of what John taught",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You do not ask for comparisons. You listen to the words Jesus says to the disciples and feel they are not invented for the moment. It is a way of speaking that flows from something he does all the time."
+       ],
+       "choices": [
+        {
+         "label": "Repeat the words quietly",
+         "to": "e3"
+        },
+        {
+         "label": "Ask what it means: Father",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "The word Father stays with you longer than the rest of the prayer. It is not a novelty but an invitation that requires no merit."
+       ],
+       "end": "End of scene. Path: Father as something new.",
+       "reflection": "Addressing God as Father is not unknown in Jewish tradition, but the directness with which Jesus teaches it to his disciples matters to Luke (Luke 11:2). Romans 8:15, which we read as the acclamation of this day, says the Spirit stirs in us the cry: Abba, Father. Prayer therefore begins with relationship, and only then with requests. What changes in your prayer when you begin with relationship rather than a list of matters?"
+      },
+      "e2": {
+       "p": [
+        "You see that John prepared people for what Jesus now gives. There is no rivalry here, only continuation."
+       ],
+       "end": "End of scene. Path: continuity between John and Jesus.",
+       "reflection": "Luke describes John as the one who prepares the way (Luke 3:3-6; 7:27). Jesus' prayer does not cancel John's teaching, but carries it further. For someone who followed John, newness need not mean a break. What in your life prepared you for what you do today?"
+      },
+      "e3": {
+       "p": [
+        "You repeat the words quietly. They are simple and need no preparation. By the second time you understand they are not words to memorise but to live."
+       ],
+       "end": "End of scene. Path: prayer in simple words.",
+       "reflection": "The prayer of Luke 11:2-4 has five short petitions, not an elaborate liturgy. Simplicity does not mean shallowness, but teaches focus on what matters: God's name, his kingdom, bread, forgiveness, protection. Such a prayer fits every situation, even one with no time. What simple prayer can you repeat on a day full of tasks?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "And it came to pass, that as he was in a certain place praying, when he ceased, one of his disciples said to him: Lord, teach us to pray, as John also taught his disciples."
+    },
+    {
+     "v": "2",
+     "t": "And he said to them: When you pray, say: Father, hallowed be thy name. Thy kingdom come."
+    },
+    {
+     "v": "3",
+     "t": "Give us this day our daily bread."
+    },
+    {
+     "v": "4",
+     "t": "And forgive us our sins, for we also forgive every one that is indebted to us. And lead us not into temptation."
+    }
+   ]
+  },
+  "2026-10-08": {
+   "ref": "Lk 11:5-13",
+   "title": "A Friend at Midnight",
+   "context": [
+    "Where we are: the scene follows directly after the teaching of the Lord's Prayer (Luke 11:1-4). In the prayer we ask for bread for today, and now Jesus tells of a man who at midnight asks for bread for a guest.",
+    "Hospitality was a duty. The man in the parable has nothing to set before his guest, so he goes to a friend. The word often rendered as importunity means something like shamelessness.",
+    "The parable does not liken God to an unwilling neighbour but contrasts him with one: if even he gives way, how much more will the Father give (Luke 11:13). It is an argument from the lesser to the greater.",
+    "What follows: in verse 14 Jesus casts out a dumb devil, which begins the scene for 9 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "The man knocking at midnight",
+     "blurb": "Your friend has come off a journey",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "It is past midnight, and a friend has arrived at your house from the road. You have no bread to set before him. You know your neighbour next door usually keeps a store."
+       ],
+       "q": {
+        "t": "Friend, lend me three loaves.",
+        "r": "Lk 11:5"
+       },
+       "choices": [
+        {
+         "label": "Go to the neighbour at midnight",
+         "to": "n2"
+        },
+        {
+         "label": "Wait until morning and disturb no one",
+         "to": "e3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You knock and hear from within: trouble me not, the door is now shut, and my children are with me in bed. I cannot rise and give thee. You stand in the dark, and at home behind you a guest is waiting."
+       ],
+       "choices": [
+        {
+         "label": "Keep knocking",
+         "to": "n3"
+        },
+        {
+         "label": "Go away and apologise to your guest",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You knock again, more softly but stubbornly. After a while you hear footsteps and the scrape of the bolt. The neighbour opens and without a word gives you as many loaves as you need."
+       ],
+       "choices": [
+        {
+         "label": "Go back to your guest at once",
+         "to": "e1"
+        },
+        {
+         "label": "Say thanks and linger a moment at the door",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You return home with bread, and your guest sits down to eat. Only later do you wonder how many times you hesitated before you knocked."
+       ],
+       "end": "End of scene. Path: persistence in asking.",
+       "reflection": "Jesus says the neighbour rises not because he is a friend, but because of the man's importunity (Luke 11:8). The word means persistence without shame. The context matters: this parable stands right after the Lord's Prayer, in which we ask for bread for today, and teaches that asking is not a sign of lack of faith. What keeps you from asking for things that matter, though you know they are needed?"
+      },
+      "e2": {
+       "p": [
+        "You leave empty-handed and apologise to your guest. He waves it off, but you know that was not the end of the possibilities."
+       ],
+       "end": "End of scene. Path: giving up after the first refusal.",
+       "reflection": "Verses 9-10 say: ask, seek, knock. The verbs are in a tense that means continuing: keep asking. The first refusal is not the last word in this parable, and giving up after it is omitted from the story, because it is not its subject. When did you last give up a request after the first no, though the matter was important?"
+      },
+      "e3": {
+       "p": [
+        "You decide to wait until morning. Your guest does not complain, but you know it is not the hospitality you wanted to show him."
+       ],
+       "end": "End of scene. Path: sparing your friend.",
+       "reflection": "The parable assumes that a request at midnight is inconvenient, yet justified by the guest's need (Luke 11:5-6). Concern not to trouble anyone can be noble, but it can also be a way to avoid the risk of refusal. Jesus teaches that in the relationship with the Father such fear is not needed (Luke 11:13). When is your delicacy toward someone care, and when is it flight?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "The friend behind the door",
+     "blurb": "It is midnight and someone is knocking",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "It is long past midnight. Your children are asleep with you in bed, and the door is shut. Someone knocks. You recognise your neighbour's voice and hear the words: friend, lend me three loaves, because a friend of mine is come off his journey."
+       ],
+       "q": {
+        "t": "Trouble me not, the door is now shut.",
+        "r": "Lk 11:7"
+       },
+       "choices": [
+        {
+         "label": "Call from within: trouble me not",
+         "to": "n2"
+        },
+        {
+         "label": "Get up quietly and open",
+         "to": "e1"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "The knocking does not stop. The children stir restlessly. You know your neighbour will not leave, and you will not sleep while he stands there."
+       ],
+       "choices": [
+        {
+         "label": "Get up and give him the bread",
+         "to": "e2"
+        },
+        {
+         "label": "Pretend to be asleep",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You open the door and give him bread before he can repeat his request. You go back to bed feeling it was easier than you expected."
+       ],
+       "end": "End of scene. Path: hospitality without hesitation.",
+       "reflection": "The parable shows the neighbour rising after long knocking (Luke 11:8), but it does not rule out that someone could rise at once. Jesus does not praise resistance, only points out that even an unwilling man eventually gives way. All the more does the Father, who is not unwilling, give at once (Luke 11:13). When did you last get up at night for someone who asked you?"
+      },
+      "e2": {
+       "p": [
+        "You get up because you cannot sleep, and give him as much bread as he needs. You know you did it more for your own peace than out of friendship."
+       ],
+       "end": "End of scene. Path: giving way out of importunity.",
+       "reflection": "Jesus says plainly that the neighbour rises because of importunity, not friendship (Luke 11:8). It is a realistic observation about people, which Jesus uses to point to the contrast with the Father. Good done unwillingly is still good for the one who receives it, but it does not show the giver's heart. What motives do you usually help from?"
+      },
+      "e3": {
+       "p": [
+        "You lie still, but the knocking goes on. In the end you begin to hear in it not importunity but someone's need, which you can no longer ignore."
+       ],
+       "end": "End of scene. Path: pretending not to hear.",
+       "reflection": "The shut door and the children in bed are in the parable real reasons for refusal, not mere excuses (Luke 11:7). Jesus shows that the one who asks must overcome not only unwillingness but ordinary comfort. Pretending to be asleep is a human reaction which the Gospel does not condemn but describes. What knocking in your life do you pretend not to hear?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "5",
+     "t": "And he said to them: Which of you shall have a friend, and shall go to him at midnight, and shall say to him: Friend, lend me three loaves,"
+    },
+    {
+     "v": "6",
+     "t": "Because a friend of mine is come off his journey to me, and I have not what to set before him."
+    },
+    {
+     "v": "7",
+     "t": "And he from within should answer, and say: Trouble me not, the door is now shut, and my children are with me in bed; I cannot rise and give thee."
+    },
+    {
+     "v": "8",
+     "t": "Yet if he shall continue knocking, I say to you, although he will not rise and give him, because he is his friend; yet, because of his importunity, he will rise, and give him as many as he needeth."
+    },
+    {
+     "v": "9",
+     "t": "And I say to you, Ask, and it shall be given you: seek, and you shall find: knock, and it shall be opened to you."
+    },
+    {
+     "v": "10",
+     "t": "For every one that asketh, receiveth; and he that seeketh, findeth; and to him that knocketh, it shall be opened."
+    },
+    {
+     "v": "11",
+     "t": "And which of you, if he ask his father bread, will he give him a stone? or a fish, will he for a fish give him a serpent?"
+    },
+    {
+     "v": "12",
+     "t": "Or if he shall ask an egg, will he reach him a scorpion?"
+    },
+    {
+     "v": "13",
+     "t": "If you then, being evil, know how to give good gifts to your children, how much more will your Father from heaven give the good Spirit to them that ask him?"
+    }
+   ]
+  },
+  "2026-10-09": {
+   "ref": "Lk 11:15-26",
+   "title": "The Finger of God",
+   "context": [
+    "Where we are: Jesus casts out a demon that had robbed a man of speech. When the demon goes out, the mute man speaks, and the crowds are amazed (Luke 11:14). Only against this background do two reactions appear: accusation and the demand for a sign.",
+    "The accusation that Jesus works by the power of Beelzebub (Luke 11:15) is an attempt to explain a deed that cannot be denied. Jesus answers by pointing to the inner contradiction of that claim (11:17-18).",
+    "“The finger of God” (Luke 11:20) recalls the scene from Exodus in which the Egyptian magicians say of the plagues: this is the finger of God (Exodus 8:15). Jesus says that in his action the kingdom of God has come upon them.",
+    "What follows: verse 23 is a sharp call to take a side. Verses 24-26 show that deliverance by itself is not enough: a house swept and garnished, but empty, can be occupied again. In verse 27 a woman in the crowd speaks up, the scene for 10 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "The man who regained his speech",
+     "blurb": "Until recently you could not speak",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "For years you could not utter a word. Now Jesus has cast the spirit out of you and suddenly you have a voice. The crowd looks on in admiration, but some say it is done by the power of Beelzebub, prince of devils."
+       ],
+       "q": {
+        "t": "He casteth out devils by Beelzebub, the prince of devils.",
+        "r": "Lk 11:15"
+       },
+       "choices": [
+        {
+         "label": "Speak and tell what happened",
+         "to": "n2"
+        },
+        {
+         "label": "Stay silent, because you hear the accusations",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You speak with a trembling voice about what you have been through. Jesus points out that every kingdom divided against itself is brought to desolation and that Satan does not cast out Satan. He says that by the finger of God he casts out devils, which means the kingdom of God has come upon you."
+       ],
+       "q": {
+        "t": "If I by the finger of God cast out devils; doubtless the kingdom of God is come upon you.",
+        "r": "Lk 11:20"
+       },
+       "choices": [
+        {
+         "label": "Come closer to Jesus",
+         "to": "n4"
+        },
+        {
+         "label": "Withdraw into the crowd, overwhelmed",
+         "to": "n3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You hear Jesus' words: he that is not with me is against me, and he that gathereth not with me scattereth. You no longer have the silence to hide behind. Your new voice demands a choice."
+       ],
+       "q": {
+        "t": "He that is not with me, is against me.",
+        "r": "Lk 11:23"
+       },
+       "choices": [
+        {
+         "label": "Take Jesus' side",
+         "to": "n4"
+        },
+        {
+         "label": "Stay in the middle, not taking a side",
+         "to": "e3"
+        }
+       ]
+      },
+      "n4": {
+       "p": [
+        "Jesus speaks of the unclean spirit that goes out of a man, wanders through waterless places, then returns and finds the house swept and garnished. Then it takes seven other spirits more wicked than itself. You understand this is also about you."
+       ],
+       "choices": [
+        {
+         "label": "Ask how to guard the house",
+         "to": "e1"
+        },
+        {
+         "label": "Give thanks for freedom and not leave the house empty",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You ask how to guard the house, and Jesus does not answer with instructions. He says only that whoever gathers with him does not scatter. You sense that guarding the house is more a relationship than a technique."
+       ],
+       "end": "End of scene. Path: vigilance.",
+       "reflection": "The Gospel does not say that deliverance is security for ever. A house swept and garnished, yet empty, is in Luke 11:24-26 a picture of what can be occupied anew. Vigilance here is not fear of evil but a question of who dwells in the house. Who or what lives in your house once you recover from something hard?"
+      },
+      "e2": {
+       "p": [
+        "You give thanks for the voice you were given and begin to use it for what seems important to you. A house is not empty when someone lives in it."
+       ],
+       "end": "End of scene. Path: gratitude that fills the house.",
+       "reflection": "The whole passage is about filling: the strong man guards his court, the stronger overcomes him, the house must not be left empty (Luke 11:21-26). Gratitude for freedom is a way of making it last, because it turns it into a relationship. Freedom from something is only a beginning, not a goal. What do you fill the place with that was freed after something that held you captive?"
+      },
+      "e3": {
+       "p": [
+        "You stay in the middle, on neither side. You feel it is not a place where one can stay long."
+       ],
+       "end": "End of scene. Path: neutrality as a position.",
+       "reflection": "Jesus says that whoever is not with him is against him (Luke 11:23). In the context of the struggle with evil, that sentence warns against the illusion of neutrality. In Luke 9:50 he says something that sounds the opposite: he that is not against you is for you. Together the two sayings teach that the measure is not belonging to a group, but one's stance toward his work. Where in your life is neutrality a way of avoiding a choice?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Someone in the crowd",
+     "blurb": "You hear accusations and demands for signs",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You stand in the crowd when Jesus casts a spirit out of a mute man, who begins to speak. Everyone is amazed, but beside you someone says it is done by Beelzebub, and someone else demands a sign from heaven."
+       ],
+       "choices": [
+        {
+         "label": "Join those who speak of Beelzebub",
+         "to": "n2"
+        },
+        {
+         "label": "Ask what exactly they demand as a sign",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus knew their thoughts and says: every kingdom divided against itself shall be brought to desolation, and house upon house shall fall. He asks by whom your children cast them out. You feel the logic of his words makes sense."
+       ],
+       "q": {
+        "t": "Every kingdom divided against itself, shall be brought to desolation.",
+        "r": "Lk 11:17"
+       },
+       "choices": [
+        {
+         "label": "Admit that the argument hits home",
+         "to": "e1"
+        },
+        {
+         "label": "Shrug, without changing your mind",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Someone answers that a sign from heaven would be unambiguous. Jesus speaks of a strong man armed who keeps his court, and of a stronger who overcomes him and distributes his spoils. The sign they ask for is already before them."
+       ],
+       "choices": [
+        {
+         "label": "Accept that the Kingdom is near",
+         "to": "e1"
+        },
+        {
+         "label": "Look for further proof",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You admit inwardly that the accusation makes no sense. You leave the crowd, and the question Jesus put goes with you."
+       ],
+       "end": "End of scene. Path: changing your mind.",
+       "reflection": "Jesus' answer is an argument, not an insult: Satan does not cast out Satan (Luke 11:18). Changing one's mind in the face of an argument is a rare event, and the Gospel shows it is possible. The passage does not say what a particular listener did, but leaves that possibility open. When did you last change your mind because someone spoke more sensibly than you?"
+      },
+      "e2": {
+       "p": [
+        "You stay with your view. You know the argument makes sense, but changing your mind would cost more than you are willing to pay."
+       ],
+       "end": "End of scene. Path: indifference to the argument.",
+       "reflection": "Jesus puts it plainly: he that is not with me is against me (Luke 11:23). A shrug is not neutrality, because in practice it means a choice. Note that the accusers do not attack Jesus for failing to heal, but for healing too effectively. What would have to happen for you to concede to someone you disagree with?"
+      },
+      "e3": {
+       "p": [
+        "You look for more proofs and signs. A new question keeps arising, and Jesus turns attention to what has already happened."
+       ],
+       "end": "End of scene. Path: demanding a sign.",
+       "reflection": "Luke 11:16 mentions people who ask a sign from heaven, and in verse 29 Jesus says that this generation will be given only the sign of Jonah. The sign they ask for has already happened in the freeing of the mute man (11:14). Demanding more proof can be a way of postponing a decision. What do you still demand in order to believe, though you already have much?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "15",
+     "t": "But some of them said: He casteth out devils by Beelzebub, the prince of devils."
+    },
+    {
+     "v": "16",
+     "t": "And others tempting, asked of him a sign from heaven."
+    },
+    {
+     "v": "17",
+     "t": "But he seeing their thoughts, said to them: Every kingdom divided against itself, shall be brought to desolation, and house upon house shall fall."
+    },
+    {
+     "v": "18",
+     "t": "And if Satan also be divided against himself, how shall his kingdom stand? because you say, that through Beelzebub I cast out devils."
+    },
+    {
+     "v": "19",
+     "t": "Now if I cast out devils by Beelzebub; by whom do your children cast them out? Therefore they shall be your judges."
+    },
+    {
+     "v": "20",
+     "t": "But if I by the finger of God cast out devils; doubtless the kingdom of God is come upon you."
+    },
+    {
+     "v": "21",
+     "t": "When a strong man armed keepeth his court, those things are in peace which he possesseth."
+    },
+    {
+     "v": "22",
+     "t": "But if a stronger than he come upon him, and overcome him; he will take away all his armour wherein he trusted, and will distribute his spoils."
+    },
+    {
+     "v": "23",
+     "t": "He that is not with me, is against me; and he that gathereth not with me, scattereth."
+    },
+    {
+     "v": "24",
+     "t": "When the unclean spirit is gone out of a man, he walketh through places without water, seeking rest; and not finding, he saith: I will return into my house whence I came out."
+    },
+    {
+     "v": "25",
+     "t": "And when he is come, he findeth it swept and garnished."
+    },
+    {
+     "v": "26",
+     "t": "Then he goeth and taketh with him seven other spirits more wicked than himself, and entering in they dwell there. And the last state of that man becomes worse than the first."
+    }
+   ]
+  },
+  "2026-10-10": {
+   "ref": "Lk 11:27-28",
+   "title": "Blessed Are Those Who Hear",
+   "context": [
+    "Where we are: this short passage follows directly after the teaching about the unclean spirit and the swept house (Luke 11:24-26). Jesus spoke of a house that is to be occupied. Now a woman in the crowd cries out a blessing.",
+    "The woman blesses the womb that bore Jesus and the breasts that nursed him. In that tradition it is an expression of esteem for the mother who raised such a son. Jesus' answer does not deny that blessing but widens its meaning (“yea rather…”).",
+    "A similar thought appears in Luke 8:19-21, where Jesus says that his mother and brethren are those who hear the word of God and do it. Luke also earlier shows Mary as the one who keeps the words in her heart (Luke 2:19.51).",
+    "What follows: in verse 29 Jesus speaks of the generation that seeks a sign, and of the sign of Jonah. That begins a new part of the teaching."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "The woman in the crowd",
+     "blurb": "You cry out words of blessing",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You stand in the crowd and listen as Jesus speaks of spirits, houses and those who gather or scatter. Suddenly you feel you have something simpler to say. You think of his mother."
+       ],
+       "choices": [
+        {
+         "label": "Cry out a blessing for her aloud",
+         "to": "n2"
+        },
+        {
+         "label": "Keep it within yourself",
+         "to": "e3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You cry out: blessed is the womb that bore thee, and the paps that gave thee suck. People turn toward you. Jesus looks at you and answers: yea rather, blessed are they who hear the word of God, and keep it."
+       ],
+       "q": {
+        "t": "Yea rather, blessed are they who hear the word of God, and keep it.",
+        "r": "Lk 11:28"
+       },
+       "choices": [
+        {
+         "label": "Receive it as a widening",
+         "to": "e1"
+        },
+        {
+         "label": "Feel rebuked",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You receive these words as an invitation. The blessing you wanted to give his mother is for you yourself, as long as you listen."
+       ],
+       "end": "End of scene. Path: listening as blessing.",
+       "reflection": "The answer begins with yea and does not deny the blessing of the mother (Luke 11:28). It widens it to those who hear and keep the word. Luke earlier shows Mary as someone who keeps words in her heart (Luke 2:19.51), so the two blessings are not opposed. What does it mean for you today to hear the word and keep it?"
+      },
+      "e2": {
+       "p": [
+        "You feel a sting, as if you had said something wrong. Only after a while do you hear in his words not rejection but an invitation you did not expect to hear."
+       ],
+       "end": "End of scene. Path: shame that turns into an invitation.",
+       "reflection": "The word yea in Luke 11:28 matters, because it means Jesus does not reject your blessing. He adds a deeper sense to it. Shame at such a correction is natural, but it is not the point of the saying. When did you last take as a rebuke something that was only a widening?"
+      },
+      "e3": {
+       "p": [
+        "You keep the blessing for yourself. Nobody hears it, and you go home with a thought that stays with you long."
+       ],
+       "end": "End of scene. Path: a word kept in the heart.",
+       "reflection": "In Luke 2:19.51 Mary keeps words in her heart and ponders them. Your silence resembles that attitude, though you cannot hear the answer the woman who cried out received. Sometimes the words we keep are valuable, and sometimes they need to be spoken in order to be corrected or deepened. What do you keep inside, and what might gain from being spoken?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "The man who accused Jesus",
+     "blurb": "You earlier spoke of Beelzebub",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Not long ago you said Jesus casts out demons by the power of Beelzebub. Now you listen as he speaks of a house swept and empty, in which evil spirits can dwell anew. Beside you a woman cries out a blessing for his mother, and he answers."
+       ],
+       "q": {
+        "t": "Blessed are they who hear the word of God, and keep it.",
+        "r": "Lk 11:28"
+       },
+       "choices": [
+        {
+         "label": "Ask yourself whether you really listen",
+         "to": "n2"
+        },
+        {
+         "label": "Brush off what you heard",
+         "to": "e2"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "A house swept and garnished may be empty, and you know Jesus spoke of it only moments ago. Now he speaks of hearing and keeping. You understand this is the answer to what could guard that house."
+       ],
+       "choices": [
+        {
+         "label": "Begin by listening, before you judge",
+         "to": "e1"
+        },
+        {
+         "label": "Put off the decision for later",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You decide to listen first and judge afterwards. It is not easy, but for the first time in a long while you feel you do not have to be right."
+       ],
+       "end": "End of scene. Path: listening before judging.",
+       "reflection": "The passage sets the earlier scene of accusation beside the blessing of those who hear (Luke 11:15.28). Listening is not a passive attitude, because it requires giving up a ready explanation, with which we so easily close off what we do not understand. That is what those who said: by Beelzebub did. What ready explanation do you keep so as not to have to listen?"
+      },
+      "e2": {
+       "p": [
+        "You brush the words off and go back to your affairs. The house Jesus spoke of stays as it was: swept, and empty."
+       ],
+       "end": "End of scene. Path: brushing it off.",
+       "reflection": "Jesus speaks of a last state that becomes worse than the first (Luke 11:26). That warning concerns those who after deliverance have built nothing new. Brushing off is a way a house is left empty. What in your life has been put in order but filled with nothing?"
+      },
+      "e3": {
+       "p": [
+        "You put off the decision. You know it has its cost, though nobody has reckoned it yet."
+       ],
+       "end": "End of scene. Path: postponing.",
+       "reflection": "Right after this passage Jesus speaks of the generation that demands a sign (Luke 11:29). Postponing a decision is a form of demanding proof: I am not yet sure. The Gospel leaves that possibility open, but does not hide its costs. What decision are you not making, because you are still waiting for proof?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "27",
+     "t": "And it came to pass, as he spoke these things, a certain woman from the crowd, lifting up her voice, said to him: Blessed is the womb that bore thee, and the paps that gave thee suck."
+    },
+    {
+     "v": "28",
+     "t": "But he said: Yea rather, blessed are they who hear the word of God, and keep it."
+    }
+   ]
+  }
+ }
+}
