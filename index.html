@@ -26,7 +26,10 @@
 
     <section id="view" aria-live="polite"></section>
 
-    <p class="note" id="footer-note"></p>
+    <footer class="footer">
+      <p class="note" id="footer-note"></p>
+      <button type="button" id="admin-toggle" class="admin-link" aria-pressed="false"></button>
+    </footer>
   </main>
 
   <script>
@@ -53,6 +56,11 @@
         emptyLibrary: 'Biblioteka jest pusta. Pierwsza scena trafi tu jutro.',
         loadError: 'Nie udało się wczytać scen. Sprawdź, czy plik sceny.json leży obok index.html.',
         footer: 'Cytaty i tekst fragmentu to własne tłumaczenie angielskiej Biblii Douay-Rheims (domena publiczna), nie przekład liturgiczny. Pozostały tekst to narracja i parafraza.',
+        admin: 'Administrator',
+        adminExit: 'Wyjdź z trybu administratora',
+        adminBanner: 'Tryb administratora: widać wszystkie dni, także przyszłe, w kolejności dat.',
+        tagToday: 'dziś',
+        tagUpcoming: 'przyszła',
         toDark: 'Przełącz na ciemny motyw',
         toLight: 'Przełącz na jasny motyw',
         locale: 'pl-PL'
@@ -75,6 +83,11 @@
         emptyLibrary: 'The library is empty. The first scene will arrive here tomorrow.',
         loadError: 'Could not load the scenes. Check that sceny.json is next to index.html.',
         footer: 'Passage text and quotes are from the Douay-Rheims Bible (public domain), not the liturgical translation. Everything else is narration and paraphrase.',
+        admin: 'Administrator',
+        adminExit: 'Leave administrator mode',
+        adminBanner: 'Administrator mode: all days are shown, including upcoming ones, in date order.',
+        tagToday: 'today',
+        tagUpcoming: 'upcoming',
         toDark: 'Switch to dark mode',
         toLight: 'Switch to light mode',
         locale: 'en-GB'
@@ -94,6 +107,9 @@
     }).format(new Date());
 
     const data = { pl: {}, en: null };  // sceny z sceny.json i sceny.en.json
+    // Tryb administratora: bez logowania, to tylko wygodny podgląd.
+    // Można go też włączyć adresem ?admin=1
+    let admin = new URLSearchParams(location.search).get('admin') === '1';
     let lang = 'pl';
     let screen = { name: 'today' };     // today | library | picker | play
     let picks = [];                     // wybory: { node, index } (niezależne od języka)
@@ -166,7 +182,16 @@
       document.getElementById('footer-note').textContent = t('footer');
       document.getElementById('lang-pl').setAttribute('aria-pressed', String(lang === 'pl'));
       document.getElementById('lang-en').setAttribute('aria-pressed', String(lang === 'en'));
+      const adminButton = document.getElementById('admin-toggle');
+      adminButton.textContent = admin ? t('adminExit') : t('admin');
+      adminButton.setAttribute('aria-pressed', String(admin));
       updateThemeButton();
+    }
+
+    function toggleAdmin() {
+      admin = !admin;
+      applyLanguageToChrome();
+      go({ name: 'library' });
     }
 
     // ==========================================================
@@ -242,18 +267,33 @@
       setActiveTab('library');
       view.replaceChildren();
 
-      // Biblioteka to wszystkie sceny z datą wcześniejszą niż dziś.
-      const past = Object.keys(scenes()).filter(d => d < today).sort().reverse();
-      if (!past.length) {
+      const all = Object.keys(scenes());
+      let dates;
+
+      if (admin) {
+        // Administrator widzi wszystkie dni, od najwcześniejszego.
+        view.append(el('p', 'admin-banner', t('adminBanner')));
+        dates = all.sort();
+      } else {
+        // Zwykła biblioteka: tylko dni wcześniejsze niż dziś, od najnowszego.
+        dates = all.filter(d => d < today).sort().reverse();
+      }
+
+      if (!dates.length) {
         view.append(el('p', null, t('emptyLibrary')));
         return;
       }
 
       const list = el('div', 'card-list');
-      past.forEach(date => {
+      dates.forEach(date => {
         const scene = scenes()[date];
         const button = el('button', null, scene.title);
-        button.append(el('small', null, formatDate(date) + ' · ' + scene.ref));
+        const info = el('small', null, formatDate(date) + ' · ' + scene.ref);
+
+        if (admin && date === today) info.append(el('span', 'tag', t('tagToday')));
+        if (admin && date > today) info.append(el('span', 'tag', t('tagUpcoming')));
+
+        button.append(info);
         button.onclick = () => go({ name: 'picker', date, from: 'library' });
         list.append(button);
       });
@@ -381,6 +421,7 @@
     document.getElementById('lang-pl').onclick = () => setLanguage('pl');
     document.getElementById('lang-en').onclick = () => setLanguage('en');
     document.getElementById('theme-toggle').onclick = toggleTheme;
+    document.getElementById('admin-toggle').onclick = toggleAdmin;
 
     // Zapisany motyw ma pierwszeństwo, w przeciwnym razie obowiązuje ustawienie systemu.
     const storedTheme = readPref('theme');
@@ -403,7 +444,10 @@
         data.pl = pl.scenes || {};
         return loadJson('sceny.en.json').then(en => { data.en = en.scenes || {}; }).catch(() => {});
       })
-      .then(render)
+      .then(() => {
+        if (admin) screen = { name: 'library' };
+        render();
+      })
       .catch(() => view.replaceChildren(el('p', null, t('loadError'))));
   </script>
 </body>

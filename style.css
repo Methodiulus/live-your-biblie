@@ -304,6 +304,57 @@ summary {
   font-size: 0.85rem;
 }
 
+/* ---------- Tryb administratora ---------- */
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer .note {
+  margin: 0 0 0.6rem;
+}
+
+/* Dyskretny przycisk w stopce: wygląda jak zwykły link */
+.admin-link {
+  min-height: 36px;
+  padding: 0.2rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.admin-link:hover,
+.admin-link[aria-pressed="true"] {
+  background: transparent;
+  color: var(--accent);
+}
+
+.admin-banner {
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  border-left: 4px solid var(--quote);
+  border-radius: var(--radius);
+  background: var(--card);
+  font-size: 0.9rem;
+}
+
+/* Znacznik przy dacie: dziś / przyszła */
+.tag {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0 0.5rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+
 /* ---------- Bardzo wąskie ekrany ---------- */
 
 @media (max-width: 380px) {

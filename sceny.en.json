@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "lang": "en",
  "note": "English version. Passage text and quotes: Douay-Rheims Bible (Challoner revision), public domain. Structure (ids, choices) mirrors sceny.json.",
  "scenes": {
@@ -2258,6 +2258,1434 @@
     {
      "v": "28",
      "t": "But he said: Yea rather, blessed are they who hear the word of God, and keep it."
+    }
+   ]
+  },
+  "2026-10-11": {
+   "ref": "Mt 22:1-14",
+   "title": "The Wedding Feast",
+   "context": [
+    "Where we are: Jerusalem, the temple, a few days before the passion. Jesus speaks “to the chief priests and elders of the people” (Matthew 21:23). The parable of the wedding feast is the third in a series: after the two sons (Matthew 21:28-32) and the tenants of the vineyard (Matthew 21:33-46), which we read on 4 October.",
+    "They knew the image of a feast from Isaiah: on the mountain the Lord will prepare a feast for all peoples and wipe away tears from every face (Isaiah 25:6-10a, the first reading of the day). The wedding of a king's son is an image of the Kingdom.",
+    "The parable has two parts: the rejected invitation (vv. 1-10) and the man without a wedding garment (vv. 11-14). The liturgy also offers a shorter form, up to verse 10. The meaning of the wedding garment is explained in different ways (faith, a changed life, a gift from the host). The text does not settle it.",
+    "Note the king's patience: after the refusal he sends more servants and finally invites “both bad and good” (v. 10). The image of the burnt city (v. 7) is interpreted in different ways, for example in relation to later historical events, and is worth discussing carefully.",
+    "What follows: in Matthew 22:15-22 the Pharisees ask Jesus about the tax to Caesar. Note: the parable is addressed to the temple leaders, not to the whole nation. The Church rejects reading it as a condemnation of the Jews."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Invited guest with his own affairs",
+     "blurb": "You have a field, and the king calls you to the wedding",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You receive an invitation to the wedding of the king's son and know it is an honour. But the field is waiting, and a deal with a merchant may fall through if you delay. The servant stands at the door and says that everything is ready."
+       ],
+       "q": {
+        "t": "Come ye to the marriage.",
+        "r": "Mt 22:4"
+       },
+       "choices": [
+        {
+         "label": "Make light of it and go to your own affairs",
+         "to": "n2"
+        },
+        {
+         "label": "Put your affairs aside and go to the feast",
+         "to": "e1"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You go to the field. In the evening you hear that some of the invited seized the king's servants and killed them. You did not do that, but you did not come either. The king, they say, was angry and sent his armies."
+       ],
+       "choices": [
+        {
+         "label": "Go to the feast, though you know it may be too late",
+         "to": "e2"
+        },
+        {
+         "label": "Stay with your own affairs",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You leave the field and enter the hall. The tables are laid, and the host greets you as if he had been waiting for you in particular."
+       ],
+       "end": "End of scene. Path: accepting the invitation.",
+       "reflection": "The first guests in the parable are not presented as wicked people: one goes to his farm, another to his trade (Matthew 22:5). Their refusal comes from matters that seem more important. The parable shows how ordinary occupations can become a reason not to come. Note that the feast is “ready” (22:4), so nothing needs to be brought. What in your life is urgent and what is important, and which usually wins?"
+      },
+      "e2": {
+       "p": [
+        "You enter the hall late. You hear that those invited were not worthy, and you do not know whether that includes you. Someone shows you a place at the table."
+       ],
+       "end": "End of scene. Path: a late arrival.",
+       "reflection": "The king says: those invited were not worthy (Matthew 22:8), yet at the same time his servants gather everyone they find (22:9-10). The boundary between “unworthy” and “invited” does not run where we would expect to look for it. Lateness is not a separate thread in the text, so we do not know what would meet such a guest, and the text leaves it open. When did you last come late to something important, and what came of it?"
+      },
+      "e3": {
+       "p": [
+        "You stay with your own affairs. The field is sown, the deal sealed. In the evening you hear music from the king's palace and know it is not your feast."
+       ],
+       "end": "End of scene. Path: staying with your own affairs.",
+       "reflection": "The response of some of the invited is violence against the servants (Matthew 22:6), but the response of the rest is indifference (22:5). The parable does not begin with great evil, only with disregard. A disregarded invitation is still an invitation: the king still wants the hall filled. What invitation did you recently fail to notice because you were busy?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Servant sent to the highways",
+     "blurb": "The king sends you for everyone you can find",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "The king calls you and says: the marriage is ready, but those invited were not worthy. Go into the highways, and as many as you find, call to the marriage. You stand at a crossroads full of random people."
+       ],
+       "q": {
+        "t": "Go ye therefore into the highways; and as many as you shall find, call to the marriage.",
+        "r": "Mt 22:9"
+       },
+       "choices": [
+        {
+         "label": "Invite everyone you meet",
+         "to": "n2"
+        },
+        {
+         "label": "Choose those who look suitable",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You invite a beggar, a merchant, a mother with a child, a drunkard and someone who looks honest. Some do not believe it is true. Others ask what the king wants from them in return."
+       ],
+       "choices": [
+        {
+         "label": "Say: the king invites everyone, everything is ready",
+         "to": "e1"
+        },
+        {
+         "label": "Ask the king about those who hesitate",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You study the faces and choose those who seem fitting. The hall fills slowly and reluctantly. After a while you see that many whom you passed over stand to one side and watch."
+       ],
+       "choices": [
+        {
+         "label": "Change your approach and invite everyone",
+         "to": "n2"
+        },
+        {
+         "label": "Return with a small group",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "The hall fills with guests, bad and good. You stand at the door and watch people who had nothing to hope for this morning sit down at the table."
+       ],
+       "end": "End of scene. Path: invitation without selection.",
+       "reflection": "The parable says the servants gathered all they found, “both bad and good” (Matthew 22:10). The sent have no criterion of selection, which recalls the first scene of 1 October, where the sent enter houses without choosing. Isaiah 25:6-8, read today as the first reading, speaks of a feast for all peoples. Whom do you usually exclude from an invitation before anyone has had the chance to accept or decline?"
+      },
+      "e2": {
+       "p": [
+        "You ask, and the king only answers: call again. You understand that your role is to invite, not to decide about those who hesitate."
+       ],
+       "end": "End of scene. Path: a question about those who hesitate.",
+       "reflection": "In the parable the king sends servants more than once (Matthew 22:3-4), which shows that his invitation is renewed. The servant's role is to invite, not to judge the answers. Only in verses 11-14 does the king himself enter to see the guests, so the judgement is his, not the servants'. What do you take responsibility for, though it is not your task?"
+      },
+      "e3": {
+       "p": [
+        "You return with a small group. The king looks at it and at the empty hall and says nothing, and you know you did not carry out the order."
+       ],
+       "end": "End of scene. Path: selection instead of invitation.",
+       "reflection": "The king's command is simple: call as many as you find (Matthew 22:9). Choosing by your own criteria is a natural reflex, but it turns an invitation into an examination. The parable shows that it is the host who decides who is worthy (22:8.11-12), not the messengers. What entry criteria do you introduce when you invite someone?"
+      }
+     }
+    },
+    {
+     "id": "r3",
+     "name": "The guest without a wedding garment",
+     "blurb": "You came in from the road and everyone is dressed for the feast",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You were called in from the road and entered a hall full of people. Everyone looks festive, and you are wearing what you walked in. You do not know whether garments were prepared somewhere. You only notice that someone is looking at you."
+       ],
+       "choices": [
+        {
+         "label": "Stay where you are and hope nobody notices",
+         "to": "n2"
+        },
+        {
+         "label": "Ask a servant whether there is something you can put on",
+         "to": "e1"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "The king enters to see the guests. He stops by you and says: Friend, how camest thou in hither not having a wedding garment?"
+       ],
+       "q": {
+        "t": "Friend, how camest thou in hither not having a wedding garment?",
+        "r": "Mt 22:12"
+       },
+       "choices": [
+        {
+         "label": "Say nothing",
+         "to": "e2"
+        },
+        {
+         "label": "Say honestly that you came as you were called",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "A servant points you to a place by the entrance where garments lie. You put one on and join the guests as one of them."
+       ],
+       "end": "End of scene. Path: asking for help.",
+       "reflection": "The text does not say where the wedding garment was to come from, and commentators explain it in different ways: as a gift from the host, as faith, as a life consistent with the invitation. This scene adopts the first possibility only as a story, not as a settlement. More important is that the guest asks before he is asked. When did you last ask for help instead of pretending that everything was fine?"
+      },
+      "e2": {
+       "p": [
+        "You are speechless. The king speaks to the servants words you would rather not hear: bind his hands and feet. The parable breaks off where your fear begins."
+       ],
+       "end": "End of scene. Path: silence before a question.",
+       "reflection": "Verse 12 says only: “But he was silent.” The evangelist does not explain why. The ending (vv. 13-14) is one of the hardest in the Gospel, and its interpretations differ; the last sentence about many called and few chosen is sometimes read as a warning to those who have already come, rather than as an answer to the question of how many will be saved. The parable leaves the reader without certainty about what the lack of a garment means. What do you usually do when someone asks a question you cannot answer?"
+      },
+      "e3": {
+       "p": [
+        "You say you came as you were called, from the road. The king looks at you for a long time. The parable does not say what he answered."
+       ],
+       "end": "End of scene. Path: an honest answer.",
+       "reflection": "The text contains no such answer, so this scene is an open possibility, not a comment on what happened. Note that the king addresses the guest as “friend,” the same word Jesus will later use to Judas in the garden (Matthew 26:50). The king's question may therefore be an invitation to answer, not only an accusation. How do you answer when someone asks you a question you fear?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "And Jesus answering, spoke again in parables to them, saying:"
+    },
+    {
+     "v": "2",
+     "t": "The kingdom of heaven is likened to a king, who made a marriage for his son."
+    },
+    {
+     "v": "3",
+     "t": "And he sent his servants, to call them that were invited to the marriage; and they would not come."
+    },
+    {
+     "v": "4",
+     "t": "Again he sent other servants, saying: Tell them that were invited, Behold, I have prepared my dinner: my beeves and fatlings are killed, and all things are ready. Come ye to the marriage."
+    },
+    {
+     "v": "5",
+     "t": "But they neglected, and went their ways, one to his farm, and another to his merchandise."
+    },
+    {
+     "v": "6",
+     "t": "And the rest laid hands on his servants, and having treated them contumeliously, put them to death."
+    },
+    {
+     "v": "7",
+     "t": "But when the king had heard of it, he was angry: and sending his armies, he destroyed those murderers, and burnt their city."
+    },
+    {
+     "v": "8",
+     "t": "Then he saith to his servants: The marriage indeed is ready; but they that were invited were not worthy."
+    },
+    {
+     "v": "9",
+     "t": "Go ye therefore into the highways; and as many as you shall find, call to the marriage."
+    },
+    {
+     "v": "10",
+     "t": "And his servants going forth into the ways, gathered together all that they found, both bad and good: and the marriage was filled with guests."
+    },
+    {
+     "v": "11",
+     "t": "And the king went in to see the guests: and he saw there a man who had not on a wedding garment."
+    },
+    {
+     "v": "12",
+     "t": "And he saith to him: Friend, how camest thou in hither not having a wedding garment? But he was silent."
+    },
+    {
+     "v": "13",
+     "t": "Then the king said to the waiters: Bind his hands and feet, and cast him into the exterior darkness: there shall be weeping and gnashing of teeth."
+    },
+    {
+     "v": "14",
+     "t": "For many are called, but few are chosen."
+    }
+   ]
+  },
+  "2026-10-12": {
+   "ref": "Lk 11:29-32",
+   "title": "The Sign of Jonah",
+   "context": [
+    "Where we are: crowds gather around Jesus after the casting out of the mute spirit and the accusation about Beelzebub (Luke 11:14-28). Some listeners had earlier demanded a sign from heaven (Luke 11:16), and now Jesus returns to that.",
+    "Jonah preached in Nineveh and the city responded with conversion (Jonah 3). The queen of the south is the ruler of Sheba, who came to Solomon (1 Kings 10:1-10). Jesus sets both figures beside his listeners: outsiders proved more open than those who have the Scriptures.",
+    "In Luke 11:30 the sign of Jonah is the Son of Man himself. Matthew develops this in relation to three days (Matthew 12:40), while Luke stays with preaching and conversion. The first reading of the day (Galatians 4:22-24) speaks of the freedom Christ has won.",
+    "What follows: Jesus speaks of light and the lamp (Luke 11:33-36), and then is invited to dine with a Pharisee (11:37), which is the scene for 13 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "A man demanding a sign",
+     "blurb": "You have heard much, and still ask for proof",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You stand in the crowd. You have seen healings and heard teachings, but it is not enough for you: you would like a sign from heaven, the kind that settles all arguments. Jesus says this generation asks a sign, and a sign shall not be given it, but the sign of Jonas."
+       ],
+       "q": {
+        "t": "It asketh a sign, and a sign shall not be given it, but the sign of Jonas the prophet.",
+        "r": "Lk 11:29"
+       },
+       "choices": [
+        {
+         "label": "Feel judged and defend yourself in your mind",
+         "to": "n2"
+        },
+        {
+         "label": "Ask what the sign of Jonah means",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus speaks of the queen of the south, who came from the ends of the earth to hear the wisdom of Solomon. He also speaks of the men of Nineveh. Both mentions concern people who did not have your privileges, and who responded."
+       ],
+       "choices": [
+        {
+         "label": "Admit that you already had a lot",
+         "to": "e1"
+        },
+        {
+         "label": "Tell yourself this is not about you",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Jesus says that as Jonah was a sign to the Ninevites, so shall the Son of man also be to this generation. He does not say what kind of sign it will be, only that it will be he himself."
+       ],
+       "choices": [
+        {
+         "label": "Wonder whether Jesus himself is not already the sign",
+         "to": "e1"
+        },
+        {
+         "label": "Wait for something clearer",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "For a moment you demand nothing. You look at Jesus as someone who is himself the answer to your question, though not the kind you expected."
+       ],
+       "end": "End of scene. Path: recognising that the sign is already here.",
+       "reflection": "Jonah did not work miracles in Nineveh. He preached, and the city repented (Jonah 3:5-10). Luke sets this beside Jesus, who is “more than Jonas” (Luke 11:32): the sign is Jesus himself and his word, not an additional proof. The context strengthens this thread: the healing of the mute man (Luke 11:14) has already happened, and part of the crowd still asks for more. What proof do you ask for, though you already have much before you?"
+      },
+      "e2": {
+       "p": [
+        "You tell yourself it is not about you but about others who deserved these words more. You leave the crowd with a slight unease."
+       ],
+       "end": "End of scene. Path: pushing the words onto others.",
+       "reflection": "Jesus speaks of “this generation” in the singular, but his words about the queen of the south and the Ninevites touch every listener (Luke 11:31-32). Those who say: this is not about me are often precisely the addressees. In the Bible a similar mechanism appears in Nathan's parable, where the king passes sentence on himself (2 Samuel 12:1-7). When do you push away words that concern you as well?"
+      },
+      "e3": {
+       "p": [
+        "You wait for something clearer. The crowd disperses, and you still stand with the same question, only a little older."
+       ],
+       "end": "End of scene. Path: waiting for a clearer sign.",
+       "reflection": "Waiting for a clearer sign is human, but Luke shows that it is also a way of avoiding a decision. The Ninevites did not wait for additional proof: they heard and repented (Jonah 3:5). The generation that demands a sign is portrayed in the Gospel as one for which every sign will be too small. What decision are you postponing because you have not yet been given a clearer sign?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "A disciple listening about the queen of the south",
+     "blurb": "You wonder why outsiders are more open",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You stand close to Jesus and hear him speak of the queen of the south, who came from the ends of the earth to hear Solomon, and of the men of Nineveh, who repented. He says that here is more than Solomon and more than Jonas. You notice he says this to people who know the Scriptures."
+       ],
+       "q": {
+        "t": "And behold more than Solomon here.",
+        "r": "Lk 11:31"
+       },
+       "choices": [
+        {
+         "label": "Ask yourself whether you are not like them",
+         "to": "n2"
+        },
+        {
+         "label": "Feel pride that you are beside Jesus",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You remember that you often listened to Jesus without astonishment, because you heard him every day. Outsiders listen as though hearing it for the first time."
+       ],
+       "choices": [
+        {
+         "label": "Try to listen as though hearing for the first time",
+         "to": "e1"
+        },
+        {
+         "label": "Leave the question for later",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "The proud feeling lasts a short time. Jesus speaks of people who heard the word and responded, with no privileges at all. You ask yourself what you have done with being so close."
+       ],
+       "choices": [
+        {
+         "label": "Admit that closeness is not enough",
+         "to": "e2"
+        },
+        {
+         "label": "Push the thought aside",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You listen attentively, as though each word were new. It turns out you know them less well than you thought."
+       ],
+       "end": "End of scene. Path: listening as for the first time.",
+       "reflection": "The queen of the south and the Ninevites had neither the Scriptures nor the daily closeness of Jesus, and yet they responded (Luke 11:31-32). Luke places those who have received much before the question of how much of it they have really accepted. Familiarity can be the enemy of attention: what we hear daily we stop hearing. What in your life have you stopped hearing because it is too familiar?"
+      },
+      "e2": {
+       "p": [
+        "You admit to yourself that closeness is not yet a response. You feel shame, but with it a lightness: you do not have to pretend."
+       ],
+       "end": "End of scene. Path: admitting that closeness is not enough.",
+       "reflection": "Jesus does not say that being near is worthless, but that it does not replace a response (Luke 11:31-32). His comparison of outsiders with those who have the Scriptures is a warning for disciples too. Honest admission of this is the beginning of change, not its end. In what area of life does closeness or privilege replace a response for you?"
+      },
+      "e3": {
+       "p": [
+        "You push the question aside. The crowd disperses and Jesus moves on. You know you will return to this thought, though you do not know when."
+       ],
+       "end": "End of scene. Path: setting the question aside.",
+       "reflection": "Luke does not describe the disciples' reaction, so this scene is an open possibility. A postponed question does not disappear but waits, and the Gospel does not criticise such postponement, though it shows that delay costs (Luke 11:32). The queen of the south and the Ninevites did not postpone. What question have you been putting off for a long time?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "29",
+     "t": "And the multitudes running together, he began to say: This generation is a wicked generation: it asketh a sign, and a sign shall not be given it, but the sign of Jonas the prophet."
+    },
+    {
+     "v": "30",
+     "t": "For as Jonas was a sign to the Ninivites; so shall the Son of man also be to this generation."
+    },
+    {
+     "v": "31",
+     "t": "The queen of the south shall rise in the judgment with the men of this generation, and shall condemn them: because she came from the ends of the earth to hear the wisdom of Solomon; and behold more than Solomon here."
+    },
+    {
+     "v": "32",
+     "t": "The men of Ninive shall rise in the judgment with this generation, and shall condemn it; because they did penance at the preaching of Jonas; and behold more than Jonas here."
+    }
+   ]
+  },
+  "2026-10-13": {
+   "ref": "Lk 11:37-41",
+   "title": "Dinner at the Pharisee's",
+   "context": [
+    "Where we are: as Jesus finishes speaking to the crowd about the sign of Jonah and about light, a Pharisee invites him to dinner (Luke 11:37). The Pharisees in the Gospel are not a uniform group: Luke also describes other meals at Pharisees' houses (Luke 7:36; 14:1).",
+    "The host's surprise concerns washing before the meal (v. 38). This is the ritual washing of hands, which in Jewish tradition had religious, not only hygienic, significance. Jesus does not answer the question about the custom, but uncovers what lies beneath it.",
+    "The image of the cup and platter (v. 39) and the question about the Maker of outside and inside (v. 40) point to the whole person. Verse 41 is hard to translate: the Douay-Rheims speaks of “that which remaineth,” while many modern translations say “what is within.” In both readings, almsgiving is a sign of inner change.",
+    "What follows: this is the start of the series of “woes” which Jesus pronounces at this table (Luke 11:42-52). It is worth remembering that this is admonition within the family of faith, spoken at a shared meal, not a sentence on a whole people."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "The Pharisee host",
+     "blurb": "You invited Jesus and something surprised you",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You invited Jesus to your house because you had heard much about him. When he sits down to the table, you notice he has not washed before the meal. You say nothing, but in your mind you ask: why?"
+       ],
+       "choices": [
+        {
+         "label": "Keep your surprise to yourself",
+         "to": "n2"
+        },
+        {
+         "label": "Ask him directly",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus, seeing your thoughts, says: now you Pharisees make clean the outside of the cup and of the platter, but your inside is full of rapine and iniquity. You do not know whether this is an accusation or an invitation."
+       ],
+       "q": {
+        "t": "Did not he that made that which is without, make also that which is within?",
+        "r": "Lk 11:40"
+       },
+       "choices": [
+        {
+         "label": "Feel hurt and say nothing",
+         "to": "e2"
+        },
+        {
+         "label": "Ask what he means",
+         "to": "e1"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You ask why he did not wash. Jesus answers not about the custom but about the cup and platter: you clean the outside, and the inside is full of rapine. He also asks whether the one who made the outside did not make the inside too."
+       ],
+       "choices": [
+        {
+         "label": "Ask what to do about it",
+         "to": "e1"
+        },
+        {
+         "label": "Begin to defend yourself",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Jesus answers that what remains should be given as alms, and all things will be clean. It is not advice about cleaning, but about giving."
+       ],
+       "end": "End of scene. Path: a question about the inside.",
+       "reflection": "Jesus' answer in verse 41 is not about new rules but about almsgiving, that is, an open hand. Translations differ: “that which remaineth” (Douay-Rheims) or “what is within,” but the sense is similar: purity is not the result of extra rituals but of a heart that gives. This is not a criticism of ritual itself, since elsewhere Jesus does not reject practices. What could you give today, and what do you usually keep in the name of sound principles?"
+      },
+      "e2": {
+       "p": [
+        "You sit in silence. The dinner goes on, but the conversation is different, as if every word now had an extra depth."
+       ],
+       "end": "End of scene. Path: hurt and silence.",
+       "reflection": "Jesus says this at a shared table, not in a square before a crowd. That matters: admonition in someone's home is a sign that he does not treat the host as an opponent but as someone he sits at table with. Being hurt at such a moment is real, but it can also be the beginning of a conversation. Who last said something hard to you over a shared meal, and how did you respond?"
+      },
+      "e3": {
+       "p": [
+        "You defend a custom that has mattered to you since childhood. Jesus listens, and for the first time you notice that you are defending not so much the custom as yourself."
+       ],
+       "end": "End of scene. Path: defending the custom.",
+       "reflection": "The Pharisees cared about the holiness of daily life, and that concern in itself is not the target of criticism. Jesus criticises the gap: when outward care hides what is within (Luke 11:39). Defending a custom is understandable, but it can also be a way of avoiding a question. What are you protecting when you defend your customs?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "A disciple at the table",
+     "blurb": "You sit next to Jesus and hear every word",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You sit at the Pharisee's table with Jesus. You notice the host looking in surprise at his hands. You know Jesus did not wash them before the meal, and that he did not do so deliberately."
+       ],
+       "choices": [
+        {
+         "label": "Look at your own hands",
+         "to": "n2"
+        },
+        {
+         "label": "Watch the host and wait for his reaction",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Your hands were not washed either. You feel uneasy, as if you were the one who had to explain. Jesus begins to speak about the cup and the platter."
+       ],
+       "choices": [
+        {
+         "label": "Listen and wonder what is within yourself",
+         "to": "e1"
+        },
+        {
+         "label": "Fear that the conversation will go badly",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "The host begins to wonder why Jesus did not wash, and Jesus, seeing his thoughts, answers. He speaks of an inside full of rapine and of the one who made both outside and inside."
+       ],
+       "choices": [
+        {
+         "label": "Understand that this concerns you too",
+         "to": "e1"
+        },
+        {
+         "label": "Wait for the conversation to calm down",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You look at your hands, and then deep into yourself. You discover several things you have long avoided."
+       ],
+       "end": "End of scene. Path: a question about your own inside.",
+       "reflection": "Jesus speaks to the host, but the disciples are listening. In the Gospel, what is said to one person often concerns those sitting beside them (Luke 11:39-41). The disciples are not better than the Pharisees from the start, and this scene shows that admonition concerns everyone. What in you needs attention more than what is visible from outside?"
+      },
+      "e2": {
+       "p": [
+        "The conversation tightens, and you wait for someone to ease it. Jesus does not do that for anyone."
+       ],
+       "end": "End of scene. Path: fear of tension.",
+       "reflection": "Jesus does not soften the tension, because the truth about the inside cannot be said gently, but he says it at the table, not outside. A disciple who is afraid is very human in this scene. Fear of conflict can, however, also be a way of not hearing what matters. How do you react when a conversation at table gets difficult?"
+      },
+      "e3": {
+       "p": [
+        "You wait for the conversation to quiet. Jesus finishes speaking about alms, and you realise you did not remember what was important."
+       ],
+       "end": "End of scene. Path: waiting on the sidelines.",
+       "reflection": "The almsgiving of verse 41 is Jesus' last word in this scene, and it is easy to miss when we focus on the tension between him and the host. It is worth noting that Jesus does not end with accusation but with a way forward: give, and all will be clean. What do you usually miss when you focus on the emotions of a conversation?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "37",
+     "t": "And as he was speaking, a certain Pharisee prayed him, that he would dine with him. And he going in, sat down to eat."
+    },
+    {
+     "v": "38",
+     "t": "And the Pharisee began to say, thinking within himself, why he was not washed before dinner."
+    },
+    {
+     "v": "39",
+     "t": "And the Lord said to him: Now you Pharisees make clean the outside of the cup and of the platter; but your inside is full of rapine and iniquity."
+    },
+    {
+     "v": "40",
+     "t": "Ye fools, did not he that made that which is without, make also that which is within?"
+    },
+    {
+     "v": "41",
+     "t": "But yet that which remaineth, give alms; and behold, all things are clean unto you."
+    }
+   ]
+  },
+  "2026-10-14": {
+   "ref": "Lk 11:42-46",
+   "title": "Woe",
+   "context": [
+    "Where we are: the continuation of the dinner at the Pharisee's (Luke 11:37-41). Jesus pronounces a series of “woes,” which in the Bible are a form of prophetic admonition rather than a curse (compare Isaiah 5:8-23).",
+    "Tithing mint and rue (v. 42) was a practice Jesus himself does not reject: “these things you ought to have done.” He criticises passing over judgment and the love of God, that is, justice and love in relationships.",
+    "Graves that do not appear (v. 44) refer to the fact that touching a grave made a person ritually unclean (Numbers 19:16). People walked over them unaware. The image says that hypocrisy affects others before anyone sees it.",
+    "Verse 45 contains the reaction of a lawyer: “thou reproachest us also.” Jesus does not retreat but turns to them as well. What follows: the further “woes” addressed to the lawyers (Luke 11:47-52), the scene for 15 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "A Pharisee at the table",
+     "blurb": "You hear the “woes” and recognise someone you know",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You sit at the table and listen as Jesus says: woe to you, Pharisees, because you tithe mint and rue and every herb, and pass over judgment and the charity of God. You know you do this yourself, and you always considered it a virtue."
+       ],
+       "q": {
+        "t": "Now these things you ought to have done, and not to leave the other undone.",
+        "r": "Lk 11:42"
+       },
+       "choices": [
+        {
+         "label": "Ask yourself what you pass over",
+         "to": "n2"
+        },
+        {
+         "label": "Feel that it is unfair",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You recall the last few weeks. The tithe was always exact, but recently you sent away a poor man who asked for help because you had no time. Jesus also speaks of the uppermost seats in the synagogues and salutations in the marketplace."
+       ],
+       "choices": [
+        {
+         "label": "Admit that you like being noticed",
+         "to": "e1"
+        },
+        {
+         "label": "Ask how to combine the one with the other",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You feel unjustly judged. All your life you have tried to live according to the Law. Jesus says you are as sepulchres that appear not, and men that walk over are not aware."
+       ],
+       "choices": [
+        {
+         "label": "Reply in your mind that you do not have this problem",
+         "to": "e3"
+        },
+        {
+         "label": "Ask what a hidden grave means",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You admit that you like the first seats and the greetings. You never called it pride, only respect for the Law."
+       ],
+       "end": "End of scene. Path: admitting a desire for recognition.",
+       "reflection": "Jesus does not criticise the practices but their proportions: “these things you ought to have done, and not to leave the other undone” (Luke 11:42). This sentence matters: Jesus does not tell them to choose between tithing and justice, only not to omit the latter. An honest admission that we like to be noticed is the beginning of change. Which of your good deeds do you also do in order to be seen?"
+      },
+      "e2": {
+       "p": [
+        "You ask, and Jesus answers only with what he has already said. He gives no new rule, only leaves you with the question of judgment and love."
+       ],
+       "end": "End of scene. Path: a question about what you passed over.",
+       "reflection": "Jesus gives no new list of rules, because the problem is not the number of commandments. “Judgment and the charity of God” (Luke 11:42) means justice toward others and faithfulness to God, which have no fixed measure. In Micah 6:8 the prophet says something similar: do justice, love mercy, walk humbly with God. What does it mean for you today to pass over judgment and love, though everything else you do correctly?"
+      },
+      "e3": {
+       "p": [
+        "You reply in your mind that this does not concern you. You go on sitting at the table, and only after a while notice that you cannot look Jesus in the eye."
+       ],
+       "end": "End of scene. Path: denial.",
+       "reflection": "The image of hidden graves (Luke 11:44) says that the problem is what we do not see in ourselves, not what everyone sees. The reply “this does not concern me” is then part of the problem. In the Gospels not every Pharisee is portrayed in the same way: according to John's Gospel, Nicodemus was a Pharisee (John 3:1). What sentence about yourself would you rather not examine?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "A lawyer who answers",
+     "blurb": "You say: in saying this you reproach us also",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You listen to Jesus speak about the Pharisees, and feel that lawyers are also in the background. When he speaks of graves that do not appear, you cannot hold back. You say: Master, in saying these things, thou reproachest us also."
+       ],
+       "q": {
+        "t": "Master, in saying these things, thou reproachest us also.",
+        "r": "Lk 11:45"
+       },
+       "choices": [
+        {
+         "label": "Wait for the answer",
+         "to": "n2"
+        },
+        {
+         "label": "Withdraw and apologise",
+         "to": "e3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus does not retreat. He says: woe to you lawyers also, because you load men with burdens which they cannot bear, and you yourselves touch not the packs with one of your fingers."
+       ],
+       "choices": [
+        {
+         "label": "Ask which burden he means",
+         "to": "e1"
+        },
+        {
+         "label": "Say that the lawyers only interpret the Law",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You ask about the burdens. Jesus names no specific rules, but you tell yourself you know what he means: the people to whom you explain the Law, whom you do not help to carry it."
+       ],
+       "end": "End of scene. Path: a question about burdens.",
+       "reflection": "Jesus asks how the lawyers treat people, not about knowledge. The burdens in Luke 11:46 are demands that those who impose them avoid themselves. Elsewhere Jesus speaks of his own yoke, which is sweet, and his burden, which is light (Matthew 11:30). Do those to whom you explain principles feel you stand beside them or above them?"
+      },
+      "e2": {
+       "p": [
+        "You say the lawyers only interpret the Law. Jesus looks at you without anger and is silent. That silence is louder than his words."
+       ],
+       "end": "End of scene. Path: justification.",
+       "reflection": "The reply “we only interpret” echoes Luke 10:29, where another lawyer “willing to justify himself” spoke. Self-justification is a human reflex, but in the Gospel it often closes a conversation rather than opening it. Jesus does not answer that justification, which shows that he is not seeking to win the argument. When did you last justify yourself instead of listening?"
+      },
+      "e3": {
+       "p": [
+        "You apologise. Jesus nods and says nothing more. What remains is only the question of whether you apologised from conviction or from awkwardness."
+       ],
+       "end": "End of scene. Path: a quick apology.",
+       "reflection": "The text does not show the lawyer apologising. Jesus' answer is immediate and does not wait for an apology (Luke 11:46). An apology meant to smooth over a situation rather than change a heart can be a way of avoiding conversation. At the same time an honest “I am sorry” can be the beginning of something new. What is the difference between an apology from conviction and one from awkwardness?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "42",
+     "t": "But woe to you, Pharisees, because you tithe mint and rue and every herb; and pass over judgment, and the charity of God. Now these things you ought to have done, and not to leave the other undone."
+    },
+    {
+     "v": "43",
+     "t": "Woe to you, Pharisees, because you love the uppermost seats in the synagogues, and salutations in the marketplace."
+    },
+    {
+     "v": "44",
+     "t": "Woe to you, because you are as sepulchres that appear not, and men that walk over are not aware."
+    },
+    {
+     "v": "45",
+     "t": "And one of the lawyers answering, saith to him: Master, in saying these things, thou reproachest us also."
+    },
+    {
+     "v": "46",
+     "t": "But he said: Woe to you lawyers also, because you load men with burdens which they cannot bear, and you yourselves touch not the packs with one of your fingers."
+    }
+   ]
+  },
+  "2026-10-15": {
+   "ref": "Lk 11:47-54",
+   "title": "The Tombs of the Prophets",
+   "context": [
+    "Where we are: the dinner at the Pharisee's continues. After the “woes” aimed at the Pharisees and the lawyers, Jesus turns to the latter: they build monuments to the prophets whom their fathers killed (Luke 11:47-48).",
+    "The blood from Abel to Zechariah (v. 51) spans the whole range of Scripture: Abel is the first victim of violence (Genesis 4), and Zechariah, usually identified with him, was stoned in the court of the temple (2 Chronicles 24:20-22), in the last book of the Hebrew canon. Jesus is saying: from beginning to end.",
+    "The “key of knowledge” (v. 52) is the ability to open the Scriptures to people. Jesus charges that those who had it did not enter themselves and hindered others. The Christian tradition sees here also a warning to everyone who teaches.",
+    "What follows: the Pharisees and lawyers begin to “urge him violently” and lie in wait for him (vv. 53-54), and in Luke 12:1 Jesus speaks to the disciples about the leaven of the Pharisees. That is the scene for 16 October. Note: Jesus speaks here to specific people at a specific table, not about a whole group for ever."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "A lawyer who builds the prophets' tombs",
+     "blurb": "You look after monuments your fathers left behind",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Your family has for generations looked after the tombs of the prophets. It matters to you and seems an expression of respect. Now Jesus says: woe to you who build the monuments of the prophets, and your fathers killed them."
+       ],
+       "q": {
+        "t": "Truly you bear witness that you consent to the doings of your fathers.",
+        "r": "Lk 11:48"
+       },
+       "choices": [
+        {
+         "label": "Ask in what you are guilty",
+         "to": "n2"
+        },
+        {
+         "label": "Answer that it was their fathers, not you",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jesus says that the wisdom of God said: I will send prophets and apostles, and some of them they will kill and persecute. He speaks of the blood from Abel to Zechariah that will be required of this generation."
+       ],
+       "choices": [
+        {
+         "label": "Wonder how you treat today's prophets",
+         "to": "e1"
+        },
+        {
+         "label": "Leave these words to Jesus, as too heavy",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You say it was their fathers who killed the prophets, and you only care for the tombs. Jesus answers that you take part in their work, because you build the sepulchre for those whom they killed. Then he speaks of the key of knowledge that you have taken away."
+       ],
+       "choices": [
+        {
+         "label": "Ask what key this is",
+         "to": "e2"
+        },
+        {
+         "label": "Turn away and start talking to your neighbour",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You wonder who in your neighbourhood says uncomfortable things and how you treat him. The answer is not pleasant."
+       ],
+       "end": "End of scene. Path: a question about today's prophets.",
+       "reflection": "Jesus joins two gestures: building tombs and consenting to the deeds of the fathers (Luke 11:47-48). Honouring dead prophets can be easier than listening to living ones. The question does not concern only lawyers, but anyone who prefers monuments to a voice that disturbs him. Whom in your surroundings do you honour after death but do not listen to in life?"
+      },
+      "e2": {
+       "p": [
+        "You ask about the key, and Jesus says only that you yourselves have not entered in, and those that were entering in, you have hindered. That sentence stays with you."
+       ],
+       "end": "End of scene. Path: a question about the key of knowledge.",
+       "reflection": "The key of knowledge means access to understanding the Scriptures. Jesus charges that the teachers stopped themselves and held others back (Luke 11:52). This is not a charge about lack of knowledge, but about what they do with it. Anyone who teaches has their own temptations in this area. Does your knowledge open doors for others or close them?"
+      },
+      "e3": {
+       "p": [
+        "You look away. The dinner ends, and you leave first. Only in the street do you feel that the words about the tombs have followed you."
+       ],
+       "end": "End of scene. Path: turning away from heavy words.",
+       "reflection": "The words about the blood from Abel to Zechariah are among the heaviest in Luke's Gospel (Luke 11:50-51). Turning away from them is understandable, but the text says this generation will be called to account. Note that according to Luke 11:53-54 after these words the Pharisees and lawyers begin to lie in wait for Jesus, that is, they understood it was about them. What heavy words do you turn away from instead of hearing?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Someone listening who sees the trap",
+     "blurb": "Tension rises around the table",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You are in the Pharisee's house, but not at the table. You hear Jesus speak of the tombs of the prophets and of the blood from Abel to Zechariah. You see the faces at the table harden. Someone whispers that he must be questioned about many things."
+       ],
+       "choices": [
+        {
+         "label": "Notice that a trap is being prepared",
+         "to": "n2"
+        },
+        {
+         "label": "Concentrate on Jesus' words",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "The Pharisees and lawyers begin to press Jesus hard, asking about many things, lying in wait for something they might use against him. Jesus still sits calmly."
+       ],
+       "q": {
+        "t": "Lying in wait for him, and seeking to catch something from his mouth, that they might accuse him.",
+        "r": "Lk 11:54"
+       },
+       "choices": [
+        {
+         "label": "Stay and see what happens",
+         "to": "e1"
+        },
+        {
+         "label": "Go out and warn the disciples",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You concentrate on what Jesus says: that I will send them prophets and apostles, and some of them they will kill. The sentence is heavy, because you know it will also concern those who follow him."
+       ],
+       "choices": [
+        {
+         "label": "Ask yourself whether you are ready",
+         "to": "e3"
+        },
+        {
+         "label": "Prefer not to think about it",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You stay in the room, watch the tension grow, and do nothing. Jesus does not need your defence, but you need to decide which side you stand on."
+       ],
+       "end": "End of scene. Path: watching without deciding.",
+       "reflection": "The Pharisees and lawyers look for something to catch Jesus in (Luke 11:54). This is the first time in Luke's Gospel that opposition to Jesus takes the form of a planned trap. An observer who does nothing is very human in this scene, but Luke does not show neutral witnesses. What do you usually do when you see tension growing around someone you respect?"
+      },
+      "e2": {
+       "p": [
+        "You go out and look for the disciples to tell them what you saw. You do not know whether it will change anything, but you know you cannot simply watch."
+       ],
+       "end": "End of scene. Path: a warning.",
+       "reflection": "In the next chapter Jesus says to the disciples: “Beware ye of the leaven of the Pharisees” (Luke 12:1). Jesus himself warns about what happens at the table, so warning the disciples is not disobedience. Note that the warning concerns leaven, that is, an attitude that spreads, not people as such. What would you like to warn someone you love about?"
+      },
+      "e3": {
+       "p": [
+        "You stay with Jesus, though you know it may cost you. You make no great decision, you simply stay."
+       ],
+       "end": "End of scene. Path: staying with Jesus.",
+       "reflection": "Jesus foretells that prophets and apostles will be persecuted (Luke 11:49). This sentence is not a promise of safety but an honest forecast. Staying with someone who says uncomfortable things does not require grand gestures, only a daily decision. By whom do you stay despite the cost?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "47",
+     "t": "Woe to you who build the monuments of the prophets: and your fathers killed them."
+    },
+    {
+     "v": "48",
+     "t": "Truly you bear witness that you consent to the doings of your fathers: for they indeed killed them, and you build their sepulchres."
+    },
+    {
+     "v": "49",
+     "t": "For this cause also the wisdom of God said: I will send to them prophets and apostles; and some of them they will kill and persecute."
+    },
+    {
+     "v": "50",
+     "t": "That the blood of all the prophets which was shed from the foundation of the world, may be required of this generation,"
+    },
+    {
+     "v": "51",
+     "t": "From the blood of Abel unto the blood of Zacharias, who was slain between the alter and the temple: Yea I say to you, It shall be required of this generation."
+    },
+    {
+     "v": "52",
+     "t": "Woe to you lawyers, for you have taken away the key of knowledge: you yourselves have not entered in, and those that were entering in, you have hindered."
+    },
+    {
+     "v": "53",
+     "t": "And as he was saying these things to them, the Pharisees and the lawyers began violently to urge him, and to oppress his mouth about many things,"
+    },
+    {
+     "v": "54",
+     "t": "Lying in wait for him, and seeking to catch something from his mouth, that they might accuse him."
+    }
+   ]
+  },
+  "2026-10-16": {
+   "ref": "Lk 12:1-7",
+   "title": "Fear Not",
+   "context": [
+    "Where we are: after the tension at the Pharisee's table (Luke 11:53-54) huge crowds gather, so that they tread one upon another. Jesus turns first to his disciples and warns of “the leaven of the Pharisees, which is hypocrisy” (Luke 12:1).",
+    "Leaven is in the Bible an image of something that works invisibly and permeates the whole. Hypocrisy is the gap between what one says and shows and what is in the heart. Jesus says that nothing will remain hidden (vv. 2-3).",
+    "Jesus calls the disciples “my friends” (v. 4), which is rare in Luke's Gospel. He speaks of fear of those who kill the body and of the fear of God. Then he moves to sparrows and the hairs of the head numbered. The whole is an encouragement to trust, not to terror.",
+    "What follows: in Luke 12:8-12 Jesus speaks of confessing him before men and of the Holy Spirit who will teach what to say. That is the scene for 17 October."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "A disciple in the crowd who is afraid",
+     "blurb": "The crowd presses on you, and Jesus' words unsettle you",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "It is so crowded that people trample each other. Jesus says to you, his disciples: beware of the leaven of the Pharisees, which is hypocrisy. There is nothing covered that shall not be revealed. You feel this may concern you as well."
+       ],
+       "q": {
+        "t": "Beware ye of the leaven of the Pharisees, which is hypocrisy.",
+        "r": "Lk 12:1"
+       },
+       "choices": [
+        {
+         "label": "Wonder what you are hiding",
+         "to": "n2"
+        },
+        {
+         "label": "Concentrate on not being trampled",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Several things come to mind that you tell no one. Jesus says that what you have spoken in darkness shall be published in the light. Then he says to you: my friends, be not afraid of them who kill the body."
+       ],
+       "q": {
+        "t": "Be not afraid of them who kill the body.",
+        "r": "Lk 12:4"
+       },
+       "choices": [
+        {
+         "label": "Feel relief at the word friends",
+         "to": "e1"
+        },
+        {
+         "label": "Ask yourself whether you are his friend",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You push through the crowd and listen only partly. You hear about sparrows and the hairs of the head being numbered. You wonder why Jesus talks about something so small."
+       ],
+       "choices": [
+        {
+         "label": "Stop and listen",
+         "to": "e1"
+        },
+        {
+         "label": "Move on, looking for a safe place",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "The word friends stays with you. For a moment the crush of the crowd stops irritating you, because you know you are seen."
+       ],
+       "end": "End of scene. Path: consolation through friendship.",
+       "reflection": "Jesus calls the disciples friends at exactly the moment when he speaks of danger (Luke 12:4). Friendship is not a reward after danger, but what one goes through it in. In John's Gospel Jesus will say something similar: I have called you friends (John 15:15). Is there room in your fear for the fact that someone sees you and calls you by name?"
+      },
+      "e2": {
+       "p": [
+        "You ask yourself whether you are Jesus' friend or only someone following him. You have no answer, but you know the question is honest."
+       ],
+       "end": "End of scene. Path: a question about friendship.",
+       "reflection": "Friendship with Jesus in the Gospel is not sentiment but following him (Luke 12:4; John 15:14). The question whether we are friends is part of the road, not an obstacle. A disciple who honestly asks is closer than one who pretends certainty. What does it mean for you to be the friend of someone who calls you to risk?"
+      },
+      "e3": {
+       "p": [
+        "You push on, and the words about sparrows are lost in the noise. Later they come back to you when it is quiet."
+       ],
+       "end": "End of scene. Path: words that come back later.",
+       "reflection": "Jesus speaks of sparrows sold for two farthings, and not one of them is forgotten before God (Luke 12:6). It is an image of small value, yet remembered before God. Words that passed us by in the crowd are often those that return in silence. What have you heard but not had time to take in that is returning to you now?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "A sparrow that is not forgotten",
+     "blurb": "The story of five sparrows from a bird's point of view",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "You are one of five sparrows at a stall. Someone pays two farthings for you. You are so small that nobody will remember your voice. From a distance you hear a man speaking about sparrows, and that not one of them is forgotten before God."
+       ],
+       "q": {
+        "t": "Not one of them is forgotten before God.",
+        "r": "Lk 12:6"
+       },
+       "choices": [
+        {
+         "label": "Listen carefully",
+         "to": "n2"
+        },
+        {
+         "label": "Doubt these words",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "The man goes on: even the hairs of your head are numbered. Fear not, you are of more value than many sparrows. You do not fully understand these words, but you feel their warmth."
+       ],
+       "q": {
+        "t": "The very hairs of your head are all numbered.",
+        "r": "Lk 12:7"
+       },
+       "choices": [
+        {
+         "label": "Trust these words",
+         "to": "e1"
+        },
+        {
+         "label": "Ask what more value means",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You doubt. You are only one of five, sold for two farthings. Does anyone really remember one like you? But you hear that it is being said by someone who seems to know what he is talking about."
+       ],
+       "choices": [
+        {
+         "label": "Give these words a chance",
+         "to": "n2"
+        },
+        {
+         "label": "Remain in your doubt",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You trust. Not because you have proof, but because these words are the only thing anyone has said to you so far about your worth."
+       ],
+       "end": "End of scene. Path: trust.",
+       "reflection": "The image of sparrows in Luke 12:6-7 speaks of things that seem worthless but are remembered. It is an argument from the lesser to the greater: if God does not forget a sparrow, how much more a person. It is not a promise of freedom from suffering, since just before Jesus speaks of those who kill the body (12:4). What in you seems too small for anyone to remember?"
+      },
+      "e2": {
+       "p": [
+        "You ask what more value means. There is no answer, but the question is already the beginning of something new."
+       ],
+       "end": "End of scene. Path: a question about worth.",
+       "reflection": "The words “you are of more value than many sparrows” (Luke 12:7) do not measure a person by comparison but by relationship: worth comes from the fact that someone knows and remembers him. It is a completely different measure from that of the marketplace, where sparrows go for two farthings. Where do you get your sense of your own worth?"
+      },
+      "e3": {
+       "p": [
+        "You remain in your doubt. The merchant takes you by the wings and leaves. Somewhere in you, however, an unclear question remains."
+       ],
+       "end": "End of scene. Path: doubt that does not close the question.",
+       "reflection": "Jesus does not explain why sparrows are remembered, he only says that they are (Luke 12:6). Doubt is very human here, and the Gospel does not condemn it. Instead it leaves a word that may work later. What in you doubts and yet does not want to close the matter?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "And when great multitudes stood about him, so that they trod one upon another, he began to say to his disciples: Beware ye of the leaven of the Pharisees, which is hypocrisy."
+    },
+    {
+     "v": "2",
+     "t": "For there is nothing covered, that shall not be revealed: nor hidden, that shall not be known."
+    },
+    {
+     "v": "3",
+     "t": "For whatsoever things you have spoken in darkness, shall be published in the light: and that which you have spoken in the ear in the chambers, shall be preached on the housetops."
+    },
+    {
+     "v": "4",
+     "t": "And I say to you, my friends: Be not afraid of them who kill the body, and after that have no more that they can do."
+    },
+    {
+     "v": "5",
+     "t": "But I will shew you whom you shall fear: fear ye him, who after he hath killed, hath power to cast into hell. Yea, I say to you, fear him."
+    },
+    {
+     "v": "6",
+     "t": "Are not five sparrows sold for two farthings, and not one of them is forgotten before God?"
+    },
+    {
+     "v": "7",
+     "t": "Yea, the very hairs of your head are all numbered. Fear not therefore: you are of more value than many sparrows."
+    }
+   ]
+  },
+  "2026-10-17": {
+   "ref": "Lk 12:8-12",
+   "title": "To Confess Before Men",
+   "context": [
+    "Where we are: the continuation of the teaching to the disciples among great crowds (Luke 12:1-7). After the words “fear not” Jesus speaks of confessing him before men (vv. 8-9). The Church remembers today Saint Ignatius of Antioch, bishop and martyr.",
+    "The sentence about denial (v. 9) is one of the most serious in the Gospel, but Luke also describes how Peter will deny (Luke 22:54-62) and be restored (John 21:15-19). Denial is not the last word in the Gospel.",
+    "Verse 10 about blasphemy against the Holy Spirit is among the hardest in Scripture. The Church's tradition understands it as a persistent, deliberate rejection of mercy, not as a single word spoken in weakness. The text is worth reading together with verses 11-12 about the Spirit who teaches.",
+    "What follows: in Luke 12:13-21 someone from the crowd asks Jesus to settle an inheritance dispute, and Jesus tells the parable of the rich man and his barns."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "A disciple before the synagogue and the authorities",
+     "blurb": "You are brought before the magistrates",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "They lead you to the synagogue and before the magistrates. They ask who this is that you follow. You remember Jesus' words: be not solicitous how or what you shall answer. But your heart pounds."
+       ],
+       "q": {
+        "t": "The Holy Ghost shall teach you in the same hour what you must say.",
+        "r": "Lk 12:12"
+       },
+       "choices": [
+        {
+         "label": "Confess Jesus",
+         "to": "n2"
+        },
+        {
+         "label": "Say nothing and wait to see what happens",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You say that you follow Jesus. The words come out more simply than you expected. The magistrates look at you in silence, and you know this was not your plan."
+       ],
+       "q": {
+        "t": "Whosoever shall confess me before men, him shall the Son of man also confess before the angels of God.",
+        "r": "Lk 12:8"
+       },
+       "choices": [
+        {
+         "label": "Add something you had prepared",
+         "to": "e1"
+        },
+        {
+         "label": "Leave only what you have said",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You say nothing and listen to the questions. With every minute of silence you remember Jesus' words about confession and denial. Someone asks directly: are you one of his disciples?"
+       ],
+       "choices": [
+        {
+         "label": "Confess now",
+         "to": "n2"
+        },
+        {
+         "label": "Say that you do not know the man",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You add what you had prepared, and it turns out to be less important than what you said earlier. For a moment you feel someone speaking along with you."
+       ],
+       "end": "End of scene. Path: a confession supported by the Spirit.",
+       "reflection": "Jesus says that the Holy Spirit will teach in the same hour what to say (Luke 12:12). This is a promise of help, not an exemption from preparation and thought. Confession before men does not depend on eloquence, only on faithfulness. St Ignatius of Antioch, whom we remember today, wrote letters to communities on the way to martyrdom, including to the Romans, asking that no one try to rescue him. What is harder for you: finding the words or going on with them?"
+      },
+      "e2": {
+       "p": [
+        "You leave what you said without additions. The silence after your words is strangely calm."
+       ],
+       "end": "End of scene. Path: a simple confession.",
+       "reflection": "The confession of verse 8 does not require an elaborate defence, because it is the Son of Man who confesses the one who confessed him (Luke 12:8). The promise is mutual. The simplicity of a confession can be its strength, because it leaves no room for discussion of details. How many words do you need to say who Jesus is for you?"
+      },
+      "e3": {
+       "p": [
+        "You say you do not know the man. The words come out quickly and easily, and then for a long time you hear them in your head."
+       ],
+       "end": "End of scene. Path: denial.",
+       "reflection": "Jesus says that whoever denies him before men will be denied before the angels (Luke 12:9). The sentence is sharp, but Luke shows later that Peter will deny Jesus three times (Luke 22:54-62) and that Jesus will look at him (22:61), and afterwards restore him (John 21:15-19). Denial is serious, but in the Gospel it is not the last word. What is hard for you to admit, even to yourself?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Someone who once denied Jesus",
+     "blurb": "The words about confession and denial hurt",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Once in a crowd you said you did not know Jesus, because you were afraid. Now you listen to him speak about those who confess him and those who deny him. Every word strikes you."
+       ],
+       "q": {
+        "t": "He that shall deny me before men, shall be denied before the angels of God.",
+        "r": "Lk 12:9"
+       },
+       "choices": [
+        {
+         "label": "Run away in shame",
+         "to": "n2"
+        },
+        {
+         "label": "Stay and keep listening",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "You run, but the words follow you. On the way you remember that Jesus also spoke about the Holy Spirit who teaches what must be said, and that everyone who speaks a word against the Son of Man will be forgiven."
+       ],
+       "q": {
+        "t": "Whosoever speaketh a word against the Son of man, it shall be forgiven him.",
+        "r": "Lk 12:10"
+       },
+       "choices": [
+        {
+         "label": "Turn back",
+         "to": "e1"
+        },
+        {
+         "label": "Go on without looking back",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "You stay. The shame does not pass, but you keep listening. Jesus says that whoever speaks a word against the Son of Man will be forgiven. You notice that this sentence stands right next to the one that hurt you."
+       ],
+       "choices": [
+        {
+         "label": "Believe in that forgiveness",
+         "to": "e1"
+        },
+        {
+         "label": "Fear that it is too good to be true",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "You turn back or stay and discover that the words about forgiveness do not cancel those about denial but place them in a different light. For the first time in a long while you breathe more freely."
+       ],
+       "end": "End of scene. Path: forgiveness beside denial.",
+       "reflection": "In Luke 12:9-10 the sentence about denial stands right next to the sentence about forgiveness for a word against the Son of Man. This shows that Jesus does not say these things to discourage the disciples, but to warn them honestly and honestly console them. Peter, who denied, was restored (John 21:15-19). Can you accept forgiveness that does not require you first to forget what you did?"
+      },
+      "e2": {
+       "p": [
+        "You fear it is too good. You remain with fear, but also with the question of whether you simply want to believe."
+       ],
+       "end": "End of scene. Path: fear that forgiveness is too good.",
+       "reflection": "Verse 10 speaks of forgiveness, but also of something that will not be forgiven. For someone who has denied, this sentence can be a source of fear that it applies to him. The Church's tradition interprets it as a persistent rejection of mercy, not weakness or a fall, and this distinction matters pastorally. It is worth talking over with a pastor. What are you afraid is unforgiven, and to whom can you say so?"
+      },
+      "e3": {
+       "p": [
+        "You go on without looking back. Jesus' words, however, are louder than your steps. You know you will return to them."
+       ],
+       "end": "End of scene. Path: fleeing the words.",
+       "reflection": "A disciple who runs away is by no means an exception in the Gospel: in the garden all fled (Mark 14:50). This does not make fleeing good, but it shows that Jesus says his words to people who know they may fail. Running away does not close the way back. What are you running from, and what follows you nevertheless?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "8",
+     "t": "And I say to you, Whosoever shall confess me before men, him shall the Son of man also confess before the angels of God."
+    },
+    {
+     "v": "9",
+     "t": "But he that shall deny me before men, shall be denied before the angels of God."
+    },
+    {
+     "v": "10",
+     "t": "And whosoever speaketh a word against the Son of man, it shall be forgiven him: but to him that shall blaspheme against the Holy Ghost, it shall not be forgiven."
+    },
+    {
+     "v": "11",
+     "t": "And when they shall bring you into the synagogues, and to magistrates and powers, be not solicitous how or what you shall answer, or what you shall say;"
+    },
+    {
+     "v": "12",
+     "t": "For the Holy Ghost shall teach you in the same hour what you must say."
     }
    ]
   }

@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "uwaga": "Cytaty (q) i teksty fragmentow (text) to wlasne tlumaczenie angielskiej Biblii Douay-Rheims (Challoner, domena publiczna), nie przeklad liturgiczny. Reszta to narracja i parafraza. Scena: ref, title, context, text, roles. Postac: id, name, blurb, start, nodes. Wezel: p (akapity), q (cytat), choices, albo end + reflection.",
  "scenes": {
   "2026-10-01": {
@@ -2257,6 +2257,1434 @@
     {
      "v": "28",
      "t": "A On rzekł: Owszem, raczej błogosławieni są ci, którzy słuchają słowa Bożego i go zachowują."
+    }
+   ]
+  },
+  "2026-10-11": {
+   "ref": "Mt 22,1-14",
+   "title": "Uczta weselna",
+   "context": [
+    "Gdzie jesteśmy: Jerozolima, świątynia, kilka dni przed męką. Jezus mówi „do arcykapłanów i starszych ludu” (Mt 21,23). Przypowieść o uczcie weselnej jest trzecią w serii: po dwóch synach (Mt 21,28-32) i dzierżawcach winnicy (Mt 21,33-46), którą czytaliśmy 4 października.",
+    "Obraz uczty znali z Księgi Izajasza: na górze Pan przygotuje ucztę dla wszystkich ludów i otrze łzy z każdego oblicza (Iz 25,6-10a, pierwsze czytanie dnia). Wesele królewskiego syna jest obrazem Królestwa.",
+    "Przypowieść ma dwie części: odrzucone zaproszenie (w. 1-10) i człowiek bez szaty weselnej (w. 11-14). W liturgii czyta się też wersję krótszą, do wersetu 10. Znaczenie szaty weselnej tłumaczy się różnie (wiara, przemiana życia, dar od gospodarza). Tekst tego nie rozstrzyga.",
+    "Zwróć uwagę na cierpliwość króla: po odmowie posyła kolejnych sług i w końcu zaprasza „złych i dobrych” (w. 10). Obraz spalonego miasta (w. 7) bywa interpretowany różnie, np. w odniesieniu do późniejszych wydarzeń historycznych, i warto go omawiać ostrożnie.",
+    "Co dalej: w Mt 22,15-22 faryzeusze pytają Jezusa o podatek dla cesarza. Uwaga: przypowieść jest skierowana do przywódców świątyni, a nie do całego narodu. Kościół odrzuca odczytywanie jej jako potępienia Żydów."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Zaproszony z własnymi sprawami",
+     "blurb": "Masz pole, a król wzywa na wesele",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Dostajesz zaproszenie na wesele królewskiego syna i wiesz, że to zaszczyt. Ale pole czeka, a umowa z kupcem może przepaść, jeśli się spóźnisz. Sługa stoi w drzwiach i mówi, że wszystko jest już gotowe."
+       ],
+       "q": {
+        "t": "Przyjdźcie na wesele.",
+        "r": "Mt 22,4"
+       },
+       "choices": [
+        {
+         "label": "Zlekceważyć zaproszenie i pójść do swoich spraw",
+         "to": "n2"
+        },
+        {
+         "label": "Odłożyć sprawy i pójść na ucztę",
+         "to": "e1"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Idziesz na pole. Wieczorem słyszysz, że niektórzy z zaproszonych pochwycili sługi króla i ich zabili. Ty tego nie zrobiłeś, ale też nie przyszedłeś. Król podobno rozgniewał się i wysłał wojska."
+       ],
+       "choices": [
+        {
+         "label": "Iść na ucztę, choć wiesz, że to chyba za późno",
+         "to": "e2"
+        },
+        {
+         "label": "Zostać przy swoich sprawach",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Zostawiasz pole i wchodzisz do sali. Stoły są nakryte, a gospodarz wita cię tak, jakby czekał właśnie na ciebie."
+       ],
+       "end": "Koniec sceny. Ścieżka: przyjęcie zaproszenia.",
+       "reflection": "Pierwsi zaproszeni w przypowieści nie są przedstawieni jako źli ludzie: jeden idzie na pole, drugi do handlu (Mt 22,5). Ich odmowa wynika ze spraw, które wydają się ważniejsze. Przypowieść pokazuje, jak zwyczajne zajęcia mogą stać się powodem, by nie przyjść. Zwróć uwagę, że uczta jest „gotowa” (22,4), a więc nie trzeba niczego przynosić. Co w twoim życiu jest pilne, a co ważne, i które z nich zwykle wygrywa?"
+      },
+      "e2": {
+       "p": [
+        "Wchodzisz do sali spóźniony. Słyszysz, że zaproszeni nie byli godni, i nie wiesz, czy to dotyczy także ciebie. Ktoś pokazuje ci miejsce przy stole."
+       ],
+       "end": "Koniec sceny. Ścieżka: spóźnione przyjście.",
+       "reflection": "Król mówi: zaproszeni nie byli godni (Mt 22,8), ale jednocześnie jego sługi zbierają wszystkich, których znajdą (22,9-10). Granica między „niegodnym” a „zaproszonym” nie przebiega tam, gdzie spodziewalibyśmy się jej szukać. Spóźnienie nie jest w tekście osobnym wątkiem, więc nie wiemy, co spotkałoby takiego gościa, i tekst zostawia to otwarte. Kiedy ostatnio przyszedłeś na coś ważnego później, niż powinieneś, i co z tego wyniknęło?"
+      },
+      "e3": {
+       "p": [
+        "Zostajesz przy swoich sprawach. Pole jest zasiane, umowa dopięta. Wieczorem słyszysz muzykę z królewskiego pałacu i wiesz, że to nie twoja uczta."
+       ],
+       "end": "Koniec sceny. Ścieżka: zajęcie się swoimi sprawami.",
+       "reflection": "Odpowiedź niektórych zaproszonych jest przemocą wobec sług (Mt 22,6), ale odpowiedź pozostałych to obojętność (22,5). Przypowieść nie zaczyna od wielkiego zła, tylko od zlekceważenia. Zlekceważone zaproszenie jest też zaproszeniem, które nie przestaje obowiązywać: król nadal chce wypełnić salę. Czego zaproszenia ostatnio nie zauważyłeś, bo byłeś zajęty?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Sługa idący na rozstaje dróg",
+     "blurb": "Król wysyła cię po wszystkich, których znajdziesz",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Król wzywa cię i mówi: wesele jest gotowe, ale zaproszeni nie byli godni. Idźcie na rozstaje dróg i ilu tylko znajdziecie, zawołajcie na wesele. Stoisz na skrzyżowaniu pełnym przypadkowych ludzi."
+       ],
+       "q": {
+        "t": "Idźcie więc na rozstaje dróg i ilu tylko znajdziecie, zawołajcie na wesele.",
+        "r": "Mt 22,9"
+       },
+       "choices": [
+        {
+         "label": "Zapraszać każdego, kogo spotkasz",
+         "to": "n2"
+        },
+        {
+         "label": "Wybierać tych, którzy wyglądają odpowiednio",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Zapraszasz żebraka, kupca, matkę z dzieckiem, pijaka i kogoś, kto wygląda na uczciwego. Niektórzy nie wierzą, że to prawda. Inni pytają, czego król od nich chce w zamian."
+       ],
+       "choices": [
+        {
+         "label": "Powiedzieć: król zaprasza wszystkich, wszystko jest gotowe",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać króla, co z tymi, którzy się wahają",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Przyglądasz się twarzom i wybierasz tych, którzy wydają ci się stosowni. Sala wypełnia się powoli i z oporem. Po chwili widzisz, że wielu, których pominąłeś, stoi z boku i patrzy."
+       ],
+       "choices": [
+        {
+         "label": "Zmienić podejście i zapraszać dalej wszystkich",
+         "to": "n2"
+        },
+        {
+         "label": "Wrócić z małą grupą",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Sala napełnia się gośćmi, złymi i dobrymi. Ty stoisz przy drzwiach i patrzysz, jak ludzie, którzy rano nie mieli na co liczyć, siadają przy stole."
+       ],
+       "end": "Koniec sceny. Ścieżka: zaproszenie bez selekcji.",
+       "reflection": "Przypowieść mówi, że sługi zgromadziły wszystkich, których znalazły, „złych i dobrych” (Mt 22,10). Posłani nie mają kryterium wyboru, co przypomina pierwszą scenę z 1 października, gdzie posłani wchodzą do domów bez wyboru. Iz 25,6-8, czytane dziś jako pierwsze czytanie, mówi o uczcie dla wszystkich ludów. Kogo ty zwykle wykluczasz z zaproszenia, zanim ktokolwiek zdążył się zgodzić lub odmówić?"
+      },
+      "e2": {
+       "p": [
+        "Pytasz, a król odpowiada tylko: zawołajcie jeszcze raz. Rozumiesz, że twoją rolą jest zapraszać, a nie rozstrzygać o tych, którzy się wahają."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o tych, którzy się wahają.",
+       "reflection": "W przypowieści król wysyła sług więcej niż raz (Mt 22,3-4), co pokazuje, że jego zaproszenie jest ponawiane. Rola sługi to zapraszanie, a nie ocenianie odpowiedzi. Dopiero w wersetach 11-14 sam król wchodzi, by zobaczyć gości, więc osąd jest jego, a nie sług. Za co ty bierzesz odpowiedzialność, choć to nie jest twoje zadanie?"
+      },
+      "e3": {
+       "p": [
+        "Wracasz z małą grupą. Król patrzy na nią i na pustą salę i nic nie mówi, a ty wiesz, że nie wykonałeś polecenia."
+       ],
+       "end": "Koniec sceny. Ścieżka: selekcja zamiast zaproszenia.",
+       "reflection": "Polecenie króla jest proste: zawołajcie, ilu znajdziecie (Mt 22,9). Wybieranie według własnych kryteriów jest naturalnym odruchem, ale zmienia zaproszenie w egzamin. Przypowieść pokazuje, że o tym, kto jest godny, decyduje gospodarz (22,8.11-12), a nie posłańcy. Jakie kryteria wstępne wprowadzasz, gdy kogoś zapraszasz?"
+      }
+     }
+    },
+    {
+     "id": "r3",
+     "name": "Gość bez szaty weselnej",
+     "blurb": "Wszedłeś z drogi i wszyscy są odświętni",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Zawołano cię z drogi i wszedłeś do sali pełnej ludzi. Wszyscy wyglądają odświętnie, a ty masz na sobie to, w czym szedłeś. Nie wiesz, czy szaty były gdzieś przygotowane. Zauważasz tylko, że ktoś na ciebie patrzy."
+       ],
+       "choices": [
+        {
+         "label": "Zostać na miejscu i liczyć, że nikt nie zauważy",
+         "to": "n2"
+        },
+        {
+         "label": "Zapytać sługi, czy jest coś, co możesz założyć",
+         "to": "e1"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Do sali wchodzi król, by zobaczyć gości. Zatrzymuje się przy tobie i mówi: Przyjacielu, jak tu wszedłeś, nie mając szaty weselnej?"
+       ],
+       "q": {
+        "t": "Przyjacielu, jak tu wszedłeś, nie mając szaty weselnej?",
+        "r": "Mt 22,12"
+       },
+       "choices": [
+        {
+         "label": "Milczeć",
+         "to": "e2"
+        },
+        {
+         "label": "Powiedzieć szczerze, że przyszedłeś tak, jak cię zawołano",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Sługa wskazuje ci miejsce przy wejściu, gdzie leżą szaty. Zakładasz jedną i wchodzisz między gości jak jeden z nich."
+       ],
+       "end": "Koniec sceny. Ścieżka: prośba o pomoc.",
+       "reflection": "Tekst nie mówi, skąd miała się wziąć szata weselna, i komentatorzy tłumaczą to różnie: jako dar od gospodarza, jako wiarę, jako życie zgodne z zaproszeniem. Ta scena przyjmuje pierwszą możliwość tylko jako opowieść, nie jako rozstrzygnięcie. Ważniejsze jest to, że gość pyta, zanim zostanie zapytany. Kiedy ostatnio poprosiłeś o pomoc, zamiast udawać, że wszystko jest w porządku?"
+      },
+      "e2": {
+       "p": [
+        "Oniemiałeś. Król mówi do sług słowa, których wolałbyś nie słyszeć: zwiążcie mu ręce i nogi. Przypowieść urywa się tam, gdzie zaczyna się twój lęk."
+       ],
+       "end": "Koniec sceny. Ścieżka: milczenie wobec pytania.",
+       "reflection": "Werset 12 mówi tylko: „A on oniemiał”. Ewangelista nie wyjaśnia, dlaczego. Zakończenie (w. 13-14) jest jednym z najtrudniejszych w Ewangelii, a jego interpretacje się różnią; ostatnie zdanie o wielu wezwanych i mało wybranych bywa czytane jako ostrzeżenie dla tych, którzy już przyszli, a nie jako odpowiedź na pytanie o liczbę zbawionych. Przypowieść pozostawia czytelnika bez pewności, co znaczy brak szaty. Co zwykle robisz, gdy ktoś zadaje pytanie, na które nie masz odpowiedzi?"
+      },
+      "e3": {
+       "p": [
+        "Mówisz, że przyszedłeś tak, jak cię zawołano, z drogi. Król patrzy na ciebie długo. Przypowieść nie mówi, co odpowiedział."
+       ],
+       "end": "Koniec sceny. Ścieżka: szczera odpowiedź.",
+       "reflection": "Tekst nie zawiera takiej odpowiedzi, więc ta scena jest otwartą możliwością, a nie komentarzem do tego, co się wydarzyło. Zwróć uwagę, że król zwraca się do gościa słowem „przyjacielu”, tym samym, którego Jezus użyje później wobec Judasza w Ogrodzie Oliwnym (Mt 26,50). Pytanie króla może być więc zaproszeniem do odpowiedzi, a nie tylko oskarżeniem. Jak odpowiadasz, gdy ktoś zadaje ci pytanie, którego się boisz?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "Jezus znowu przemówił do nich w przypowieściach i rzekł:"
+    },
+    {
+     "v": "2",
+     "t": "Królestwo niebieskie podobne jest do króla, który wyprawił wesele swemu synowi."
+    },
+    {
+     "v": "3",
+     "t": "I posłał swoje sługi, aby zaproszonych zawołali na wesele, ale oni nie chcieli przyjść."
+    },
+    {
+     "v": "4",
+     "t": "Znowu posłał inne sługi, mówiąc: Powiedzcie zaproszonym: Oto przygotowałem mój obiad, woły moje i tuczne zwierzęta zabite i wszystko gotowe. Przyjdźcie na wesele."
+    },
+    {
+     "v": "5",
+     "t": "Lecz oni to zlekceważyli i poszli swoją drogą: jeden na swoje pole, drugi do swego handlu."
+    },
+    {
+     "v": "6",
+     "t": "A inni pochwycili jego sługi i znieważywszy ich, zabili."
+    },
+    {
+     "v": "7",
+     "t": "Gdy król o tym usłyszał, rozgniewał się i wysławszy swoje wojska, wytracił tych zabójców i spalił ich miasto."
+    },
+    {
+     "v": "8",
+     "t": "Wtedy rzekł swoim sługom: Wesele wprawdzie jest gotowe, ale zaproszeni nie byli godni."
+    },
+    {
+     "v": "9",
+     "t": "Idźcie więc na rozstaje dróg i ilu tylko znajdziecie, zawołajcie na wesele."
+    },
+    {
+     "v": "10",
+     "t": "A jego sługi, wyszedłszy na drogi, zgromadziły wszystkich, których znalazły, złych i dobrych; i sala weselna napełniła się gośćmi."
+    },
+    {
+     "v": "11",
+     "t": "Wszedł król, by zobaczyć gości, i ujrzał tam człowieka, który nie miał szaty weselnej."
+    },
+    {
+     "v": "12",
+     "t": "I rzekł do niego: Przyjacielu, jak tu wszedłeś, nie mając szaty weselnej? A on oniemiał."
+    },
+    {
+     "v": "13",
+     "t": "Wtedy król rzekł do sług: Zwiążcie mu ręce i nogi i wyrzućcie go w ciemność zewnętrzną; tam będzie płacz i zgrzytanie zębów."
+    },
+    {
+     "v": "14",
+     "t": "Bo wielu jest wezwanych, lecz mało wybranych."
+    }
+   ]
+  },
+  "2026-10-12": {
+   "ref": "Łk 11,29-32",
+   "title": "Znak Jonasza",
+   "context": [
+    "Gdzie jesteśmy: tłumy zbierają się wokół Jezusa po wyrzuceniu niemego ducha i po oskarżeniu o Belzebuba (Łk 11,14-28). Część słuchaczy już wcześniej żądała znaku z nieba (Łk 11,16), a teraz Jezus do tego wraca.",
+    "Jonasz głosił w Niniwie i miasto zareagowało nawróceniem (Jon 3). Królowa z Południa to władczyni Saby, która przybyła do Salomona (1 Krl 10,1-10). Jezus zestawia obie postacie ze swoimi słuchaczami: obcy okazali się bardziej otwarci niż ci, którzy mają Pismo.",
+    "W Łk 11,30 znak Jonasza to sam Syn Człowieczy. Mateusz rozwija ten wątek w odniesieniu do trzech dni (Mt 12,40), Łukasz pozostaje przy głoszeniu i nawróceniu. Pierwsze czytanie dnia (Ga 4,22-24) mówi o wolności, do której Chrystus wyswobodził.",
+    "Co dalej: Jezus mówi o świetle i lampie (Łk 11,33-36), a potem jest zaproszony na obiad do faryzeusza (11,37), co jest sceną z 13 października."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Człowiek żądający znaku",
+     "blurb": "Słyszałeś już wiele, a wciąż pytasz o dowód",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Stoisz w tłumie. Widziałeś uzdrowienia i słyszałeś nauki, ale to ci nie wystarcza: chciałbyś znaku z nieba, takiego, który zamknie wszystkie spory. Jezus mówi, że to pokolenie żąda znaku, a znak nie będzie mu dany, tylko znak Jonasza."
+       ],
+       "q": {
+        "t": "Żąda znaku, a znak nie będzie mu dany, tylko znak proroka Jonasza.",
+        "r": "Łk 11,29"
+       },
+       "choices": [
+        {
+         "label": "Poczuć się osądzony i bronić się w myślach",
+         "to": "n2"
+        },
+        {
+         "label": "Zapytać, co znaczy znak Jonasza",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus mówi o królowej z Południa, która przybyła z krańców ziemi, żeby słuchać mądrości Salomona. Mówi też o mężach z Niniwy. Obie wzmianki dotyczą ludzi, którzy nie mieli twoich przywilejów, a odpowiedzieli."
+       ],
+       "choices": [
+        {
+         "label": "Przyznać, że miałeś już dużo",
+         "to": "e1"
+        },
+        {
+         "label": "Odpowiedzieć sobie, że to nie dotyczy ciebie",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Jezus mówi, że jak Jonasz był znakiem dla Niniwitów, tak będzie Syn Człowieczy dla tego pokolenia. Nie mówi, jaki to będzie znak, mówi tylko, że będzie sam."
+       ],
+       "choices": [
+        {
+         "label": "Zastanowić się, czy sam Jezus nie jest już tym znakiem",
+         "to": "e1"
+        },
+        {
+         "label": "Czekać na coś bardziej wyraźnego",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Przez chwilę nie żądasz niczego. Patrzysz na Jezusa jak na kogoś, kto sam jest odpowiedzią na twoje pytanie, choć nie takiej, jakiej się spodziewałeś."
+       ],
+       "end": "Koniec sceny. Ścieżka: uznanie, że znak już jest.",
+       "reflection": "Jonasz nie czynił cudów w Niniwie. Głosił, a miasto się nawróciło (Jon 3,5-10). Łukasz zestawia to z Jezusem, który jest „więcej niż Jonasz” (Łk 11,32): znakiem jest sam Jezus i Jego słowo, a nie dodatkowy dowód. Kontekst wzmacnia ten wątek: uzdrowienie niemego człowieka (Łk 11,14) już się wydarzyło, a część tłumu mimo to prosi o więcej. O jaki dowód prosisz, choć masz przed sobą już dużo?"
+      },
+      "e2": {
+       "p": [
+        "Mówisz sobie, że to nie o tobie, tylko o innych, którzy bardziej zasłużyli na te słowa. Odchodzisz z tłumu z lekkim niepokojem."
+       ],
+       "end": "Koniec sceny. Ścieżka: zepchnięcie słów na innych.",
+       "reflection": "Jezus mówi o „tym pokoleniu” w liczbie pojedynczej, ale jego słowa o królowej z Południa i o Niniwitach dotykają każdego słuchacza (Łk 11,31-32). Ci, którzy mówią: to nie o mnie, zwykle właśnie ci są adresatami. W Biblii podobny mechanizm widać w przypowieści Natana, w której król sam wydaje wyrok na siebie (2 Sm 12,1-7). Kiedy odpychasz od siebie słowa, które dotyczą także ciebie?"
+      },
+      "e3": {
+       "p": [
+        "Czekasz na coś bardziej wyraźnego. Tłum się rozchodzi, a ty wciąż stoisz z tym samym pytaniem, tylko trochę starszym."
+       ],
+       "end": "Koniec sceny. Ścieżka: czekanie na wyraźniejszy znak.",
+       "reflection": "Czekanie na wyraźniejszy znak jest ludzkie, ale Łukasz pokazuje, że jest też sposobem uniknięcia decyzji. Niniwici nie czekali na dodatkowe dowody: usłyszeli i się nawrócili (Jon 3,5). Pokolenie, które żąda znaku, jest w Ewangelii przedstawione jako takie, któremu każdy znak będzie za mały. Jaką decyzję odkładasz, bo jeszcze nie dostałeś wyraźniejszego znaku?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Uczeń słuchający o królowej z Południa",
+     "blurb": "Zastanawiasz się, czemu obcy są bardziej otwarci",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Stoisz blisko Jezusa i słyszysz, jak mówi o królowej z Południa, która przybyła z krańców ziemi, żeby słuchać Salomona, i o mężach z Niniwy, którzy się nawrócili. Mówi, że tutaj jest więcej niż Salomon i więcej niż Jonasz. Zauważasz, że mówi to do ludzi, którzy znają Pisma."
+       ],
+       "q": {
+        "t": "A oto tu więcej niż Salomon.",
+        "r": "Łk 11,31"
+       },
+       "choices": [
+        {
+         "label": "Zapytać siebie, czy ty nie jesteś taki jak oni",
+         "to": "n2"
+        },
+        {
+         "label": "Poczuć dumę, że jesteś przy Jezusie",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Przypominasz sobie, że to ty często słuchałeś Jezusa bez zdziwienia, bo słyszałeś go codziennie. Obcy słuchają, jakby słyszeli to po raz pierwszy."
+       ],
+       "choices": [
+        {
+         "label": "Spróbować słuchać tak, jakbyś słyszał po raz pierwszy",
+         "to": "e1"
+        },
+        {
+         "label": "Zostawić to pytanie na później",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Dumne uczucie trwa krótko. Jezus mówi o ludziach, którzy usłyszeli słowo i odpowiedzieli, bez żadnych przywilejów. Pytasz siebie, co ty zrobiłeś z tym, że jesteś tak blisko."
+       ],
+       "choices": [
+        {
+         "label": "Przyznać, że bliskość nie wystarczy",
+         "to": "e2"
+        },
+        {
+         "label": "Odsunąć tę myśl",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Słuchasz uważnie, jakby każde słowo było nowe. Okazuje się, że znasz je gorzej, niż myślałeś."
+       ],
+       "end": "Koniec sceny. Ścieżka: słuchanie jak po raz pierwszy.",
+       "reflection": "Królowa z Południa i Niniwici nie mieli Pism ani codziennej bliskości Jezusa, a odpowiedzieli (Łk 11,31-32). Łukasz stawia tych, którzy wiele dostali, wobec pytania, ile z tego rzeczywiście przyjęli. Zwyczajność może być wrogiem uważności: to, co słyszymy codziennie, przestajemy słyszeć. Co w twoim życiu przestałeś słyszeć, bo jest ci zbyt dobrze znane?"
+      },
+      "e2": {
+       "p": [
+        "Przyznajesz przed sobą, że bliskość nie jest jeszcze odpowiedzią. Czujesz zawstydzenie, ale razem z nim lekkość: nie musisz niczego udawać."
+       ],
+       "end": "Koniec sceny. Ścieżka: przyznanie, że bliskość nie wystarczy.",
+       "reflection": "Jezus nie mówi, że bycie blisko jest bezwartościowe, ale że nie zastępuje odpowiedzi (Łk 11,31-32). Jego zestawienie obcych z tymi, którzy mają Pisma, jest ostrzeżeniem także dla uczniów. Uczciwe przyznanie się do tego jest początkiem zmiany, a nie jej końcem. W jakiej dziedzinie życia bliskość lub przywilej zastępuje ci odpowiedź?"
+      },
+      "e3": {
+       "p": [
+        "Odsuwasz pytanie. Tłum rozchodzi się, a Jezus idzie dalej. Wiesz, że do tej myśli wrócisz, choć nie wiesz kiedy."
+       ],
+       "end": "Koniec sceny. Ścieżka: odsunięcie pytania.",
+       "reflection": "Łukasz nie opisuje reakcji uczniów, więc ta scena jest otwartą możliwością. Odsunięte pytanie nie znika, tylko czeka, a Ewangelia nie krytykuje takiego odłożenia, ale pokazuje, że zwłoka kosztuje (Łk 11,32). Królowa z Południa i Niniwici nie odkładali. Jakie pytanie odkładasz od dłuższego czasu?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "29",
+     "t": "A gdy tłumy się zbiegły, zaczął mówić: To pokolenie jest pokoleniem przewrotnym: żąda znaku, a znak nie będzie mu dany, tylko znak proroka Jonasza."
+    },
+    {
+     "v": "30",
+     "t": "Bo jak Jonasz był znakiem dla Niniwitów, tak i Syn Człowieczy będzie dla tego pokolenia."
+    },
+    {
+     "v": "31",
+     "t": "Królowa z Południa powstanie na sądzie z mężami tego pokolenia i potępi ich, bo przybyła z krańców ziemi, aby słuchać mądrości Salomona; a oto tu więcej niż Salomon."
+    },
+    {
+     "v": "32",
+     "t": "Mężowie niniwiccy powstaną na sądzie z tym pokoleniem i potępią je, bo pokutowali na głoszenie Jonasza; a oto tu więcej niż Jonasz."
+    }
+   ]
+  },
+  "2026-10-13": {
+   "ref": "Łk 11,37-41",
+   "title": "Obiad u faryzeusza",
+   "context": [
+    "Gdzie jesteśmy: gdy Jezus kończy mówić do tłumu o znaku Jonasza i o świetle, pewien faryzeusz zaprasza Go na obiad (Łk 11,37). Faryzeusze w Ewangelii nie są jednolitą grupą: Łukasz opisuje też inne posiłki u faryzeuszów (Łk 7,36; 14,1).",
+    "Zdziwienie gospodarza dotyczy mycia przed posiłkiem (w. 38). Chodzi o rytualne obmycie rąk, które w tradycji żydowskiej miało znaczenie religijne, a nie tylko higieniczne. Jezus nie odpowiada na pytanie o zwyczaj, tylko odsłania, co jest pod spodem.",
+    "Obraz kubka i półmiska (w. 39) i pytanie o Stwórcę zewnętrza i wnętrza (w. 40) wskazują na całość człowieka. Werset 41 jest trudny w tłumaczeniu: Douay-Rheims mówi o tym, „co zostaje”, a wiele współczesnych przekładów o tym, „co jest wewnątrz”. W obu wersjach chodzi o jałmużnę jako znak wewnętrznej zmiany.",
+    "Co dalej: jest to początek serii „biada”, które Jezus wypowiada przy tym stole (Łk 11,42-52). Warto pamiętać, że to napomnienie wewnątrz rodziny wiary, wypowiedziane przy wspólnym posiłku, a nie wyrok nad całym narodem."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Gospodarz-faryzeusz",
+     "blurb": "Zaprosiłeś Jezusa i coś cię zaskoczyło",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Zaprosiłeś Jezusa do swojego domu, bo słyszałeś o Nim wiele. Gdy siada do stołu, zauważasz, że nie umył rąk przed posiłkiem. Nie mówisz nic, ale w myślach pytasz: dlaczego?"
+       ],
+       "choices": [
+        {
+         "label": "Zachować zdziwienie dla siebie",
+         "to": "n2"
+        },
+        {
+         "label": "Zapytać Go wprost",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus, widząc twoje myśli, mówi: wy, faryzeusze, oczyszczacie zewnętrzną stronę kubka i półmiska, ale wasze wnętrze jest pełne zdzierstwa i nieprawości. Nie wiesz, czy to oskarżenie czy zaproszenie."
+       ],
+       "q": {
+        "t": "Czyż Ten, który uczynił to, co zewnętrzne, nie uczynił także tego, co wewnętrzne?",
+        "r": "Łk 11,40"
+       },
+       "choices": [
+        {
+         "label": "Poczuć się zraniony i milczeć",
+         "to": "e2"
+        },
+        {
+         "label": "Zapytać, co ma na myśli",
+         "to": "e1"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Pytasz, dlaczego nie umył rąk. Jezus nie odpowiada o zwyczaju, tylko o kubku i półmisku: czyścicie zewnętrzną stronę, a wnętrze jest pełne zdzierstwa. Pyta też, czy Ten, który stworzył zewnętrze, nie stworzył także wnętrza."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać, co z tym zrobić",
+         "to": "e1"
+        },
+        {
+         "label": "Zacząć się bronić",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Jezus odpowiada, że to, co zostaje, trzeba dać jako jałmużnę, a wszystko stanie się czyste. Nie jest to rada o czyszczeniu, tylko o dawaniu."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o wnętrze.",
+       "reflection": "Odpowiedź Jezusa z wersetu 41 nie dotyczy nowych przepisów, tylko jałmużny, czyli otwarcia dłoni. Tłumaczenia różnią się: „to, co zostaje” (Douay-Rheims) albo „to, co jest wewnątrz”, ale sens jest podobny: czystość nie jest skutkiem dodatkowych rytuałów, lecz serca, które daje. Nie jest to krytyka rytuału samego w sobie, bo Jezus w innych miejscach nie odrzuca praktyk. Co mógłbyś dziś dać, a co zwykle zatrzymujesz w imię słusznych zasad?"
+      },
+      "e2": {
+       "p": [
+        "Siedzisz w milczeniu. Obiad trwa, ale rozmowa jest inna, jakby każde słowo miało teraz dodatkowe dno."
+       ],
+       "end": "Koniec sceny. Ścieżka: zranienie i milczenie.",
+       "reflection": "Jezus mówi to przy wspólnym stole, a nie na placu przed tłumem. To ważne: napomnienie w gościnie jest znakiem, że nie traktuje gospodarza jako przeciwnika, tylko jako kogoś, z kim siedzi przy stole. Zranienie w takiej chwili jest rzeczywiste, ale może też być początkiem rozmowy. Kto ostatnio powiedział ci coś trudnego przy wspólnym posiłku i jak odpowiedziałeś?"
+      },
+      "e3": {
+       "p": [
+        "Bronisz zwyczaju, który od dzieciństwa był dla ciebie czymś ważnym. Jezus słucha, a ty pierwszy raz zauważasz, że bronisz nie tyle zwyczaju, co siebie."
+       ],
+       "end": "Koniec sceny. Ścieżka: obrona zwyczaju.",
+       "reflection": "Faryzeusze troszczyli się o świętość codziennego życia, i ta troska sama w sobie nie jest przedmiotem krytyki. Jezus krytykuje rozdźwięk: gdy zewnętrzna staranność zasłania to, co wewnątrz (Łk 11,39). Obrona zwyczaju jest zrozumiała, ale może być także sposobem na uniknięcie pytania. Co chronisz, gdy bronisz swoich zwyczajów?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Uczeń przy stole",
+     "blurb": "Siedzisz obok Jezusa i słyszysz każde słowo",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Siedzisz przy stole u faryzeusza razem z Jezusem. Zauważasz, że gospodarz patrzy z zaskoczeniem na Jego ręce. Wiesz, że Jezus nie umył ich przed posiłkiem, bo nie zrobił tego świadomie."
+       ],
+       "choices": [
+        {
+         "label": "Spojrzeć na własne ręce",
+         "to": "n2"
+        },
+        {
+         "label": "Patrzeć na gospodarza i czekać na jego reakcję",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Twoje ręce też nie były umyte. Czujesz się nieswojo, jakby to ty miałeś się tłumaczyć. Jezus zaczyna mówić o kubku i półmisku."
+       ],
+       "choices": [
+        {
+         "label": "Słuchać i zastanawiać się, co jest w tobie samym",
+         "to": "e1"
+        },
+        {
+         "label": "Obawiać się, że rozmowa potoczy się źle",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Gospodarz zaczyna myśleć o tym, że Jezus nie umył rąk, i Jezus, widząc jego myśli, odpowiada. Mówi o wnętrzu pełnym zdzierstwa i o Tym, który stworzył zewnętrze i wnętrze."
+       ],
+       "choices": [
+        {
+         "label": "Zrozumieć, że to dotyczy także ciebie",
+         "to": "e1"
+        },
+        {
+         "label": "Czekać, aż rozmowa się uspokoi",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Patrzysz na swoje ręce, a potem w głąb siebie. Odkrywasz kilka rzeczy, które od dawna omijałeś."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o własne wnętrze.",
+       "reflection": "Jezus mówi do gospodarza, ale uczniowie słuchają. W Ewangelii często to, co zostaje powiedziane komuś, dotyczy też tych, którzy siedzą obok (Łk 11,39-41). Uczniowie nie są z góry lepsi od faryzeuszów, i ta scena pokazuje, że napomnienie dotyczy każdego. Co w tobie wymaga uwagi bardziej niż to, co widać z zewnątrz?"
+      },
+      "e2": {
+       "p": [
+        "Rozmowa się napina, a ty czekasz, aż ktoś ją rozładuje. Jezus nie robi tego za nikogo."
+       ],
+       "end": "Koniec sceny. Ścieżka: lęk przed napięciem.",
+       "reflection": "Jezus nie łagodzi napięcia, bo prawda o wnętrzu nie da się powiedzieć miękko, ale mówi ją przy stole, a nie na zewnątrz. Uczeń, który się boi, jest w tej scenie bardzo ludzki. Strach przed konfliktem może być jednak także sposobem, żeby nie usłyszeć tego, co jest ważne. Jak reagujesz, gdy rozmowa przy stole robi się trudna?"
+      },
+      "e3": {
+       "p": [
+        "Czekasz, aż rozmowa ucichnie. Jezus kończy mówić o jałmużnie, a ty orientujesz się, że nie zapamiętałeś tego, co ważne."
+       ],
+       "end": "Koniec sceny. Ścieżka: czekanie z boku.",
+       "reflection": "Jałmużna z wersetu 41 jest ostatnim słowem Jezusa w tej scenie i łatwo ją przegapić, gdy skupiamy się na napięciu między Nim a gospodarzem. Warto zauważyć, że Jezus nie kończy oskarżeniem, tylko wskazaniem drogi: dawaj, a wszystko będzie czyste. Co zwykle przegapiasz, gdy skupiasz się na emocjach rozmowy?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "37",
+     "t": "A gdy mówił, pewien faryzeusz prosił Go, aby zjadł u niego obiad. I wszedłszy, usiadł do stołu."
+    },
+    {
+     "v": "38",
+     "t": "A faryzeusz zaczął w sobie myśleć, dlaczego nie umył się przed obiadem."
+    },
+    {
+     "v": "39",
+     "t": "I rzekł do niego Pan: Wy, faryzeusze, oczyszczacie zewnętrzną stronę kubka i półmiska, ale wasze wnętrze pełne jest zdzierstwa i nieprawości."
+    },
+    {
+     "v": "40",
+     "t": "Głupcy, czyż Ten, który uczynił to, co zewnętrzne, nie uczynił także tego, co wewnętrzne?"
+    },
+    {
+     "v": "41",
+     "t": "Lecz to, co zostaje, dajcie jako jałmużnę, a oto wszystko będzie dla was czyste."
+    }
+   ]
+  },
+  "2026-10-14": {
+   "ref": "Łk 11,42-46",
+   "title": "Biada",
+   "context": [
+    "Gdzie jesteśmy: dalszy ciąg obiadu u faryzeusza (Łk 11,37-41). Jezus wypowiada serię „biada”, które w Biblii są formą prorockiego napomnienia, a nie przekleństwa (por. Iz 5,8-23).",
+    "Dziesięcina z mięty i ruty (w. 42) była praktyką, którą Jezus sam nie odrzuca: „to należało czynić”. Krytykuje pominięcie sądu i miłości Bożej, czyli sprawiedliwości i miłości w relacjach.",
+    "Groby, które nie są widoczne (w. 44), odnoszą się do tego, że dotknięcie grobu czyniło człowieka rytualnie nieczystym (Lb 19,16). Ludzie chodzili po nich nieświadomie. Obraz mówi o tym, że obłuda zaraża innych, zanim ktokolwiek ją zobaczy.",
+    "Werset 45 zawiera reakcję uczonego w Prawie: „i nas znieważasz”. Jezus nie wycofuje się, ale zwraca się też do nich. Co dalej: kolejne „biada” skierowane do uczonych w Prawie (Łk 11,47-52), czyli scena z 15 października."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Faryzeusz przy stole",
+     "blurb": "Słuchasz „biada” i rozpoznajesz kogoś znajomego",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Siedzisz przy stole i słuchasz, jak Jezus mówi: biada wam, faryzeusze, bo dajecie dziesięcinę z mięty i ruty i wszelkiego ziela, a pomijacie sąd i miłość Bożą. Wiesz, że sam to robisz, i zawsze uważałeś to za cnotę."
+       ],
+       "q": {
+        "t": "To należało czynić, a tamtego nie opuszczać.",
+        "r": "Łk 11,42"
+       },
+       "choices": [
+        {
+         "label": "Zapytać siebie, co pomijasz",
+         "to": "n2"
+        },
+        {
+         "label": "Poczuć, że to niesprawiedliwe",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Przypominasz sobie ostatnie tygodnie. Dziesięcina była zawsze dokładna, ale ostatnio odesłałeś ubogiego, który prosił o pomoc, bo nie miałeś czasu. Jezus mówi też o pierwszych miejscach w synagogach i pozdrowieniach na rynku."
+       ],
+       "choices": [
+        {
+         "label": "Przyznać, że lubisz być zauważany",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać, jak połączyć jedno z drugim",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Czujesz się niesprawiedliwie osądzony. Przez całe życie starałeś się żyć zgodnie z Prawem. Jezus mówi, że jesteście jak groby, które nie są widoczne, i ludzie chodzą po nich, nie wiedząc."
+       ],
+       "choices": [
+        {
+         "label": "Odpowiedzieć w duchu, że nie masz tego problemu",
+         "to": "e3"
+        },
+        {
+         "label": "Zapytać, co znaczy ukryty grób",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Przyznajesz, że lubisz pierwsze miejsca i pozdrowienia. Nigdy nie nazywałeś tego pychą, tylko szacunkiem dla Prawa."
+       ],
+       "end": "Koniec sceny. Ścieżka: przyznanie się do pragnienia uznania.",
+       "reflection": "Jezus nie krytykuje praktyk, tylko ich proporcje: „to należało czynić, a tamtego nie opuszczać” (Łk 11,42). To zdanie jest ważne: Jezus nie każe wybrać między dziesięciną a sprawiedliwością, tylko żeby nie pomijać drugiego. Uczciwe przyznanie, że lubimy być zauważani, jest początkiem zmiany. Co z twoich dobrych uczynków robisz także po to, żeby być widzianym?"
+      },
+      "e2": {
+       "p": [
+        "Pytasz, a Jezus odpowiada tylko tym, co już powiedział. Nie podaje nowej reguły, tylko zostawia cię z pytaniem o sąd i miłość."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o to, co pominąłeś.",
+       "reflection": "Jezus nie daje nowej listy przepisów, bo problem nie jest w liczbie przykazań. „Sąd i miłość Boża” (Łk 11,42) oznacza sprawiedliwość wobec innych i wierność Bogu, które nie mają stałej miary. W Mi 6,8 prorok mówi podobnie: czynić sprawiedliwość, kochać miłosierdzie, kroczyć pokornie z Bogiem. Co dla ciebie znaczy dziś pominąć sąd i miłość, choć wszystko inne robisz poprawnie?"
+      },
+      "e3": {
+       "p": [
+        "Odpowiadasz w duchu, że ciebie to nie dotyczy. Siedzisz dalej przy stole i dopiero po chwili zauważasz, że nie możesz spojrzeć Jezusowi w oczy."
+       ],
+       "end": "Koniec sceny. Ścieżka: zaprzeczenie.",
+       "reflection": "Obraz niewidocznych grobów (Łk 11,44) mówi, że problemem jest to, czego nie widzimy w sobie, a nie to, co widzą wszyscy. Odpowiedź „mnie to nie dotyczy” jest wtedy częścią problemu. W Ewangelii nie każdy faryzeusz jest przedstawiony tak samo: według Ewangelii Jana Nikodem był faryzeuszem (J 3,1). Jakie zdanie o sobie wolałbyś nie sprawdzać?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Uczony w Prawie, który odpowiada",
+     "blurb": "Mówisz: tym razem także nas obrażasz",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Słuchasz Jezusa, który mówi o faryzeuszach, i czujesz, że w tle są też uczeni w Prawie. Gdy mówi o grobach, które nie są widoczne, nie wytrzymujesz. Mówisz: Nauczycielu, tak mówiąc, i nas znieważasz."
+       ],
+       "q": {
+        "t": "Nauczycielu, tak mówiąc, i nas znieważasz.",
+        "r": "Łk 11,45"
+       },
+       "choices": [
+        {
+         "label": "Czekać na odpowiedź",
+         "to": "n2"
+        },
+        {
+         "label": "Wycofać się i przeprosić",
+         "to": "e3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus nie wycofuje się. Mówi: i wam, uczonym w Prawie, biada, bo obciążacie ludzi ciężarami nie do udźwignięcia, a sami jednym palcem ich nie dotykacie."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać, który ciężar ma na myśli",
+         "to": "e1"
+        },
+        {
+         "label": "Powiedzieć, że uczeni tylko tłumaczą Prawo",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Pytasz o ciężary. Jezus nie wymienia konkretnych przepisów, ale mówisz sobie, że wiesz, o czym mówi: o ludziach, którym tłumaczysz Prawo, a sam nie pomagasz im go nieść."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o ciężary.",
+       "reflection": "Jezus pyta o to, jak uczeni traktują ludzi, a nie o wiedzę. Ciężary w Łk 11,46 to wymagania, które ci, którzy je nakładają, sami omijają. W innym miejscu Jezus mówi o swoim jarzmie, które jest słodkie, a brzemię lekkie (Mt 11,30). Czy ci, którym tłumaczysz zasady, czują, że stoisz obok nich, czy nad nimi?"
+      },
+      "e2": {
+       "p": [
+        "Mówisz, że uczeni tylko tłumaczą Prawo. Jezus patrzy na ciebie bez gniewu i milczy. To milczenie jest głośniejsze niż jego słowa."
+       ],
+       "end": "Koniec sceny. Ścieżka: usprawiedliwienie.",
+       "reflection": "Odpowiedź „tylko tłumaczymy” jest znana z Łk 10,29, gdzie inny uczony „chciał się usprawiedliwić”. Usprawiedliwianie się jest ludzkim odruchem, ale w Ewangelii często zamyka rozmowę zamiast ją otwierać. Jezus nie odpowiada na to usprawiedliwienie, co świadczy o tym, że nie szuka zwycięstwa w dyskusji. Kiedy ostatnio usprawiedliwiłeś się, zamiast posłuchać?"
+      },
+      "e3": {
+       "p": [
+        "Przepraszasz. Jezus kiwa głową i nie mówi nic więcej. Zostaje tylko pytanie, czy przeprosiłeś z przekonania, czy z niezręczności."
+       ],
+       "end": "Koniec sceny. Ścieżka: szybkie przeprosiny.",
+       "reflection": "Tekst nie pokazuje, że uczony przeprasza. Odpowiedź Jezusa jest natychmiastowa i nie czeka na przeprosiny (Łk 11,46). Przeprosiny, które mają załagodzić sytuację, a nie zmienić serce, bywają sposobem uniknięcia rozmowy. Jednocześnie uczciwe „przepraszam” może być początkiem czegoś nowego. Jaka jest różnica między przeprosinami z przekonania a przeprosinami z niezręczności?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "42",
+     "t": "Ale biada wam, faryzeusze, bo dajecie dziesięcinę z mięty, ruty i wszelkiego ziela, a pomijacie sąd i miłość Bożą. To należało czynić, a tamtego nie opuszczać."
+    },
+    {
+     "v": "43",
+     "t": "Biada wam, faryzeusze, bo lubicie pierwsze miejsca w synagogach i pozdrowienia na rynku."
+    },
+    {
+     "v": "44",
+     "t": "Biada wam, bo jesteście jak groby, które nie są widoczne, a ludzie chodzą po nich i nie wiedzą."
+    },
+    {
+     "v": "45",
+     "t": "A jeden z uczonych w Prawie, odpowiadając, rzekł do Niego: Nauczycielu, tak mówiąc, i nas znieważasz."
+    },
+    {
+     "v": "46",
+     "t": "A On rzekł: I wam, uczonym w Prawie, biada, bo obciążacie ludzi ciężarami nie do udźwignięcia, a sami jednym palcem ich nie dotykacie."
+    }
+   ]
+  },
+  "2026-10-15": {
+   "ref": "Łk 11,47-54",
+   "title": "Groby proroków",
+   "context": [
+    "Gdzie jesteśmy: dalszy ciąg obiadu u faryzeusza. Po „biada” skierowanych do faryzeuszów i uczonych w Prawie Jezus zwraca się do tych drugich: budują pomniki prorokom, których zabili ich ojcowie (Łk 11,47-48).",
+    "Krew od Abla do Zachariasza (w. 51) obejmuje cały zakres Pisma: Abel to pierwsza ofiara przemocy (Rdz 4), a Zachariasz, zwykle z nim utożsamiany, został ukamienowany w dziedzińcu świątyni (2 Krn 24,20-22), w ostatniej księdze hebrajskiego kanonu. Jezus mówi więc: od początku do końca.",
+    "„Klucz wiedzy” (w. 52) to zdolność otwierania Pisma przed ludźmi. Jezus zarzuca, że ci, którzy go mieli, sami nie weszli i przeszkodzili innym. Tradycja chrześcijańska widzi tu także ostrzeżenie dla każdego, kto naucza.",
+    "Co dalej: faryzeusze i uczeni zaczynają „gwałtownie naciskać” na Jezusa i czyhać na Niego (w. 53-54), a w Łk 12,1 Jezus mówi do uczniów o kwasie faryzeuszów. To scena z 16 października. Uwaga: Jezus mówi tu do konkretnych ludzi przy konkretnym stole, a nie o całej grupie na zawsze."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Uczony budujący groby proroków",
+     "blurb": "Opiekujesz się pomnikami, które twoi ojcowie zostawili",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Twoja rodzina od pokoleń troszczy się o groby proroków. To dla ciebie ważne i wydaje ci się wyrazem szacunku. Teraz Jezus mówi: biada wam, którzy budujecie pomniki prorokom, a wasi ojcowie ich zabili."
+       ],
+       "q": {
+        "t": "Zaiste świadczycie, że zgadzacie się z uczynkami waszych ojców.",
+        "r": "Łk 11,48"
+       },
+       "choices": [
+        {
+         "label": "Zapytać, w czym jesteś winny",
+         "to": "n2"
+        },
+        {
+         "label": "Odpowiedzieć, że przecież to ich ojcowie, nie ty",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Jezus mówi, że mądrość Boża postanowiła posłać proroków i apostołów, a niektórych z nich zabiją i będą prześladować. Mówi o krwi od Abla do Zachariasza, która zostanie zażądana od tego pokolenia."
+       ],
+       "choices": [
+        {
+         "label": "Zastanowić się, jak traktujesz dzisiejszych proroków",
+         "to": "e1"
+        },
+        {
+         "label": "Zostawić te słowa Jezusowi, jako zbyt ciężkie",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Mówisz, że to ich ojcowie zabili proroków, a ty tylko dbasz o groby. Jezus odpowiada, że bierzecie udział w ich dziele, bo budujecie grób tym, których oni zabili. Potem mówi o kluczu wiedzy, który zabraliście."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać, co to za klucz",
+         "to": "e2"
+        },
+        {
+         "label": "Odwrócić się i zacząć rozmowę z sąsiadem",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Zastanawiasz się, kto w twojej okolicy mówi niewygodne rzeczy i jak go traktujesz. Odpowiedź nie jest przyjemna."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o dzisiejszych proroków.",
+       "reflection": "Jezus łączy dwa gesty: budowanie grobów i zgadzanie się z uczynkami ojców (Łk 11,47-48). Oddawanie czci umarłym prorokom bywa łatwiejsze niż słuchanie żywych. Pytanie nie dotyczy tylko uczonych w Prawie, ale każdego, kto woli pomniki od głosu, który mu przeszkadza. Kogo w swoim otoczeniu czcisz po śmierci, a nie słuchasz za życia?"
+      },
+      "e2": {
+       "p": [
+        "Pytasz o klucz, a Jezus mówi tylko, że wy sami nie weszliście, a tych, którzy wchodzili, powstrzymaliście. To zdanie zostaje z tobą."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o klucz wiedzy.",
+       "reflection": "Klucz wiedzy oznacza dostęp do zrozumienia Pisma. Jezus zarzuca, że nauczyciele sami się zatrzymali i innych powstrzymali (Łk 11,52). To nie jest zarzut o brak wiedzy, ale o to, co z nią robią. Każdy, kto uczy, ma na tym polu własne pokusy. Czy twoja wiedza otwiera innym drzwi, czy je przymyka?"
+      },
+      "e3": {
+       "p": [
+        "Odwracasz wzrok. Obiad się kończy, a ty wychodzisz pierwszy. Dopiero na ulicy czujesz, że słowa o grobach poszły za tobą."
+       ],
+       "end": "Koniec sceny. Ścieżka: odwrócenie się od ciężkich słów.",
+       "reflection": "Słowa o krwi od Abla do Zachariasza są jednymi z najcięższych w Ewangelii Łukasza (Łk 11,50-51). Odwrócenie się od nich jest zrozumiałe, ale tekst mówi, że to pokolenie zostanie z nich rozliczone. Zwróć uwagę, że według Łk 11,53-54 po tych słowach faryzeusze i uczeni zaczynają czyhać na Jezusa, czyli zrozumieli, że chodzi o nich. Od jakich ciężkich słów odwracasz się, zamiast je usłyszeć?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Ktoś przysłuchujący się i widzący zasadzkę",
+     "blurb": "Wokół stołu napięcie rośnie",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Jesteś w domu faryzeusza, ale nie przy stole. Słyszysz Jezusa, który mówi o grobach proroków i o krwi od Abla do Zachariasza. Widzisz, jak twarze przy stole twardnieją. Ktoś szepcze, że trzeba Go zapytać o wiele rzeczy."
+       ],
+       "choices": [
+        {
+         "label": "Zauważyć, że szykuje się zasadzka",
+         "to": "n2"
+        },
+        {
+         "label": "Skupić się na słowach Jezusa",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Faryzeusze i uczeni zaczynają gwałtownie naciskać na Jezusa, pytając Go o wiele rzeczy, czyhając na coś, co mogliby użyć przeciw Niemu. Jezus wciąż siedzi spokojnie."
+       ],
+       "q": {
+        "t": "Czyhając na Niego i usiłując coś pochwycić z Jego ust, aby Go oskarżyć.",
+        "r": "Łk 11,54"
+       },
+       "choices": [
+        {
+         "label": "Zostać i patrzeć, co się stanie",
+         "to": "e1"
+        },
+        {
+         "label": "Wyjść i ostrzec uczniów",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Skupiasz się na tym, co mówi Jezus: że poślę do nich proroków i apostołów, a niektórych zabiją. Zdanie jest ciężkie, bo wiesz, że będzie dotyczyć także tych, którzy za Nim idą."
+       ],
+       "choices": [
+        {
+         "label": "Zapytać siebie, czy jesteś gotów na to",
+         "to": "e3"
+        },
+        {
+         "label": "Wolisz o tym nie myśleć",
+         "to": "e1"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Zostajesz w pokoju, patrzysz, jak napięcie rośnie, i nie robisz nic. Jezus nie potrzebuje twojej obrony, ale ty potrzebujesz zdecydować, po której stronie stoisz."
+       ],
+       "end": "Koniec sceny. Ścieżka: obserwowanie bez decyzji.",
+       "reflection": "Faryzeusze i uczeni szukają, w czym mogliby Jezusa przyłapać (Łk 11,54). To pierwszy raz w Ewangelii Łukasza, kiedy opór wobec Jezusa przybiera formę planowej zasadzki. Obserwator, który nic nie robi, jest w tej scenie bardzo ludzki, ale Łukasz nie pokazuje neutralnych świadków. Co zwykle robisz, gdy widzisz narastające napięcie wokół kogoś, kogo szanujesz?"
+      },
+      "e2": {
+       "p": [
+        "Wychodzisz i szukasz uczniów, żeby powiedzieć im, co zobaczyłeś. Nie wiesz, czy to coś zmieni, ale wiesz, że nie możesz po prostu patrzeć."
+       ],
+       "end": "Koniec sceny. Ścieżka: ostrzeżenie.",
+       "reflection": "W następnym rozdziale Jezus mówi do uczniów: „strzeżcie się kwasu faryzeuszów” (Łk 12,1). Jezus sam ostrzega przed tym, co dzieje się przy stole, więc ostrzeżenie uczniów nie jest nieposłuszeństwem. Zwróć uwagę, że ostrzeżenie dotyczy kwasu, czyli postawy, która się rozprzestrzenia, a nie ludzi jako takich. Przed czym chciałbyś ostrzec kogoś, kogo kochasz?"
+      },
+      "e3": {
+       "p": [
+        "Zostajesz przy Jezusie, choć wiesz, że to może cię kosztować. Nie podejmujesz wielkiej decyzji, tylko po prostu zostajesz."
+       ],
+       "end": "Koniec sceny. Ścieżka: pozostanie przy Jezusie.",
+       "reflection": "Jezus zapowiada, że prorocy i apostołowie będą prześladowani (Łk 11,49). To zdanie nie jest obietnicą bezpieczeństwa, tylko szczerą zapowiedzią. Pozostanie przy kimś, kto mówi niewygodne rzeczy, nie wymaga wielkich gestów, tylko codziennej decyzji. Przy kim zostajesz mimo ceny?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "47",
+     "t": "Biada wam, którzy budujecie pomniki prorokom, a wasi ojcowie ich zabili."
+    },
+    {
+     "v": "48",
+     "t": "Zaiste świadczycie, że zgadzacie się z uczynkami waszych ojców, bo oni ich zabili, a wy budujecie ich groby."
+    },
+    {
+     "v": "49",
+     "t": "Dlatego i mądrość Boża powiedziała: Poślę do nich proroków i apostołów, a niektórych z nich zabiją i będą prześladować,"
+    },
+    {
+     "v": "50",
+     "t": "aby od tego pokolenia zażądano krwi wszystkich proroków, która została przelana od założenia świata,"
+    },
+    {
+     "v": "51",
+     "t": "od krwi Abla aż do krwi Zachariasza, który zginął między ołtarzem a świątynią. Tak, powiadam wam, zażąda się tego od tego pokolenia."
+    },
+    {
+     "v": "52",
+     "t": "Biada wam, uczeni w Prawie, bo zabraliście klucz wiedzy: sami nie weszliście, a tym, którzy wchodzili, przeszkodziliście."
+    },
+    {
+     "v": "53",
+     "t": "A gdy im to mówił, faryzeusze i uczeni w Prawie zaczęli gwałtownie na Niego naciskać i wypytywać Go o wiele rzeczy,"
+    },
+    {
+     "v": "54",
+     "t": "czyhając na Niego i usiłując coś pochwycić z Jego ust, aby Go oskarżyć."
+    }
+   ]
+  },
+  "2026-10-16": {
+   "ref": "Łk 12,1-7",
+   "title": "Nie bójcie się",
+   "context": [
+    "Gdzie jesteśmy: po napięciu przy stole faryzeusza (Łk 11,53-54) gromadzą się ogromne tłumy, tak że ludzie się tratują. Jezus zwraca się najpierw do uczniów i ostrzega przed „kwasem faryzeuszów, którym jest obłuda” (Łk 12,1).",
+    "Kwas (zakwas) jest w Biblii obrazem czegoś, co działa niewidocznie i przenika całość. Obłuda to rozdźwięk między tym, co się mówi i pokazuje, a tym, co jest w sercu. Jezus mówi, że nic nie pozostanie ukryte (w. 2-3).",
+    "Jezus nazywa uczniów „przyjaciółmi” (w. 4), co jest rzadkie w Ewangelii Łukasza. Mówi o strachu przed tymi, którzy zabijają ciało, i o strachu przed Bogiem. Potem przechodzi do wróbli i włosów policzonych na głowie. Całość jest zachętą do zaufania, a nie do trwogi.",
+    "Co dalej: w Łk 12,8-12 Jezus mówi o wyznaniu Go przed ludźmi i o Duchu Świętym, który nauczy, co mówić. To scena z 17 października."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Uczeń w tłumie, który się boi",
+     "blurb": "Tłum cię ściska, a słowa Jezusa niepokoją",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Wokół jest tak ciasno, że ludzie się tratują. Jezus mówi do was, uczniów: strzeżcie się kwasu faryzeuszów, którym jest obłuda. Nic nie jest tak zakryte, żeby nie zostało objawione. Czujesz, że to może dotyczyć także ciebie."
+       ],
+       "q": {
+        "t": "Strzeżcie się kwasu faryzeuszów, którym jest obłuda.",
+        "r": "Łk 12,1"
+       },
+       "choices": [
+        {
+         "label": "Zastanowić się, co ukrywasz",
+         "to": "n2"
+        },
+        {
+         "label": "Skupić się na tym, żeby nie zostać zadeptanym",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Przychodzi ci do głowy kilka rzeczy, o których nie mówisz nikomu. Jezus mówi, że to, co mówiliście w ciemności, będzie ogłoszone w świetle. Potem mówi do was: moi przyjaciele, nie bójcie się tych, którzy zabijają ciało."
+       ],
+       "q": {
+        "t": "Nie bójcie się tych, którzy zabijają ciało.",
+        "r": "Łk 12,4"
+       },
+       "choices": [
+        {
+         "label": "Poczuć ulgę przy słowie przyjaciele",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać siebie, czy jesteś jego przyjacielem",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Przepychasz się przez tłum i słuchasz tylko częściowo. Słyszysz o wróblach i o włosach policzonych na głowie. Zastanawiasz się, czemu Jezus mówi o czymś tak drobnym."
+       ],
+       "choices": [
+        {
+         "label": "Zatrzymać się i posłuchać",
+         "to": "e1"
+        },
+        {
+         "label": "Iść dalej, szukając bezpiecznego miejsca",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Słowo przyjaciele zostaje w tobie. Przez chwilę ciasnota tłumu przestaje cię drażnić, bo wiesz, że jesteś widziany."
+       ],
+       "end": "Koniec sceny. Ścieżka: ukojenie przez przyjaźń.",
+       "reflection": "Jezus nazywa uczniów przyjaciółmi dokładnie w chwili, gdy mówi o zagrożeniu (Łk 12,4). Przyjaźń nie jest nagrodą po niebezpieczeństwie, tylko tym, w czym się je przechodzi. W Ewangelii Jana Jezus powie podobnie: nazwałem was przyjaciółmi (J 15,15). Czy w twoim lęku jest miejsce na to, że ktoś cię widzi i nazywa po imieniu?"
+      },
+      "e2": {
+       "p": [
+        "Pytasz siebie, czy jesteś przyjacielem Jezusa, czy tylko kimś, kto za Nim idzie. Nie masz odpowiedzi, ale wiesz, że pytanie jest uczciwe."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o przyjaźń.",
+       "reflection": "Przyjaźń z Jezusem w Ewangelii nie jest sentymentem, tylko pójściem za Nim (Łk 12,4; J 15,14). Pytanie, czy jesteśmy przyjaciółmi, jest częścią drogi, a nie jej przeszkodą. Uczeń, który uczciwie pyta, jest bliżej niż ten, który udaje pewność. Co oznacza dla ciebie bycie przyjacielem kogoś, kto cię wzywa do ryzyka?"
+      },
+      "e3": {
+       "p": [
+        "Przepychasz się dalej, a słowa o wróblach tracisz w gwarze. Później wracają do ciebie, gdy jest cicho."
+       ],
+       "end": "Koniec sceny. Ścieżka: słowa, które wracają później.",
+       "reflection": "Jezus mówi o wróblach, które są sprzedawane za dwa grosze, a żaden nie jest zapomniany przed Bogiem (Łk 12,6). To obraz niewielkiej wartości, a jednak przed Bogiem pamiętanej. Słowa, które nas ominęły w tłumie, bywają tymi, które wracają w ciszy. Co z tego, co usłyszałeś, a nie zdążyłeś przyjąć, wraca do ciebie teraz?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Wróbel, który nie jest zapomniany",
+     "blurb": "Opowieść o pięciu wróblach z perspektywy ptaka",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Jesteś jednym z pięciu wróbli na straganie. Ktoś płaci za was dwa grosze. Jesteś tak mały, że nikt nie zapamięta twojego głosu. Z oddali słyszysz człowieka, który mówi o wróblach, i o tym, że żaden z nich nie jest zapomniany przed Bogiem."
+       ],
+       "q": {
+        "t": "Żaden z nich nie jest zapomniany przed Bogiem.",
+        "r": "Łk 12,6"
+       },
+       "choices": [
+        {
+         "label": "Słuchać uważnie",
+         "to": "n2"
+        },
+        {
+         "label": "Wątpić w te słowa",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Człowiek mówi dalej: nawet włosy na waszej głowie są policzone. Nie bójcie się, jesteście więcej warci niż wiele wróbli. Nie rozumiesz tych słów w pełni, ale czujesz ich ciepło."
+       ],
+       "q": {
+        "t": "Włosy na waszej głowie wszystkie są policzone.",
+        "r": "Łk 12,7"
+       },
+       "choices": [
+        {
+         "label": "Zaufać tym słowom",
+         "to": "e1"
+        },
+        {
+         "label": "Zapytać, co znaczy więcej warte",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Wątpisz. Jesteś tylko jednym z pięciu, sprzedanym za dwa grosze. Czy ktoś naprawdę pamięta o takim jak ty? Ale słyszysz, że mówi to ktoś, kto wydaje się wiedzieć, o czym mówi."
+       ],
+       "choices": [
+        {
+         "label": "Dać szansę tym słowom",
+         "to": "n2"
+        },
+        {
+         "label": "Pozostać przy swoim wątpieniu",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Ufasz. Nie dlatego, że masz dowody, ale dlatego, że te słowa są jedynym, co ktokolwiek ci dotąd powiedział o twojej wartości."
+       ],
+       "end": "Koniec sceny. Ścieżka: zaufanie.",
+       "reflection": "Obraz wróbli w Łk 12,6-7 mówi o rzeczach, które wydają się bezwartościowe, a są pamiętane. To argument z mniejszego do większego: jeśli Bóg nie zapomina o wróblu, to tym bardziej o człowieku. Nie jest to obietnica braku cierpienia, bo zaraz wcześniej Jezus mówi o tych, którzy zabijają ciało (12,4). Co w tobie wydaje się zbyt małe, żeby ktoś o tym pamiętał?"
+      },
+      "e2": {
+       "p": [
+        "Pytasz, co znaczy więcej warte. Odpowiedzi nie ma, ale to pytanie jest już początkiem czegoś nowego."
+       ],
+       "end": "Koniec sceny. Ścieżka: pytanie o wartość.",
+       "reflection": "Słowa „jesteście więcej warci niż wiele wróbli” (Łk 12,7) nie mierzą człowieka przez porównanie, tylko przez relację: wartość wynika z tego, że ktoś go zna i pamięta. To zupełnie inna miara niż ta, którą stosuje świat targu, gdzie wróble idą za dwa grosze. Skąd bierzesz poczucie własnej wartości?"
+      },
+      "e3": {
+       "p": [
+        "Zostajesz przy swoim wątpieniu. Kupiec bierze cię za skrzydła i odchodzi. Gdzieś w tobie zostaje jednak niejasne pytanie."
+       ],
+       "end": "Koniec sceny. Ścieżka: wątpienie, które nie zamyka pytania.",
+       "reflection": "Jezus nie tłumaczy, dlaczego wróble są pamiętane, tylko mówi, że są (Łk 12,6). Wątpienie jest tu bardzo ludzkie, a Ewangelia go nie potępia. Zamiast tego zostawia słowo, które może zadziałać później. Co w tobie wątpi i czego mimo to nie chce zamknąć?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "1",
+     "t": "A gdy zebrały się wielkie tłumy, tak że deptały jedni drugich, zaczął mówić najpierw do swoich uczniów: Strzeżcie się kwasu faryzeuszów, którym jest obłuda."
+    },
+    {
+     "v": "2",
+     "t": "Nie ma bowiem nic zakrytego, co by nie zostało objawione, ani ukrytego, co by nie zostało poznane."
+    },
+    {
+     "v": "3",
+     "t": "Dlatego wszystko, co powiedzieliście w ciemności, będzie ogłoszone w świetle, a co mówiliście do ucha w komnatach, będzie głoszone na dachach."
+    },
+    {
+     "v": "4",
+     "t": "A mówię wam, przyjaciołom moim: Nie bójcie się tych, którzy zabijają ciało, a potem nie mają nic więcej do uczynienia."
+    },
+    {
+     "v": "5",
+     "t": "Ale pokażę wam, kogo macie się bać: bójcie się tego, który po zabiciu ma moc wrzucić do piekła. Tak, powiadam wam, tego się bójcie."
+    },
+    {
+     "v": "6",
+     "t": "Czyż nie sprzedaje się pięciu wróbli za dwa grosze, a żaden z nich nie jest zapomniany przed Bogiem?"
+    },
+    {
+     "v": "7",
+     "t": "Ale i włosy na waszej głowie wszystkie są policzone. Nie bójcie się więc: jesteście więcej warci niż wiele wróbli."
+    }
+   ]
+  },
+  "2026-10-17": {
+   "ref": "Łk 12,8-12",
+   "title": "Wyznać przed ludźmi",
+   "context": [
+    "Gdzie jesteśmy: dalszy ciąg nauki do uczniów wśród wielkich tłumów (Łk 12,1-7). Po słowach „nie bójcie się” Jezus mówi o wyznawaniu Go przed ludźmi (w. 8-9). Kościół wspomina dziś św. Ignacego Antiocheńskiego, biskupa i męczennika.",
+    "Zdanie o wyparciu się (w. 9) jest jednym z najpoważniejszych w Ewangelii, ale Łukasz opisuje też, że Piotr się wyprze (Łk 22,54-62) i zostanie przywrócony (J 21,15-19). Wyparcie nie jest w Ewangelii ostatnim słowem.",
+    "Werset 10 o bluźnierstwie przeciw Duchowi Świętemu należy do najtrudniejszych w Piśmie. Tradycja Kościoła rozumie go jako trwałe, świadome odrzucenie miłosierdzia, a nie jako jednorazowe słowo wypowiedziane w słabości. Tekst warto czytać razem z wersetami 11-12 o Duchu, który uczy.",
+    "Co dalej: w Łk 12,13-21 ktoś z tłumu prosi Jezusa o rozstrzygnięcie sporu o spadek, a Jezus opowiada przypowieść o bogaczu i jego spichlerzach."
+   ],
+   "roles": [
+    {
+     "id": "r1",
+     "name": "Uczeń przed synagogą i władzami",
+     "blurb": "Wprowadzają cię przed urzędy",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Prowadzą cię do synagogi i przed urzędników. Pytają, kim jest ten, za którym idziesz. Przypominasz sobie słowa Jezusa: nie troszczcie się, jak lub co macie odpowiedzieć. Ale serce ci bije jak szalone."
+       ],
+       "q": {
+        "t": "Duch Święty nauczy was w tej samej godzinie, co trzeba powiedzieć.",
+        "r": "Łk 12,12"
+       },
+       "choices": [
+        {
+         "label": "Przyznać się do Jezusa",
+         "to": "n2"
+        },
+        {
+         "label": "Milczeć i czekać, co będzie",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Mówisz, że idziesz za Jezusem. Słowa wychodzą prościej, niż się spodziewałeś. Urzędnicy patrzą na ciebie w milczeniu, a ty wiesz, że to nie był twój plan."
+       ],
+       "q": {
+        "t": "Każdego, kto mnie wyzna przed ludźmi, i Syn Człowieczy wyzna przed aniołami Bożymi.",
+        "r": "Łk 12,8"
+       },
+       "choices": [
+        {
+         "label": "Dodać coś, co przygotowałeś",
+         "to": "e1"
+        },
+        {
+         "label": "Zostawić tylko to, co powiedziałeś",
+         "to": "e2"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Milczysz i słuchasz pytań. Z każdą minutą milczenia czujesz, że przypominasz sobie słowa Jezusa o wyznaniu i wyparciu się. Ktoś pyta wprost: czy ty jesteś jednym z Jego uczniów?"
+       ],
+       "choices": [
+        {
+         "label": "Przyznać się teraz",
+         "to": "n2"
+        },
+        {
+         "label": "Powiedzieć, że nie znasz tego człowieka",
+         "to": "e3"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Dodajesz to, co przygotowałeś, i okazuje się mniej ważne niż to, co powiedziałeś wcześniej. Przez chwilę czujesz, że ktoś mówi razem z tobą."
+       ],
+       "end": "Koniec sceny. Ścieżka: wyznanie wspierane przez Ducha.",
+       "reflection": "Jezus mówi, że Duch Święty nauczy w tej samej godzinie, co trzeba powiedzieć (Łk 12,12). To obietnica pomocy, a nie zwolnienie z przygotowania i myślenia. Wyznanie przed ludźmi nie zależy od elokwencji, tylko od wierności. Św. Ignacy Antiocheński, którego dziś wspominamy, w drodze na męczeństwo pisał listy do wspólnot, w tym do Rzymian, prosząc, by nie próbowano go ocalić. Co jest dla ciebie trudniejsze: znaleźć słowa czy pójść z nimi dalej?"
+      },
+      "e2": {
+       "p": [
+        "Zostawiasz to, co powiedziałeś, bez dodatków. Milczenie po twoich słowach jest dziwnie spokojne."
+       ],
+       "end": "Koniec sceny. Ścieżka: proste wyznanie.",
+       "reflection": "Wyznanie z wersetu 8 nie wymaga rozbudowanej obrony, bo to Syn Człowieczy wyznaje tego, kto wyznał Jego (Łk 12,8). Obietnica jest wzajemna. Prostota wyznania bywa jego siłą, bo nie zostawia miejsca na dyskusję o szczegółach. Ile słów potrzebujesz, by powiedzieć, kim jest dla ciebie Jezus?"
+      },
+      "e3": {
+       "p": [
+        "Mówisz, że nie znasz tego człowieka. Słowa wychodzą szybko i łatwo, a potem przez długi czas słyszysz je w głowie."
+       ],
+       "end": "Koniec sceny. Ścieżka: wyparcie się.",
+       "reflection": "Jezus mówi, że kto się Go wyprze przed ludźmi, zostanie wyparty przed aniołami (Łk 12,9). To zdanie jest ostre, ale Łukasz pokazuje w dalszej części, że Piotr zaprze się Jezusa trzykrotnie (Łk 22,54-62) i że Jezus spojrzy na niego (22,61), a później go przywróci (J 21,15-19). Wyparcie jest poważne, ale w Ewangelii nie jest ostatnim słowem. Do czego trudno ci się przyznać nawet przed sobą?"
+      }
+     }
+    },
+    {
+     "id": "r2",
+     "name": "Ktoś, kto kiedyś zaparł się Jezusa",
+     "blurb": "Słowa o wyznaniu i wyparciu bolą",
+     "start": "n1",
+     "nodes": {
+      "n1": {
+       "p": [
+        "Kiedyś w tłumie powiedziałeś, że nie znasz Jezusa, bo bałeś się. Teraz słuchasz Go, jak mówi o tych, którzy Go wyznają, i o tych, którzy się Go wyprą. Każde słowo trafia w ciebie."
+       ],
+       "q": {
+        "t": "Kto się mnie wyprze przed ludźmi, zostanie wyparty przed aniołami Bożymi.",
+        "r": "Łk 12,9"
+       },
+       "choices": [
+        {
+         "label": "Uciec ze wstydu",
+         "to": "n2"
+        },
+        {
+         "label": "Zostać i słuchać dalej",
+         "to": "n3"
+        }
+       ]
+      },
+      "n2": {
+       "p": [
+        "Uciekasz, ale słowa idą za tobą. Po drodze przypominasz sobie, że Jezus mówił też o Duchu Świętym, który uczy, co trzeba powiedzieć, i o tym, że każdy, kto mówi słowo przeciw Synowi Człowieczemu, otrzyma przebaczenie."
+       ],
+       "q": {
+        "t": "Każdemu, kto powie słowo przeciw Synowi Człowieczemu, będzie odpuszczone.",
+        "r": "Łk 12,10"
+       },
+       "choices": [
+        {
+         "label": "Zawrócić",
+         "to": "e1"
+        },
+        {
+         "label": "Iść dalej, nie oglądając się",
+         "to": "e3"
+        }
+       ]
+      },
+      "n3": {
+       "p": [
+        "Zostajesz. Wstyd nie mija, ale słuchasz dalej. Jezus mówi, że każdemu, kto powie słowo przeciw Synowi Człowieczemu, będzie odpuszczone. Zauważasz, że to zdanie stoi tuż obok zdania, które cię zraniło."
+       ],
+       "choices": [
+        {
+         "label": "Uwierzyć w to przebaczenie",
+         "to": "e1"
+        },
+        {
+         "label": "Bać się, że to zbyt piękne",
+         "to": "e2"
+        }
+       ]
+      },
+      "e1": {
+       "p": [
+        "Zawracasz albo zostajesz i odkrywasz, że słowa o przebaczeniu nie unieważniają tych o wyparciu, ale stawiają je w innym świetle. Pierwszy raz od dawna oddychasz swobodniej."
+       ],
+       "end": "Koniec sceny. Ścieżka: przebaczenie obok wyparcia.",
+       "reflection": "W Łk 12,9-10 zdanie o wyparciu stoi tuż obok zdania o przebaczeniu słowa przeciw Synowi Człowieczemu. To pokazuje, że Jezus nie mówi tych rzeczy po to, by uczniów zniechęcić, tylko by ich uczciwie ostrzec i uczciwie pocieszyć. Piotr, który się wyparł, został przywrócony (J 21,15-19). Czy potrafisz przyjąć przebaczenie, które nie wymaga, żebyś najpierw zapomniał o tym, co zrobiłeś?"
+      },
+      "e2": {
+       "p": [
+        "Boisz się, że to zbyt piękne. Zostajesz z lękiem, ale i z pytaniem, czy nie chcesz po prostu uwierzyć."
+       ],
+       "end": "Koniec sceny. Ścieżka: lęk, że przebaczenie jest zbyt piękne.",
+       "reflection": "Werset 10 mówi o przebaczeniu, ale też o rzeczy, która nie będzie odpuszczona. Dla kogoś, kto się wyparł, to zdanie bywa źródłem lęku, że dotyczy właśnie jego. Tradycja Kościoła tłumaczy je jako trwałe odrzucenie miłosierdzia, a nie słabość lub upadek, i to rozróżnienie ma znaczenie pastoralne. Warto o tym porozmawiać z duszpasterzem. Czego się boisz, że jest ci niewybaczone, i komu możesz o tym powiedzieć?"
+      },
+      "e3": {
+       "p": [
+        "Idziesz dalej, nie oglądając się. Słowa Jezusa są jednak głośniejsze niż twoje kroki. Wiesz, że do nich wrócisz."
+       ],
+       "end": "Koniec sceny. Ścieżka: ucieczka przed słowami.",
+       "reflection": "Uczeń, który ucieka, jest w Ewangelii wcale nie wyjątkiem: w Ogrodzie Oliwnym uciekli wszyscy (Mk 14,50). To nie czyni ucieczki dobrą, ale pokazuje, że Jezus mówi swoje słowa do ludzi, którzy wiedzą, że mogą zawieść. Ucieczka nie zamyka drogi powrotu. Od czego uciekasz, a co mimo to za tobą idzie?"
+      }
+     }
+    }
+   ],
+   "text": [
+    {
+     "v": "8",
+     "t": "A powiadam wam: Każdego, kto mnie wyzna przed ludźmi, i Syn Człowieczy wyzna przed aniołami Bożymi."
+    },
+    {
+     "v": "9",
+     "t": "A kto się mnie wyprze przed ludźmi, zostanie wyparty przed aniołami Bożymi."
+    },
+    {
+     "v": "10",
+     "t": "A każdemu, kto powie słowo przeciw Synowi Człowieczemu, będzie odpuszczone; lecz temu, kto bluźni przeciw Duchowi Świętemu, nie będzie odpuszczone."
+    },
+    {
+     "v": "11",
+     "t": "A gdy was będą wprowadzać do synagog, przed urzędy i władze, nie troszczcie się, jak lub co macie odpowiedzieć, albo co powiedzieć,"
+    },
+    {
+     "v": "12",
+     "t": "bo Duch Święty nauczy was w tej samej godzinie, co trzeba powiedzieć."
     }
    ]
   }
